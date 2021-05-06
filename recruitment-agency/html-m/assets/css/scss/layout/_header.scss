@@ -1,0 +1,166 @@
+.main-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background-color: $white;
+    @include box-shadow(0px 1px 5px #b8b8b8);
+    nav {
+        background-color: transparent;
+        line-height: normal;
+        box-shadow: none;
+        height: auto;
+    }
+    .navbar-menu {
+        @include flexbox();
+        @include align-items(center);
+        ul {
+            li {
+                padding: 0 15px;
+                line-height: normal;
+                &:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    color: $darkblack;
+                    background-color: transparent !important;
+                    font-size: 16px;
+                    padding: 0;
+                    line-height: normal;
+                    height: auto;
+                    position: relative;
+                    display: inline-block;
+                    @include transition(0.2s, ease-in-out);
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 1px;
+                        bottom: 0;
+                        @include transition(0.2s, ease-in-out);
+                        left: 50%;
+                        background-color: $purple;
+                    }
+                    &:hover {
+                        color: $purple;
+                        &:after {
+                            width: 100%;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav-wrapper {
+        padding: 16px 0;
+        overflow: hidden;
+    }
+
+    .schedule-btn {
+        color: $purple;
+        font-size: 16px;
+        border: 1px solid $purple;
+        min-width: 160px;
+        height: 46px;
+        margin-left: 60px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include transition(0.2s, ease-in-out);
+        @include border-radius(25px);
+        &:hover {
+            background-color: $purple;
+            color: $white;
+        }
+    }
+    .mobile-menu-icon {
+        padding: 0;
+        border: none;
+        span {
+            width: 25px;
+            display: block;
+            height: 3px;
+            margin: 4px 0px;
+            cursor: pointer;
+            @include border-radius(5px);
+            @include transition(0.2s, ease-in-out);
+            background-color: $darkblack;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .nav-wrapper {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+            height: 60px;
+            padding: 10px 0;
+        }
+        .logo-block {
+            position: relative;
+            left: auto;
+            transform: none;
+        }
+        .sidenav-trigger {
+            float: none;
+            height: auto;
+            line-height: normal;
+            overflow: hidden;
+            display: inline-block;
+            color: $darkblack;
+            margin: 0;
+            i {
+                height: auto;
+                line-height: normal;
+                font-size: 33px;
+                color: $darkblack;
+            }
+        }
+        .schedule-btn {
+            height: 40px;
+            margin-left: 30px;
+        }
+
+        .navbar-menu {
+            display: block;
+            width: 400px;
+            max-width: 100%;
+            border-top: 1px solid #eee;
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+            .schedule-btn {
+                margin: 20px 20px 0;
+            }
+            ul {
+                li {
+                    padding: 5px 20px !important;
+                    a {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .mobile-menu {
+            border-top: 1px solid #eee;
+            border-right: transparent;
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+        }
+    }
+    @media (max-width: 575px) {
+        .navbar-menu {
+            width: 280px;
+        }
+    }
+}
+@media (min-width: 993px) {
+    .sidenav-overlay,
+    .sidenav {
+        display: none !important;
+    }
+    body {
+        overflow: visible !important;
+    }
+}

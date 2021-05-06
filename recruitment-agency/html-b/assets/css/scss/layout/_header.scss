@@ -24,9 +24,26 @@
                         color: $darkblack;
                         font-size: 16px;
                         padding: 0;
+                        position: relative;
+                        display: inline-block;
                         @include transition(0.2s, ease-in-out);
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            bottom: 0;
+                            @include transition(0.2s, ease-in-out);
+                            left: 50%;
+                            background-color: $purple;
+                        }
                         &:hover {
                             color: $purple;
+                            &:after {
+                                width: 100%;
+                                left: 0;
+                                right: 0;
+                            }
                         }
                     }
                 }
@@ -89,14 +106,17 @@
                 }
             }
             .mobile-menu {
-                padding-top: 40px;
-                .btn-close {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    padding: 10px;
-                    cursor: pointer;
-                }
+                border-top: 1px solid #eee;
+                border-right: transparent;
+                margin-top: 60px;
+                min-height: calc(100vh - 60px);
+            }
+        }
+    }
+    @media (max-width: 575px) {
+        .navbar {
+            .mobile-menu {
+                width: 280px;
             }
         }
     }

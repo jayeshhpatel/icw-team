@@ -1,29 +1,7 @@
 ul {
     list-style: none;
 }
-.site-btn {
-    font-size: 18px;
-    color: $white;
-    height: 62px;
-    min-width: 200px;
-    background-color: $purple;
-    border: 1px solid transparent;
-    @include inline-flex;
-    @include align-items(center);
-    @include justify-content(center);
-    @include border-radius(100px);
-    @include transition(0.2s, ease-in-out);
-    &:hover {
-        border: 1px solid $purple;
-        background-color: $white;
-        color: $purple;
-    }
-    @media (max-width: 991px) {
-        height: 40px;
-        font-size: 16px;
-        min-width: 150px;
-    }
-}
+
 .main-title {
     margin-bottom: 50px;
     text-align: center;
@@ -37,7 +15,7 @@ ul {
         margin-bottom: 0;
         font-size: 16px;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         h2 {
             font-size: 36px;
             margin-bottom: 20px;
@@ -54,23 +32,9 @@ ul {
         }
     }
 }
-.offcanvas-backdrop {
-    overflow: visible !important;
-    &::before {
-        display: none;
-    }
-}
-@media (max-width: 767px) {
-    .offcanvas-backdrop {
-        overflow: hidden !important;
-        &::before {
-            display: block;
-        }
-    }
-}
 .main-wrapper {
     padding-top: 78px;
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding-top: 60px;
     }
 }
@@ -101,7 +65,7 @@ ul {
     @media (max-width: 1299px) {
         background-size: 55%;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         min-height: calc(70vh - 60px);
         background-size: 50%;
         .banner-content {
@@ -142,7 +106,7 @@ ul {
 }
 .logo-section {
     padding-top: 40px;
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding-bottom: 25px;
     }
     @media (max-width: 767px) {
@@ -197,7 +161,7 @@ ul {
             margin-left: 15px;
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         .services-item {
             h3 {
                 font-size: 18px;
@@ -244,12 +208,24 @@ ul {
     }
 }
 .procress-section {
-    .procress-inner-content {
-        margin-top: -24px;
+    padding-bottom: 76px;
+    .row {
+        margin-bottom: 0;
+        @include flex-wrap(wrap);
+        @include flexbox();
+    }
+    .procress-card {
+        margin-bottom: 24px;
     }
     .procress-item {
         border: none;
         border-radius: 0;
+        margin: 0;
+        height: 100%;
+        @include flexbox();
+        @include flex-direction(column);
+        @include box-shadow(0px 0px 0px rgba($black, 0));
+
         &.procress-1 {
             background: $purple url(../images/procress-bg1.png) top center no-repeat;
             background-size: 100% 315px;
@@ -269,8 +245,9 @@ ul {
             width: 180px;
             margin: 75px auto 35px;
         }
-        .card-body {
+        .card-content {
             padding: 60px 25px 30px;
+            flex: 1 1 auto;
             h3 {
                 color: $white;
                 font-size: 20px;
@@ -284,7 +261,8 @@ ul {
             }
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
+        padding-bottom: 16px;
         .procress-item {
             background-size: 100% 205px;
             &.procress-1 {
@@ -300,7 +278,7 @@ ul {
                 width: 120px;
                 margin: 25px auto;
             }
-            .card-body {
+            .card-content {
                 padding: 30px 20px;
                 h3 {
                     font-size: 17px;
@@ -327,13 +305,24 @@ ul {
     }
 }
 .secret-section {
+    .row {
+        margin-bottom: 0;
+        @include flex-wrap(wrap);
+        @include flexbox();
+    }
+    .secret-card {
+        margin-bottom: 24px;
+    }
     .card-item {
         padding: 40px;
         @include border-radius(8px !important);
         @include transition(0.2s, ease-in-out);
         border: none;
         cursor: pointer;
+        height: 100%;
         text-align: center;
+        margin: 0;
+        @include box-shadow(0px 0px 0px rgba($black, 0));
         &:hover {
             @include box-shadow(0px 2px 4px rgba($black, 0.3));
         }
@@ -360,7 +349,7 @@ ul {
             }
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         .card-item {
             padding: 30px 15px;
             .card-img-top {
@@ -390,7 +379,7 @@ ul {
 }
 .section-btn {
     margin-top: 40px;
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         margin-top: 20px;
     }
     @media (max-width: 767px) {
@@ -409,7 +398,7 @@ ul {
             font-weight: 500;
         }
         p {
-            font-size: 24px;
+            font-size: 20px;
             margin: 0;
         }
         .user-dec {
@@ -457,12 +446,21 @@ ul {
             }
         }
         .user-content {
-            
             p {
                 font-size: 16px;
             }
             .user-dec {
                 margin-top: 20px;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .row {
+            display: block;
+        }
+        .user-image {
+            img {
+                max-width: 40%;
             }
         }
     }
@@ -489,7 +487,7 @@ ul {
             @include justify-content(center);
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding: 30px 0;
     }
     @media (max-width: 767px) {
@@ -603,7 +601,7 @@ ul {
             }
         }
     }
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (min-width: 993px) and (max-width: 1199px) {
         .team-user-item {
             &.team-user5 {
                 margin-right: 30px;
@@ -619,7 +617,8 @@ ul {
             }
         }
     }
-    @media (max-width: 991px) {
+
+    @media (max-width: 992px) {
         background-size: cover;
         .team-inner-content {
             padding: 0;
@@ -734,10 +733,13 @@ ul {
             }
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding-top: 40px;
     }
     @media (max-width: 767px) {
+        .row {
+            display: block;
+        }
         .stories-content {
             .stories-item {
                 margin-bottom: 30px;
@@ -787,12 +789,18 @@ ul {
             margin-bottom: 25px;
         }
         .contact-form-input {
+            .input-field {
+                margin-top: 0;
+                @include flexbox();
+            }
             .form-control {
-                border: 1px solid #e8e8e8;
-                height: 64px;
+                border: 1px solid #e8e8e8 !important;
+                background-color: $white;
                 color: #3c3c3c;
                 font-size: 16px;
                 font-weight: 400;
+                padding: 8px 15px;
+                margin: 0;
                 @include border-radius(6px);
                 &::placeholder {
                     color: #939393;
@@ -801,6 +809,7 @@ ul {
             .form-select {
                 color: #939393;
                 cursor: pointer;
+                height: 63px;
                 option {
                     font-size: 16px;
                 }
@@ -818,7 +827,7 @@ ul {
             }
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding: 40px 0;
         .contact-us-content {
             p {
@@ -834,6 +843,7 @@ ul {
             .contact-form-input {
                 .form-control {
                     height: 44px;
+                    padding: 0 15px;
                     font-size: 16px;
                 }
             }
