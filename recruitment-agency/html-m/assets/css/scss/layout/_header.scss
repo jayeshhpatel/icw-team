@@ -10,6 +10,13 @@
         line-height: normal;
         box-shadow: none;
         height: auto;
+        width: auto;
+    }
+    .logo-block{
+        @include inline-flex;
+        @include align-items(center);
+        top: 0;
+        bottom: 0;
     }
     .navbar-menu {
         @include flexbox();
@@ -130,6 +137,7 @@
             border-top: 1px solid #eee;
             margin-top: 60px;
             min-height: calc(100vh - 60px);
+            box-shadow: none;
             .schedule-btn {
                 margin: 20px 20px 0;
             }

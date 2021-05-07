@@ -36,7 +36,6 @@ a {
 }
 :focus {
     outline: none !important;
-    box-shadow: none !important;
 }
 p {
     margin-bottom: 15px;
@@ -69,8 +68,8 @@ h6 {
 .container {
     max-width: 1350px;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .row {
     margin-left: -0.75rem;
@@ -88,4 +87,7 @@ h6 {
 .m-0 {
     margin-left: 0 !important;
     margin-right: 0 !important;
+}
+.card{
+    margin-top: 0;
 }

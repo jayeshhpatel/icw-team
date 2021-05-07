@@ -84,6 +84,9 @@ ul {
         min-height: auto;
         padding: 40px 0;
         background-size: contain;
+        .banner-column{
+            width: 100% !important;
+        }
         .banner-content {
             background-color: rgba($white, 0.85);
             @include border-radius(10px);
@@ -587,8 +590,8 @@ ul {
             }
         }
         .team-user-img-title {
-            display: inline-block;
-            vertical-align: middle;
+            @include inline-flex;
+            @include flex-direction(column);
             text-align: center;
             img {
                 width: 98px;
@@ -620,6 +623,13 @@ ul {
 
     @media (max-width: 992px) {
         background-size: cover;
+        .main-title {
+            p{
+                br{
+                    display: none;
+                }
+            }
+        }
         .team-inner-content {
             padding: 0;
         }
@@ -810,6 +820,13 @@ ul {
                 color: #939393;
                 cursor: pointer;
                 height: 63px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-image: url(../images/angle-bottom.svg);   
+                 background-repeat: no-repeat;
+                background-position: right 12px center;
+                background-size: 16px 12px;
                 option {
                     font-size: 16px;
                 }

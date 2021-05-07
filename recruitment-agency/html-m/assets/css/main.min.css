@@ -5,7 +5,8 @@
 .site-btn{height:40px;font-size:16px;min-width:150px}
 }
 .main-header{position:fixed;left:0;right:0;z-index:1040;background-color:#fff;-moz-box-shadow:0 1px 5px #b8b8b8;-webkit-box-shadow:0 1px 5px #b8b8b8;box-shadow:0 1px 5px #b8b8b8}
-.main-header nav{background-color:transparent;line-height:normal;box-shadow:none;height:auto}
+.main-header nav{background-color:transparent;line-height:normal;box-shadow:none;height:auto;width:auto}
+.main-header .logo-block{display:-webkit-inline-box;display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-ms-flex-align:center;align-items:center;top:0;bottom:0}
 .main-header .navbar-menu{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-ms-flex-align:center;align-items:center}
 .main-header .navbar-menu ul li{padding:0 15px;line-height:normal}
 .main-header .navbar-menu ul li:last-child{padding-right:0}
@@ -24,7 +25,7 @@
 .main-header .sidenav-trigger{float:none;height:auto;line-height:normal;overflow:hidden;display:inline-block;color:#3c3c3c;margin:0}
 .main-header .sidenav-trigger i{height:auto;line-height:normal;font-size:33px;color:#3c3c3c}
 .main-header .schedule-btn{height:40px;margin-left:30px}
-.main-header .navbar-menu{display:block;width:400px;max-width:100%;border-top:1px solid #eee;margin-top:60px;min-height:calc(100vh - 60px)}
+.main-header .navbar-menu{display:block;width:400px;max-width:100%;border-top:1px solid #eee;margin-top:60px;min-height:calc(100vh - 60px);box-shadow:none}
 .main-header .navbar-menu .schedule-btn{margin:20px 20px 0}
 .main-header .navbar-menu ul li{padding:5px 20px!important}
 .main-header .navbar-menu ul li a{line-height:30px}
@@ -40,7 +41,7 @@ body{overflow:visible!important}
 .main-footer{background-color:#b57ad2;padding-top:55px}
 .main-footer .footer-list-block .footer-link-list h2{font-size:24px;color:#fff;font-weight:700;margin-bottom:15px}
 .main-footer .footer-list-block .footer-link-list ul li{margin-bottom:5px}
-.main-footer .footer-list-block .footer-link-list ul li a{color:#fff;font-size:14px;font-weight:500;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;position:relative}
+.main-footer .footer-list-block .footer-link-list ul li a{color:#fff;font-size:14px;font-weight:500;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;position:relative;vertical-align:text-top}
 .main-footer .footer-list-block .footer-link-list ul li a:after{content:"";position:absolute;width:0;height:1px;bottom:0;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;left:50%;background-color:#fff}
 .main-footer .footer-list-block .footer-link-list ul li a:hover:after{width:100%;left:0;right:0}
 .main-footer .footer-list-block .footer-social h2{margin-bottom:25px}
@@ -94,6 +95,7 @@ ul{list-style:none}
 }
 @media (max-width:767px){
 .banner-section{min-height:auto;padding:40px 0;background-size:contain}
+.banner-section .banner-column{width:100%!important}
 .banner-section .banner-content{background-color:rgba(255,255,255,.85);border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;padding:15px 15px 15px 40px}
 .banner-section .banner-content .main-title{font-size:22px;margin-bottom:15px}
 .banner-section .banner-content .site-btn{margin-top:20px}
@@ -247,7 +249,7 @@ ul{list-style:none}
 .team-section .team-user-item p{font-size:14px;color:#2f281e;margin:0;min-height:55px;padding:10px 20px;min-width:280px;position:absolute;right:45px;top:0;display:inline-block;background-color:#fff;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;-moz-box-shadow:0 2px 8px rgba(86,117,146,.1);-webkit-box-shadow:0 2px 8px rgba(86,117,146,.1);box-shadow:0 2px 8px rgba(86,117,146,.1)}
 .team-section .team-user-item p:before{content:"";position:absolute;width:16px;height:16px;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;background-color:#fff;right:55px;bottom:-7px}
 .team-section .team-user-item p:after{content:"";position:absolute;width:10px;height:10px;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;background-color:#fff;right:35px;bottom:-20px}
-.team-section .team-user-item .team-user-img-title{display:inline-block;vertical-align:middle;text-align:center}
+.team-section .team-user-item .team-user-img-title{display:-webkit-inline-box;display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center}
 .team-section .team-user-item .team-user-img-title img{width:98px;height:98px}
 .team-section .team-user-item .team-user-img-title h3{font-size:20px;color:#2b292d;margin:10px 0 0}
 @media (min-width:993px) and (max-width:1199px){
@@ -257,6 +259,7 @@ ul{list-style:none}
 }
 @media (max-width:992px){
 .team-section{background-size:cover}
+.team-section .main-title p br{display:none}
 .team-section .team-inner-content{padding:0}
 .team-section .team-user-items{text-align:center}
 .team-section .team-user-item{margin:30px auto 0!important;padding:0;width:100%;display:-webkit-inline-box;display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-justify-content:center;-moz-justify-content:center;-ms-justify-content:center;justify-content:center;-ms-flex-pack:center;-webkit-flex-direction:row-reverse;-moz-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-ms-flex-align:center;align-items:center}
@@ -303,7 +306,7 @@ ul{list-style:none}
 .contact-us-section .contact-form .contact-form-input .input-field{margin-top:0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
 .contact-us-section .contact-form .contact-form-input .form-control{border:1px solid #e8e8e8!important;background-color:#fff;color:#3c3c3c;font-size:16px;font-weight:400;padding:8px 15px;margin:0;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px}
 .contact-us-section .contact-form .contact-form-input .form-control::placeholder{color:#939393}
-.contact-us-section .contact-form .contact-form-input .form-select{color:#939393;cursor:pointer;height:63px}
+.contact-us-section .contact-form .contact-form-input .form-select{color:#939393;cursor:pointer;height:63px;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url(../images/angle-bottom.svg);background-repeat:no-repeat;background-position:right 12px center;background-size:16px 12px}
 .contact-us-section .contact-form .contact-form-input .form-select option{font-size:16px}
 .contact-us-section .contact-form .contact-form-input textarea.form-control{height:auto}
 @media (max-width:1199px){
@@ -328,15 +331,16 @@ section{padding-bottom:40px}
 body{margin:0;padding:0;font-family:Lato,sans-serif;color:#3c3c3c;font-size:20px;position:relative;min-height:100vh;line-height:1.5}
 ul{margin:0;padding:0}
 a{text-decoration:none}
-:focus{outline:0!important;box-shadow:none!important}
+:focus{outline:0!important}
 p{margin-bottom:15px;margin-top:0;font-size:16px}
 @media (max-width:767px){
 p{font-size:15px}
 }
 img{max-width:100%}
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}
-.container{max-width:1350px;width:100%;padding-left:15px;padding-right:15px}
+.container{max-width:1350px;width:100%;padding-left:12px;padding-right:12px}
 .row{margin-left:-.75rem;margin-right:-.75rem;margin-bottom:0}
 .ml-auto{margin-left:auto}
 .p-0{padding-left:0!important;padding-right:0!important}
 .m-0{margin-left:0!important;margin-right:0!important}
+.card{margin-top:0}
