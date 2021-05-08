@@ -1,0 +1,241 @@
+ul {
+    list-style: none;
+}
+.icon-pencil {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/icons/pencil.svg) center center no-repeat;
+    background-size: contain;
+}
+
+.main-title {
+    h2 {
+        font-weight: bold;
+        font-size: 18px;
+        color: #7e7e7e;
+        margin: 0 0 20px 15px;
+        line-height: 1.1;
+        @include flexbox();
+        @include align-items(center);
+        i {
+            margin-right: 10px;
+            font-size: 21px;
+        }
+    }
+    @media (max-width: 992px) {
+    }
+    @media (max-width: 767px) {
+    }
+}
+.main-wrapper {
+    padding-top: 54px;
+    flex: 1;
+    @media (max-width: 992px) {
+        padding-top: 60px;
+    }
+}
+.alert {
+    text-align: center;
+    @include border-radius(0);
+    font-weight: bold;
+    padding: 15px;
+    padding-right: 50px;
+    &.alert-primary {
+        color: $white;
+        background: $info;
+        border-color: $info;
+        &.notification-alert {
+            position: fixed;
+            top: 54px;
+            width: 100%;
+            z-index: 999;
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        .close-icon {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+}
+.filter-job {
+    padding: 0px 50px 0px;
+    .title-welcome {
+        font-weight: bold;
+        font-size: 18px;
+        color: #32b6c4;
+        padding: 30px 0;
+        margin: 0;
+    }
+    .filter-box {
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        .filter-body {
+            margin-top: 10px;
+            font-size: 14px;
+            .filter-link {
+                color: $darkblack;
+                text-decoration: none;
+                display: block;
+                font-size: 14px;
+                line-height: 19px;
+                margin-bottom: 0.5rem;
+                &:hover {
+                    text-decoration: underline;
+                    color: $info;
+                }
+            }
+            .filter-content {
+                margin-bottom: 15px;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(space-between);
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                h2 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $info;
+                    margin: 0;
+                }
+            }
+            .edit-input {
+                color: $info;
+                font-weight: 700;
+                font-size: 15px;
+                margin-bottom: 0;
+                @include flexbox();
+                @include justify-content(space-between);
+                .filter-dec {
+                    max-width: 210px;
+                    color: #4e4e4e;
+                    font-weight: 400;
+                }
+                .icon {
+                    color: #4e4e4e;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    margin-top: 3px;
+                    margin-left: 10px;
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justify-content(center);
+                }
+            }
+        }
+    }
+    .profile-progress {
+        .profile-progress-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .progress {
+            height: 8px;
+            @include border-radius(0);
+            background: #c4c4c4;
+            .determinate {
+                background-color: $info;
+            }
+        }
+    }
+    .filter-overflow-scroll {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100vh;
+        min-height: 100vh;
+        padding-left: 4px;
+        .filter-box {
+            border-bottom: none;
+        }
+        .small-info {
+            font-size: 11px;
+            color: $darkblack;
+        }
+        h4 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #4e4e4e;
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 15px 0;
+    }
+}
+.site-more-btn {
+    text-align: center;
+    a {
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}
+.filter-side-block {
+    .user-name {
+        font-size: 16px;
+        color: #7e7e7e;
+        font-weight: bold;
+    }
+    .progress {
+        margin-bottom: 0;
+    }
+    .profile-progress-info {
+        font-size: 12px;
+        color: #4e4e4e;
+        margin-bottom: 5px;
+    }
+    .filter-box {
+        padding-bottom: 15px !important;
+        margin: 0;
+        border: none;
+    }
+}
+.filter-data-block {
+    .main-description-block {
+        padding: 20px 0;
+        .job-slider-block {
+            padding: 20px;
+            margin-bottom: 20px;
+            .slider-items {
+            }
+            .slider-item {
+                background: #ffffff;
+                border: 1px solid #c4c4c4;
+                padding: 5px 10px;
+                font-size: 14px;
+                .slider-title {
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justify-content(space-between);
+                    margin-bottom: 10px;
+                    .match-job {
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                    .job-ago-time {
+                        color: #32b6c4;
+                        font-weight: bold;
+                        @include flexbox();
+                        @include align-items(center);
+                        i {
+                            margin-left: 5px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

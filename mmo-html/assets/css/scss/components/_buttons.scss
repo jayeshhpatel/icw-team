@@ -1,0 +1,25 @@
+// .site-btn {
+//     font-size: 18px;
+//     color: $white;
+//     height: 62px;
+//     min-width: 200px;
+//     background-color: $purple;
+//     border: 1px solid transparent;
+//     @include inline-flex;
+//     @include align-items(center);
+//     @include justify-content(center);
+//     @include border-radius(100px);
+//     @include transition(0.2s, ease-in-out);
+//     &:focus,
+//     &:active,
+//     &:hover {
+//         border: 1px solid $purple;
+//         background-color: $white;
+//         color: $purple;
+//     }
+//     @media (max-width: 992px) {
+//         height: 40px;
+//         font-size: 16px;
+//         min-width: 150px;
+//     }
+// }

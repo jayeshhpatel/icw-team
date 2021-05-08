@@ -1,0 +1,22 @@
+.custom-dropdown-select {
+    .dropdown-content {
+        min-width: 170px;
+        max-height: 350px;
+        li {
+            min-height: auto;
+            &:hover {
+                a {
+                    color: #32b6c4;
+                    background-color: rgba(0, 0, 0, 0.03);
+                }
+            }
+            a {
+                padding: 10px 15px;
+                height: auto;
+                line-height: normal;
+                text-decoration: none !important;
+                @include transition(0.3s, ease-in-out);
+            }
+        }
+    }
+}
