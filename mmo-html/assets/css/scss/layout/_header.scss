@@ -12,7 +12,7 @@
         height: auto;
         color: $darkblack;
         width: auto;
-        border-bottom: 2px solid $info;
+        border-bottom: 3px solid $info;
         li {
             background-color: transparent !important;
             a {
@@ -56,6 +56,24 @@
                 &.active {
                     a {
                         color: $info;
+                    }
+                    i {
+                        &.icon-home {
+                            background: url(../images/icons/home-active.svg) 50% 50% no-repeat;
+                            background-size: contain;
+                        }
+                        &.icon-job {
+                            background: url(../images/icons/job-active.svg) 50% 50% no-repeat;
+                            background-size: contain;
+                        }
+                        &.icon-mail {
+                            background: url(../images/icons/mail-active.svg) 50% 50% no-repeat;
+                            background-size: contain;
+                        }
+                        &.icon-application {
+                            background: url(../images/icons/application-active.svg) 50% 50% no-repeat;
+                            background-size: contain;
+                        }
                     }
                 }
                 i {
