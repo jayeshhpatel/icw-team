@@ -126,11 +126,26 @@
 			</div>
 		</header>
 		<main class="main-wrapper">
+			<div class="job-tab-wrapper">
+				<div class="container">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="job-matches.html" class="active"> All Jobs<br />200 </a>
+						</li>
+						<li class="nav-item">
+							<a href="job-matches.html"> Matches<br />20 </a>
+						</li>
+						<li class="nav-item">
+							<a href="saved-job.html"> Saved Jobs<br />3 </a>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div class="container-fluid">
 				<div class="filter-job row">
 					<div class="col s12 m4 l2 filter-sidebar filter-inner-block hide-on-med-and-down">
 						<ul class="filter-box collapsible">
-							<li class="filter-toggle">
+							<li class="filter-toggle active">
 								<div class="collapsible-header filter-title">
 									<h2>Date posted</h2>
 									<i class="material-icons arrow-icon">expand_more</i>
@@ -152,7 +167,7 @@
 							</li>
 						</ul>
 						<ul class="filter-box collapsible">
-							<li class="filter-toggle">
+							<li class="filter-toggle active">
 								<div class="collapsible-header filter-title">
 									<h2>New jobs</h2>
 									<i class="material-icons arrow-icon">expand_more</i>
@@ -173,13 +188,12 @@
 								</div>
 							</li>
 						</ul>
-						<ul class="filter-box collapsible">
+						<ul class="filter-box">
 							<li class="filter-toggle">
 								<div class="collapsible-header filter-title">
-									<h2>Date posted</h2>
-									<i class="material-icons arrow-icon">expand_more</i>
+									<h2>Location</h2>
 								</div>
-								<div class="collapsible-body filter-body">
+								<div class="filter-body">
 									<div class="custom-control">
 										<label class="custom-checkbox">
 											<input type="checkbox" class="filled-in" />
@@ -191,7 +205,7 @@
 						</ul>
 						<div class="filter-overflow-scroll scrollbar">
 							<ul class="filter-box collapsible">
-								<li class="filter-toggle">
+								<li class="filter-toggle active">
 									<div class="collapsible-header filter-title">
 										<h2>Country</h2>
 										<i class="material-icons arrow-icon">expand_more</i>
@@ -293,7 +307,7 @@
 								</li>
 							</ul>
 							<ul class="filter-box collapsible">
-								<li class="filter-toggle">
+								<li class="filter-toggle active">
 									<div class="collapsible-header filter-title">
 										<h2>Job type</h2>
 										<i class="material-icons arrow-icon">expand_more</i>
@@ -315,7 +329,7 @@
 								</li>
 							</ul>
 							<ul class="filter-box collapsible">
-								<li class="filter-toggle">
+								<li class="filter-toggle active">
 									<div class="collapsible-header filter-title">
 										<h2>Visa sponsorship</h2>
 										<i class="material-icons arrow-icon">expand_more</i>
@@ -343,20 +357,79 @@
 								</li>
 							</ul>
 							<ul class="filter-box collapsible">
-								<li class="filter-toggle">
+								<li class="filter-toggle active">
 									<div class="collapsible-header filter-title">
 										<h2>Total compensation</h2>
 										<i class="material-icons arrow-icon">expand_more</i>
 									</div>
 									<div class="collapsible-body filter-body">
-										<div class="flex-span">
-
+										<div class="flex-span"> Minimum <div
+												class="custom-dropdown-select icon-dropdown-select">
+												<span class="icon">
+													<i class="material-icons">euro_symbol</i>
+												</span>
+												<select class="icons dropdown-content">
+													<option value="" selected>100</option>
+													<option value="">1000</option>
+													<option value="">10000</option>
+													<option value="">100000</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-span"> Maximum <div
+												class="custom-dropdown-select icon-dropdown-select">
+												<span class="icon">
+													<i class="material-icons">euro_symbol</i>
+												</span>
+												<select class="icons dropdown-content">
+													<option value="" selected>100</option>
+													<option value="">1000</option>
+													<option value="">10000</option>
+													<option value="">100000</option>
+												</select>
+											</div>
 										</div>
 									</div>
 								</li>
 							</ul>
 							<ul class="filter-box collapsible">
-								<li class="filter-toggle">
+								<li class="filter-toggle active">
+									<div class="collapsible-header filter-title">
+										<h2>Day rates</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										<div class="flex-span"> Minimum <div
+												class="custom-dropdown-select icon-dropdown-select">
+												<span class="icon">
+													<i class="material-icons">euro_symbol</i>
+												</span>
+												<select class="icons dropdown-content">
+													<option value="" selected>100</option>
+													<option value="">1000</option>
+													<option value="">10000</option>
+													<option value="">100000</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-span"> Maximum <div
+												class="custom-dropdown-select icon-dropdown-select">
+												<span class="icon">
+													<i class="material-icons">euro_symbol</i>
+												</span>
+												<select class="icons dropdown-content">
+													<option value="" selected>100</option>
+													<option value="">1000</option>
+													<option value="">10000</option>
+													<option value="">100000</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle active">
 									<div class="collapsible-header filter-title">
 										<h2>Industry preferences</h2>
 										<i class="material-icons arrow-icon">expand_more</i>
@@ -365,7 +438,12 @@
 										<ul class="sub-filter-toggle collapsible">
 											<li>
 												<div class="filter-title collapsible-header">
-													<h5><span class="custom-control-label">Start-up - 20</span></h5>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Start-up - 20</span>
+														</label>
+													</div>
 													<i class="material-icons inner-arrow-icon">expand_more</i>
 												</div>
 												<div class="sub-filter-body collapsible-body">
@@ -383,7 +461,353 @@
 													</div>
 												</div>
 											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">PE&VC -15</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">SUB PE&VC -15</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">SUB PE&VC -15</span>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Boutique consulting - 20
+															</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Boutique consulting
+																-2</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Boutique consulting
+																-1</span>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Large consulting -
+																20</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Large consulting -
+																2</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Large consulting -
+																1</span>
+														</label>
+													</div>
+												</div>
+											</li>
 										</ul>
+										<div class="site-more-btn"> <a href="#!">View more (15)</a> </div>
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle active">
+									<div class="collapsible-header filter-title">
+										<h2>Function preferences </h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										<ul class="sub-filter-toggle collapsible">
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Strategy -40</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Strategy -4</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Strategy -2</span>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Operations - 20</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">SUB Operations -
+																20</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">SUB Operations -
+																20</span>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">General Management -
+																2</span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">General Management -
+																2</span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">General Management -
+																1</span>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="filter-title collapsible-header">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Sales - 10</span> </span>
+														</label>
+													</div>
+													<i class="material-icons inner-arrow-icon">expand_more</i>
+												</div>
+												<div class="sub-filter-body collapsible-body">
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Sales - 2</span> </span>
+														</label>
+													</div>
+													<div class="custom-control">
+														<label class="custom-checkbox">
+															<input type="checkbox" class="filled-in" />
+															<span class="custom-control-label">Sales - 1</span>
+														</label>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="site-more-btn"> <a href="#!">View more (23)</a> </div>
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle active">
+									<div class="collapsible-header filter-title">
+										<h2>Seniority</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">Analyst - 2</span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">Associate - 60</span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">Manager - 88</span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">Director - 50</span>
+											</label>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle active">
+									<div class="collapsible-header filter-title">
+										<h2>Language required</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">English - 10</span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">French - 10 </span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">German - 10</span>
+											</label>
+										</div>
+										<div class="custom-control">
+											<label class="custom-checkbox">
+												<input type="checkbox" class="filled-in" />
+												<span class="custom-control-label">Spanish - 10 </span>
+											</label>
+										</div>
+										<div class="site-more-btn"> <a href="#!">View more (5)</a> </div>
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Company size</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Equity provided</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Function experience</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Industry experience </h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Geography experience</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Consulting experience</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
+									</div>
+								</li>
+							</ul>
+							<ul class="filter-box collapsible">
+								<li class="filter-toggle">
+									<div class="collapsible-header filter-title">
+										<h2>Skills</h2>
+										<i class="material-icons arrow-icon">expand_more</i>
+									</div>
+									<div class="collapsible-body filter-body">
+										-
 									</div>
 								</li>
 							</ul>
@@ -391,423 +815,165 @@
 					</div>
 					<div class="filter-data-block col s12 l10">
 						<div class="main-description-block">
+							<div class="search-input">
+								<div class="input-field">
+									<i class="material-icons search-icon">search</i>
+									<input id="icon_prefix" type="text" class="validate form-control"
+										placeholder="Job title, company or keyword">
+									<a class="waves-effect search-btn btn"><i class="material-icons">search</i></a>
+								</div>
+							</div>
 							<div class="filter-side-block hide-on-large-only">
-								<h1 class="title user-name">Welcome back, Elisa</h1>
-								<div class="filter-box">
-									<div class="profile-progress">
-										<div class="profile-progress-title">80% of profile and preferences updated</div>
-										<div class="progress">
-											<div class="determinate" style="width: 80%"></div>
-										</div>
-										<div class="profile-progress-info">Last preferences update: 20th April 2020
+								<div class="row">
+									<div class="col s4">
+										<a class="waves-effect filter-btn btn">
+											<i class="material-icons">filter_alt</i> Filters <span>(2)</span></a>
+									</div>
+									<div class="col s4">
+										<div class="custom-dropdown-select icon-dropdown-select filter-select">
+											<i class="material-icons icon">date_range</i>
+											<select class="dropdown-content">
+												<option value="" hidden>Since last login</option>
+												<option value="">Date posted</option>
+											</select>
 										</div>
 									</div>
-									<div class="site-more-btn"> <a href="#!">Update</a>
-									</div>
-								</div>
-							</div>
-							<div class="job-slider-block bg-light">
-								<div class="main-title">
-									<h2><i class="material-icons">star</i>Invited to interview from employers</h2>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
+									<div class="col s4">
+										<div class="custom-dropdown-select icon-dropdown-select filter-select">
+											<i class="material-icons icon">swap_vert</i>
+											<select class="dropdown-content">
+												<option value="" hidden>Sort by</option>
+												<option value="">Most Relevant</option>
+											</select>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="material-icons">favorite</i>Saved jobs</h2>
-									<p>Don't forget to apply to your saved jobs before they expire</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (3)</a>
+							<div class="filter-block hide-on-med-and-down">
+								<a href="#" class="filter-title">Filter using my preferences</a>
+								<div class="custom-dropdown-select icon-dropdown-select">
+									<select class="icons dropdown-content">
+										<option value="" hidden>Sort by</option>
+										<option value="">Most Relevant</option>
+									</select>
 								</div>
 							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="material-icons">search</i>Invited to apply by
-										the movemeon team<i class="icon-info tooltipped" data-toggle="tooltip" title=""
-											data-position="top" data-tooltip="Info"></i></h2>
-									<p>Jobs manually selected for you by our team</p>
+							<div class="match-job-block">
+								<div class="job-box">
+									<h2>100% Match <i class="material-icons">favorite_border</i></h2>
+									<div class="job-details">
+										<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+										<div class="job-info">
+											<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+												Movemeon</a>
+											<div class="job-desc">Pastry sesame snaps dragée lemon drops marshmallow
+												dessert icing. Chocolate bar tiramisu cupcake. Apple pie dragée sweet
+												sweet roll liquorice.</div>
+											<div class="job-location">London, Uk | Sponsorship available | Permanent |
+												40-50K + equity | Manager</div>
+										</div>
+									</div>
 								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-box">
+									<h2>100% Match <i class="material-icons">favorite_border</i></h2>
+									<div class="job-details">
+										<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+										<div class="job-info">
+											<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+												Movemeon</a>
+											<div class="job-desc">Pastry sesame snaps dragée lemon drops marshmallow
+												dessert icing. Chocolate bar tiramisu cupcake. Apple pie dragée sweet
+												sweet roll liquorice.</div>
+											<div class="job-location">London, Uk | Sponsorship available | Permanent |
+												40-50K + equity | Manager</div>
+										</div>
+									</div>
+								</div>
+								<div class="job-box">
+									<h2>100% Match <i class="material-icons">favorite_border</i></h2>
+									<div class="job-details">
+										<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+										<div class="job-info">
+											<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+												Movemeon</a>
+											<div class="job-desc">Pastry sesame snaps dragée lemon drops marshmallow
+												dessert icing. Chocolate bar tiramisu cupcake. Apple pie dragée sweet
+												sweet roll liquorice.</div>
+											<div class="job-location">London, Uk | Sponsorship available | Permanent |
+												40-50K + equity | Manager</div>
+										</div>
+									</div>
+								</div>
+								<div class="job-box">
+									<h2>100% Match <i class="material-icons">favorite_border</i></h2>
+									<div class="job-details">
+										<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+										<div class="job-info">
+											<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+												Movemeon</a>
+											<div class="job-desc">Pastry sesame snaps dragée lemon drops marshmallow
+												dessert icing. Chocolate bar tiramisu cupcake. Apple pie dragée sweet
+												sweet roll liquorice.</div>
+											<div class="job-location">London, Uk | Sponsorship available | Permanent |
+												40-50K + equity | Manager</div>
+										</div>
+									</div>
+								</div>
+								<div class="main-title">
+									<h2>Recent hires on movemeon</h2>
+								</div>
+								<div class="job-box">
+									<div class="row">
+										<div class="col s12 l4">
+											<div class="job-details valign-wrapper">
+												<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+												<div class="job-info">
+													<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+														Movemeon</a>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+										<div class="col s12 l4">
+											<div class="job-details valign-wrapper">
+												<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+												<div class="job-info">
+													<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+														Movemeon</a>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+										<div class="col s12 l4">
+											<div class="job-details valign-wrapper">
+												<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+												<div class="job-info">
+													<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+														Movemeon</a>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
-								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="icon-square-check"></i>100% match<i
-											class="icon-info tooltipped" data-toggle="tooltip" title=""
-											data-position="top" data-tooltip="Info"></i></h2>
-									<p>Jobs that match your profile and preferences</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
+								<div class="job-box">
+									<h2>100% Match <i class="material-icons">favorite_border</i></h2>
+									<div class="job-details">
+										<div class="img"><img src="assets/images/img-75x75.jpg" alt=""></div>
+										<div class="job-info">
+											<a href="#" class="job-title"><strong>Strategy Manager</strong> at
+												Movemeon</a>
+											<div class="job-desc">Pastry sesame snaps dragée lemon drops marshmallow
+												dessert icing. Chocolate bar tiramisu cupcake. Apple pie dragée sweet
+												sweet roll liquorice.</div>
+											<div class="job-location">London, Uk | Sponsorship available | Permanent |
+												40-50K + equity | Manager</div>
 										</div>
 									</div>
-								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
-								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><span class="icon-label">New</span>New jobs you haven’t
-										seen yet</h2>
-									<p>New jobs you haven’t seen yet</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
-												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (100)</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="live-application-block">
-				<div class="container-fluid">
-					<div class="main-title">
-						<h2 class="text-secondary">Live applications <span class="font-weight-normal"> - 4 live
-								applications recenly updated</span></h2>
-					</div>
-					<div class="inner-content">
-						<div class="row">
-							<div class="col s12 m6 l3">
-								<div class="live-app-box">
-									<div class="app-img-name">
-										<div class="img">
-											<img src="assets/images/logo.png" alt="">
-										</div> <a class="title" href="#">Strategy Manager at Movemeon</a>
-									</div>
-									<div class="applied-date"><i class="material-icons">event_note</i><span>Applied-
-											23rd April 2020<br>Expected update - 7th May 2020</span>
-									</div>
-									<div class="status">In screening</div>
-								</div>
-							</div>
-							<div class="col s12 m6 l3">
-								<div class="live-app-box">
-									<div class="app-img-name">
-										<div class="img">
-											<img src="assets/images/logo.png" alt="">
-										</div> <a class="title" href="#">Strategy Manager at Movemeon</a>
-									</div>
-									<div class="applied-date"><i class="material-icons">event_note</i><span>Applied-
-											23rd April 2020<br>Expected update - 7th May 2020</span>
-									</div>
-									<div class="status">Interviewing</div>
-								</div>
-							</div>
-							<div class="col s12 m6 l3">
-								<div class="live-app-box">
-									<div class="app-img-name">
-										<div class="img">
-											<img src="assets/images/logo.png" alt="">
-										</div> <a class="title" href="#">Strategy Manager at Movemeon</a>
-									</div>
-									<div class="applied-date"><i class="material-icons">event_note</i><span>Applied-
-											23rd April 2020<br>Expected update - 7th May 2020</span>
-									</div>
-									<div class="status">In screening</div>
-								</div>
-							</div>
-							<div class="col s12 m6 l3">
-								<div class="live-app-box">
-									<div class="app-img-name">
-										<div class="img">
-											<img src="assets/images/logo.png" alt="">
-										</div> <a class="title" href="#">Strategy Manager at Movemeon</a>
-									</div>
-									<div class="applied-date"><i class="material-icons">event_note</i><span>Applied-
-											23rd April 2020<br>Expected update - 7th May 2020</span>
-									</div>
-									<div class="status">Final round</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="site-more-btn"> <a href="#!">View all live applications (10)</a>
-					</div>
-				</div>
-			</div>
+
 		</main>
 		<footer class="main-footer">
 			<div class="container-fluid">

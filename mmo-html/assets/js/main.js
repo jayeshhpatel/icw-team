@@ -8,6 +8,7 @@ $(document).ready(function () {
     $('.tooltipped').tooltip();
     $('.dropdown-trigger').dropdown();
     $('.collapsible').collapsible();
+    $('select').formSelect();
     $('#alert_close').click(function () {
         $(".alert").fadeOut("slow", function () {
         });
