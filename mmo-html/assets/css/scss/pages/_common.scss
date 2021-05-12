@@ -175,6 +175,7 @@ ul {
     .filter-overflow-scroll {
         overflow-x: hidden;
         overflow-y: auto;
+        // height: 100vh;
         min-height: 100vh;
         padding-left: 4px;
         .small-info {
