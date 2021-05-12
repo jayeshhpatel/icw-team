@@ -175,7 +175,6 @@ ul {
     .filter-overflow-scroll {
         overflow-x: hidden;
         overflow-y: auto;
-        height: 100vh;
         min-height: 100vh;
         padding-left: 4px;
         .small-info {
@@ -286,11 +285,6 @@ ul {
                 .job-location {
                     font-size: 13px;
                 }
-            }
-        }
-        @media (max-width: 992px) {
-            .job-details {
-                margin-bottom: 20px;
             }
         }
     }
@@ -710,9 +704,6 @@ ul {
     }
 }
 .match-job-block {
-    .job-details {
-        margin-bottom: 0 !important;
-    }
     .main-title {
         margin-left: 0 !important;
         margin-bottom: 8px;
@@ -721,6 +712,13 @@ ul {
         h2 {
             color: #4e4e4e;
             @include inline-flex;
+        }
+    }
+    @media (max-width: 992px) {
+        .category-box {
+            .job-details {
+                margin-bottom: 20px;
+            }
         }
     }
 }
