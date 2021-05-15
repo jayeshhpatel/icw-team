@@ -115,6 +115,9 @@ strong {
     &::-webkit-scrollbar-track {
         background-color: $white;
     }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
 }
 
 .bg-light {
@@ -153,4 +156,47 @@ strong {
 .row {
     @include flexbox();
     @include flex-wrap(wrap);
+}
+.btn-border {
+    color: $info !important;
+    border: 2px solid $info !important;
+    background-color: transparent !important;
+}
+.overflow-hidden {
+    overflow: hidden !important;
+}
+.sidenav-overlay{
+    ~.sidenav-overlay{
+        @include opacity(0 !important);
+        @include transition(0.3s, ease-in-out);
+        &.is-visible{
+            @include opacity(1 !important);
+        }
+    }
+}
+body{
+    overflow: visible !important;
+    &.is-visible{
+        overflow: hidden !important;
+    }
+}
+.material-tooltip{
+    font-size: 13px;min-height: auto;
+    line-height: normal;
+    padding: 5px;
+    background-color: $info;
+    color: $white; @include border-radius(4px);
+    overflow: visible;
+    // &:before{
+    //     content: "";
+    //     position: absolute;
+    //     border-style: solid;
+    //     border-width: 6px 6px 0;
+    //     border-top-color: $info;
+    //     bottom: -6px;
+    //     left: 0;
+    //     right: 0;
+    //     margin: auto;
+    //     width: 6px;
+    // }
 }

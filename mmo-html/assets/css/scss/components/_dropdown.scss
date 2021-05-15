@@ -1,4 +1,15 @@
 .custom-dropdown-select {
+    .select-wrapper {
+        border-bottom: 1px solid #c4c4c4;
+        input {
+            height: auto;
+            width: 100%;
+            line-height: 28px;
+            font-size: 14px;
+            margin-bottom: 0;
+            border: none !important;
+        }
+    }
     .dropdown-content {
         min-width: 170px;
         max-height: 350px;
@@ -56,14 +67,6 @@
         }
     }
     .select-wrapper {
-        border-bottom: 1px solid #c4c4c4;
-        input {
-            height: auto;
-            width: auto;
-            line-height: 28px;
-            font-size: 14px;
-            margin-bottom: 0;
-            border: none !important;
-        }
+        padding-left: 20px;
     }
 }

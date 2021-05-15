@@ -4,7 +4,6 @@
     right: 0;
     z-index: 1040;
     background-color: $white;
-    @include box-shadow(0px 1px 5px #b8b8b8);
     nav {
         background-color: transparent;
         line-height: normal;
@@ -12,7 +11,6 @@
         height: auto;
         color: $darkblack;
         width: auto;
-        border-bottom: 3px solid $info;
         li {
             background-color: transparent !important;
             a {
@@ -49,9 +47,24 @@
             @include align-items(center);
             li {
                 padding: 0 45px;
+                position: relative;
                 text-align: center;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    bottom: -6px;
+                    width: 0;
+                    height: 2px;
+                    background-color: $info;
+                    @include transition(0.3s, ease-in-out);
+                }
                 &:hover {
                     @include opacity(0.8);
+                    &:after{
+                        width: 100%;
+                    }
                 }
                 &.active {
                     a {
@@ -105,6 +118,7 @@
                     position: relative;
                     display: inline-block;
                     @include transition(0.3s, ease-in-out);
+                    
                 }
             }
         }
@@ -135,6 +149,33 @@
                 line-height: 15px;
                 color: $white;
                 @include border-radius(50%);
+            }
+            .menu-icon{
+                display: block;
+                &.is-visible{
+                    span{
+                        &.line1 {
+                            @include transform(rotate(-45deg) translate(-5px, 5px));
+                            background-color: $info;
+                        }
+                        &.line2 {
+                            opacity: 0;
+                        }
+                        &.line3 {
+                            @include transform(rotate(45deg) translate(-5px, -5px));
+                            background-color: $info;
+                        }
+                    }
+                }
+                span{
+                    width: 25px;
+                    height: 3px;
+                    margin: 4px 0px;
+                    display: block;
+                    background-color: #000;
+                    @include border-radius(3px);
+                    @include transition(0.3s, ease-in-out);
+                }
             }
             ul {
                 @include flexbox();
@@ -223,6 +264,11 @@
     .navbar-side-menu {
         text-align: left;
         padding: 20px 0;
+        @include transition(0.3s, ease-in-out);
+        @include transform(translateX(105%) !important);
+        &.is-visible{
+            @include transform(translateX(0%) !important);
+        }
         li {
             a {
                 text-decoration: none !important;

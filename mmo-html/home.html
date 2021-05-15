@@ -15,7 +15,7 @@
 	</head>
 
 	<body>
-		<header class="main-header">
+		<header class="main-header z-depth-1">
 			<nav>
 				<div class="nav-wrapper">
 					<a href="home.html" class="brand-logo logo-block">
@@ -52,8 +52,10 @@
 								</a>
 							</li>
 							<li>
-								<a href="#!" data-target="sidenav-2" class="sidenav-trigger menu-icon"> <i
-										class="material-icons">menu</i>
+								<a href="#!" data-target="sidenav-2" class="sidenav-trigger menu-icon"> 
+									<span class="line1"></span>
+									<span class="line2"></span>
+									<span class="line3"></span> 
 								</a>
 							</li>
 						</ul>
@@ -110,17 +112,17 @@
 					</li>
 				</ul>
 				<ul class="sidenav navbar-side-menu" id="sidenav-2">
-					<li> <a href="#!"><i class="icon-profile"></i>Profile</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-profile"></i>Profile</a>
 					</li>
-					<li> <a href="#!"><i class="icon-matching-criteria"></i>Matching criteria</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-matching-criteria"></i>Matching criteria</a>
 					</li>
-					<li> <a href="#!"><i class="icon-account-settings"></i>Account settings</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-account-settings"></i>Account settings</a>
 					</li>
-					<li> <a href="#!"><i class="icon-contact"></i>Contact us</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-contact"></i>Contact us</a>
 					</li>
-					<li> <a href="#!"><i class="icon-success-stories"></i>Success stories</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-success-stories"></i>Success stories</a>
 					</li>
-					<li> <a href="#!"><i class="icon-logout"></i>Logout</a>
+					<li> <a href="#!" class="waves-effect"><i class="icon-logout"></i>Logout</a>
 					</li>
 				</ul>
 			</div>
@@ -131,427 +133,445 @@
 					class="material-icons close-icon" id="alert_close" aria-hidden="true">close</i>
 			</div>
 			<div class="container-fluid">
-				<div class="filter-job row">
-					<div class="col s12 m4 l2 filter-sidebar hide-on-med-and-down">
-						<h1 class="title-welcome">Welcome back, Elisa</h1>
-						<div class="filter-box">
-							<div class="filter-body">
-								<div class="filter-content">
-									<h2 class="info">Daily alerts</h2>
-									<div class="switch filter-switch">
-										<label>
-											<input type="checkbox"> <span class="lever"></span>
-										</label>
-									</div>
-								</div>
-								<div class="filter-content">
-									<h2 class="info">Weekly newsletter</h2>
-									<div class="switch filter-switch">
-										<label>
-											<input type="checkbox"> <span class="lever"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="filter-box">
-							<div class="filter-body">
-								<div class="edit-input"> <span class="filter-dec"> Employers can view an anonymized
-										version of your profile</span> <span class="icon tooltipped"
-										data-toggle="tooltip" title="" data-position="top" data-tooltip="Edit"> <i
-											class="icon-pencil"></i></span>
-								</div>
-							</div>
-						</div>
-						<div class="profile-progress">
-							<div class="profile-progress-title">80% of profile and preferences updated</div>
-							<div class="progress">
-								<div class="determinate" style="width: 80%"></div>
-							</div>
-						</div>
-						<div class="filter-overflow-scroll scrollbar">
-							<div class="filter-box border-0">
-								<div class="filter-body">
-									<div class="edit-input"> <span class="filter-dec"> <strong>Product manager at
-												Movemeon</strong><br />5 years of expereince <br />London, UK </span>
-										<span class="icon tooltipped mt-4" data-toggle="tooltip" title=""
-											data-position="top" data-tooltip="Edit"> <i class="icon-pencil"></i></span>
-									</div> <small class="small-info">Last profile update: 20th April 2020</small>
-									<h3 class="edit-input mt-4"> Preferences <span class="icon tooltipped"
-											data-toggle="tooltip" title="" data-position="top" data-tooltip="Edit"> <i
-												class="icon-pencil"></i></h3>
-								</div> <small class="small-info">Last preferences update: 20th April 2020</small>
-								<p class="mb-0">Actively looking for a job</p>
-							</div>
-							<div class="filter-box border-0">
-								<h4>Job type</h4>
-								<div class="filter-body"> <a href="#!" class="filter-link">Permanent</a>
-								</div>
-							</div>
-							<div class="filter-box border-0">
-								<h4>Location</h4>
-								<div class="filter-body"> <a href="#!" class="filter-link">London, UK - I have permanent
-										working eligibility</a> <a href="#!" class="filter-link">France - I have
-										sponsorship but will need it transfered</a>
-								</div>
-							</div>
-							<div class="filter-box border-0">
-								<h4>Total compensation</h4>
-								<div class="filter-body"> <a href="#!" class="filter-link">Minimum: £30K</a> <a
-										href="#!" class="filter-link">Minimum: £50K</a>
-								</div>
-							</div>
-							<div class="site-more-btn"> <a href="#!">View all</a>
-							</div>
-						</div>
-					</div>
-					<div class="filter-data-block col s12 l10">
-						<div class="main-description-block">
-							<div class="filter-side-block hide-on-large-only">
-								<h1 class="title user-name">Welcome back, Elisa</h1>
+				<div class="filter-job">
+					<div class="row">
+						<div class="col s12 m4 l2 hide-on-med-and-down">
+							<div class="filter-sidebar">
+								<h1 class="title-welcome">Welcome back, Elisa</h1>
 								<div class="filter-box">
-									<div class="profile-progress">
-										<div class="profile-progress-title">80% of profile and preferences updated</div>
-										<div class="progress">
-											<div class="determinate" style="width: 80%"></div>
+									<div class="filter-body">
+										<div class="filter-content">
+											<h2 class="info">Daily alerts</h2>
+											<div class="switch filter-switch">
+												<label>
+													<input type="checkbox"> <span class="lever"></span>
+												</label>
+											</div>
 										</div>
-										<div class="profile-progress-info">Last preferences update: 20th April 2020
+										<div class="filter-content">
+											<h2 class="info">Weekly newsletter</h2>
+											<div class="switch filter-switch">
+												<label>
+													<input type="checkbox"> <span class="lever"></span>
+												</label>
+											</div>
 										</div>
 									</div>
-									<div class="site-more-btn"> <a href="#!">Update</a>
+								</div>
+								<div class="filter-box">
+									<div class="filter-body">
+										<div class="edit-input"> <span class="filter-dec"> Employers can view an
+												anonymized
+												version of your profile</span> <span class="icon tooltipped"
+												data-toggle="tooltip" title="" data-position="top" data-tooltip="Edit">
+												<i class="icon-pencil"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="profile-progress">
+									<div class="profile-progress-title">80% of profile and preferences updated</div>
+									<div class="progress">
+										<div class="determinate" style="width: 80%"></div>
+									</div>
+								</div>
+								<div class="filter-overflow-scroll scrollbar">
+									<div class="filter-box border-0">
+										<div class="filter-body">
+											<div class="edit-input"> <span class="filter-dec"> <strong>Product manager
+														at
+														Movemeon</strong><br />5 years of expereince <br />London, UK
+												</span>
+												<span class="icon tooltipped mt-4" data-toggle="tooltip" title=""
+													data-position="top" data-tooltip="Edit"> <i
+														class="icon-pencil"></i></span>
+											</div> <small class="small-info">Last profile update: 20th April
+												2020</small>
+											<h3 class="edit-input mt-4"> Preferences <span class="icon tooltipped"
+													data-toggle="tooltip" title="" data-position="top"
+													data-tooltip="Edit">
+													<i class="icon-pencil"></i></h3>
+										</div> <small class="small-info">Last preferences update: 20th April
+											2020</small>
+										<p class="mb-0">Actively looking for a job</p>
+									</div>
+									<div class="filter-box border-0">
+										<h4>Job type</h4>
+										<div class="filter-body"> <a href="#!" class="filter-link">Permanent</a>
+										</div>
+									</div>
+									<div class="filter-box border-0">
+										<h4>Location</h4>
+										<div class="filter-body"> <a href="#!" class="filter-link">London, UK - I have
+												permanent
+												working eligibility</a> <a href="#!" class="filter-link">France - I have
+												sponsorship but will need it transfered</a>
+										</div>
+									</div>
+									<div class="filter-box border-0">
+										<h4>Total compensation</h4>
+										<div class="filter-body"> <a href="#!" class="filter-link">Minimum: £30K</a> <a
+												href="#!" class="filter-link">Minimum: £50K</a>
+										</div>
+									</div>
+									<div class="site-more-btn"> <a href="#!">View all</a>
 									</div>
 								</div>
 							</div>
-							<div class="job-slider-block bg-light">
-								<div class="main-title">
-									<h2><i class="material-icons">star</i>Invited to interview from employers</h2>
+						</div>
+						<div class="filter-data-block col s12 l10">
+							<div class="main-description-block">
+								<div class="filter-side-block hide-on-large-only">
+									<h1 class="title user-name">Welcome back, Elisa</h1>
+									<div class="filter-box">
+										<div class="profile-progress">
+											<div class="profile-progress-title">80% of profile and preferences updated
+											</div>
+											<div class="progress">
+												<div class="determinate" style="width: 80%"></div>
+											</div>
+											<div class="profile-progress-info">Last preferences update: 20th April 2020
+											</div>
+										</div>
+										<div class="site-more-btn"> <a href="#!">Update</a>
+										</div>
+									</div>
 								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-slider-block bg-light">
+									<div class="main-title">
+										<h2><i class="material-icons">star</i>Invited to interview from employers</h2>
+									</div>
+									<div class="job-slider">
+										<div class="slider invited-slider">
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="material-icons">favorite</i>Saved jobs</h2>
-									<p>Don't forget to apply to your saved jobs before they expire</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-slider-block">
+									<div class="main-title">
+										<h2 class="text-secondary"><i class="material-icons">favorite</i>Saved jobs</h2>
+										<p>Don't forget to apply to your saved jobs before they expire</p>
+									</div>
+									<div class="job-slider">
+										<div class="slider invited-slider">
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle"><i class="material-icons">favorite_border</i></div></span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
+									<div class="site-more-btn"> <a href="#!">View all saved jobs (3)</a>
+									</div>
 								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (3)</a>
-								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="material-icons">search</i>Invited to apply by
-										the movemeon team<i class="icon-info tooltipped" data-toggle="tooltip" title=""
-											data-position="top" data-tooltip="Info"></i></h2>
-									<p>Jobs manually selected for you by our team</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-slider-block">
+									<div class="main-title">
+										<h2 class="text-secondary"><i class="material-icons">search</i>Invited to apply
+											by
+											the movemeon team<i class="icon-info tooltipped" data-toggle="tooltip"
+												title="" data-position="top" data-tooltip="Info"></i></h2>
+										<p>Jobs manually selected for you by our team</p>
+									</div>
+									<div class="job-slider">
+										<div class="slider invited-slider">
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
+									<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
+									</div>
 								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
-								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><i class="icon-square-check"></i>100% match<i
-											class="icon-info tooltipped" data-toggle="tooltip" title=""
-											data-position="top" data-tooltip="Info"></i></h2>
-									<p>Jobs that match your profile and preferences</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-slider-block">
+									<div class="main-title">
+										<h2 class="text-secondary"><i class="icon-square-check"></i>100% match<i
+												class="icon-info tooltipped" data-toggle="tooltip" title=""
+												data-position="top" data-tooltip="Info"></i></h2>
+										<p>Jobs that match your profile and preferences</p>
+									</div>
+									<div class="job-slider">
+										<div class="slider invited-slider">
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
+									<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
+									</div>
 								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (20)</a>
-								</div>
-							</div>
-							<div class="job-slider-block">
-								<div class="main-title">
-									<h2 class="text-secondary"><span class="icon-label">New</span>New jobs you haven’t
-										seen yet</h2>
-									<p>New jobs you haven’t seen yet</p>
-								</div>
-								<div class="job-slider">
-									<div class="slider invited-slider">
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+								<div class="job-slider-block">
+									<div class="main-title">
+										<h2 class="text-secondary"><span class="icon-label">New</span>New jobs you
+											haven’t
+											seen yet</h2>
+										<p>New jobs you haven’t seen yet</p>
+									</div>
+									<div class="job-slider">
+										<div class="slider invited-slider">
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
-										</div>
-										<div class="slider-items">
-											<div class="slider-item">
-												<div class="slider-title"> <span class="match-job">100% Match</span>
-													<span class="job-ago-time">12 hours ago <i
-															class="material-icons">favorite_border</i> </span>
+											<div class="slider-items">
+												<div class="slider-item">
+													<div class="slider-title"> <span class="match-job">100% Match</span>
+														<span class="job-ago-time">12 hours ago <div class="wishlist-toggle">
+															<i class="material-icons">favorite_border</i> </div>
+														</span>
+													</div>
+													<div class="box-info">
+														<div class="box-img">
+															<img src="assets/images/img-75x55.jpg" alt="">
+														</div>
+														<div class="box-desc"> <a href="#!" class="box-title">Movemeon
+																<br /><strong>Strategy Manager</strong></a>
+															<p>Sugar plum fruitcake macaroon sweet roll...</p>
+														</div>
+													</div> <span class="location-dec">London, UK | Sponsorship
+														provided<br>30-40K | Manager</span>
 												</div>
-												<div class="box-info">
-													<div class="box-img">
-														<img src="assets/images/img-75x55.jpg" alt="">
-													</div>
-													<div class="box-desc"> <a href="#!" class="box-title">Movemeon
-															<br /><strong>Strategy Manager</strong></a>
-														<p>Sugar plum fruitcake macaroon sweet roll...</p>
-													</div>
-												</div> <span class="location-dec">London, UK | Sponsorship
-													provided<br>30-40K | Manager</span>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="site-more-btn"> <a href="#!">View all saved jobs (100)</a>
+									<div class="site-more-btn"> <a href="#!">View all saved jobs (100)</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -561,7 +581,7 @@
 			<div class="live-application-block">
 				<div class="container-fluid">
 					<div class="main-title">
-						<h2 class="text-secondary">Live applications <span class="font-weight-normal"> - 4 live
+						<h2>Live applications <span class="font-weight-normal"> - 4 live
 								applications recenly updated</span></h2>
 					</div>
 					<div class="inner-content">
