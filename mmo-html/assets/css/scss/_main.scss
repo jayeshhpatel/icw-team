@@ -26,6 +26,8 @@ body {
     position: relative;
     min-height: 100vh;
     line-height: 1.5;
+    @include flexbox();
+    @include flex-direction(column);
 }
 ul {
     margin: 0;
@@ -199,4 +201,34 @@ body{
     //     margin: auto;
     //     width: 6px;
     // }
+}
+.btn-outline-danger {
+    color: $white;
+    @include border-radius(5px);font-size: 13px;
+    line-height:normal;
+    text-transform: inherit;
+    text-decoration: none !important;
+    height: auto;
+    background-color: #ec656a;
+    cursor: pointer; 
+    padding: 5px 10px;
+    @include transition(0.3s, ease-in-out);
+    &:hover{
+        color: $white;
+        background-color: #c82333;
+    }
+}
+.custom-checkbox{
+    position: relative;
+}
+.dec-text{
+    font-size: 14px !important;
+}
+@media (max-width:1199px) {
+    .filter-sidebar-left{
+        width: 25% !important;
+    }
+    .filter-data-block{
+        width: 75% !important;
+    }
 }

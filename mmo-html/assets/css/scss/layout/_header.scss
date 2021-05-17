@@ -62,11 +62,11 @@
                 }
                 &:hover {
                     @include opacity(0.8);
+                }
+                &.active {
                     &:after{
                         width: 100%;
                     }
-                }
-                &.active {
                     a {
                         color: $info;
                     }
@@ -203,9 +203,10 @@
     }
     .sidenav {
         width: 280px;
-        top: 56px;
-        height: calc(100vh - 56px);
+        top: 54px;
+        height: calc(100vh - 54px);
         box-shadow: none;
+        
         li {
             line-height: normal;
         }
@@ -264,10 +265,14 @@
     .navbar-side-menu {
         text-align: left;
         padding: 20px 0;
+        opacity: 0;
+        visibility: hidden;
         @include transition(0.3s, ease-in-out);
         @include transform(translateX(105%) !important);
         &.is-visible{
             @include transform(translateX(0%) !important);
+            opacity: 1;
+            visibility: visible;
         }
         li {
             a {
