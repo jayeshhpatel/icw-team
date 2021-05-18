@@ -224,11 +224,22 @@ body{
 .dec-text{
     font-size: 14px !important;
 }
-@media (max-width:1199px) {
+
+@media (min-width:993px) and (max-width:1199px) {
     .filter-sidebar-left{
         width: 25% !important;
     }
     .filter-data-block{
         width: 75% !important;
+    }
+}
+.w-100{
+    width: 100% !important;
+}
+.btn-underline {
+    text-decoration: underline;
+    font-weight: 700;
+    &:hover{
+        text-decoration: none;
     }
 }
