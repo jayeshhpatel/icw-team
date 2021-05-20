@@ -6,6 +6,7 @@
     .email-content {
         @include flexbox();
         a {
+            text-decoration: none;
             @include inline-flex;
             @include align-items(center);
             i {
