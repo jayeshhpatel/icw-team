@@ -5,6 +5,7 @@
   MenuIcon.addEventListener('click', function () {
     Menu.classList.toggle('open');
     MenuIcon.classList.toggle('open');
+    document.querySelector('body').classList.toggle('overflow-hidden');
   });
 
 })();
