@@ -56,7 +56,7 @@ p {
     font-size: 18px;
     color: #556281;
     font-weight: 500;
-    max-width: 600px;
+    max-width: 585px;
     @media (max-width: 767px) {
         font-size: 16px;
     }
@@ -91,8 +91,8 @@ img {
 .d-none {
     display: none !important;
 }
-.highlighter-green {
-    background: url(../images/highlighter-green.png) no-repeat center;
+.small-highlighter-green {
+    background: url(../images/small-highlighter-green.png) no-repeat center;
     background-size: 100% 100%;
 }
 
@@ -113,6 +113,11 @@ img {
 @media (max-width: 991px) {
     .container {
         padding: 0 24px;
+    }
+}
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block !important;
     }
 }
 @media (max-width: 767px) {

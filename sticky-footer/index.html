@@ -11,39 +11,46 @@
                 height: 1500px;
                 background-color: #eee;
             }
-            .issticky-note.sticky-element {
+
+            .sticky-note.sticky-element {
                 position: sticky;
             }
-            .issticky-note {
+
+            .sticky-note {
                 position: static;
                 bottom: 0;
             }
+
             .main-footer {
                 height: 300px;
                 background-color: green;
             }
-            .sticky-element .snote-content{
+
+            .sticky-element .snote-content {
                 display: none;
             }
-            .snote-content{
-                display: block;
+
+            .snote-content {
+                display: none;
                 -webkit-transition: all .4s ease-in-out;
                 -moz-transition: all .4s ease-in-out;
                 -o-transition: all .4s ease-in-out;
                 transition: all .4s ease-in-out;
             }
-            .is-noteshow .snote-content{
-                display: none;
+
+            .is-noteshow .snote-content {
+                display: block;
             }
+
         </style>
     </head>
 
     <body>
         <div class="main-wrappper"></div>
-        <section class="sticky-note issticky-note" id="footer-sticky">
+        <section class="sticky-note" id="footer-sticky">
             <div class="snote-title">
                 <div class="container">
-                    <h2 class="stickyNote-action">Important safety information <span>+</span></h2>
+                    <h2 class="stickynote-action">Important safety information <span>+</span></h2>
                 </div>
             </div>
             <div class="snote-content">
@@ -52,8 +59,10 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised
+                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                        recently
                         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
             </div>
@@ -61,7 +70,7 @@
         <div class="main-footer"> </div>
         <script>
 
-                (function (d) {
+            (function (d) {
                 "use strict";
                 //lets add the observer element dynamically.
                 var sticky = d.createElement("sticky-note");
@@ -74,26 +83,32 @@
 
                 var observer = new IntersectionObserver(
                     function (entries) {
-                    if (entries[0].intersectionRatio === 0) {
-                        d.querySelector("#footer-sticky").classList.add("sticky-element");
-                    } else if (entries[0].intersectionRatio === 1) {
-                        d.querySelector("#footer-sticky").classList.remove("sticky-element");
-                    }
+                        if (entries[0].intersectionRatio === 0) {
+                            d.querySelector("#footer-sticky").classList.add("sticky-element");
+                            // d.querySelector('.sticky-note').classList.remove('is-notescroll');
+
+
+                        } else if (entries[0].intersectionRatio === 1) {
+                            d.querySelector("#footer-sticky").classList.remove("sticky-element");
+                            // d.querySelector('.sticky-note').classList.toggle('is-notescroll');
+                        }
                     },
                     { threshold: [0, 1] }
                 );
 
                 observer.observe(d.querySelector(".sticky-notetop"));
-                })(document);
+            })(document);
 
-                if(document.querySelector(".stickyNote-action")){
-                document.querySelector('.stickyNote-action').addEventListener('click', togglestickyNote );
+            if (document.querySelector(".stickynote-action")) {
+                document.querySelector('.stickynote-action').addEventListener('click', togglestickyNote);
+
                 // stickyNote();
             }
-            function togglestickyNote(){
+            function togglestickyNote() {
                 this.classList.toggle('toggle');
-                document.querySelector('.issticky-note').classList.toggle('is-noteshow');
-            
+                document.querySelector('.sticky-note').classList.toggle('is-noteshow');
+
+
             }
 
         </script>
