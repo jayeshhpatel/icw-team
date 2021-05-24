@@ -1189,6 +1189,8 @@
       background-color: #ffffff; }
     .main-header.open {
       background-color: #7AA036; }
+      .main-header.open .logo img {
+        filter: brightness(20); }
     .main-header .header-inner-block {
       padding: 10px 0;
       min-height: 60px; }

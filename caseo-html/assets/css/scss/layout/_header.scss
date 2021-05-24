@@ -162,6 +162,11 @@
         }
         &.open{
             background-color: $green;
+            .logo{
+                img{
+                    filter: brightness(20);
+                }
+            }
         }
         .header-inner-block {
             padding: 10px 0;
