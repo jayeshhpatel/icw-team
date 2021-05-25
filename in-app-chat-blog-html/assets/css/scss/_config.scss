@@ -5,10 +5,11 @@ $bodyfont: "Poppins", sans-serif;
 $bodyfontsize: calc(16px + (18 - 16) * ((100vw - 400px) / (1920 - 400)));
 $bodyfontcolor: #000000;
 $bodybg: #ffffff;
-$darkBlack: #273739;
+$darkBlack: #222222;
 $white: #ffffff;
 $black: #000000;
 $purple: #5351fb;
+$orange: #f03a06;
 $gradient: linear-gradient(to right, #09b04c 0%, #1bd464 100%);
 
 /* Mixins */

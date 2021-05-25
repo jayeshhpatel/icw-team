@@ -49,6 +49,20 @@ ul {
     margin: 0;
     padding: 0;
 }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
 a {
     color: $darkBlack;
     text-decoration: none;
@@ -63,15 +77,19 @@ a {
 }
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     font-size: 16px;
+    color: $darkBlack;
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
 }
 img {
     max-width: 100%;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1340px;
 }
 .navbar-toggler:focus {
     box-shadow: none !important;
@@ -86,10 +104,11 @@ img {
     background-color: $purple;
     min-width: 180px;
     position: relative;
+    cursor: pointer;
+    white-space: nowrap;
     @include inline-flex;
     @include justify-content(center);
     @include align-items(center);
-    cursor: pointer;
     @include transition(0.3s, ease-in-out);
     &:hover {
         color: $white;
@@ -103,6 +122,8 @@ img {
     }
     @media (max-width: 767px) {
         height: 40px;
+        font-size: 14px;
+        padding: 5px 10px;
     }
 }
 .site-btn1 {
@@ -117,6 +138,7 @@ img {
     position: relative;
     border: 1px solid #dddddd;
     cursor: pointer;
+    white-space: nowrap;
     @include inline-flex;
     @include justify-content(center);
     @include align-items(center);
@@ -134,31 +156,50 @@ img {
     }
     @media (max-width: 767px) {
         height: 40px;
+        padding: 5px 10px;
+        font-size: 14px;
     }
 }
 section {
     position: relative;
-    padding: 60px 0;
+    padding: 100px 0;
     @media (max-width: 991px) {
-        padding: 30px 0;
+        padding: 40px 0;
     }
 }
 .main-title {
-    text-align: center;
-    margin-bottom: 60px;
+    span {
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $purple;
+        margin-bottom: 25px;
+        display: inline-block;
+        font-weight: 600;
+        padding-right: 100px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            background-color: $purple;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
     h2 {
-        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 48px;
+        margin-bottom: 25px;
     }
     p {
-        font-weight: 300;
-        max-width: 580px;
-        margin: auto;
-    }
-    @media (max-width: 991px) {
-        margin-bottom: 50px;
-    }
-    @media (max-width: 767px) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        max-width: 600px;
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 .main-header {
@@ -167,10 +208,10 @@ section {
     left: 0;
     right: 0;
     @include transitionValue(background, 0.5s, ease-in-out);
-    background-color: $white;
     z-index: 10;
     &.fixed-header {
         position: fixed;
+        background-color: $white;
         @include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.15));
         .navbar {
             padding: 15px 0;
@@ -184,7 +225,7 @@ section {
     .navbar {
         @include transitionValue(padding, 0.5s, ease-in-out);
         @include justify-content(space-between);
-        padding: 15px 0;
+        padding: 50px 0 0;
         .navbar-brand {
             padding: 0;
             margin-right: 40px;
@@ -201,26 +242,29 @@ section {
             }
         }
         ul {
-            li {
+            > li {
                 padding: 15px 25px;
                 position: relative;
                 @include align-items(center);
                 @include inline-flex;
                 &:hover,
                 &.active {
-                    a {
+                    > a {
                         color: $purple;
                     }
                 }
                 a {
                     position: relative;
-                    padding: 0 !important;
+                    padding: 0;
                     font-size: 16px;
                     @include align-items(center);
                     @include flexbox();
                     @include transition(0.3s, ease-in-out);
                     color: $black;
                     text-transform: capitalize;
+                    strong {
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -265,26 +309,19 @@ section {
             padding: 8px 0;
             li {
                 padding: 0 !important;
-            }
-            .megamenu-dropdown {
-                .megamenu-list {
-                    position: relative;
-                    li {
-                        width: 100%;
-                        a {
-                            padding: 8px 15px !important;
-                            background: 0 0;
-                            color: #666666;
-                            font-size: 16px;
-                            font-weight: 500;
-                            line-height: 24px;
-                            white-space: nowrap;
-                            transition: background-color 0.2s linear, color 0.2s linear;
-                            &:hover {
-                                background-color: #f2f4f9;
-                                color: $black;
-                            }
-                        }
+                display: block;
+                a {
+                    padding: 8px 15px;
+                    background: 0 0;
+                    color: #666666;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    white-space: nowrap;
+                    transition: background-color 0.2s linear, color 0.2s linear;
+                    &:hover {
+                        background-color: #f2f4f9;
+                        color: $black;
                     }
                 }
             }
@@ -293,6 +330,7 @@ section {
 
     @media (max-width: 1199px) {
         .navbar {
+            padding-top: 30px;
             .navbar-brand {
                 margin-right: 15px;
             }
@@ -409,15 +447,9 @@ section {
             .dropdown-menu-list {
                 padding: 0;
                 background-color: transparent;
-                .megamenu-dropdown {
-                    padding: 5px 0 0;
-                    .megamenu-list {
-                        li {
-                            a {
-                                font-size: 14px;
-                                @include inline-flex;
-                            }
-                        }
+                li {
+                    a {
+                        font-size: 14px;
                     }
                 }
             }
@@ -425,6 +457,11 @@ section {
     }
     @media (max-width: 575px) {
         .navbar {
+            .navbar-brand {
+                img {
+                    height: 30px;
+                }
+            }
             .menu-list {
                 padding-top: 70px;
             }
@@ -441,4 +478,279 @@ section {
     @include opacity(0);
     visibility: hidden;
     z-index: 9;
+}
+.main-banner {
+    padding: 0 0 60px;
+    overflow: hidden;
+    .banner-inner-content {
+        padding: 105px 0 60px;
+        min-height: 100vh;
+        background: url(../images/banner-bg.png) no-repeat 97% 75%;
+        @include flexbox();
+        @include align-items(center);
+        .banner-content {
+            max-width: 460px;
+            h1 {
+                font-weight: 700;
+                color: $black;
+                font-size: 60px;
+                margin-bottom: 20px;
+                span {
+                    color: $orange;
+                }
+            }
+            p {
+                margin-bottom: 40px;
+            }
+            .banner-btn {
+                @include inline-flex;
+                .site-btn1 {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .banner-bottom-text {
+        text-align: center;
+        padding-top: 80px;
+        span {
+            font-size: 22px;
+            color: $purple;
+            display: inline-block;
+            font-weight: 500;
+            position: relative;
+            padding: 0 25px;
+            &:after,
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 3px;
+                height: 30px;
+                @include border-radius(5px);
+                background-color: $purple;
+            }
+            &:after {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        .banner-inner-content {
+            background-size: 55%;
+            padding-bottom: 20px;
+            min-height: 70vh;
+            .banner-content {
+                h1 {
+                    font-size: 48px;
+                }
+            }
+        }
+        .banner-bottom-text {
+            padding-top: 30px;
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        .banner-inner-content {
+            background-size: 50%;
+            .banner-content {
+                max-width: 370px;
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .banner-inner-content {
+            min-height: auto;
+            padding-top: 100px;
+            background: transparent;
+            .banner-content {
+                margin-bottom: 50px;
+                max-width: 100%;
+                p {
+                    margin-bottom: 25px;
+                }
+                .banner-btn {
+                    .site-btn1 {
+                        min-width: 125px;
+                    }
+                }
+            }
+        }
+    }
+}
+.animation-shape {
+    span {
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+    .shape1 {
+        width: 250px;
+        height: 250px;
+        top: 50px;
+        left: -9.5%;
+        @include border-radius(50%);
+        background-color: rgba($orange, 0.05);
+    }
+    .shape2 {
+        width: 50px;
+        height: 50px;
+        right: 3%;
+        top: 50px;
+        background-image: url(../images/animation/shape1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: animationFramesOne 15s infinite linear;
+    }
+    .shape3 {
+        width: 95px;
+        height: 95px;
+        top: 18%;
+        left: 35%;
+        background-image: url(../images/animation/shape2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-animation: vibrate-2 15s steps(50, start) infinite both;
+        animation: vibrate-2 15s steps(50, start) infinite both;
+    }
+    .shape4 {
+        width: 28px;
+        height: 28px;
+        top: 32%;
+        left: 2%;
+        background-image: url(../images/animation/shape3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: animationFramesOne 15s infinite linear;
+    }
+    .shape5 {
+        width: 54px;
+        height: 54px;
+        bottom: 15%;
+        left: 5%;
+        background-image: url(../images/animation/shape4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-animation: vibrate-2 15s steps(50, start) infinite both;
+        animation: vibrate-2 15s steps(50, start) infinite both;
+    }
+}
+@keyframes animationFramesOne {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    20% {
+        -webkit-transform: translate(73px, -1px) rotate(36deg);
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+    40% {
+        -webkit-transform: translate(141px, 72px) rotate(72deg);
+        transform: translate(141px, 72px) rotate(72deg);
+    }
+    60% {
+        -webkit-transform: translate(83px, 122px) rotate(108deg);
+        transform: translate(83px, 122px) rotate(108deg);
+    }
+    80% {
+        -webkit-transform: translate(-40px, 72px) rotate(144deg);
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+@keyframes vibrate-2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(50px, -50px);
+        transform: translate(50px, -50px);
+    }
+    40% {
+        -webkit-transform: translate(30px, -30px);
+        transform: translate(30px, -30px);
+    }
+    60% {
+        -webkit-transform: translate(80px, -80px);
+        transform: translate(80px, -80px);
+    }
+    80% {
+        -webkit-transform: translate(-30px, -30px);
+        transform: translate(-30px, -30px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+.chat-banner {
+    background-color: #f8f8fc;
+    .chat-banner-block {
+        padding-bottom: 100px;
+        .chat-banner-img {
+            text-align: right;
+        }
+    }
+    .chat-card-block {
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+        .card-img-text {
+            @include flexbox();
+            @include align-items(center);
+            margin-bottom: 30px;
+            .card-image {
+                margin-right: 20px;
+                width: 80px;
+                height: 80px;
+            }
+            .card-title {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        .chat-card-inner {
+            margin-bottom: 70px;
+            .row {
+                @include justify-content(center);
+            }
+            .card {
+                @include border-radius(15px);
+                border: 2px solid transparent;
+                @include transition(0.3s, ease-in-out);
+                &:hover {
+                    border: 2px solid $orange;
+                }
+                .card-body {
+                    padding: 25px 25px 30px;
+                }
+            }
+        }
+    }
+    .chat-bottom-dec {
+        h4 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            span {
+                color: $orange;
+            }
+        }
+    }
 }
