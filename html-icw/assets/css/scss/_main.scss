@@ -267,6 +267,7 @@ section {
         }
     }
     .create-destroy {
+        padding-bottom: 20px;
         @include opacity(0);
         @include transform(scale(0.9));
         -webkit-animation: createDestroy 1s forwards;
