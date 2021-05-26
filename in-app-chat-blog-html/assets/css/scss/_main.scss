@@ -214,7 +214,7 @@ section {
         background-color: $white;
         @include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.15));
         .navbar {
-            padding: 15px 0;
+            padding: 10px 0;
             .navbar-brand {
                 img {
                     @include transform(scale(0.9));
@@ -711,35 +711,36 @@ section {
             font-weight: 600;
             margin-bottom: 50px;
         }
-        .card-img-text {
-            @include flexbox();
-            @include align-items(center);
-            margin-bottom: 30px;
-            .card-image {
-                margin-right: 20px;
-                width: 80px;
-                height: 80px;
-            }
-            .card-title {
-                margin: 0;
-                font-size: 20px;
-                font-weight: 600;
-            }
+    }
+    .chat-card-inner {
+        margin-bottom: 70px;
+        .row {
+            @include justify-content(center);
         }
-        .chat-card-inner {
-            margin-bottom: 70px;
-            .row {
-                @include justify-content(center);
+        .card {
+            @include border-radius(15px);
+            border: 2px solid transparent;
+            @include transition(0.3s, ease-in-out);
+            height: 100%;
+            &:hover {
+                border: 2px solid $orange;
             }
-            .card {
-                @include border-radius(15px);
-                border: 2px solid transparent;
-                @include transition(0.3s, ease-in-out);
-                &:hover {
-                    border: 2px solid $orange;
+            .card-body {
+                padding: 25px 25px 30px;
+            }
+            .card-img-text {
+                @include flexbox();
+                @include align-items(center);
+                margin-bottom: 30px;
+                .card-image {
+                    margin-right: 20px;
+                    width: 80px;
+                    height: 80px;
                 }
-                .card-body {
-                    padding: 25px 25px 30px;
+                .card-title {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 600;
                 }
             }
         }
@@ -750,6 +751,23 @@ section {
             margin-bottom: 40px;
             span {
                 color: $orange;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        .chat-card-inner {
+            .card {
+                .card-body {
+                    padding: 20px;
+                }
+                .card-img-text {
+                    .card-image {
+                        margin-right: 15px;
+                    }
+                    .card-title {
+                        font-size: 18px;
+                    }
+                }
             }
         }
     }
