@@ -2,7 +2,7 @@
 $bodyfont: "Colfax", sans-serif;
 $bodyfontsize: calc(16px + (18 - 16) * ((100vw - 400px) / (1920 - 400)));
 $bodyfontcolor: #000000;
-$bodybg: #ffffff;
+$bodybg: #f5f5f5;
 $darkBlack: #222222;
 $white: #ffffff;
 $black: #000000;
@@ -13,10 +13,10 @@ $bg-dark: #191919;
 /* Fonts */
 
 // Colfax
-$font-colfax: "Colfax", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-colfax-medium: "Colfax-Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-colfax-bold: "Colfax-Bold", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-colfax-black: "Colfax-Black", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-colfax: "Colfax", sans-serif;
+$font-colfax-medium: "Colfax-Medium", sans-serif;
+$font-colfax-bold: "Colfax-Bold", sans-serif;
+$font-colfax-black: "Colfax-Black", sans-serif;
 
 // Elena
 $font-elena: "Elena", "georgia", serif;
@@ -24,19 +24,23 @@ $font-elena-bold: "Elena-Bold", "georgia", serif;
 
 @font-face {
   font-family: "Colfax";
-  src: url(../fonts/colfax/bold.woff);
+  src: url(../fonts/colfax/regular.woff);
+  font-weight: normal;
 }
 @font-face {
   font-family: "Colfax-Medium";
   src: url(../fonts/colfax/medium.woff);
+  font-weight: 500;
 }
 @font-face {
   font-family: "Colfax-Bold";
-  src: url(../fonts/colfax/regular.woff);
+  src: url(../fonts/colfax/bold.woff);
+  font-weight: 700;
 }
 @font-face {
   font-family: "Elena";
   src: url(../fonts/elena/regular.woff);
+  font-weight: normal;
 }
 
 /* Mixins */

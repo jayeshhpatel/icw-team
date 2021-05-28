@@ -1,0 +1,80 @@
+.main-footer {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #fff;
+    .footer-inner {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        .copyright-text {
+            font-style: normal;
+            font-weight: 400;
+            font-family: $font-elena;
+            font-size: 16px;
+            line-height: normal;
+        }
+        .social-links {
+            @include flexbox();
+            li {
+                &:not(:last-of-type) {
+                    margin-right: 30px;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    color: $black;
+                    font-family: $font-elena;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: normal;
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                            margin-left: -50%;
+                            @include opacity(0.8);
+                            @include transform(translateY(0));
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        pointer-events: none;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        margin-left: -25%;
+                        width: 50%;
+                        height: 1px;
+                        background-color: $black;
+                        @include opacity(0);
+                        @include transform(translateY(3px));
+                        @include transition(0.15s, ease-in-out);
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 40px 30px;
+        .footer-inner {
+            @include flex-wrap(wrap);
+            .copyright-text {
+                margin-bottom: 20px;
+                line-height: 24px;
+                width: 100%;
+            }
+            .social-links {
+                width: 100%;
+                display: block;
+                li {
+                    &:not(:last-of-type) {
+                        margin-bottom: 20px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
