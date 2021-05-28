@@ -1181,7 +1181,7 @@ section {
         width: 250px;
         height: 2px;
         background-color: $white;
-        @include transform(rotate(-45deg) scale(0));
+        @include transform(rotate(-45deg) scale(1));
         -webkit-transform-origin: right top;
         -ms-transform-origin: right top;
         transform-origin: right top;
@@ -1212,7 +1212,7 @@ section {
             width: 360px;
             height: 2px;
             background-color: $white;
-            @include transform(rotate(45deg) scale(0));
+            @include transform(rotate(45deg) scale(1));
         }
         h1 {
             font-style: normal;
@@ -1275,6 +1275,9 @@ section {
         min-height: 80vh;
         .content-wrapper {
             padding: 0 50px;
+            &::before {
+                display: none;
+            }
             h1 {
                 font-size: 28px;
                 line-height: 36px;
