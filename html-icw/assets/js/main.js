@@ -2,7 +2,7 @@
 /* MAIN
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function () {
-
+  new WOW().init();
 
   $('.menu-btn').on('click', function (e) {
     $('body').toggleClass('nav-menu-open');
@@ -18,25 +18,27 @@ $(document).ready(function () {
       }
     });
   }
-
-  /* scroll page to top */
-  if ($('.scroll-to-top').length) {
-    var scrollTop = $(".scroll-to-top");
-    $(window).scroll(function () {
-      var topPos = $(this).scrollTop();
-      if (topPos > 300) {
-        $(scrollTop).addClass("is-visible");
-      } else {
-        $(scrollTop).removeClass("is-visible");
-      }
-
-    });
-    //Click event to scroll to top
-    $(scrollTop).click(function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 300);
-      return false;
-    });
-  }
+  $('.image-slider').slick({
+    dots: true,
+    infinite: false,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 });
