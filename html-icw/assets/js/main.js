@@ -2,7 +2,6 @@
 /* MAIN
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function () {
-  new WOW().init();
 
   $('.menu-btn').on('click', function (e) {
     $('body').toggleClass('nav-menu-open');
@@ -41,4 +40,8 @@ $(document).ready(function () {
       },
     ],
   });
+
+  setTimeout(function () {
+    $(".reveal").addClass("reveal-show");
+  }, 200);
 });
