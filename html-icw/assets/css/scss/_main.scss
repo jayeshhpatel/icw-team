@@ -1735,6 +1735,7 @@ section {
         padding-bottom: 50px;
         .slider-container {
             padding-bottom: 0;
+
             .slider-item {
                 margin-right: 25px;
             }
@@ -2579,6 +2580,32 @@ section {
         .default-hero-block {
             height: calc(80vh + 376px);
             min-height: 990px;
+        }
+    }
+}
+
+.splide__pagination {
+    position: relative;
+    z-index: 1;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    padding: 0;
+    width: 100%;
+    padding-top: 28px;
+    li {
+        @include inline-flex;
+    }
+    .splide__pagination__page {
+        width: 10px;
+        height: 10px;
+        margin: 0 8px;
+        border: 1px solid #777;
+        @include opacity(0.25);
+        @include transform(scale(1) !important);
+        background-color: #333333;
+        &.is-active {
+            @include opacity(1);
         }
     }
 }
