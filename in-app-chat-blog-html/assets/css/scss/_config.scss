@@ -2,15 +2,14 @@
 
 /* Variables */
 $bodyfont: "Poppins", sans-serif;
-$bodyfontsize: calc(16px + (18 - 16) * ((100vw - 400px) / (1920 - 400)));
-$bodyfontcolor: #000000;
+$bodyfontsize: 16px;
+$bodyfontcolor: #0f0f1d;
 $bodybg: #ffffff;
 $darkBlack: #222222;
 $white: #ffffff;
-$black: #000000;
+$black: #0f0f1d;
 $purple: #5351fb;
-$orange: #f03a06;
-$gradient: linear-gradient(to right, #09b04c 0%, #1bd464 100%);
+$orange: #f03a01;
 
 /* Mixins */
 @mixin border-radius($radius) {
