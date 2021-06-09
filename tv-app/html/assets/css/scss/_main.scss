@@ -137,7 +137,6 @@ h6,
 // strong {font-family: $hfont-bold;}
 body.overflow-hidden {
     overflow: hidden !important;
-    padding-right: 18px;
 }
 .overflow-hidden {
     overflow: hidden !important;
@@ -1132,127 +1131,6 @@ body.overflow-hidden {
             background: #a3c6e5;
         }
     }
-    .table-responsive {
-        overflow: hidden;
-        overflow-x: auto;
-        .schedule-table {
-            width: 100%;
-            color: $white;
-            border-spacing: 0px;
-            position: relative;
-            thead {
-                tr {
-                    th {
-                        width: 250px;
-                        border-bottom: 1px solid $white;
-                        border-right: 1px solid $white;
-                        position: relative;
-                        padding: 15px;
-                        text-align: center;
-                        font-size: 20px;
-                        &:first-child {
-                            border-bottom: none;
-                            width: 80px;
-                            &:before {
-                                content: "";
-                                width: 25px;
-                                height: 1px;
-                                background: $white;
-                                position: absolute;
-                                bottom: 0;
-                                right: 0;
-                            }
-                        }
-                    }
-                }
-            }
-            tbody {
-                tr {
-                    th {
-                        position: relative;
-                        width: 80px;
-                        border-right: 1px solid $white;
-                        span {
-                            font-size: 14px;
-                            display: block;
-                            position: absolute;
-                            top: -11px;
-                            left: 0;
-                        }
-                        &:before {
-                            content: "";
-                            width: 25px;
-                            height: 1px;
-                            background: $white;
-                            position: absolute;
-                            bottom: 0;
-                            right: 0;
-                        }
-                    }
-                    td {
-                        border-bottom: 1px solid $white;
-                        border-right: 1px solid $white;
-                        width: 250px;
-                        padding: 10px 15px;
-                        height: 98px;
-                    }
-                }
-            }
-            @media (max-width: 1600px) {
-                thead {
-                    tr {
-                        th {
-                            width: 180px;
-                            &:first-child {
-                                &:before {
-                                    width: 20px;
-                                }
-                            }
-                        }
-                    }
-                }
-                tbody {
-                    tr {
-                        th {
-                            &:before {
-                                width: 20px;
-                            }
-                        }
-                        td {
-                            width: 180px;
-                        }
-                    }
-                }
-            }
-            @media (max-width: 992px) {
-                table-layout: fixed;
-                white-space: nowrap;
-                thead {
-                    tr {
-                        th {
-                            min-width: 200px;
-                            position: sticky;
-                            top: 0;
-                            &:first-child {
-                                min-width: 80px;
-                            }
-                        }
-                    }
-                }
-                tbody {
-                    tr {
-                        th {
-                            min-width: 80px;
-                        }
-                        td {
-                            min-width: 200px;
-                            white-space: nowrap;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 .custom-modal {
@@ -1570,6 +1448,14 @@ body.overflow-hidden {
                     }
                 }
             }
+            .content-header {
+                .title {
+                    strong {
+                        display: block;
+                        margin: 10px 0 0 0;
+                    }
+                }
+            }
         }
     }
     @media (max-width: 500px) {
@@ -1681,5 +1567,10 @@ body.overflow-hidden {
 @media (max-width: 767px) {
     .fc .fc-view-harness {
         height: 500px !important;
+    }
+}
+@media (max-width: 575px) {
+    .fc .fc-button-primary {
+        height: 35px;
     }
 }
