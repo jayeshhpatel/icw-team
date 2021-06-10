@@ -66,7 +66,83 @@
         <main class="inner-content-wrapper play-schedule">           
             <div class="container">
                 <div class="play-schedule-block">
-                    <div id="calendar"></div>
+                    <div id='wrap'>
+                        <div id='external-events'>
+                            <div class="accordion-left-panel">
+                                <div class="accordion-toggle open">
+                                    <div class="accordion-title">Drag-n-Drop Events <span class="fc-icon fc-icon-chevron-right"></span></div>
+                                    <div class="accordion-panel">
+                                        <p class="sub-title">Drag video onto the calendar:</p>
+                                        <div id='external-events-list'>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Teeth_Whitening Special</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Braces Treatment</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>All-On-4</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Teeth-In-A-Day</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Invisalign Special</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Flossing Instructions</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Brushing Instructions</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Porcelain Veneers</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Snap-On-Smile</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Underbite Correction</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Gum Lifting</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Smile Design</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Digital Implants</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>V-Pro 5</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Staff Profiles</div>
+                                            </div>
+                                            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                                                <div class='fc-event-main'>Invisalign Special1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <div class="accordion-title">Time Zones <span class="fc-icon fc-icon-chevron-right"></span></div>
+                                    <div class="accordion-panel" style="display: none;">
+                                        <p class="sub-title"> Select a different time zone: </p>
+                                        <div class="select-dropdown">
+                                            <select id='time-zone-selector'>
+                                                <option value='local'>local</option>
+                                                <option value='UTC' selected>UTC</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='calendar-wrap'>
+                          <div id='calendar'></div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </main>
@@ -202,38 +278,94 @@
         <script>
 
             document.addEventListener('DOMContentLoaded', function () {
+                var initialTimeZone = 'UTC';
+                var timeZoneSelectorEl = document.getElementById('time-zone-selector');
+
+            /* initialize the external events
+                -----------------------------------------------------------------*/
+                
+                var containerEl = document.getElementById('external-events-list');
+                new FullCalendar.Draggable(containerEl, {
+                itemSelector: '.fc-event',
+                eventData: function (eventEl) {
+                    return {
+                    title: eventEl.innerText.trim()
+                    }
+                }
+                });
+
+                /* initialize the calendar
+                -----------------------------------------------------------------*/
+
                 var calendarEl = document.getElementById('calendar');
 
                 var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: initialTimeZone,
                     initialDate: '2021-06-06',
                     initialView: 'timeGridWeek',
                     nowIndicator: true,
                     headerToolbar: {
-                        left: 'prev,next today',
+                        left: 'prev,next timeGridWeek,timeGridDay',
                         center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        right: ''
                     },
                     navLinks: true, // can click day/week names to navigate views
                     editable: true,
                     selectable: true,
                     selectMirror: true,
-                    dayMaxEvents: true, // allow "more" link when too many events
+                    dayMaxEvents: true,
+                    droppable: true, // allow "more" link when too many events
                     eventClick: function (event) {
                         document.getElementById('teeth-whitening').classList.add('is-show');
                     },
+                    events: 'https://fullcalendar.io/demo-events.json',
                     events: [
 
                         {
                             title: 'Teeth Whitening',
                             start: '2021-06-06T03:00:00'
                         },
-
-                        // <div class="bg-label" data-popup="teeth-whitening">Teeth Whitening</div>
-                    ]
+                    ],
+                    eventTimeFormat: { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }
                 });
 
                 calendar.render();
+
+                FullCalendar.requestJson('GET', 'https://fullcalendar.io/demo-timezones.json', {}, function(timeZones) {
+                timeZones.forEach(function(timeZone) {
+                    var optionEl;
+
+                    if (timeZone !== 'UTC') { // UTC is already in the list
+                    optionEl = document.createElement('option');
+                    optionEl.value = timeZone;
+                    optionEl.innerText = timeZone;
+                    timeZoneSelectorEl.appendChild(optionEl);
+                    }
+                });
+                }, function() {
+                // failure
+                });
+
+                // when the timezone selector changes, dynamically change the calendar option
+                timeZoneSelectorEl.addEventListener('change', function() {
+                calendar.setOption('timeZone', this.value);
+                }); 
             });
+
+            
+            
+
+            $(".accordion-toggle .accordion-title").click(function(){
+                if($(this).closest(".accordion-toggle").hasClass("open")) {
+                    $(this).closest(".accordion-toggle").removeClass("open");
+                    $(this).closest(".accordion-toggle").find(".accordion-panel").slideUp();
+                }else{
+                $(".accordion-toggle").removeClass("open");
+                    $(".accordion-toggle").find(".accordion-panel").slideUp();
+                    $(this).closest(".accordion-toggle").addClass("open");
+                    $(this).closest(".accordion-toggle").find(".accordion-panel").slideDown();
+                }
+            })
 
         </script>
     </body>
