@@ -112,7 +112,7 @@ h6, .h6 {
 .font-20 {font-size: 20px !important;}
 
 // strong {font-family: $hfont-bold;}
-body.overflow-hidden { overflow: hidden !important; padding-right: 18px;}
+body.overflow-hidden { overflow: hidden !important;}
 .overflow-hidden { overflow: hidden !important;}
 
 
@@ -961,6 +961,9 @@ body.overflow-hidden { overflow: hidden !important; padding-right: 18px;}
 }
 .fc-event-title {
     font-size: 12px;
+}
+.fc .fc-timegrid-slot {
+    height: 8rem;
 }
 @media (max-width: 991px) {
 
