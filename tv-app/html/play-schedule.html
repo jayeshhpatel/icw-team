@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="Googlebot" content="noindex,nofollow" />
-        <meta name="author" content="www.promovideocreator.com" />
-        <meta name="description" content="TV - Promo Video Creator" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <meta name="Googlebot" content="noindex,nofollow">        
+        <meta name="author" content="www.promovideocreator.com">
+        <meta name="description" content="TV - Promo Video Creator">    
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon.png" sizes="180x180" />
-        <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicons/favicon.ico"> 
 
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/calender.css" />
@@ -18,21 +18,15 @@
         <title>Play Scheduler - Promo Video Creator</title>
         <style></style>
     </head>
-
     <body>
         <!-- HEADER SECTION -->
-        <header class="main-header is-sticky-header">
-            <!-- .is-sticky-header -->
+        <header class="main-header is-sticky-header"> <!-- .is-sticky-header -->
             <div class="container">
                 <nav class="navbar">
                     <div class="bar-icon">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
+                        <div class="line1"></div><div class="line2"></div><div class="line3"></div>
                     </div>
-                    <h1>
-                        <a class="nav-logo" href="index.html"><img src="assets/images/logo-white.svg" alt="TV - Promo Video Creator" /></a>
-                    </h1>
+                    <h1><a class="nav-logo" href="index.html"><img src="assets/images/logo-white.svg" alt="TV - Promo Video Creator" /></a></h1>                   
                     <div class="mainmenu">
                         <ul class="nav">
                             <li><a href="index.html">Play Now</a></li>
@@ -44,9 +38,7 @@
                     </div>
                     <div class="nav-right">
                         <div class="nav-info">
-                            <div class="nav-info-logo">
-                                <a href="#"><img src="assets/images/logo-maloneydental.svg" alt="Maloney Dental" /></a>
-                            </div>
+                            <div class="nav-info-logo"><a href="#"><img src="assets/images/logo-maloneydental.svg" alt="Maloney Dental" /></a></div>
                             <div class="nav-info-details">
                                 <div class="dropdown">
                                     <a href="#" class="dropdown-title">
@@ -61,7 +53,7 @@
                                             <li><a href="#">Remove Sync</a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -71,19 +63,20 @@
         <!-- // HEADER SECTION -->
 
         <!-- MAIN SECTION -->
-        <main class="inner-content-wrapper play-schedule">
+        <main class="inner-content-wrapper play-schedule">           
             <div class="container">
                 <div class="play-schedule-block">
                     <div id="calendar"></div>
                 </div>
             </div>
         </main>
-
         <!-- // MAIN SECTION -->
 
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
-            <div class="container"></div>
+            <div class="container">
+               
+            </div>
         </footer>
         <!-- // FOOTER SECTION -->
 
@@ -101,10 +94,10 @@
                                 <div class="slider-arrow">
                                     <div title="Next" class="swiper-button swiper-button-next"></div>
                                     <a href="#" class="btn-select">Select</a>
-                                    <div title="Prev" class="swiper-button swiper-button-prev"></div>
-                                </div>
+                                    <div title="Prev" class="swiper-button swiper-button-prev"></div>  
+                                </div> 
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide">                                        
                                         <div class="image-block">
                                             <img src="assets/images/video-bg-1.png" class="img-fluid" alt="" />
                                             <div class="bottom-title">Teeth Bling</div>
@@ -140,9 +133,9 @@
                                             <div class="bottom-title yellow">All-On-4</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </div>                                
+                            </div>  
+                        </div>    
                         <div class="description-block">
                             <div class="details-block">
                                 <span><strong>Date Created:</strong> 24 November 2019</span>
@@ -190,7 +183,18 @@
             </div>
         </div>
 
-       <!-- JS -->
+        <!-- <div id="modal" class="modal">
+            <div class="icw-modal">
+                <div class="modal-image">
+                    <img src="assets/images/under-construction.svg" alt="Maloney Dental" />
+                </div>
+                <div class="lable-info">Sorry!</div>
+                <h2>Under Construction</h2>
+                <p class="blinking">Launching in Aug 2021</p>
+            </div>
+          </div> -->
+
+        <!-- JS -->
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/calender.js"></script>
         <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
@@ -201,13 +205,13 @@
                 var calendarEl = document.getElementById('calendar');
 
                 var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialDate: '2020-09-12',
+                    initialDate: '2021-06-06',
                     initialView: 'timeGridWeek',
                     nowIndicator: true,
                     headerToolbar: {
                         left: 'prev,next today',
                         center: 'title',
-                        right: ''
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
                     },
                     navLinks: true, // can click day/week names to navigate views
                     editable: true,
@@ -221,7 +225,7 @@
 
                         {
                             title: 'Teeth Whitening',
-                            start: '2020-09-06T03:00:00'
+                            start: '2021-06-06T03:00:00'
                         },
 
                         // <div class="bg-label" data-popup="teeth-whitening">Teeth Whitening</div>
@@ -233,5 +237,7 @@
 
         </script>
     </body>
-
 </html>
+
+
+  
