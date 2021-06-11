@@ -289,7 +289,9 @@
                 itemSelector: '.fc-event',
                 eventData: function (eventEl) {
                     return {
-                    title: eventEl.innerText.trim()
+                    title: eventEl.innerText.trim(),
+                    start:'2021-06-06T01:00:00',
+                    end:'2021-06-06T03:00:00'
                     }
                 }
                 });
@@ -317,9 +319,12 @@
                     allDaySlot: false,
                     forceEventDuration : true,
                     scrollTime: '00:00:00', 
-                    slotDuration: "00:10:00",
+                    slotDuration: "00:05:00",
                     slotLabelInterval: "01:00:00",
-                    defaultTimedEventDuration : "00:10:00",
+                    defaultTimedEventDuration : "00:05:00",
+                    dragToCreate: true,
+                    dragToMove: true,
+                    dragToResize: true,
                     droppable: true, // allow "more" link when too many events
                     eventClick: function (event) {
                         document.getElementById('teeth-whitening').classList.add('is-show');
@@ -330,6 +335,11 @@
                         {
                             title: 'Teeth Whitening',
                             start: '2021-06-06T01:00:00'
+                        },
+                        {
+                            title: 'Teeth Whitening',
+                            start:'2021-06-07T01:00:00',
+                            end:'2021-06-07T01:15:00'
                         },
                     ],
                     eventTimeFormat: { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }
