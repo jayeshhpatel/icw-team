@@ -968,6 +968,9 @@ body.overflow-hidden { overflow: hidden !important;}
 .fc-v-event .fc-event-main-frame{
     display: block;
 }
+.fc-v-event .fc-event-title-container{
+    line-height: 10px;
+}
 @media (max-width: 991px) {
     #external-events{
         margin-right: 30px;
