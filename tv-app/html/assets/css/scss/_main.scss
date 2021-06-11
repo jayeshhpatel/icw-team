@@ -962,23 +962,24 @@ body.overflow-hidden { overflow: hidden !important;}
 .fc-event-title {
     font-size: 12px;
 }
-.fc .fc-timegrid-slot {
-    height: 8rem;
-}
+// .fc .fc-timegrid-slot {
+//     height: 8rem;
+// }
 @media (max-width: 991px) {
 
-    #calendar .fc-timegrid {
-        overflow: hidden;
-        overflow-x: auto;
-    }
-    .fc .fc-scrollgrid-liquid {
-        width: 1200px;
-    }
+    
     #external-events{
         margin-right: 30px;
     }
 }
 @media (max-width: 767px) {
+    #calendar .fc-timegrid {
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .fc .fc-scrollgrid  {
+        width: 1200px;
+    }
     .fc .fc-view-harness {
         height: 500px !important;
     }
