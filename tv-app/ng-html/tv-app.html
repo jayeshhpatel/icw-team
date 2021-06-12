@@ -1,6 +1,5 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,56 +18,7 @@
         <title>Play Scheduler - Promo Video Creator</title>
         <style></style>
     </head>
-
-    <body>
-        <!-- HEADER SECTION -->
-        <header class="main-header is-sticky-header">
-            <!-- .is-sticky-header -->
-            <div class="container">
-                <nav class="navbar">
-                    <div class="bar-icon">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                    <h1><a class="nav-logo" href="index.html"><img src="assets/images/logo-white.svg"
-                                alt="TV - Promo Video Creator" /></a></h1>
-                    <div class="mainmenu">
-                        <ul class="nav">
-                            <li><a href="index.html">Play Now</a></li>
-                            <li><a href="recently-added.html">Recently Added</a></li>
-                            <li><a href="frequently-used.html">Frequently Used</a></li>
-                            <li><a href="play-schedule.html" class="active">Play Schedule</a></li>
-                            <!-- <li><a href="http://waitingroompromos.com/#/videos" target="_blank">Create Video</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="nav-right">
-                        <div class="nav-info">
-                            <div class="nav-info-logo"><a href="#"><img src="assets/images/logo-maloneydental.svg"
-                                        alt="Maloney Dental" /></a></div>
-                            <div class="nav-info-details">
-                                <div class="dropdown">
-                                    <a href="#" class="dropdown-title">
-                                        <strong>Premium Plan</strong>
-                                        <span>Dr Denver Maloney</span>
-                                    </a>
-                                    <div class="dropdown-nav">
-                                        <ul>
-                                            <li><a href="#">Logout or Login</a></li>
-                                            <li class="divider"></li>
-                                            <!-- <li><a href="#">Sync</a></li> -->
-                                            <!-- <li><a href="#">Remove Sync</a></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- // HEADER SECTION -->
-
+    <body ng-app="myApp">
         <!-- MAIN SECTION -->
         <main class="inner-content-wrapper play-schedule">
             <div class="container">
@@ -134,8 +84,8 @@
                                     </div>
                                 </div>
                                 <div class="accordion-toggle">
-                                    <div class="accordion-title">Time Zones <span
-                                            class="fc-icon fc-icon-chevron-right"></span></div>
+                                    <div class="accordion-title">Time Zones <span class="fc-icon fc-icon-chevron-right"></span>
+                                    </div>
                                     <div class="accordion-panel" style="display: none;">
                                         <p class="sub-title"> Select a different time zone: </p>
                                         <div class="select-dropdown">
@@ -148,142 +98,140 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="calendar-wrap">
+                        <div id="calendar-wrap" ng-controller="myCtrl">
                             <div id="calendar"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-        <!-- // MAIN SECTION -->
+    </footer>
+    <!-- // FOOTER SECTION -->
 
-        <!-- FOOTER SECTION -->
-        <footer class="main-footer">
-            <div class="container">
-
-            </div>
-        </footer>
-        <!-- // FOOTER SECTION -->
-
-        <div class="custom-modal" id="teeth-whitening">
-            <div class="wrapper">
-                <div class="content">
-                    <div class="content-header">
-                        <div class="title">Schedule Video Play <strong>Sunday 3:30 AM – 4:00 AM</strong></div>
-                        <span class="popup-close"><em class="icon-close"></em></span>
-                    </div>
-                    <div class="content-body">
-                        <div class="slider-block">
-                            <div class="swiper-container modal-slider">
-                                <!-- Add Arrows -->
-                                <div class="slider-arrow">
-                                    <div title="Next" class="swiper-button swiper-button-next"></div>
-                                    <a href="#" class="btn-select">Select</a>
-                                    <div title="Prev" class="swiper-button swiper-button-prev"></div>
+    <div class="custom-modal" id="teeth-whitening">
+        <div class="wrapper">
+            <div class="content">
+                <div class="content-header">
+                    <div class="title">Schedule Video Play <strong>Sunday 3:30 AM – 4:00 AM</strong></div>
+                    <span class="popup-close"><em class="icon-close"></em></span>
+                </div>
+                <div class="content-body">
+                    <div class="slider-block">
+                        <div class="swiper-container modal-slider">
+                            <!-- Add Arrows -->
+                            <div class="slider-arrow">
+                                <div title="Next" class="swiper-button swiper-button-next"></div>
+                                <a href="#" class="btn-select">Select</a>
+                                <div title="Prev" class="swiper-button swiper-button-prev"></div>
+                            </div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-1.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title">Teeth Bling</div>
+                                    </div>
                                 </div>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-1.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title">Teeth Bling</div>
-                                        </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-2.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title yellow">All-On-4</div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-2.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title yellow">All-On-4</div>
-                                        </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-3.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title orange">Business Hours</div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-3.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title orange">Business Hours</div>
-                                        </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-4.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title pink">Happy Birthday</div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-4.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title pink">Happy Birthday</div>
-                                        </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-1.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title">Teeth Bling</div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-1.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title">Teeth Bling</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-block">
-                                            <img src="assets/images/video-bg-2.png" class="img-fluid" alt="" />
-                                            <div class="bottom-title yellow">All-On-4</div>
-                                        </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="assets/images/video-bg-2.png" class="img-fluid" alt="" />
+                                        <div class="bottom-title yellow">All-On-4</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="description-block">
-                            <div class="details-block">
-                                <span><strong>Date Created:</strong> 24 November 2019</span>
-                                <span>Status: Broadcast Ready</span>
-                                <span>Color Scheme: Green</span>
-                                <span>Number of Frames in Template: 30</span>
-                                <span>Number of Frames Used: 25</span>
-                                <span>Layout: Landscape</span>
-                                <span>ideo Use: Promotional</span>
-                                <span>Application: Dental Practice</span>
-                                <span>Category: Teeth Whitening</span>
-                                <span>Type: In-Chair</span>
-                                <span>Background Music: Easy Listening</span>
-                                <span>Narration Accent: Australian</span>
-                                <span>Design: Contemporary</span>
-                                <div class="with-icon">
-                                    <span><em class="icon-check"></em>Social Offer Use</span>
-                                    <span><em class="icon-check"></em>With Business Hours</span>
-                                </div>
+                    </div>
+                    <div class="description-block">
+                        <div class="details-block">
+                            <span><strong>Date Created:</strong> 24 November 2019</span>
+                            <span>Status: Broadcast Ready</span>
+                            <span>Color Scheme: Green</span>
+                            <span>Number of Frames in Template: 30</span>
+                            <span>Number of Frames Used: 25</span>
+                            <span>Layout: Landscape</span>
+                            <span>ideo Use: Promotional</span>
+                            <span>Application: Dental Practice</span>
+                            <span>Category: Teeth Whitening</span>
+                            <span>Type: In-Chair</span>
+                            <span>Background Music: Easy Listening</span>
+                            <span>Narration Accent: Australian</span>
+                            <span>Design: Contemporary</span>
+                            <div class="with-icon">
+                                <span><em class="icon-check"></em>Social Offer Use</span>
+                                <span><em class="icon-check"></em>With Business Hours</span>
                             </div>
-                            <div class="info-block">
-                                <div class="heading">Description</div>
-                                <div class="info">
-                                    <span><strong>Use Suggestions</strong></span>
-                                    <span><em class="icon-check"></em>Email promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Embed in business website</span>
-                                    <span><em class="icon-check"></em>Internal signage</span>
-                                    <span><em class="icon-check"></em>SMS promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Social medial posts</span>
-                                    <span><em class="icon-check"></em>Email promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Embed in business website</span>
-                                    <span><em class="icon-check"></em>Internal signage</span>
-                                    <span><em class="icon-check"></em>SMS promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Social medial posts</span>
-                                    <span><em class="icon-check"></em>Email promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Embed in business website</span>
-                                    <span><em class="icon-check"></em>Internal signage</span>
-                                    <span><em class="icon-check"></em>SMS promotional campaigns</span>
-                                    <span><em class="icon-check"></em>Social medial posts</span>
-                                </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="heading">Description</div>
+                            <div class="info">
+                                <span><strong>Use Suggestions</strong></span>
+                                <span><em class="icon-check"></em>Email promotional campaigns</span>
+                                <span><em class="icon-check"></em>Embed in business website</span>
+                                <span><em class="icon-check"></em>Internal signage</span>
+                                <span><em class="icon-check"></em>SMS promotional campaigns</span>
+                                <span><em class="icon-check"></em>Social medial posts</span>
+                                <span><em class="icon-check"></em>Email promotional campaigns</span>
+                                <span><em class="icon-check"></em>Embed in business website</span>
+                                <span><em class="icon-check"></em>Internal signage</span>
+                                <span><em class="icon-check"></em>SMS promotional campaigns</span>
+                                <span><em class="icon-check"></em>Social medial posts</span>
+                                <span><em class="icon-check"></em>Email promotional campaigns</span>
+                                <span><em class="icon-check"></em>Embed in business website</span>
+                                <span><em class="icon-check"></em>Internal signage</span>
+                                <span><em class="icon-check"></em>SMS promotional campaigns</span>
+                                <span><em class="icon-check"></em>Social medial posts</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+     <!-- JS -->
+     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+     <script type="text/javascript" src="assets/js/calender.js"></script>
+     <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope) {
+                $scope.names = [
+                    {
+                        title: 'All Day Event',
+                        start: '2018-07-19',
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2018-07-20'
 
-        <!-- <div id="modal" class="modal">
-            <div class="icw-modal">
-                <div class="modal-image">
-                    <img src="assets/images/under-construction.svg" alt="Maloney Dental" />
-                </div>
-                <div class="lable-info">Sorry!</div>
-                <h2>Under Construction</h2>
-                <p class="blinking">Launching in Aug 2021</p>
-            </div>
-          </div> -->
-
-        <!-- JS -->
-        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/calender.js"></script>
-        <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
+                    }
+                ];
+                console.log($scope.names);
+            });
+        </script>
         <script>
 
             document.addEventListener('DOMContentLoaded', function () {
@@ -384,7 +332,49 @@
                     $(this).closest(".accordion-toggle").addClass("open");
                     $(this).closest(".accordion-toggle").find(".accordion-panel").slideDown();
                 }
-            })
+            });
+            if($('.modal-slider').length) {
+                var swiper = new Swiper('.modal-slider', {
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    loop: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev"
+                    },
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                    },
+                });
+            }
+
+            // Model Popup
+            if(document.querySelector(".custom-modal")){                                                                                    
+                const openEls = document.querySelectorAll("[data-popup]"); 
+                const closeEls = document.querySelectorAll(".popup-close"); 
+                for (const el of openEls) {
+                    el.addEventListener("click", function() {
+                        const modalId = this.dataset.popup;
+                        console.log(modalId);
+                        document.getElementById(modalId).classList.add('is-show');
+                    });
+                }  
+                for (const el of closeEls) {
+                    el.addEventListener("click", function() {
+                        document.querySelector(".custom-modal.is-show").classList.remove('is-show');
+                    });
+                }  
+                document.addEventListener("click", e => {
+                    if (e.target == document.querySelector(".custom-modal.is-show")) {
+                        document.querySelector(".custom-modal.is-show").classList.remove('is-show');
+                    }
+                });
+            }   
 
         </script>
     </body>
