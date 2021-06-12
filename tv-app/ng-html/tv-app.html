@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +19,7 @@
         <title>Play Scheduler - Promo Video Creator</title>
         <style></style>
     </head>
+
     <body ng-app="myApp">
         <!-- MAIN SECTION -->
         <main class="inner-content-wrapper play-schedule">
@@ -211,8 +213,8 @@
         </div>
     </div>
      <!-- JS -->
+     <script type="text/javascript" src="assets/js/angular.min.js"></script>
      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
      <script type="text/javascript" src="assets/js/calender.js"></script>
      <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
         <script>
@@ -230,6 +232,9 @@
                     }
                 ];
                 console.log($scope.names);
+                // $('#calendar').fullCalendar({
+                //     events: $scope.names
+                // });
             });
         </script>
         <script>
