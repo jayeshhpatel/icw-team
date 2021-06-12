@@ -220,24 +220,7 @@
         <script>
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function ($scope) {
-                $scope.names = [
-                    {
-                        title: 'All Day Event',
-                        start: '2018-07-19',
-                    },
-                    {
-                        title: 'Long Event',
-                        start: '2018-07-20'
-
-                    }
-                ];
-                console.log($scope.names);
-                // $('#calendar').fullCalendar({
-                //     events: $scope.names
-                // });
             });
-        </script>
-        <script>
 
             document.addEventListener('DOMContentLoaded', function () {
                 var initialTimeZone = 'UTC';
