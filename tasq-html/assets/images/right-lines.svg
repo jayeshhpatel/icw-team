@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="558" viewBox="0 0 650 558">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3541" data-name="Rectangle 3541" width="650" height="558" transform="translate(1270 3150)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Lines_Right" data-name="Lines Right" transform="translate(-1270 -3150)" clip-path="url(#clip-path)">
+    <g id="Group_3182" data-name="Group 3182" transform="translate(-1058.143 2965.045)">
+      <g id="Group_1093" data-name="Group 1093" transform="translate(2406.899 282.996)">
+        <path id="Path_1737" data-name="Path 1737" d="M716.336-140.711H528.68c-18.566,0-33.618-16.018-33.618-35.775V-485.846c0-19.759-15.052-35.775-33.62-35.775h-319.1" transform="translate(-135.603 526.424)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
+        <ellipse id="Ellipse_652" data-name="Ellipse 652" cx="9.204" cy="9.204" rx="9.204" ry="9.204" transform="translate(571.067 336.507)" fill="#cecece"/>
+        <g id="Group_1092" data-name="Group 1092" transform="translate(0 0)">
+          <path id="Path_1738" data-name="Path 1738" d="M445.036-346.638a5,5,0,0,0-5,5,5,5,0,0,0,5,5,5,5,0,0,0,5-5A5,5,0,0,0,445.036-346.638Z" transform="translate(-437.037 345.638)" fill="#ffffff"/>
+        </g>
+      </g>
+      <g id="Group_1096" data-name="Group 1096" transform="translate(2633.637 151.955)">
+        <line id="Line_29" data-name="Line 29" y1="197" transform="translate(7.005 38.055)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
+        <g id="Group_1094" data-name="Group 1094" transform="translate(0 254.499)">
+          <path id="Path_1739" data-name="Path 1739" d="M332.49-426.7a5,5,0,0,1-5,5,5,5,0,0,1-5-5,5,5,0,0,1,5-5,5,5,0,0,1,5,5Z" transform="translate(-319.49 402.702)" fill="#ffffff"/>
+        </g>
+        <g id="Group_1095" data-name="Group 1095" transform="translate(0 0)">
+          <path id="Path_1740" data-name="Path 1740" d="M332.49-256.578a5,5,0,0,0-5-5,5,5,0,0,0-5,5,5,5,0,0,0,5,5A5,5,0,0,0,332.49-256.578Z" transform="translate(-319.49 294.579)" fill="#ffffff"/>
+        </g>
+      </g>
+      <g id="Group_1096-2" data-name="Group 1096" transform="translate(2938.636 520.205) rotate(90)">
+        <line id="Line_29-2" data-name="Line 29" y1="399.061" transform="translate(7.004 -164.006)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
+        <g id="Group_1094-2" data-name="Group 1094" transform="translate(0 254.499)">
+          <path id="Path_1739-2" data-name="Path 1739" d="M332.49-426.7a5,5,0,0,1-5,5,5,5,0,0,1-5-5,5,5,0,0,1,5-5,5,5,0,0,1,5,5Z" transform="translate(-319.49 402.702)" fill="#ffffff"/>
+        </g>
+        <g id="Group_1095-2" data-name="Group 1095" transform="translate(0 0)">
+          <path id="Path_1740-2" data-name="Path 1740" d="M332.49-256.578a5,5,0,0,0-5-5,5,5,0,0,0-5,5,5,5,0,0,0,5,5A5,5,0,0,0,332.49-256.578Z" transform="translate(-319.49 97.579)" fill="#ffffff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
