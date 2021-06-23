@@ -1205,6 +1205,9 @@ section {
             li{
                 padding: 10px 0;
                 border-bottom: 1px solid rgba(141, 138, 155, 0.22);
+                &:first-child{
+                    padding-top: 0;
+                }
                 &:last-child{
                     border-bottom: none;
                 }
@@ -1219,12 +1222,21 @@ section {
             li{
                 @include inline-flex;
                 @include align-items(center);
+                a{
+                    @include transition(0.3s, ease-in-out);
+                    @include border-radius(34px);
+
+                    &:hover{
+                        background-color: $purple;
+                    }
+                }
                 .i-icon{
                     width: 34px;
                     height: 34px; 
                     @include flexbox();
                     @include align-items(center);
                     @include justify-content(center);
+                   
                     &.icon-linkedin{
                         background: url(../images/linkedin.svg) no-repeat center;
                     }
