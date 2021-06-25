@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 jQuery(function (o) {
-	o(".site-btn1").hover(function () {
+	o(".purple-circle-btn").hover(function () {
 		o(this).addClass("hovered")
 	})
 })
@@ -52,7 +52,6 @@ $(document).ready(function () {
         return '<a class="pager__item"> '+title+' </a>';
     },
   });
-
   $('.testimonial-slider').slick({
     arrows: true,
     dots: false,
@@ -106,7 +105,6 @@ $(document).ready(function () {
   ]
   });
   
-  
   //------- Click to filter slides according to user's choice
   
   $(document).on('click', '.filter-option li a', function(){
@@ -148,6 +146,23 @@ $(document).ready(function () {
     }
   });
 
+  $('.category-list ul li a').click(function(){
+    //hide all works by default 
+    $(".category-box").addClass('category-hide');
+    //show slected works based on the menu clicked
+    $(".category-box[data-filter='"+$(this).attr('data-filter')+"']").removeClass("category-hide");
+    //remove selected class to the link      
+    $('.category-list ul li a').removeClass('selected');
+    //add selected class to the active link
+    $(this).addClass('selected');
+    return false;
+   });
+   //show all works for "all" menu
+  $('a[data-filter="*"]').click(function(event) {    
+     $(".category-box").removeClass('category-hide');
+     return false;
+  });
+
   if($('.work-slider').length) {
     var swiper = new Swiper('.work-slider', {
         effect: 'coverflow',
@@ -166,5 +181,17 @@ $(document).ready(function () {
             modifier: 1,
         },
     });
-}
+  }
+
+  $(".accordion-toggle .accordion-title").click(function () {
+    if ($(this).closest(".accordion-toggle").hasClass("open")) {
+        $(this).closest(".accordion-toggle").removeClass("open");
+        $(this).closest(".accordion-toggle").find(".accordion-panel").slideUp();
+    } else {
+        $(".accordion-toggle").removeClass("open");
+        $(".accordion-toggle").find(".accordion-panel").slideUp();
+        $(this).closest(".accordion-toggle").addClass("open");
+        $(this).closest(".accordion-toggle").find(".accordion-panel").slideDown();
+    }
+})
 });
