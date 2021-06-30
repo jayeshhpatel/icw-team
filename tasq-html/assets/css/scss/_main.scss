@@ -349,6 +349,7 @@ section {
 .main-title {
     text-align: center;
     margin-bottom: 70px;
+    text-transform: capitalize;
     span {
         font-size: 20px;
         font-weight: 300;
@@ -2964,6 +2965,7 @@ section {
 }
 .labeling-page,
 .solution-page{
+    .blog-block,
     .about-number-block{
         background: #1D173B url(../images/solution-page-bg.png) no-repeat center bottom;
         color: #F5F5F5;
@@ -2974,6 +2976,7 @@ section {
                 color: #F5F5F5;
             }
         }
+        .main-title1,
         .main-title{
             min-height: 50vh;
             padding: 20px 0;
@@ -3295,6 +3298,9 @@ section {
         }
     }
 }
+.border-yellow{
+    border-bottom: 1px solid #FB950A;
+}
 .image-grid-block{
     .main-title{
         p{
@@ -3302,6 +3308,89 @@ section {
             margin: auto;
             margin-top: 25px;
             color: #1D173B;
+        }
+    }
+    .card-content{
+        max-width: 400px;
+        h3{
+            letter-spacing: 0.9px;
+            color: #1D173B;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+    }
+    .card-image{
+        img{
+            width:100%;@include border-radius(10px);box-shadow: 0px 0px 60px #0000001D;
+        }
+    }
+    .row{
+        margin-bottom: 120px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .site-btn{
+        min-width: 240px;
+        margin-top: 15px;
+    }
+    @media(max-width:991px){
+        .row{
+            margin-bottom: 40px;
+        }
+        .card-content {
+            max-width: 100%;
+        }
+    }
+    @media(max-width:767px){
+        .row{
+            @include flex-direction(column-reverse);
+        }
+        .card-content {
+            margin-top: 20px;
+            h3{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.labeling-page{
+    .frequently-block{
+        color: #F5F5F5;
+        background-color: #1D173B;
+        .card-item{
+            @include box-shadow(0px 0px 90px #100E21);
+            h3{
+                color: #F5F5F5;
+            }
+            .readmore-btn {
+                color: #F5F5F5;
+            }
+        }
+        .sub-title{
+            .site-btn1{
+                color: #F5F5F5;
+            }
+        }
+    }
+    .blog-block{
+        padding-top: 100px;   
+        background: #1D173B;
+        .main-title{
+            min-height: auto;
+        }
+        .main-title1{
+            min-height: 50vh;
+           background: #1D173B url(../images/solution-page-bg.png) no-repeat center bottom; background-size: 100%;
+        }
+        @media(max-width:991px){
+            .main-title1{
+                min-height: auto;
+               background: transparent;
+            }
+            padding-top: 0;
         }
     }
 }
