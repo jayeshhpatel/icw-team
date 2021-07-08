@@ -64,13 +64,12 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="sidebar-icon toggle-sidebar">
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                            <span class="line3"></span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="bar-icon toggle-sidebar">
-                    <span class="line1"></span>
-                    <span class="line2"></span>
-                    <span class="line3"></span>
                 </div>
             </nav>
         </header>
@@ -123,11 +122,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="image-content-block">
+            <section class="image-content-block bg-light">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-md-5">
-                            <div class="card-image"></div>
+                            <div class="card-image">
+                                <img src="assets/images/box-image.png" alt=""/>
+                            </div>
                         </div>
                         <div class="col-md-7">
                             <div class="card-content">
@@ -140,18 +141,79 @@
                                 <p>This will be a live event where expert speaker Sarah Smith will be presenting the following AstraZeneca research to health care professionals.</p>
                                 <h4>5 spaces remaining </h4>
                                 <p>Claim your seat now and register for this live event.</p>
-                                <a href="#!">Register</a>
+                                <a href="#!" class="site-btn">Register</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section class="timer-block">
+                <div class="container">
+                    <h2>This session will start in…</h2>
+                    <div id="timer">
+                        <div id="days" class="timer-count"></div>
+                        <div id="hours" class="timer-count"></div>
+                        <div id="minutes" class="timer-count"></div>
+                        <div id="seconds" class="timer-count"></div>
+                      </div>
+                </div>
+            </section>
+            <section class="image-content-block bg-light">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 order-2 order-md-1">
+                            <div class="card-content">
+                                <div class="main-title">
+                                    <h2>Meet Sarah Smith</h2>
+                                    <h3>Head of Oncology at London Hospital</h3>
+                                </div>
+                                <p>This will be a live event where expert speaker Sarah Smith will be presenting
+                                    the following AstraZeneca research to health care professionals. Content about
+                                    the speaker such as a bio Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting industry. Lorem Ipsum has been the industry’s standard
+                                    dummy text ever since the 1500s.</p>
+                                <a href="#!" class="site-btn">Register</a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 order-1 order-md-2">
+                            <div class="card-image">
+                                <img src="assets/images/box-image.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- // MAIN SECTION -->
 
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
-            
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.png" alt=""/>
+                    <h3 class="d-none d-md-block">Contact us</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-content">
+                            <p><strong>This site in intended for healthcare professionals.</strong></p>
+                            <p>Veeva ID: Z4-33274; Date of Preparation: Jun 01, 2021</p>
+                            <p>© AstraZeneca 2021</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-contact-details">
+                            <h3 class="d-block d-md-none">Contact us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#!">Legal terms of Use</a></li>
+                                <li><a href="#!">Privacy policy</a></li>
+                                <li><a href="#!">Cookie policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </footer>
         <!-- // FOOTER SECTION -->
 
@@ -159,6 +221,33 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            function makeTimer() {
+
+                var endTime = new Date("29 December 2021 9:56:00 GMT+01:00");			
+                    endTime = (Date.parse(endTime) / 1000);
+
+                    var now = new Date();
+                    now = (Date.parse(now) / 1000);
+
+                    var timeLeft = endTime - now;
+
+                    var days = Math.floor(timeLeft / 86400); 
+                    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+                    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+                    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+                    if (hours < "10") { hours = "0" + hours; }
+                    if (minutes < "10") { minutes = "0" + minutes; }
+                    if (seconds < "10") { seconds = "0" + seconds; }
+
+                    $("#days").html(days + "<span>Days</span>");
+                    $("#hours").html(hours + "<span>Hours</span>");
+                    $("#minutes").html(minutes + "<span>Minutes</span>");
+                    $("#seconds").html(seconds + "<span>Seconds</span>");		
+            }
+            setInterval(function() { makeTimer(); }, 1000);
+        </script>
     </body>
 
 </html>
