@@ -113,12 +113,49 @@ section {
     background-color: #444444;@include inline-flex;@include align-items(center);
     @include justify-content(center);
     min-height: 50px;
-    padding: 5px 15px;
+    padding: 5px 25px;
     min-width: 120px; 
     &:hover{
         color: #ffffff;
         background-color: #222222;
-    }   
+        &.arrow-right{
+            &:after{
+                @include transform(rotate(-90deg) translateY(5px));
+            }
+        }
+    } 
+    &.arrow-right{
+        &:after{
+            width: 15px;
+            height: 15px; 
+            margin-left: 15px;filter: invert(1);@include transition(0.3s, ease-in-out);
+        }
+    }  
+}
+.site-btn1{
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    border: 1px solid #000000;
+    @include inline-flex;@include align-items(center);
+    @include justify-content(center);
+    min-height: 50px;
+    padding: 5px 25px;
+    min-width: 120px; 
+    &:hover{
+        &.arrow-right{
+            &:after{
+                @include transform(rotate(-90deg) translateY(5px));
+            }
+        }
+    } 
+    &.arrow-right{
+        &:after{
+            width: 15px;
+            height: 15px; 
+            margin-left: 15px;@include transition(0.3s, ease-in-out);
+        }
+    }  
 }
 .color-darked{
     color: #666666 !important;
@@ -178,8 +215,9 @@ section {
     background-color: $white;left: 0;
     right: 0;
     top: 0;
-    z-index: 10;@include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.08));
+    z-index: 10;
     &.fixed-header{
+        @include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.08));
         .navbar-brand{
             img{
                 max-width: 75%;
@@ -516,22 +554,19 @@ section {
     }
     .input-group{
         min-height: 50px;
-        .input-group-text{
-            border-right: 0;
-            padding-left: 25px;
-        }
+        
         .form-control{
-            border-left: none;
-            padding-left: 0;
+            @include border-radius(0);
+            background-image: url(../images/search.png);
+            background-repeat: no-repeat;
+            background-position: 15px center;
+            padding-left: 60px;
         }
         .form-select{
             color: #000000;
             max-width: 400px;
         }
-        .input-group-text{
-            background-color: transparent;
-            @include border-radius(0);
-        }
+        
         button{
             @include border-radius(0);
             background-color: #626262;
@@ -563,9 +598,6 @@ section {
         .input-search-block{
             .input-group {
                 min-height: 40px;
-                .input-group-text {
-                    padding-left: 15px;
-                }
             } 
         }
     }
@@ -652,6 +684,7 @@ section {
                 font-size: 16px;
                 display: inline-block;
                 margin-left: 15px;
+                cursor: pointer;
             }
         }
         h4{
@@ -767,6 +800,82 @@ section {
         }
         h3{
             margin-bottom: 10px;
+        }
+    }
+}
+.blog-about-wrapper{
+    .card{
+        border: none;
+        background-color: #f4f4f4;
+        .card-body{
+            padding: 50px;
+            h2{
+                font-weight: 700;
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+.left-content-block{
+    .card-content{
+        .site-btn {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .btn-groups{
+            @include inline-flex;@include flex-direction(column);
+        }
+    }
+}
+.number-list{
+    counter-reset: section;
+    li{
+        font-size: 20px;
+        @include flexbox();
+        @include align-items(baseline);
+        padding: 8px 0;
+        &::before{
+            content: counter(section);
+            counter-increment: section;
+            font-weight: 700;
+            font-size: 20px;
+            width: 45px;
+            display: block;
+        }
+        a{
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+.trending-list-wrapper{
+    .card-block{
+        background-color: #f4f4f4;padding: 40px 50px;
+    }
+    .main-title{
+        margin-bottom: 20px;
+    }
+}
+.blog-wrapper{
+    .card{
+        border:none;background-color: #f4f4f4;
+        .card-body{
+            padding: 35px;
+            h2{
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            p{
+                margin-bottom: 20px;
+            }
         }
     }
 }
