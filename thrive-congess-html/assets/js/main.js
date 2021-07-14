@@ -8,6 +8,10 @@ $(document).ready(function () {
     $('.bg-overly,.toggle-sidebar,body,.main-header').toggleClass('is-visible');
     e.preventDefault();
   });
+  $('.filter-btn').on('click', function (e) {
+    $('.filter-dropdown').toggleClass('is-open');
+    e.preventDefault();
+  });
 
   if ($('.main-header').length) {
     $(window).scroll(function () {
