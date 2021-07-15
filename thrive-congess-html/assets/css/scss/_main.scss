@@ -201,7 +201,7 @@ section {
     color: #666666 !important;
 }
 .bg-light{
-    background-color: #eeeeee;
+    background-color: #f4f4f4 !important;
 }
 .main-title {
     margin-bottom: 40px;
@@ -236,6 +236,7 @@ section {
         }
     }
     @media (max-width: 991px) {
+        margin-bottom: 20px;
         h2 {
             font-size: 24px;
         }
@@ -1403,5 +1404,79 @@ li{
         font-size: 18px;
         border: none;
         background-color: transparent;
+    }
+}
+.what-wrapper{
+    .link-btn{
+        @include inline-flex;
+    }
+    .card{
+        background-color: #e8e7e7;
+        border: none;
+        .card-body{
+            padding: 20px 25px 25px;
+        }
+        h3{
+            font-weight: 700;
+            font-size: 22px;
+        }
+        h4{
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .card-address-block{
+            p{
+                margin-bottom: 0;
+            }
+            span{
+                font-weight: 500;
+                min-width: 75px;
+                display: inline-block;
+            }
+        }
+        .register-calender-block{
+            margin-top: 50px;@include flexbox();@include align-items(center);@include justify-content(space-between);
+            .icons-list{
+                @include flexbox();
+            }
+        }
+    }
+    @media(max-width:991px){
+        .card{
+            .register-calender-block{
+                margin-top: 20px;
+            }
+            .card-body {
+                padding: 15px 20px 20px;
+            }   
+            h3{
+                font-size: 18px;
+            }
+            h4{
+                font-size: 16px;
+            }
+            .card-address-block{
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.icon{
+    margin-left: 10px;
+    &.bookmarks-icon{
+        width: 34px;
+        height: 34px;
+        background: url(../images/bookmark.png) no-repeat center;
+        background-size: contain;
+        display: inline-block;
+    }
+    &.calender-icon{
+        width: 34px;
+        height: 34px;
+        background: url(../images/calender.png) no-repeat center;
+        background-size: contain;
+        display: inline-block;
     }
 }
