@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>astrazeneca-thrive</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body{
+            width: 100%;
+            position: relative;
+            font-size: 16px;
+            color: #222222;
+            font-family: 'Roboto Slab', serif;
+        }
+        img{
+            max-width: 100%;
+        }
+        .image-tooltips-block{
+            padding: 50px 0;
+        }
+        .image-tooltips-block h2{
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .card-block .card{
+            background-color: #11927C;
+            border: none;
+            border-radius: 0;
+            color: #ffffff;
+            padding: 60px;
+        }
+        .card-block .card h2{
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .card-block .card p{
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .download-btn h3{
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+        .download-btn span{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+        }
+        .download-btn img{
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .download-btn{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .download-btn:hover{
+            color: #ffffff;
+
+        }
+        .card-block{
+            padding-bottom: 50px;
+        }
+        .image-tooltips-block .card-image > img{
+            width: 100%;
+        }
+        .tooltip-box .tooltip-card{
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+        }
+        .tooltip-box .tooltip-card > img{
+            width: 50px;
+            cursor: pointer;
+        }
+        .tooltip-inner{
+            background-color: #ffffff;border-radius: 0;color: #11927C;    
+            font-family: 'Roboto Slab', serif;
+            padding: 10px 20px;
+            max-width: 300px;
+        }
+        .tooltip-arrow::before{
+            border-bottom-color: #ffffff !important;
+        }
+        .image-tooltips-block .card-image{
+            position: relative;
+        }
+        .tooltip-card:nth-child(1){
+            bottom: 17%;
+            left: 6%;
+        }
+        .tooltip-card:nth-child(2){
+            bottom: 9%;
+            left: 31%;
+        }
+        .tooltip-card:nth-child(3){
+            top: 31%;
+            left: 48%
+        }
+        .tooltip-card:nth-child(4){
+            bottom: 22%;
+            right: 18%;
+        }
+        .tooltip-card span{
+            background-color: #ffffff;
+            padding: 10px 20px;
+            display: block;
+            color: #11927C;
+            position: relative;    
+            max-width: 300px;
+            text-align: center;
+            white-space: nowrap;
+            margin-top: 12px;
+        }
+        .tooltip-card span::before{    
+            content: "";
+            top: -8px;
+            position: absolute;
+            border-bottom: 8px solid #fff;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            width: 13px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 999;
+        }
+        @media(max-width:991px){
+            .image-tooltips-block h2 {
+                font-size: 26px;
+            }
+            .tooltip-inner{
+                padding: 5px 10px;font-size: 12px;
+            }
+            .card-block .card{
+                padding: 20px;
+            }
+            .card-block .card h2 {
+                font-size: 26px;
+            }
+            .download-btn h3 {
+                font-size: 14px;
+            }
+            .download-btn span{
+                font-size: 12px;
+            }
+            .download-btn img {
+                width: 40px;
+                height: 40px;
+            }
+            .tooltip-box .tooltip-card img {
+                width: 30px;
+            }
+            .tooltip-card:nth-child(4){
+                right: 20%;
+            }
+            .tooltip-card span {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            .tooltip-card:nth-child(2) {
+                bottom: 5%;}
+            @media(max-width:767px){
+                .tooltip-card span {
+                    font-size: 8px;
+                }
+                .tooltip-card:nth-child(4) {
+                    right: 3%;
+                    bottom: 26%;
+                }
+                .tooltip-card:nth-child(3) {
+                    top: 3%;
+                    left: 50%;
+                }
+                .tooltip-card:nth-child(1) {
+                bottom: 31%;}
+                .tooltip-card:nth-child(2) {
+                    bottom: 5%;}
+            }
+        }
+    </style>
+</head>
+    <body>
+        <div class="main-wrapper">
+            <div class="image-tooltips-block">
+                <div class="container">
+                    <h2>Explore LOKELMA</h2>
+                    <div class="card-image">
+                        <img src="images/tooltip-image.jpg" alt=""/>
+                        <div class="tooltip-box">
+                            <div class="tooltip-card">
+                                <img src="images/plus.png" alt=""/>
+                                <span>Mechanism of action video</span>
+                            </div>
+                            <div class="tooltip-card" >
+                                <img src="images/plus.png" alt=""/>
+                                <span>LOKELMA administration video</span>
+                            </div>
+                            <div class="tooltip-card" >
+                                <img src="images/plus.png" alt=""/>
+                                <span>LOKELMA libray</span>
+                            </div>
+                            <div class="tooltip-card" >
+                                <img src="images/plus.png" alt=""/>
+                                <span>Dosing card</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="container">
+                    <div class="row g-3 g-lg-5">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <h2>Product Summary</h2>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                <a href="#!" class="download-btn">
+                                    <img src="images/download.png" alt=""/>
+                                    <div class="title">
+                                        <h3>Download product summary</h3>
+                                        <span>PDF (250kb)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <h2>Dosing card</h2>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                <a href="#!" class="download-btn">
+                                    <img src="images/download.png" alt=""/>
+                                    <div class="title">
+                                        <h3>Download product summary</h3>
+                                        <span>PDF (250kb)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+    </body>
+</html>

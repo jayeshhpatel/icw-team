@@ -245,7 +245,7 @@ section {
     @media (max-width: 991px) {
         min-height: 40px;
         padding: 5px 15px;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .site-btn1 {
@@ -277,7 +277,7 @@ section {
     @media (max-width: 991px) {
         min-height: 40px;
         padding: 5px 15px;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .color-darked {
@@ -326,6 +326,9 @@ section {
         }
         h3 {
             font-size: 18px;
+        }
+        p{
+            margin-top: 15px;
         }
     }
 }
@@ -2048,4 +2051,65 @@ section {
     @include align-items(center);
     @include justify-content(space-between);
     margin-top: 15px;
+}
+.video-content-wrapper{
+    .main-title{
+        margin: auto;    
+        padding: 20px;
+        max-width: 400px;
+        p{
+            margin: 20px 0 25px;
+        }
+    }
+    @media(max-width:767px){
+        .main-title{
+            max-width: 100%;
+        }
+    }
+}
+.video-second-wrapper{
+    .card-left-content{
+        background-color: #f4f4f4;
+        height: 100%;@include flexbox();
+        @include align-items(center); 
+    }
+    .main-title{
+        margin: auto;    
+        padding: 15px;
+        max-width: 400px;
+        p{
+            margin: 20px 0;
+        }
+    }
+    .card-right-content{
+        .main-title{
+            padding: 50px;
+        }
+    }
+    @media(max-width:991px){
+        .main-title{
+            padding: 20px;
+        }
+        .card-right-content{
+            .main-title{
+                padding: 20px;
+            }
+        }
+    }
+    @media(max-width:767px){
+        .main-title{
+            max-width: 100%;
+        }
+        .card-left-content{
+            display: block;
+        }
+    }
+}
+.card-content{
+    .user-content{
+        img{
+            width: 60px;
+            height: 60px;@include border-radius(100px);
+        }
+    }
 }
