@@ -26,18 +26,17 @@ $(document).ready(function () {
     $(".dropdown-menu-list").hide();
 
     // Shows dropdown-menu-list when it's parent is hovered.
-    $(".dropdown-menu-list").parent("li").hover(function () {
-      $(this).find(">.dropdown-menu-list").not(':animated').slideDown(300);
+    $(".dropdown-mega-menu").hover(function () {
+      $(this).find(".dropdown-menu-list").not(':animated').slideDown(300);
       $(this).toggleClass("active");
       $(".navbar").toggleClass("active");
       sectionHeight = $(this).find(">.dropdown-menu-list").height();
-      $('<style>.main-header .navbar:after {height: ' + sectionHeight + 'px;}</style>').appendTo('head');
-      console.log(sectionHeight = $(this).find(">.dropdown-menu-list").height());
+      $('head').append('<style>.main-header .navbar:after {height: ' + sectionHeight + 'px;}</style>');
     });
 
     // Hides dropdown-menu-list when mouse leaves the zone.
-    $(".dropdown-menu-list").parent("li").mouseleave(function () {
-      $(this).find(">.dropdown-menu-list").slideUp(150);
+    $(".dropdown-mega-menu").mouseleave(function () {
+      $(this).find(".dropdown-menu-list").slideUp(150);
       $(".navbar").removeClass("active");
       $("style").remove();
     });
@@ -68,3 +67,22 @@ $(document).ready(function () {
     });
   }
 });
+
+// $(".navbar-nav > li").mousemove(function () {
+//   var ele = $(this);
+//   $(ele).find("a + .dropdown-menu-list").not(':animated').slideDown(300);
+//   $(this).toggleClass("active");
+//   $(".navbar").toggleClass("active");
+
+//   sectionHeight = $(this).find('a + .dropdown-menu-list:not(:animated)').height();
+
+//   $('head').append('<style>.main-header .navbar:after {height: ' + sectionHeight + 'px;}</style>');
+//   console.log(sectionHeight);
+// });
+
+// // Hides dropdown-menu-list when mouse leaves the zone.
+// $(".dropdown-menu-list").parent("li").mouseleave(function () {
+//   $(this).find(">.dropdown-menu-list").slideUp(150);
+//   $(".navbar").removeClass("active");
+//   $("style").remove();
+// });
