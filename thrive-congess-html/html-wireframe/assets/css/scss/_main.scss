@@ -2154,3 +2154,212 @@ section {
         }
     }
 }
+/*******************congresses page css*********************/
+.gray-bg{
+    background-color: #e8e8e8;
+}
+.gray-border{
+    border: 1px solid #e0e0e0;
+}
+.congresses-block{
+    .calendar-box{
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        border-bottom: 1px solid #707070;
+        margin-bottom: 40px;
+        span{
+            font-size: 18px;
+            color: #595959;
+            font-weight:700;
+            cursor: pointer;
+            &:first-child{
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    height: 13px;
+                    width: 13px;
+                    margin-right: 8px;
+                    background-image: url(../images/angle-arrow-down.svg);
+                    background-size: cover;
+                    background-position: center;@include transform(rotate(90deg))
+                }
+                &:after{
+                    display: none;
+                }
+            }
+            &:after{
+                height: 13px;
+                width: 13px;
+            }
+        }
+        .calendar-month{
+            @include flexbox();
+            @include align-items(center);
+            li{
+                font-size: 18px;
+                color: #595959;
+                font-weight:700;
+                padding: 5px 0;
+                margin: 0 25px;
+                &.active{
+                    color: #000000;
+                    border-bottom: 2px solid #000000;
+                }
+            }
+        }
+    }
+    .calendar-card{
+        padding: 30px;
+        margin-bottom: 30px;
+        .subtitle-icon{
+            margin-bottom: 10px;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+            .icons-box{
+                @include flexbox();
+                .wish-list{
+                    @include flexbox();
+                }
+                i{
+                    margin-left: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+        span{
+            font-size: 14px;
+            font-weight: 700;
+            color: #5e5e5e;
+            text-transform: uppercase;
+        }
+        .date-title{
+            color: #000000;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        h3{
+            font-size: 24px;
+            color: #000000;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: normal;
+        }
+    }
+    .calendar-date-block{
+        h5{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+    }
+    @media(max-width:1199px){
+        .calendar-box{
+            .calendar-month{
+                li{
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+    @media(max-width:991px){
+        .calendar-card{
+            margin-bottom: 24px;
+            padding: 20px;
+            h3{
+                font-size: 20px;
+                br{
+                    display: none;
+                }
+            }
+            .date-title{
+                font-size: 18px;
+            }
+            .subtitle-icon{
+                .icons-box{
+                    i{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+        .calendar-box{
+            span{
+                font-size: 16px;
+
+            }
+            .calendar-month{
+                li{
+                    margin: 0 7px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media(max-width:767px){
+        .calendar-card{
+            margin-bottom: 15px;
+            padding: 15px;
+            h3{
+                font-size: 17px;
+            }
+            .date-title{
+                font-size: 15px;
+            }
+        }
+    }
+}
+.wishlist-icon{
+    width: 34px;
+    height: 34px;
+    background: url(../images/wishlist.svg) no-repeat center;
+    background-size: contain;
+    @include inline-flex;
+}
+.wishlist-outline-icon{
+    width: 34px;
+    height: 34px;
+    background: url(../images/wishlist-outline.svg) no-repeat center;
+    background-size: contain;
+    @include inline-flex;
+}
+.calendar-icon{
+    width: 34px;
+    height: 34px;
+    background: url(../images/calendar.svg) no-repeat center;
+    background-size: contain;
+    @include inline-flex;
+}
+.select-dropdown{
+    @include flexbox();
+    @include align-items(center);
+    margin-bottom: 15px;
+}
+.custom-html-dropdown { 
+    position: relative;width: 49%;
+    & ~ .custom-html-dropdown{
+        margin-left: 15px;
+    }
+    .dropdown-input { padding: 5px 40px 5px 15px; color: $black;font-weight: 700; font-size: 16px; @include appearance(none); background: url(../images/angle-arrow-down.svg) calc(100% - 15px) center no-repeat; background-size: 13px; border: 1px solid $black; @include border-radius(0px); height: 40px; min-width: 100%; text-align: left;        
+        &::after{ content: none; }
+        &:focus { outline: none; }
+    }
+    .dropdown-menu { margin-top: 0; background: #FFFFFF; @include box-shadow(0px 4px 20px rgba(0, 0, 0, 0.25)); @include border-radius(10px);  min-width: 100%; border: none; display: block!important; z-index: 4; visibility: hidden; @include opacity(0); transition : all 0.2s ease-in-out 0s,visibility 0s linear 0.3s,z-index 0s linear 0.01s; transform: translateY(2em); padding: 10px 0; max-height: 350px; overflow: hidden; overflow-y: auto; top: 100% !important;
+        &::-webkit-scrollbar { width:6px;background-color:#F5F5F5; }
+        &::-webkit-scrollbar-thumb { background-color:rgba(0,0,0,0.3); }
+        &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1); }
+        &.show { visibility: visible; opacity: 1; transition-delay: 0s, 0s, 0.3s; transform: translateY(0) !important; }
+        li {
+            button { font-size: 14px; border: none; background: transparent; width: 100%; text-align: left; padding: 5px 15px; @include transition(0.3s, ease-in-out ); color: $black; padding: 4px 15px;
+                &:focus { outline: none; }
+                &:hover, &:focus { color: #444444; background: rgba(83, 81, 251, 0.05); }
+            }
+        }
+        .dropdown-item { cursor: pointer; padding: 5px 15px; font-size: 14px;
+            &:hover, &:focus, &:active, &.active { color: #444444; background: rgba(83, 81, 251, 0.05); }
+        }
+    }
+}

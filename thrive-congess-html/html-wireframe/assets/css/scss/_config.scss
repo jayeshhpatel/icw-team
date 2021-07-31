@@ -115,7 +115,11 @@ $black: #0f0f1d;
   -webkit-order: $val;
   order: $val;
 }
-
+@mixin appearance($none) {
+  appearance: $none;
+  -moz-appearance: $none;
+  -webkit-appearance: $none;
+}
 /** Operation **/
 /* Parametric Mixins */
 /** Guarded Mixins **/

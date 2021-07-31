@@ -2008,6 +2008,9 @@ section {
     background-color: #fafafa;
     margin-top: 50px;
     padding: 0;
+    .container{
+        max-width: 100%;
+    }
     .main-title {
         margin-bottom: 25px;
         h2 {
@@ -2020,8 +2023,8 @@ section {
             font-family: $HelveticaMedium;
         }
     }
-    > .card-content {
-        padding: 30px 0;
+     .left-content {
+        padding: 50px 100px;
     }
     #timer {
         @include flexbox();
