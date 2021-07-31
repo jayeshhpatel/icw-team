@@ -2053,6 +2053,9 @@ section {
     }
     .date-time-content {
         margin: 10px 0;
+        max-width: 400px;
+        text-align: left;
+        margin-left: auto;
         .card-item {
             background-color: rgba(50 ,59 ,60, 0.4);
             @include flexbox();
@@ -2088,7 +2091,7 @@ section {
             }
             .arrow-right {
                 &:after {
-                    filter: invert(1);
+                    background-image: url(../images/angle-arrow-down-pink.svg);
                 }
             }
         }

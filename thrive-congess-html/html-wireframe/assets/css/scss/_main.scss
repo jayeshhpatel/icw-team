@@ -217,7 +217,7 @@ section {
     font-size: 18px;
     color: #ffffff;
     font-weight: 600;
-    background-color: #444444;
+    background-color: #3c4242;
     @include inline-flex;
     @include align-items(center);
     @include justify-content(center);
@@ -244,7 +244,7 @@ section {
     }
     @media (max-width: 991px) {
         min-height: 40px;
-        padding: 5px 15px;
+        padding: 0 15px;
         font-size: 14px;
     }
 }
@@ -276,7 +276,7 @@ section {
     }
     @media (max-width: 991px) {
         min-height: 40px;
-        padding: 5px 15px;
+        padding: 0 15px;
         font-size: 14px;
     }
 }
@@ -1280,6 +1280,36 @@ section {
         }
     }
 }
+.bookmark-page {
+    &:before {
+        content: "";
+        width: 38px;
+        height: 38px;
+        display: block;
+        margin-right: 12px;
+        background: url(../images/bookmark.jpg) no-repeat center;
+    }
+}
+.pdf-download {
+    &:before {
+        content: "";
+        width: 38px;
+        height: 38px;
+        display: block;
+        margin-right: 12px;
+        background: url(../images/pdf-download.jpg) no-repeat center;
+    }
+}
+.xls-download {
+    &:before {
+        content: "";
+        width: 38px;
+        height: 38px;
+        display: block;
+        margin-right: 12px;
+        background: url(../images/xls-download.jpg) no-repeat center;
+    }
+}
 .link-btn {
     color: $white;
     background-color: #3c4242;
@@ -1300,21 +1330,6 @@ section {
         height: 38px;
         display: block;
         margin-right: 12px;
-    }
-    &.bookmark-page {
-        &:before {
-            background: url(../images/bookmark.jpg) no-repeat center;
-        }
-    }
-    &.pdf-download {
-        &:before {
-            background: url(../images/pdf-download.jpg) no-repeat center;
-        }
-    }
-    &.xls-download {
-        &:before {
-            background: url(../images/xls-download.jpg) no-repeat center;
-        }
     }
     @media (max-width: 991px) {
         max-width: 342px;
@@ -2360,6 +2375,94 @@ section {
         }
         .dropdown-item { cursor: pointer; padding: 5px 15px; font-size: 14px;
             &:hover, &:focus, &:active, &.active { color: #444444; background: rgba(83, 81, 251, 0.05); }
+        }
+    }
+}
+
+/*******************event-wrapper page css*********************/
+.event-wrapper{
+    .main-title{
+        span{
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+    .event-content{
+        h3{
+            font-size: 22px;font-weight: 700;margin-bottom: 15px;
+        }
+    }
+    .event-card{
+        padding: 40px;
+        margin-bottom: 20px;
+        h4{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .date-title{
+            font-weight: 700;
+            color: #3c4242;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        span{
+            font-weight: 700;
+            color: #3c4242;
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: block;
+            a{
+                font-weight: normal;
+                color: #6e6e6e;
+                text-decoration: underline;
+            }
+        }
+        p{
+            margin-bottom: 25px;
+        }
+        
+    }
+    .btn-groups{
+        @include inline-flex;
+        @include flex-direction(column);
+        a{
+            padding-left: 10px;
+        }
+        .site-btn{
+            margin-bottom: 15px;@include justify-content(start);
+        }
+        .calendar-icons{
+            &:before{
+                content: "";
+                width: 34px;
+                height: 34px;
+                background: url(../images/calendar.svg) no-repeat center;
+                display: block;filter: brightness(100);margin-right: 12px;
+            }
+        }
+        .bookmark-page{
+            &:before{
+                background: url(../images/bookmark-fill.png) no-repeat center;
+            }
+        }
+    }
+    @media(max-width:991px){
+        padding-top: 0;
+        .main-title{
+            span{
+                font-size: 14px;
+            }
+        }
+        .event-card{
+            padding: 20px;
+            h4{
+                font-size: 20px;
+            }
+            span,
+            .date-title{
+                font-size: 15px;
+            }
         }
     }
 }
