@@ -2389,8 +2389,9 @@ section {
     }
     .event-content{
         h3{
-            font-size: 22px;font-weight: 700;margin-bottom: 15px;
+            font-size: 22px;font-weight: 700;margin-bottom: 15px;color: #000000;
         }
+        
     }
     .event-card{
         padding: 40px;
@@ -2447,11 +2448,24 @@ section {
             }
         }
     }
+    @media(min-width:768px){
+        .event-content{
+            .tab-pane{
+                display: block !important;
+                @include opacity(1 !important);
+            }
+        }
+    }
     @media(max-width:991px){
         padding-top: 0;
         .main-title{
             span{
                 font-size: 14px;
+            }
+        }
+        .event-content{
+            h3{
+                font-size: 18px;
             }
         }
         .event-card{
