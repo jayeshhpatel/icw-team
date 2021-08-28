@@ -2099,6 +2099,7 @@ section {
     @media(max-width:767px) {
         padding: 40px 0;
         #timer {
+            display: block;
             .timer-count {
                 font-size: 15px;
                 span {

@@ -15,17 +15,24 @@
             right: 10%;
             z-index: 10;
             bottom: 8%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
             background-color: #ffffff;
         }
-        .title-block{
+        .accessibility-popup.is-show{
+            opacity: 1;
+            visibility: visible;
+        }
+        .accessibility-popup .title-block{
             position: relative;
             margin-bottom: 10px;
         }
-        .title-block h2{
+        .accessibility-popup .title-block h2{
             font-size: 24px;
             margin-bottom: 0;
         }
-        .close-icon{
+        .accessibility-popup .close-icon{
             font-size: 14px;
             display: flex;
             align-items: center;
@@ -36,20 +43,20 @@
             top: -14px;
             z-index: 1;
         }
-        .close-icon span{
+       .accessibility-popup  .close-icon span{
             font-size: 30px;
             padding-left: 5px;
             color: #707070;
         }
-        .label-title{
+        .accessibility-popup .label-title{
             font-weight: 500;font-family: "Lexia-Regular",sans-serif;font-size: 18px;
             margin-bottom: 10px;
         }
-        .text-block{
+        .accessibility-popup .text-block{
             display: flex;
             justify-content: space-between;
         }
-        .text-block .form-check{
+        .accessibility-popup .text-block .form-check{
             cursor: pointer;
             padding: 0;margin: 0;    
             min-height: auto;
@@ -57,7 +64,7 @@
             flex-direction: column-reverse;
             align-items: center;justify-content: space-between;
         }
-        .text-block .form-check-label{
+        .accessibility-popup .text-block .form-check-label{
             cursor: pointer;
             line-height: 1;
             min-height: 30px;
@@ -65,12 +72,12 @@
             display: flex;
             align-items: flex-end;
         }
-        .text-block .form-check-input{
+        .accessibility-popup .text-block .form-check-input{
             cursor: pointer;
             float: none;
             margin: 0;position: relative;
         }
-        .text-block .form-check-input:checked:after{
+        .accessibility-popup .text-block .form-check-input:checked:after{
             content: "";
             position: absolute;
             width: 8px;
@@ -83,15 +90,15 @@
             bottom: 0;
             top: 0;
         }
-        .label-block{
+        .accessibility-popup .label-block{
             margin-bottom: 30px;
         }
         
-        .text-block .form-check-input:checked{
+        .accessibility-popup .text-block .form-check-input:checked{
             background-color: transparent;
             border-color: #d0006f;
         }
-        .text-block .form-check-input:checked + .form-check-label{
+        .accessibility-popup .text-block .form-check-input:checked + .form-check-label{
             color: #d0006f;
         }
         .f14{
@@ -109,11 +116,11 @@
         .f22{
             font-size: 22px !important;
         }
-        .plus-minus-btns{
+        .accessibility-popup .plus-minus-btns{
             display: flex;align-items: center;
             justify-content: space-between;
         }
-        .plus-minus-btn{
+        .accessibility-popup .plus-minus-btn{
             width: 40px;
             height: 40px;
             cursor: pointer;
@@ -124,20 +131,69 @@
             color: #ffffff;
             font-size: 30px;
         }
-        .img.img--on {
-            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/157293/light_on.jpg);
-        }
-        .contrast-block{
+        .accessibility-popup .contrast-block{
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-        .control-range{
+        .accessibility-popup .control-range{
            width: 100%;
            display: flex;
         }
-        .control-range input{width: 100%;}
+       .accessibility-popup  #slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: 5px;
+            background: #ededed;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+        .accessibility-popup #slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0 ,0.5);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+        .accessibility-popup #slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border: 0;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            transition: background 0.15s ease-in-out;
+        }       
+       .accessibility-popup  #slider::-moz-range-thumb:hover {
+            background: #d4d4d4;
+        }
+        .accessibility-icon{
+            position: fixed;
+            right: 0;
+            bottom: 40%;
+            z-index: 10;
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 40px 0 0 40px;
+            cursor: pointer;box-shadow: 0 0 5px rgba(0, 0, 0 ,0.5);
+        }
+        @media(max-width:575px){
+            .accessibility-popup{
+                width: 280px;
+                right: 20px;
+            }
+            .accessibility-popup .title-block h2 { font-size: 18px;}
+            .accessibility-popup .label-title{font-size: 14px;}
+            .accessibility-popup .plus-minus-btn { width: 30px; height: 30px;}
+        }
+       
     </style>
 </head>
 <body>
@@ -505,10 +561,19 @@
             </div>
         </div>
     </footer>
-    <div class="accessibility-popup">
+    <div class="accessibility-modal">
+        <div class="accessibility-icon" data-popup="accessibility-modal">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="19" stroke="#D0006F" stroke-width="2"/>
+                <path d="M20.7071 10.2929C20.3166 9.90237 19.6834 9.90237 19.2929 10.2929L12.9289 16.6569C12.5384 17.0474 12.5384 17.6805 12.9289 18.0711C13.3195 18.4616 13.9526 18.4616 14.3431 18.0711L20 12.4142L25.6569 18.0711C26.0474 18.4616 26.6805 18.4616 27.0711 18.0711C27.4616 17.6805 27.4616 17.0474 27.0711 16.6569L20.7071 10.2929ZM21 29L21 11L19 11L19 29L21 29Z" fill="#D0006F"/>
+            </svg>
+        </div>
+        
+    </div>
+    <div class="accessibility-popup custom-modal" id="accessibility-modal">
         <div class="title-block">
             <h2>Accessibility</h2>
-            <div class="close-icon">Close <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="close-icon popup-close">Close <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="16.9492" y="5.63599" width="2" height="16" transform="rotate(45 16.9492 5.63599)" fill="#707070"/>
                 <rect x="18.3633" y="16.9497" width="2" height="16" transform="rotate(135 18.3633 16.9497)" fill="#707070"/>
                 </svg>
@@ -547,7 +612,7 @@
                 <img src="assets/images/brightness3.png" alt=""/>
             </div>
             <div class="control-range">
-                <input type="range" name="brightness" min="50" max="150" value="100" step="1">
+                <input id="slider" type="range" name="brightness" value="100" min="0" max="500">
             </div>
         </div>
         <div class="plus-minus-btns">
@@ -565,55 +630,25 @@
         </div>
     </div>
     <script>
-        (function(win, doc) {
-            const $ = s => doc.querySelector(s)
-            const addEvent = (n, e, h) => {
-                n.addEventListener(e, h, false)
+        // Model Popup
+        if(document.querySelector(".custom-modal")){
+            const openEls = document.querySelectorAll("[data-popup]"); 
+            const closeEls = document.querySelectorAll(".popup-close"); 
+            // const modalEls = document.querySelectorAll(".custom-modal"); 
+            for (const el of openEls) {
+                el.addEventListener("click", function() {
+                    const modalId = this.dataset.popup;
+                    document.getElementById(modalId).classList.add('is-show');
+                });
+            }  
+            for (const el of closeEls) {
+                el.addEventListener("click", function() {
+                    document.querySelector(".custom-modal.is-show").classList.remove('is-show');
+                });
             }
+        }
+        
 
-            const changeFilters = () => {
-                target.style['webkit' + 'Filter'] = 'brightness(' + filtersMap['brightness'] + ')'
-            }
-
-            const setFilters = (key, value) => {
-                if (!filtersMap) {return}
-                filtersMap[key] = value
-                changeFilters()
-            }
-
-            let filtersMap = {
-                hue: '0deg',
-                brightness: 1
-            }
-            let tempCover = document.querySelector('.img__cover')
-
-            let s = $('[name="light-switch"]')
-            let b = $('[name="brightness"]')
-            let t = $('[name="temp"]')
-
-            let target = $('.img')
-
-            // turn light on and off
-            addEvent(s, "change", (e) => {
-                target.classList.toggle('img--on')
-            })
-
-            addEvent(t, 'input', (e) => {
-                let $val = parseInt(e.target.value)
-                if ($val > 0) {
-                tempCover.style.background = 'rgba(255,255,0,' + Math.abs($val) / 400 + ')'
-                } else {
-                tempCover.style.background = 'rgba(0, 0, 255,' + Math.abs($val) / 400 + ')'
-                }
-            })
-
-            addEvent(b, 'input', (e) => {
-                let $val = parseInt(e.target.value)
-                let $brightness = $val / 100
-                setFilters('brightness', $brightness)
-            })
-
-            })(window, document)
     </script>
 </body>
 </html>
