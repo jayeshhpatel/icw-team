@@ -41,6 +41,9 @@ p{
     &:last-child{
         margin-bottom: 0;
     }
+    @media(max-width:991px){
+        margin-bottom: 15px;
+    }
 }
 img{
     max-width: 100%;
@@ -62,7 +65,11 @@ body {
         font-size: 16px;
     }
 }
-
+.animation-image{
+    @media (max-width:1199px) {
+        display: none;
+    }
+}
 .site-btn {
     font-size: 30px;
     color: $white;font-family: 'Creepster', cursive;
@@ -112,6 +119,33 @@ body {
     height: 14px;
     background: url(../images/arrow-right.svg) no-repeat center;background-size: contain;
 }
+.icon-arrow-top{
+    width: 29px;
+    height: 14px;
+    background: url(../images/arrow-top.svg) no-repeat center;background-size: contain;
+}
+.scroll-to-top{
+    width: 70px;
+    height: 70px;border: 2px solid #00D0AB;
+    @include border-radius(70px); @include align-items(center);
+    @include flexbox();
+    @include justify-content(center);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20%;
+    right: 10%;background-color: #1B1B1B;
+    @include opacity(0); @include transition(0.3s, ease-in-out);
+    &.is-visible{
+        @include opacity(1);
+    }
+    @media(max-width:991px){
+        width: 40px;
+        height:40px;
+        .icon-arrow-top{
+            width: 15px;
+        }
+    }
+}
 section{
     padding: 100px 0;
     @media(max-width:991px){
@@ -145,25 +179,29 @@ section{
     margin-left: -70px;$color: #000000;
     h2 {
         font-size: 64px;font-family: 'Creepster', cursive;
-        background-image: linear-gradient( 180deg , #14FF00 0%, #00D0AB 100%);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        
         margin-bottom: 0;
         @include inline-flex();
         position: relative;
-        &:after{
-            content: "";
-            position: absolute;
-            background: url(../images/smoke.png) no-repeat center;
-            width: 100%;
-            height: 131px;
-            opacity: 0.75;
-            background-size: contain;
-            z-index: -1;
-            left: 70px;
+        span{
+            position: relative;background-image: linear-gradient( 180deg , #14FF00 0%, #00D0AB 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            &:after{
+                content: "";
+                position: absolute;
+                background: url(../images/smoke.png) no-repeat center;
+                width: 100%;
+                height: 131px;
+                opacity: 0.75;
+                background-size: 100% 100%;
+                z-index: -1;
+                left: 0;
+                top: -27%;
+            }
         }
     }
     p {
@@ -178,8 +216,12 @@ section{
         margin-bottom: 20px;
         h2 {
             font-size: 36px;
-            &:after{
-                left: 0;
+            span{
+                &:after{
+                    left: 0;height: 50px;
+                    top: -11px;
+                    margin: auto;
+                }
             }
         }
         p{
@@ -191,6 +233,20 @@ section{
             font-size: 26px;
         }
     }
+}
+.pulse { 
+    -webkit-animation: pulse 0.6s ease-out infinite;
+    -moz-animation:pulse 0.6s ease-out infinite;
+    -o-animation:pulse 0.6s ease-out infinite;
+    -ms-transition:pulse 0.6s ease-out infinite;
+    animation:pulse 0.6s ease-out infinite;
+    
+}
+@keyframes pulse {
+    0% {opacity: 0.9;transform: scale(0.98);}
+    30% {opacity: 1; transform: scale(1);}
+    70% {opacity: 1; transform: scale(1);}
+    100% {opacity: 0.9; transform: scale(0.98); }
 }
 .main-header {
     width: 100%;
@@ -255,7 +311,11 @@ section{
                         -webkit-background-clip: text;
                         -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        -moz-text-fill-color: transparent;
+                        -moz-text-fill-color: transparent;-webkit-animation: pulse 0.4s ease-out infinite;
+                        -moz-animation:pulse 0.4s ease-out infinite;
+                        -o-animation:pulse 0.4s ease-out infinite;
+                        -ms-transition:pulse 0.4s ease-out infinite;
+                        animation:pulse 0.4s ease-out infinite;
                         &::after {
                             width: 45px;
                             right: auto;
@@ -296,7 +356,7 @@ section{
     @media (max-width: 991px) {
         .container{max-width: 100%;}
         &.is-visible {
-            background-color: #1c163a;
+            background-color: #1B1B1B;
         }
         &.fixed-header {
             .navbar {
@@ -358,7 +418,7 @@ section{
                 overflow-y: auto;
                 width: 300px;
                 display: block;
-                background-color: #1c163a;
+                background-color: #1B1B1B;
                 @include transition(0.4s, ease-in-out);
                 @include transform(translateX(-100%));
                 position: fixed;
@@ -475,11 +535,26 @@ section{
     }
 }
 .circle-img-content{
+    position: relative;
+    .animation-image{
+        position: absolute;
+        right: -35%;
+        top: 0;
+    }
+    .image-block{
+        position: relative;
+    }
     .image-item{
         text-align: center;
         p{
             font-size: 20px;
             margin-top: 30px;
+        }
+    }
+    @media(max-width:1399px){
+        .animation-image{
+            right: 0;
+            z-index: -1;
         }
     }
     @media(max-width:991px){
@@ -489,7 +564,7 @@ section{
                 width: 100%;
             }
             p{
-                font-size: 16px;margin-top: 15px;
+                font-size: 16px;margin-top: 10px;
             }
         }
     }
@@ -500,6 +575,17 @@ section{
     }
 }
 .roadmap-wrapper{
+    position: relative;
+    .animation-image{
+        position: absolute;
+        left: 6%;
+        bottom: -5%;
+    }
+    @media(max-width:1440px){
+        .animation-image{
+            display: none;
+        }
+    }
     @media(max-width:991px){
         .card-dec{
             margin-bottom: 30px;
@@ -568,6 +654,10 @@ section{
         h2{
             -webkit-text-fill-color: $white;
             -moz-text-fill-color: $white;
+            z-index: 1;
+            &:after{
+                left: 0;
+            }
         }
         p{
             color: #00D0AB;
