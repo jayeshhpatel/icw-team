@@ -13,7 +13,7 @@ $(document).ready(function () {
       var scrollTop = $(".scroll-to-top");
       $(window).scroll(function () {
         var topPos = $(this).scrollTop();
-        if (topPos > 300) {
+        if (topPos > 600) {
           $(scrollTop).addClass("is-visible");
         } else {
           $(scrollTop).removeClass("is-visible");
@@ -24,9 +24,18 @@ $(document).ready(function () {
       $(scrollTop).click(function () {
         $('html, body').animate({
           scrollTop: 0
-        }, 300);
+        }, 600);
         return false;
       });
     }
+
+    $(window).scroll(function(){
+      if ($(window).scrollTop() >= 10) {
+          $('.main-header').addClass('fixed-header');
+      }
+      else {
+          $('.main-header').removeClass('fixed-header');
+      }
+    });
 
 });
