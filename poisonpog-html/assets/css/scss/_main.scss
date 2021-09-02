@@ -132,8 +132,8 @@ body {
     @include justify-content(center);
     cursor: pointer;
     position: fixed;
-    bottom: 20%;
-    right: 10%;background-color: #1B1B1B;
+    bottom: 10%;
+    right: 8%;background-color: #1B1B1B;
     @include opacity(0); @include transition(0.3s, ease-in-out);
     &.is-visible{
         @include opacity(1);
@@ -176,6 +176,7 @@ section{
 }
 .main-content-wrapper{
     background: url(../images/grunge-dots.png) no-repeat center;background-size: 100% 100%;
+    overflow: hidden;
 }
 .main-title {
     margin-bottom: 30px;
