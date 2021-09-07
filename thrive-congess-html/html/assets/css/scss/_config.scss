@@ -1,6 +1,6 @@
 
 /* Variables */
-$bodyfont: "Lexia-Regular", sans-serif;
+$bodyfont: "Lexia Lt", sans-serif;
 $bodyfontsize: 16px;
 $bodyfontcolor: #0f0f1d;
 $bodybg: #ffffff;
@@ -12,6 +12,7 @@ $lightpink:#830051;
 $HelveticaLight:"Helvetica-Neue-Light";
 $HelveticaMedium:"Helvetica-Neue-Medium";
 
+
 @font-face {
 	font-family: "Helvetica-Neue-Light";
 	font-weight: 300;
@@ -22,10 +23,9 @@ $HelveticaMedium:"Helvetica-Neue-Medium";
 	font-weight: 500;
 	src:url("../fonts/Helvetica-Medium.woff") format("woff");
 }
-@font-face {
-	font-family: "Lexia-Regular";
-	src:url("../fonts/Lexia-Regular.woff") format("woff");
-}
+
+@font-face{font-family:'Lexia Lt';font-style:normal;font-weight:normal;src:local("Lexia Lt"),url("../fonts/Lexia_Lt.woff") format("woff")}
+@font-face{font-family:'Lexia Bd';font-style:normal;font-weight:normal;src:local("Lexia Bd"),url("../fonts/Lexia_Bd.woff") format("woff")} 
 /* Mixins */
 @mixin border-radius($radius) {
   border-radius: $radius;

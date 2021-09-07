@@ -227,6 +227,8 @@ section {
     min-height: 50px;
     padding: 5px 25px;
     min-width: 120px;
+    border: none;
+    &:focus,
     &:hover {
         color: #ffffff;
         background-color: #222222;
@@ -2270,6 +2272,126 @@ section {
                 color: #0f0f1d;
                 margin: 0;
             }
+        }
+    }
+}
+.custom-html-dropdown{
+    position: relative;
+    .select-input {
+        border: 1px solid #eeeeee;
+        @include border-radius(0);
+        padding: 12px 20px;font-family: "Helvetica-Neue-Medium";
+        color: #000000; font-size: 18px; background: url(../images/angle-arrow-down-pink.svg) calc(100% - 15px) center no-repeat; background-size: 15px;cursor: pointer;
+    }
+    .select-dropdown-menu{font-family: "Helvetica-Neue-Medium";position: absolute; background: #FFFFFF; @include box-shadow(-1px 1px 11px rgba(0, 0, 0, 0.10)); @include border-radius(5px);  min-width: 100%;display: block; z-index: 4; visibility: hidden; @include opacity(0); transition : all 0.2s ease-in-out 0s,visibility 0s linear 0.3s,z-index 0s linear 0.01s; transform: translateY(2em); max-height: 350px; overflow: hidden; overflow-y: auto; top: 100%;
+        &.show { visibility: visible; opacity: 1; transition-delay: 0s, 0s, 0.3s; transform: translateY(0); }
+        li{
+            font-size: 14px; border: none; background: transparent; width: 100%; text-align: left; padding: 10px 15px; @include transition(0.3s, ease-in-out );cursor: pointer;
+            &:hover{
+                background-color: #f8f8f8;
+            }
+        }
+    }
+    @media(max-width:991px){
+        .select-input{font-size: 16px;}
+    }
+}
+.text-pink{color: #d0006f;}
+.msl-connect-form{
+    .information-block{
+        .form-group{
+            margin-bottom: 30px;
+        }
+        .form-label{
+            font-family:'Lexia Bd';
+        }
+    }
+}
+.medical-science-wrapper{
+    .site-btn{background-color: #830051;
+        &:hover{
+            color: #ffffff;
+            background-color: #222222;
+        }
+    }
+    .medical-science-box{
+        background-color: #FBEDCB;
+        padding: 40px 155px 40px 50px;
+        position: relative;
+        .circle-logo{
+            position: absolute;
+            right: 35px;
+            top: 35px;
+        }
+        p{
+            a{word-break: break-all;}
+        }
+        h3{
+            font-size: 40px;
+        }  
+    }
+    @media(max-width:1199px){
+        .medical-science-box{
+            margin-bottom: 30px;padding: 20px 110px 20px 30px;
+            h3{font-size: 30px;}
+            .circle-logo {
+                max-width: 70px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        .card-content{
+            h2{margin-bottom: 0;}
+        }
+        .medical-science-box{
+            padding: 20px;
+            padding-right: 65px;
+            p{font-size: 16px;}
+            .circle-logo {
+                right: 20px;
+                top: 25px;
+            }
+        }
+    }
+}
+.contact-modal{
+    .custom-html-dropdown{
+        .select-input{font-size: 15px;}
+    }
+    .modal-body{padding: 40px;}
+    .close-icon{
+        @include flexbox;
+        @include align-items(center);
+        .btn-close{background-size: 13px;}
+    }
+    .modal-header{border: none;padding: 40px;padding-bottom: 0 !important;}
+    .modal-title{font-size: 32px;}
+    .col-form-label{color: #000000;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+    }
+    .form-control{
+        border-radius: 0;border: 1px solid #eeeeee;
+        padding: 10px 15px;min-height: 46px;
+        @include flexbox;
+        @include align-items(center);
+    }
+    .modal-footer{
+        >*{margin: 0;}
+        display: block;padding: 40px;padding-top: 0 !important;border: none;
+        h3{font-size: 24px;margin-bottom: 30px;}
+        button{border-radius: 0; @include flexbox;margin: 0 0 20px;}
+        .site-btn1{border: 1px solid #eeeeee;margin-bottom: 0;}
+    }
+    @media (min-width: 576px){
+        .modal-dialog{max-width: 700px;}
+    }
+    @media (max-width:991px){
+        .modal-header{padding: 15px;}
+        .modal-body {padding: 15px;}
+        .modal-footer{padding: 15px;
+            h3{font-size: 18px;}
         }
     }
 }
