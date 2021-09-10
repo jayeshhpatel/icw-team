@@ -2,7 +2,7 @@
 .main-header { position: absolute; top: 0; left: 0; right: 0; z-index: 1999; @include transition(0.3s, ease-in-out);
     /*box-shadow: 0px 0px 4px rgba(#000, 0.08);*/ background: #fff; 
     border-bottom: 1px solid rgba(#9DB0AC, 0.2);
-    @media (max-width: 992px) {  
+    @media (max-width: 991px) {  
         .container, .container-fluid {padding: 0px !important;}
     }
 
@@ -223,7 +223,7 @@
 
 
     // SHOW MOBILE
-    @media (max-width: 992px) {  
+    @media (max-width: 991px) {  
         background-color: #fff;
         padding: 15px 0 !important;
         .nav-logo {margin-left: 15px;}
