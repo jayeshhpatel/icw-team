@@ -353,6 +353,11 @@
             }
         }
     }
+    @media(max-width:991px){
+        &:after{
+            background: linear-gradient(#3e5e51 20%, #fff 70%, #b46595);
+        }
+    }
 }
 .text-gray{
     color: #9a9fa3 !important;
