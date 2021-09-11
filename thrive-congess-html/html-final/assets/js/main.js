@@ -126,3 +126,27 @@ if(document.querySelector(".embed-video")){
         video.classList.add('has-media-controls-hidden')
     }
 }
+
+$(".custom-html-dropdown .dropdown-menu li .dropdown-item").click(function(){
+    $('.custom-html-dropdown .dropdown-menu li .dropdown-item ').removeClass('active');
+    $(this).addClass('active');
+    $(this).parents(".custom-html-dropdown").find('.dropdown-input').html($(this).text() );
+    $(this).parents(".custom-html-dropdown").find('.dropdown-input').val($(this).data('value'));
+});
+// Model Popup
+if(document.querySelector(".custom-modal")){
+    const openEls = document.querySelectorAll("[data-popup]"); 
+    const closeEls = document.querySelectorAll(".popup-close"); 
+    // const modalEls = document.querySelectorAll(".custom-modal"); 
+    for (const el of openEls) {
+        el.addEventListener("click", function() {
+            const modalId = this.dataset.popup;
+            document.getElementById(modalId).classList.add('is-show');
+        });
+    }  
+    for (const el of closeEls) {
+        el.addEventListener("click", function() {
+            document.querySelector(".custom-modal.is-show").classList.remove('is-show');
+        });
+    }
+}
