@@ -85,7 +85,7 @@
         .mainmenu { margin-left: auto;
             .nav { @include flexbox(); @include align-items(center); @include justify-content(flex-end); margin: 0; padding: 0; list-style-type: none;  margin-left: auto;
                 & > li { padding-right:30px;
-                    &:last-child {padding-right: 0px;}
+                    &:last-child {padding-right: 0px;border-bottom: none;}
                     
                     & > a:not(.btn-nav) { color: $black; text-decoration: none; 
                         padding: 12px 0px; display: inline-block; text-align: center;
@@ -225,16 +225,16 @@
     // SHOW MOBILE
     @media (max-width: 991px) {  
         background-color: #fff;
-        padding: 15px 0 !important;
-        .nav-logo {margin-left: 15px;}
-
+        padding: 15px 0;
+        .nav-logo {
+            margin-left: 15px;
+        }
         .mainmenu {
             margin-bottom: -15px;
             .nav {
                 flex-direction: column;
-                margin-top: 15px; 
+                margin-top: 15px;
                 border-top: 1px solid #D8CFDD; 
-                // display: block; margin: 100px 15px 20px; padding:0px;
                 &::before { content: none; }
                 & > li { padding: 0px 15px; display: block;
                     border-bottom: 1px solid #D8CFDD; width: 100%;
@@ -313,21 +313,27 @@
     }
 
     @media (max-width: 767px) {  
-        padding: 3px 0px !important;
+        padding: 10px 0;
         .mainmenu {margin-bottom: -3px;
-            .nav {margin-top: 5px; }
         }
     }
 
     } 
+    @media(max-width:991px){
+        &.is-sticky-header{
+            &.scroll-up,
+            &.scroll-down{
+                .navbar{padding: 10px 0;}
+            }
+        }
+    }
+    
     
 }
 
 @media (min-width: 992px){
     .navbar-m-expand-xxl {flex-wrap:nowrap; justify-content:flex-start}
     .navbar-m-expand-xxl .nav {flex-direction:row;}
-    // .navbar-m-expand-xxl .nav .dropdown-menu {position:absolute}
-    // .navbar-m-expand-xxl .nav .nav-link {padding-right:.5rem; padding-left:.5rem}
     .navbar-m-expand-xxl .nav-scroll {overflow:visible}
     .navbar-m-expand-xxl .navbar-collapse {display:flex !important;flex-basis:auto}
     .navbar-m-expand-xxl .navbar-toggler {display:none}
@@ -336,7 +342,7 @@
 
 /* ANIMATED X */
 .navbar-toggler.x {
-    border: none !important;  outline: none !important;  width: 44px; height: 44px; box-shadow:none !important; margin-right: 10px; margin-left: auto;
+    border: none !important;  outline: none !important;  box-shadow:none !important;padding: 0;margin-left:auto;margin-right:15px;
     &:focus {
         outline: none;
     }
@@ -402,4 +408,5 @@
             transform: rotate(0);
         }
     }
+   
 }

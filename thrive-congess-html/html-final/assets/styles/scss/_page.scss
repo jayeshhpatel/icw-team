@@ -275,6 +275,14 @@
             &.card-body-top-action{color: $black;}
         }
     }
+    .msl-connect-form {
+        .custom-html-dropdown {
+            .dropdown-input  {
+                color: $white;
+            }
+        }
+    }
+    
     hr:not([size]){
         border-top: 1px dashed $white;
         height: auto;
@@ -359,6 +367,7 @@
         }
     }
 }
+
 .text-gray{
     color: #9a9fa3 !important;
 }
@@ -646,4 +655,78 @@
         }
     }
     
+}
+
+.text-pink{color: #d0006f;}
+.msl-connect-form{
+    .information-block{
+        .form-group{
+            margin-bottom: 30px;
+        }
+        .form-label{
+            font-family:'Lexia Bd';
+        }
+    }
+    .custom-html-dropdown{
+        position: relative;
+        .dropdown-input {
+            border: 1px solid #eeeeee;
+            background-color: transparent;
+            min-height: 50px;
+        }
+    }
+    @media(max-width:991px){
+        .custom-html-dropdown{
+            .dropdown-input {
+                min-height: 40px;
+            }
+        }
+    }
+}
+.medical-science-wrapper{
+    .site-btn{background-color: #830051;
+        &:hover{
+            color: #ffffff;
+            background-color: #222222;
+        }
+    }
+    .medical-science-box{
+        background-color: #FBEDCB;
+        padding: 40px 155px 40px 50px;
+        position: relative;color:$black;
+        .circle-logo{
+            position: absolute;
+            right: 35px;
+            top: 35px;
+        }
+        p{
+            a{word-break: break-all;}
+        }
+        h3{
+            font-size: 40px;
+        }  
+    }
+    @media(max-width:1199px){
+        .medical-science-box{
+            margin-bottom: 30px;padding: 20px 110px 20px 30px;
+            h3{font-size: 30px;}
+            .circle-logo {
+                max-width: 70px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        .card-content{
+            h2{margin-bottom: 0;}
+        }
+        .medical-science-box{
+            padding: 20px;
+            padding-right: 65px;
+            p{font-size: 16px;}
+            .circle-logo {
+                right: 20px;
+                top: 25px;
+            }
+        }
+    }
 }
