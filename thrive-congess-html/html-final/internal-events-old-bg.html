@@ -274,10 +274,75 @@
         </footer>
         <!-- // FOOTER SECTION -->
         
-        <!-- JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
-
+        <!-- accessibility-popup -->
+        <div class="accessibility-modal">
+            <div class="accessibility-icon" data-popup="accessibility-modal">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="19" stroke="#D0006F" stroke-width="2"/>
+                    <path d="M20.7071 10.2929C20.3166 9.90237 19.6834 9.90237 19.2929 10.2929L12.9289 16.6569C12.5384 17.0474 12.5384 17.6805 12.9289 18.0711C13.3195 18.4616 13.9526 18.4616 14.3431 18.0711L20 12.4142L25.6569 18.0711C26.0474 18.4616 26.6805 18.4616 27.0711 18.0711C27.4616 17.6805 27.4616 17.0474 27.0711 16.6569L20.7071 10.2929ZM21 29L21 11L19 11L19 29L21 29Z" fill="#D0006F"/>
+                </svg>
+            </div>
+            
+        </div>
+        <div class="accessibility-popup custom-modal" id="accessibility-modal">
+            <div class="title-block">
+                <h2>Accessibility</h2>
+                <div class="close-icon popup-close">Close <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="16.9492" y="5.63599" width="2" height="16" transform="rotate(45 16.9492 5.63599)" fill="#707070"/>
+                    <rect x="18.3633" y="16.9497" width="2" height="16" transform="rotate(135 18.3633 16.9497)" fill="#707070"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="label-block">
+                <p class="label-title">Text size</p>
+                <div class="text-block">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="text1">
+                        <label class="form-check-label f14" for="text1"> A </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="text2">
+                        <label class="form-check-label f16" for="text2"> A </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="text3">
+                        <label class="form-check-label f18" for="text3"> A </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="text4">
+                        <label class="form-check-label f20" for="text4"> A </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="text5">
+                        <label class="form-check-label f22" for="text5"> A </label>
+                    </div>
+                </div>
+            </div>
+            <div class="label-block">
+                <p class="label-title">Contrast</p>
+                <div class="contrast-block">
+                    <img src="assets/images/brightness1.png" alt=""/>
+                    <img src="assets/images/brightness2.png" alt=""/>
+                    <img src="assets/images/brightness3.png" alt=""/>
+                </div>
+                <div class="control-range">
+                    <input id="slider" type="range" name="brightness" value="100" min="0" max="500">
+                </div>
+            </div>
+            <div class="plus-minus-btns">
+                <div class="minus-btn plus-minus-btn">
+                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="16" width="2" height="16" transform="rotate(90 16 0)" fill="white"/>
+                    </svg>
+                </div>
+                <div class="plus-btn plus-minus-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="7" width="2" height="16" fill="white"/>
+                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
