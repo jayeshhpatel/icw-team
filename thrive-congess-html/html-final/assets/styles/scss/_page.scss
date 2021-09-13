@@ -95,7 +95,8 @@
     .title {
         margin-bottom:15px;
         font-size: calc(28px + (38 - 28) * ((100vw - 320px) / (1600 - 320)));
-        font-family:$hfont;   
+        font-family:$hfont; 
+         
     }
     .date {
         font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1600 - 320)));
@@ -266,9 +267,17 @@
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(#3e5e51 20%, #fff 80%, #b46595);
+        background: linear-gradient(#3e5e51 20%, #fff 70%, #b46595);
         z-index: -1;
     }
+    .download-pdf {
+        .title {
+            span {
+                color: $white;
+            }
+        }
+    }
+    
     .card-block{
         &.bg-light-blue{color: $black;}
         .card-body{
@@ -728,5 +737,147 @@
                 top: 25px;
             }
         }
+    }
+}
+
+// section-column-block
+.section-column-block{
+    margin-top: 30px;
+    strong{font-family: "Helvetica Neue",sans-serif;}
+    .page-title-hero{
+        border-bottom: 1px solid $accent;padding-bottom: 20px;
+    }
+}
+
+
+// summary-block
+.summary-block{
+    margin-bottom: 30px;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+            font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(208, 0, 111 ,0.18);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+// published-views
+.published-views{
+    @include flexbox;
+    @include justify-content(space-between);    
+    margin-top: 10px;
+}
+// download-pdf
+.download-pdf{
+    @include flexbox;
+    @include align-items(center);
+    padding: 25px 0 40px;
+    .title{
+        padding-left: 15px;
+        a{
+            text-decoration: none;
+        }
+        p{
+            margin: 0;font-family: $hfont-normal;color: $pink;font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+        }
+        span{font-size: 14px;color: #373737;}
+    }
+}
+// image-block
+.image-block{
+    img{width: 100%;}
+}
+// download-twitter-btn
+.icon-text-btn{
+    @include inline-flex;font-family: $hfont-normal;
+    a{
+        @include inline-flex;
+        @include align-items(center);
+        margin-right: 40px;
+        &:last-child{margin-right: 0;}
+        img{
+            margin-right: 15px;
+        }
+    }
+}
+// key-data-point
+.key-data-point{
+    .card-title{font-family: $hfont-45 !important;margin-bottom: 25px;color: $black;}
+    .card{
+        background-color: transparent;
+        .card-img-top{
+            @include border-radius(0);
+        }
+        .card-body{padding: 30px;}
+    }
+    .icon-text-btn{
+        a{
+            img{
+                width: 30px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        .card{
+            .card-body{padding: 20px;}
+        }
+    }   
+}
+// interested-block
+.interested-block{
+    .card-block {
+        color: $black;
+        .card-body {
+            padding: 40px;
+            .card-sm-title{
+                font-size: calc(14px + (14 - 14) * ((100vw - 320px) / (1920 - 320)));font-family: $hfont-65 !important;
+            }
+            .card-title {
+                font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+    } 
+    @media(max-width:991px){
+        .card-block {
+            .card-body {
+                padding: 20px;
+            }
+        }
+    }   
+}
+// social-links
+.social-links{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include flexbox;;
+    li{
+        font-family: "lexialight",serif !important;
+        color: $pink;
+        text-align: center;cursor: pointer;
+        padding-right: 30px;
+        &:last-child{padding-right: 0;}
+        span{
+            display: block;padding-top: 5px;
+        }
+    }
+}
+// novelty-btn
+.novelty-btn-block{
+    span{
+        color: $pink;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .novelty-btn{
+        
     }
 }

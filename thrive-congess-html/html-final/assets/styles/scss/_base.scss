@@ -46,6 +46,7 @@ a {
 .text-light-lime      {color: #F3F7CC !important;}
 .text-lime            {color: #FBEDCB !important;}
 .text-lime-green       {color: #C4D600 !important;}
+.text-lime-darkgreen       {color: #565a31 !important;}
 
 .text-light-magenta   {color: #E6CCDC !important;}
 .text-light2-magenta  {color: #D8CFDD !important;}
@@ -131,7 +132,7 @@ body.overflow-hidden { overflow: hidden !important; padding-right: 18px;}
 
 .w-100 {width: 100%;}
 .w-m100 {min-width: 100%;}
-
+.mw-340{max-width: 340px;margin: auto;}
 
 .pt-20 {padding-top: 20px;}
 .pt-0 {padding-top: 0px !important;}
@@ -295,10 +296,6 @@ body {
             padding-right: 120px;
         }
         @media (min-width: 1600px){
-            // max-width: 100%;
-            // padding-left: 5%;
-            // padding-right: 5%;
-
             max-width: 1520px;
             padding-left: 40px; 
             padding-right: 40px;

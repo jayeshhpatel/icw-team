@@ -96,9 +96,26 @@ img {
     max-width: 100%;
 }
 
-.container {
-    max-width: 1530px;
-    display: block !important;
+.container { 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    max-width: 1530px; 
+    margin: 0 auto;
+    @media (min-width: 1250px){
+        max-width: 1600px;
+        padding-left: 60px; 
+        padding-right: 60px; 
+    }
+    @media (min-width: 1400px){
+        max-width: 100%;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    @media (min-width: 1600px){
+        max-width: 1520px;
+        padding-left: 40px; 
+        padding-right: 40px;
+    }
 }
 .navbar-toggler:focus {
     box-shadow: none !important;
@@ -369,10 +386,6 @@ section {
             }
         }
     }
-    .container {
-        max-width: 1920px;
-        padding: 0 5%;
-    }
     .navbar {
         padding: 0;
         display: block;
@@ -396,6 +409,9 @@ section {
                 @include opacity(1);
                 visibility: visible;
             }
+        }
+        >.container{
+            display: block;
         }
     }
     .navbar-nav {
@@ -530,14 +546,12 @@ section {
         }
     }
     @media (max-width: 1499px) {
-        .container {
-            padding: 0 12px;
-        }
+       
         .menu-list {
             width: 100%;
             li {
                 padding: 25px 0;
-                margin: 0 10px;
+                margin: 0 7px;
                 a {
                     font-size: 16px;
                 }
@@ -562,12 +576,7 @@ section {
                 @include transform(translateX(0px));
             }
         }
-        &.fixed-header {
-            .menu-list {
-                min-height: calc(100vh - 68px);
-                margin-top: 68px;
-            }
-        }
+       
         .navbar {
             &:after {
                 display: none;
@@ -727,10 +736,7 @@ section {
 .header-search-block {
     padding: 30px 0;
     border-bottom: 1px solid #ebefee;
-    .container {
-        max-width: 1920px;
-        padding: 0 5%;
-    }
+   
     .input-group {
         min-height: 50px;
 
@@ -780,11 +786,7 @@ section {
             margin-right: 40px;
         }
     }
-    @media (max-width: 1499px) {
-        .container {
-            padding: 0 12px;
-        }
-    }
+    
     @media (max-width: 991px) {
         padding: 20px 0;
         .input-search-block {
@@ -820,10 +822,7 @@ section {
 .breadcrumb-menu-list {
     padding: 5px 0;
     font-family: $HelveticaMedium;
-    .container {
-        max-width: 1920px;
-        padding: 0 5%;
-    }
+    
     ul {
         @include flexbox();
         @include align-items(center);
@@ -852,11 +851,7 @@ section {
             }
         }
     }
-    @media (max-width: 1499px) {
-        .container {
-            padding: 0 12px;
-        }
-    }
+   
     @media (max-width: 991px) {
         ul {
             li {
@@ -2345,7 +2340,7 @@ section {
         }
         .medical-science-box{
             padding: 20px;
-            padding-right: 65px;
+            padding-right: 80px;
             p{font-size: 16px;}
             .circle-logo {
                 right: 20px;

@@ -1,8 +1,8 @@
 .page-title-hero {
     margin: 50px 0; 
-
+    .sub-title{ font-size: 16px;color: $primary;margin-bottom: 10px;display: block;}
     .title {
-        font-size: calc(38px + (42 - 38) * ((100vw - 320px) / (1600 - 320)));
+        font-size: calc(30px + (42 - 30) * ((100vw - 320px) / (1600 - 320)));
     }
     .sm-title {
         font-size: calc(28px + (32 - 28) * ((100vw - 320px) / (1600 - 320)));
