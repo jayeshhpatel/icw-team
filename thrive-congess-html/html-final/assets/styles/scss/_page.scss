@@ -742,10 +742,13 @@
 
 // section-column-block
 .section-column-block{
-    margin-top: 30px;
+    margin-top: 40px;
     strong{font-family: "Helvetica Neue",sans-serif;}
     .page-title-hero{
         border-bottom: 1px solid $accent;padding-bottom: 20px;
+    }
+    @media(max-width:991px){
+        margin-top: 25px;
     }
 }
 
@@ -870,6 +873,13 @@
 }
 // novelty-btn
 .novelty-btn-block{
+    background-color: $white;
+    padding: 30px;
+    margin-top: 30px;
+    @include box-shadow(0px 1px 4px rgba(0,0,0,0.25));
+    h4{
+        color: $black;
+    }
     span{
         color: $pink;
         text-transform: uppercase;
@@ -878,6 +888,20 @@
         display: block;
     }
     .novelty-btn{
-        
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    @media(max-width:991px){
+        padding: 20px;
+    }
+}
+// section-fullbanner
+.section-fullbanner{
+    img{
+        width: 100%;
     }
 }

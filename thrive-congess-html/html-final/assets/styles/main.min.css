@@ -2512,9 +2512,11 @@ a:focus,a:hover{color:#830051;outline:0!important;text-decoration:underline}
 .bg-light-gray{background-color:#ccd7e0!important}
 .bg-dark-gray{background-color:#ccc!important}
 .bg-purle{background-color:#3c1053!important}
+.bg-light-purle{background-color:#d8cfdd!important}
 .bg-green{background-color:#00927c!important}
 .bg-pink{background-color:#d0006e!important}
 .bg-dark-pink{background-color:#830051!important}
+.text-black{color:#000}
 .text-blue{color:#003865!important}
 .text-light-blue{color:#e1f6f9!important}
 .text-light-lime{color:#f3f7cc!important}
@@ -3208,9 +3210,12 @@ body .scrollbar-dark::-webkit-scrollbar-thumb:hover{background-color:#3b0d52}
 .medical-science-wrapper .medical-science-box p{font-size:16px}
 .medical-science-wrapper .medical-science-box .circle-logo{right:20px;top:25px}
 }
-.section-column-block{margin-top:30px}
+.section-column-block{margin-top:40px}
 .section-column-block strong{font-family:"Helvetica Neue",sans-serif}
 .section-column-block .page-title-hero{border-bottom:1px solid #c4d600;padding-bottom:20px}
+@media (max-width:991px){
+.section-column-block{margin-top:25px}
+}
 .summary-block{margin-bottom:30px}
 .summary-block ul{padding:0;margin:0;list-style:none}
 .summary-block ul li{font-size:calc(15px + (18 - 15) * ((100vw - 320px)/ (1920 - 320)));padding:12px 0;border-bottom:1px solid rgba(208,0,111,.18)}
@@ -3245,4 +3250,12 @@ body .scrollbar-dark::-webkit-scrollbar-thumb:hover{background-color:#3b0d52}
 .social-links li{font-family:lexialight,serif!important;color:#d0006e;text-align:center;cursor:pointer;padding-right:30px}
 .social-links li:last-child{padding-right:0}
 .social-links li span{display:block;padding-top:5px}
+.novelty-btn-block{background-color:#fff;padding:30px;margin-top:30px;-moz-box-shadow:0 1px 4px rgba(0,0,0,.25);-webkit-box-shadow:0 1px 4px rgba(0,0,0,.25);box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.novelty-btn-block h4{color:#000}
 .novelty-btn-block span{color:#d0006e;text-transform:uppercase;font-size:16px;margin-bottom:10px;display:block}
+.novelty-btn-block .novelty-btn{width:100%;text-align:center;margin-bottom:15px}
+.novelty-btn-block .novelty-btn:last-child{margin-bottom:0}
+@media (max-width:991px){
+.novelty-btn-block{padding:20px}
+}
+.section-fullbanner img{width:100%}
