@@ -197,7 +197,7 @@
 }
 
 .btn-download {
-    @include flexbox();  @include align-items(flex-start); @include justify-content(space-between); @include flex-direction(column); text-align: left;
+    @include inline-flex;  @include align-items(flex-start); @include justify-content(space-between); @include flex-direction(column); text-align: left;
     color: $interaction; font-size: 16px;  font-family: $hfont-normal; line-height: 1; cursor: pointer;  text-decoration: none;
     padding: 10px;
     padding-left: 50px; position: relative; min-height: 34px;
@@ -217,10 +217,10 @@
         @include transition(0.3s, ease-in-out);
     }
     span {
-        color: $interaction; display: block; padding-bottom: 3px;
+        color: $interaction; display: block; padding-bottom: 3px;@include transition(0.3s, ease-in-out);
     }
     small {
-        font-size: 12px; font-family: $hfont-45;  color: #000000;
+        font-size: 12px; font-family: $hfont-45;  color: #000000;@include transition(0.3s, ease-in-out);
         strong {
             font-family: $hfont-65;
         }
