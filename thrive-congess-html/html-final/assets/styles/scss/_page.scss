@@ -1057,16 +1057,24 @@
             font-family: $hfont-65 !important;
         }
     }
+    .slider-block{
+        // @include flexbox;
+        @include align-items(center);
+    }
     #secondary-slider{
         .splide__list{
             display: block;
             transform:none !important;
         }
     }
+    #primary-slider{
+        // width: 70%;
+    }
     .date-time-content {
         margin: 10px 0;
         text-align: left;
         margin-left: auto;
+        // width: 30%;
         .card-item {
             background-color: rgba(50 ,59 ,60, 0.4);
             @include flexbox();
@@ -1123,5 +1131,50 @@
             font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));text-transform: uppercase;
             
         }
+    }
+}
+
+
+.number-list {
+    counter-reset: section;
+    .number-item {
+           border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+           font-size: 18px;
+           padding-left: 40px;
+        &:last-child{
+            span{
+                border-bottom: none;
+            }
+        }
+        &::before {
+            content: counter(section);
+            counter-increment: section;
+            font-size: 20px;
+            width: 40px;
+            display: block;
+            flex: none;
+            font-family: $hfont;
+            position: absolute;
+        }
+        span {
+           display: block;
+           width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        .number-item {
+            font-size: 16px;
+            &::before {
+                font-size: 16px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+// trending-list-wrapper
+.trending-list-wrapper{
+    .card-block{
+        padding: 50px;
     }
 }
