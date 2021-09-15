@@ -3305,6 +3305,8 @@ body .scrollbar-dark::-webkit-scrollbar-thumb:hover{background-color:#3b0d52}
 .ceo-block .page-hero .hero-bg{height:100%!important}
 .ceo-block .page-hero-inner .sub-info{font-size:calc(14px + (16 - 14) * ((100vw - 320px)/ (1600 - 320)))}
 .ceo-block .page-hero-inner h3{font-weight:400;margin-bottom:20px;font-size:20px;font-family:"Helvetica 65",sans-serif!important}
+.ceo-block #secondary-slider{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
+.ceo-block #secondary-slider .splide__track{margin:auto}
 .ceo-block #secondary-slider .splide__list{display:block;width:auto;transform:none!important}
 .ceo-block #secondary-slider .splide__list li{width:400px!important;border:none}
 .ceo-block #primary-slider .splide__slide{height:100%!important}

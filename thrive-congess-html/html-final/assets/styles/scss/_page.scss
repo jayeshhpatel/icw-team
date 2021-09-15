@@ -1078,6 +1078,8 @@
         }
     }
     #secondary-slider{
+        @include flexbox;
+        .splide__track{margin: auto;}
         .splide__list{
             display: block;
             width: auto;
