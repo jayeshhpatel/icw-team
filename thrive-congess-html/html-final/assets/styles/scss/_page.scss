@@ -253,6 +253,18 @@
     background: url(../images/icons/arrow-red.svg) no-repeat center;
     background-size: contain;
 }
+.icons-fire{
+    width: 40px;
+    height: 40px;
+    background: url(../images/icons/fire.png) no-repeat center;
+    background-size: contain;margin-right: 15px;
+}
+.icons-linechart{
+    width: 40px;
+    height: 40px;
+    background: url(../images/icons/chart.png) no-repeat center;
+    background-size: contain;margin-right: 15px;
+}
 .bg-image{
     background-image: url(../images/bg.jpg);
     background-size: 100% 50%;
@@ -1046,6 +1058,14 @@
 }
 // ceo-block
 .ceo-block{
+    position: relative;
+    .page-hero{
+        margin-bottom: 0;
+        padding: 33px 0;
+        .hero-bg{
+            height: 100% !important;
+        }
+    }
     .page-hero-inner{
         .sub-info{
             font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));
@@ -1057,35 +1077,36 @@
             font-family: $hfont-65 !important;
         }
     }
-    .slider-block{
-        // @include flexbox;
-        @include align-items(center);
-    }
     #secondary-slider{
         .splide__list{
             display: block;
+            width: auto;
             transform:none !important;
+            li{width: 400px !important;border: none;}
         }
     }
     #primary-slider{
-        // width: 70%;
+        .splide__slide{
+            height: 100% !important;
+        }
     }
     .date-time-content {
-        margin: 10px 0;
         text-align: left;
-        margin-left: auto;
-        // width: 30%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 5px;
+        z-index: 10;
         .card-item {
             background-color: rgba(50 ,59 ,60, 0.4);
             @include flexbox();
             @include align-items(center);
             @include justify-content(space-between);
             padding: 30px 40px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: $white;
-            &:last-child {
-                margin-bottom: 0;
-            }
+            min-height: 145px;
             .arrow-right {
                 &:after {
                     width: 15px;
@@ -1101,9 +1122,9 @@
             }
         }
         .upcoming-block {
-            background-color: #999999;
+            background-color: #E1F6F9;
             h4 {
-                color: $white;
+                color: $black;
                 margin-bottom: 0;
                 line-height: normal;
             }
@@ -1111,6 +1132,51 @@
                 &:after {
                     background-image: url(../images/angle-arrow-down-pink.svg);
                 }
+            }
+        }
+    }
+    @media(max-width:991px){
+        #secondary-slider{
+            .splide__list{
+                li{
+                    width: 345px !important;
+                }
+            }
+        }
+        .date-time-content {
+            .card-item{
+                padding: 20px 25px;
+                min-height: 120px;
+                h4{
+                    font-size: 18px;
+                }
+            }
+        }
+        .page-hero {
+            padding: 30px 0;
+            .page-hero-inner {
+                padding: 10px 3% 10px 5%;
+            }
+        }
+    }
+    @media(max-width:767px){
+        margin-bottom: 20px;
+        #secondary-slider{
+            .splide__list{
+                li{
+                    width: 100% !important;
+                }
+            }
+        }
+        .date-time-content{
+            position: relative;
+            padding: 15px;
+            margin: 0;
+        }
+        .page-hero{
+            padding: 0;
+            .page-hero-inner{
+                padding: 30px 15px;
             }
         }
     }
@@ -1129,7 +1195,6 @@
         small{
             display: block;font-family: $hfont-65 !important;
             font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));text-transform: uppercase;
-            
         }
     }
 }
@@ -1138,35 +1203,62 @@
 .number-list {
     counter-reset: section;
     .number-item {
-           border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-           font-size: 18px;
-           padding-left: 40px;
-        &:last-child{
-            span{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            margin-left: 40px;padding-bottom: 20px;margin-bottom: 20px ;position: relative;
+            &:last-child{
                 border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
             }
-        }
+            &:hover{
+                p{
+                    display: block;
+                    @include opacity(1);
+                }
+                span{
+                    font-family: $hfont-normal;font-size: 20px;
+                }
+            }
         &::before {
             content: counter(section);
             counter-increment: section;
             font-size: 20px;
+            left: -40px;
             width: 40px;
             display: block;
             flex: none;
             font-family: $hfont;
             position: absolute;
         }
-        span {
-           display: block;
-           width: 100%;
+        p {
+            @include opacity(0);
+           display: none;
+           margin: 10px 0 0;
         }
     }
     @media (max-width: 991px) {
         .number-item {
-            font-size: 16px;
+            font-size: 14px;
+            margin-left: 30px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            &:hover{
+                span{
+                    font-size:19px;
+                }
+            }
+            p {
+                @include opacity(1);
+                display: block;
+                
+            }
+            span{
+                font-family: $hfont-normal;font-size:19px;
+            }
             &::before {
                 font-size: 16px;
-                width: 35px;
+                width: 30px;
+                left: -30px;
             }
         }
     }
@@ -1176,5 +1268,48 @@
 .trending-list-wrapper{
     .card-block{
         padding: 50px;
+        h2{margin-bottom: 30px;@include flexbox;}
+    }
+    @media(max-width:991px){
+        .card-block{
+            padding: 20px;
+            h2{margin-bottom: 20px;}
+        }
+    }
+}
+// man-content-block
+.docter-content-block{
+    .card-content{
+        padding: 30px 0;
+        h2{
+            margin-bottom: 25px;
+        }
+        h4{
+            margin-bottom: 20px;
+        }
+    }
+    .card-image{
+        img{
+            margin-top: -30px;
+        }
+    }
+    @media(max-width:767px){
+        margin-bottom: 30px;
+        padding-top: 30px;
+        .card-content{
+            h2{
+                margin-bottom: 20px;
+            }
+            h4{
+                margin-bottom: 15px;font-size: 17px;
+            }
+        }
+        .card-image{
+            img{
+                margin-top: 0;
+                max-width: 240px;
+                width: 100%;
+            }
+        }
     }
 }
