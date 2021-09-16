@@ -10,6 +10,9 @@
     .main-title {  
         font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); font-family: $hfont-hbold !important; line-height: 1.2;
     }
+    @media(max-width:991px){
+        margin: 25px 0;
+    }
 }
 
 // page-hero
@@ -24,10 +27,6 @@
     @media (max-width: 767px) { 
         margin-bottom: 30px;
     }
-
-    // @media (min-width: 1600px) { 
-    //     margin-bottom: 50px; 
-    // }
 
     @media (min-width: 768px) { 
         .hero-bg {

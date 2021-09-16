@@ -26,7 +26,19 @@ $(document).ready(function () {
         $('body,.menu-icon,.navbar-side-menu,.sidenav-overlay').removeClass('is-visible');
         e.preventDefault();
     });
-    $('.invited-slider').slick({
+    
+    if ($('.wishlist-toggle').length) {
+        $('.wishlist-toggle').click(function(){ 
+            if($(this).hasClass("liked")){
+                $(this).html('<i class="material-icons">favorite_border</i>');
+                $(this).removeClass("liked");
+              }else{
+                $(this).html('<i class="material-icons">favorite</i>');
+                $(this).addClass("liked");
+              }
+        });
+    }
+    $('.testimonials-slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [
@@ -42,17 +54,6 @@ $(document).ready(function () {
         ]
 
     });
-    if ($('.wishlist-toggle').length) {
-        $('.wishlist-toggle').click(function(){ 
-            if($(this).hasClass("liked")){
-                $(this).html('<i class="material-icons">favorite_border</i>');
-                $(this).removeClass("liked");
-              }else{
-                $(this).html('<i class="material-icons">favorite</i>');
-                $(this).addClass("liked");
-              }
-        });
-    }
 });
 
  /* Filter Navbar in Mobile */

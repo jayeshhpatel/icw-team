@@ -28,7 +28,7 @@
 }
 
 .is-light {
-    * {color: #fff !important;}
+    * {color: $white !important;}
 }
 .is-dark {
     * {color: $bodyfontcolor !important;}
@@ -145,8 +145,8 @@
             @include opacity(0.5);
         }
         svg {
-            fill: #fff; width: 60px; height: 60px; 
-            stroke: #fff;
+            fill: $white; width: 60px; height: 60px; 
+            stroke: $white;
             stroke-width: 3px;
         }
 
@@ -160,7 +160,7 @@
     }
         
     .splide__pagination {
-        background: #fff;
+        background: $white;
         width: 100%;
         padding: 10px 15px;
         top: 100%;
@@ -279,7 +279,7 @@
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(#3e5e51 20%, #fff 70%, #b46595);
+        background: linear-gradient(#3e5e51 20%, $white 70%, #b46595);
         z-index: -1;
     }
     .btn-download {
@@ -382,7 +382,7 @@
     }
     @media(max-width:991px){
         &:after{
-            background: linear-gradient(#3e5e51 20%, #fff 70%, #b46595);
+            background: linear-gradient(#3e5e51 20%, $white 70%, #b46595);
         }
     }
 }
@@ -676,7 +676,7 @@
     
 }
 
-.text-pink{color: #d0006f;}
+.text-pink{color: $interaction;}
 .msl-connect-form{
     .information-block{
         .form-group{
@@ -703,9 +703,9 @@
     }
 }
 .medical-science-wrapper{
-    .site-btn{background-color: #830051;
+    .site-btn{background-color: $darkTheme;
         &:hover{
-            color: #ffffff;
+            color: $white;
             background-color: #222222;
         }
     }
@@ -759,6 +759,9 @@
     }
     @media(max-width:991px){
         margin-top: 25px;
+        .card-right-content{
+            margin: 0;
+        }
     }
 }
 
@@ -1033,12 +1036,12 @@
         a {
             margin:5px 13px 5px 0;
             white-space: nowrap; @include border-radius(100px);
-            border-color: #830051;
+            border-color: $darkTheme;
             font-style: italic;
             min-width: auto;
             &:hover{
-                background-color: #830051 !important;
-                border-color: #830051 !important;
+                background-color: $darkTheme !important;
+                border-color: $darkTheme !important;
                 color: $white;
             }
             &:last-child {
