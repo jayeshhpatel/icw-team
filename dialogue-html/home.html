@@ -13,6 +13,7 @@
         <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicon.png">
 
         <!-- CSS -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
         <link rel="stylesheet" href="assets/css/main.css">
         <title>Dialogue Dashboard</title>
     </head>
@@ -61,7 +62,7 @@
             <section class="section-block content-section">
                 <div class="container">
                     <div class="main-title">
-                        <h1>Create personalized shopping experiencesthat boost sales with 3 clicks.</h1>
+                        <h1>Create personalized shopping experiencesthat boost sales <span class="hightlight-bg">with 3 clicks.</span></h1>
                         <p>We recognize, analyze and understand your shoppers patterns to deliver the most enhanced and relevant experience in every step of their online journey.</p>
                         <a href="#!" class="btn btn-primary">Start FREE Trail NOW</a>
                     </div>
@@ -114,12 +115,15 @@
                     </div>
                 </div>
             </section>
-            <section class="section-block pt-0">
+            <section class="section-block roadmap-section">
                 <div class="container">
-                    <div class="main-title mb-0">
+                    <div class="main-title">
                         <h2>Why Dialogue?</h2>
                         <p>Guide customers throughtheir full shopping journeyfrom discovery to upsell</p>
                     </div>
+                </div>
+                <div class="card-image">
+                    <img src="assets/images/roadmap.png" alt=""/>
                 </div>
             </section>
             <section class="section-block pricing-section">
@@ -128,15 +132,296 @@
                         <h2>Pricing</h2>
                         <p>Choose a flexible plan, desined to scale with you Get an estimated expected monthly rate</p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="pricing-card">
+                    <div class="selector">
+                        <div class="price-slider">
+                            <div id="slider-range"></div>
+                            <span data-max="300"  class="slider-price max-price">300k+</span>
+                        </div> 
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+                        <div class="col">
+                            <div class="card h-100 pricing-card border-lightblue">
                                 <h3>Free</h3>
                                 <div class="price-box">
                                     <span>Starts at</span>
-                                    <h4>$0<span>/month</span></h4>
+                                    <h4><strong class="text-lightblue">$0</strong><span>/month</span></h4>
+                                    <a href="#!" class="btn-border">Start FREE</a>
                                 </div>
                                 <p>Free for stores that have under $5,000 in monthly revenue</p>
+                                <hr>
+                                <h3>Free Includes:</h3>
+                                <ul class="list-item">
+                                    <li>
+                                        <span>Product Recomendations</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Product Recomendations">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Cross Sells & Up Sells</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Cross Sells & Up Sells">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Automated Banners</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Automated Banners">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Recomendations</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Recomendations">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Ready to use Design Templates</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Ready to use Design Templates">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Magic Position</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Magic Position">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Auto Branding & Quick Desgin Edit</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Auto Branding & Quick Desgin Edit">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Asset Store</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Asset Store">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Dynamic Dashboard</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Dynamic Dashboard">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Statistics</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Statistics">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Custom Asset Creation</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Custom Asset Creation">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 pricing-card border-purple">
+                                <h3>Free</h3>
+                                <div class="price-box">
+                                    <span>Starts at</span>
+                                    <h4><strong class="text-purple">$15</strong><span>/month</span></h4>
+                                    <a href="#!" class="btn-border">Start FREE Trail</a>
+                                </div>
+                                <p>Free for stores that have more than $120,000 in monthly revenue</p>
+                                <hr>
+                                <h3>Silver Includes:</h3>
+                                <p>Everything in Free, plus:</p>
+                                <ul class="list-item">
+                                    <li>
+                                        <span>Al journey Algorithm</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Al journey Algorithm">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Content Creation</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Content Creation">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Ready to use Rules</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Ready to use Rules">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Messaging Templates</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Messaging Templates">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Checkout Page</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Checkout Page">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Advacned Customization</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Advacned Customization">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 pricing-card border-darkyellow">
+                                <h3>Free</h3>
+                                <div class="price-box">
+                                    <span>Starts at</span>
+                                    <h4><strong class="text-darkyellow">$120</strong><span>/month</span></h4>
+                                    <a href="#!" class="btn-border">Start FREE Trail</a>
+                                </div>
+                                <p>Free for stores that have more than $200,000 in monthly revenue</p>
+                                <hr>
+                                <h3>Gold Includes:</h3>
+                                <ul class="list-item">
+                                    <li>
+                                        <span>Position Rules</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Position Rules">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Custome Position</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Custome Position">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Custom Rules</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Custom Rules">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Custom Asset Features</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Custom Asset Features">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Messaging Panel</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Messaging Panel">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Advanced Statistics</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Advanced Statistics">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Multi Store Management</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Multi Store Management">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Multi Store Content Migration</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Multi Store Content Migration">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Google Analytics Integration</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Google Analytics Integration">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Dedicated Customer Success</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="Dedicated Customer Success">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 pricing-card border-cyan">
+                                <h3>Free</h3>
+                                <div class="price-box">
+                                    <span>Starts at</span>
+                                    <h4><strong class="text-cyan">$500</strong><span>/month</span></h4>
+                                    <a href="#!" class="btn-border">Find out more</a>
+                                </div>
+                                <p>Free for stores that have more than $300,000 in monthly revenue</p>
+                                <hr>
+                                <h3>Premium Includes:</h3>
+                                <ul class="list-item">
+                                    <li>
+                                        <span>White Glove Service</span>
+                                        <div class="icon" data-bs-toggle="tooltip" title="White Glove Service">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 13H11V15H9.5V13ZM9.5 5H11V11H9.5V5ZM9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM9.99 18.5C5.57 18.5 1.5 14.42 1.5 10C1.5 5.58 5.57 1.5 9.99 1.5C14.41 1.5 18.5 5.58 18.5 10C18.5 14.42 14.41 18.5 9.99 18.5Z" fill="#2D055B"/>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -236,7 +521,7 @@
                 <div class="container">
                     <div class="main-title mb-0">
                         <h2>Start using Dialogue today</h2>
-                        <p>Try it now for free</p>
+                        <p class="mb-4">Try it now for free</p>
                         <a href="#!" class="btn btn-primary">Get Started</a>
                     </div>
                 </div>
@@ -328,8 +613,24 @@
         </footer>
         <!-- JS -->
         <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+           $("#slider-range").slider({
+                range: true, 
+                min: 0,
+                max: 300,
+                step: 5,
+                slide: function( event, ui ) {
+                    suffix = 'k+';
+                    if (ui.values[ 1 ] == $( ".max-price").data('max') ){
+                    suffix = 'k+';
+                    }
+                    $( ".max-price").html(ui.values[ 1 ] + suffix);         
+                }
+            })
+        </script>
     </body>
 </html>

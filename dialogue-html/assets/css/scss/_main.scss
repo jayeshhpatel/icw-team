@@ -55,7 +55,11 @@ ul {
     margin: 0;
     padding: 0;
 }
-
+.hightlight-bg{
+    background: url(../images/hightlight-bg.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 0 10px;
+}
 a {
     color: $darkBlack;
     text-decoration: none;
@@ -70,6 +74,30 @@ a {
 }
 .light-pink{
     color: $lightpink !important;
+}
+.text-lightblue{
+    color: #5D86F4 !important;
+}
+.text-purple{
+    color: #7733de !important;
+}
+.text-cyan{
+    color: #33DEDE !important;
+}
+.text-darkyellow{
+    color: #DE9C33 !important;
+}
+.border-lightblue{
+    border-color: #5D86F4 !important;
+}
+.border-purple{
+    border-color: #7733de !important;
+}
+.border-cyan{
+    border-color: #33DEDE !important;
+}
+.border-darkyellow{
+    border-color: #DE9C33 !important;
 }
 p {
     margin-top: 0;
@@ -147,7 +175,7 @@ section {
     }
 }
 
-.btn-border {min-height: 50px; padding: 8px 25px; font-size: 16px; white-space: nowrap; color: $black; border: 1px solid $purple; text-decoration: none !important; @include inline-flex;@include align-items(center);@include justify-content(center); @include transition(0.2s, ease-in-out); line-height: 1; cursor: pointer;@include border-radius(100px);background-color:$white;
+.btn-border {min-height: 50px; padding: 8px 25px; font-size: 16px; white-space: nowrap; color: $purple !important; border: 1px solid $purple; text-decoration: none !important; @include inline-flex;@include align-items(center);@include justify-content(center); @include transition(0.2s, ease-in-out); line-height: 1; cursor: pointer;@include border-radius(100px);background-color:$white;
 
     &.focus, &:focus { outline: none !important; }
     &:hover, &:focus, &:active {
@@ -216,7 +244,7 @@ section {
         color: #2D055B;font-family: "SofiaPro-Bold";
     }
     p {
-        margin: 10px auto 0;color: #2D055B;max-width: 500px;
+        margin: 20px auto 0;color: #2D055B;max-width: 500px;
     }
     @media (max-width: 1199px) {
         h1,
@@ -224,14 +252,14 @@ section {
             font-size: 36px;
         }
     }
-    @media (max-width: 991px) {
-        margin-bottom: 20px;
+    @media (max-width: 767px) {
+        margin-bottom: 30px;
         h1,
         h2 {
-            font-size: 24px;
+            font-size: 30px;
         }
         p {
-            margin-top: 15px;
+            margin-top: 10px;
         }
     }
 }
@@ -463,6 +491,7 @@ section {
 }
 // content-section
 .content-section{
+    @include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.08));
     .main-title{
         max-width: 600px;
         margin-left: auto;
@@ -718,13 +747,129 @@ section {
 // pricing-section
 .pricing-section{
     .pricing-card{
+        box-shadow: rgba(93 ,93, 93 , 0.12) 0px 1px 4px 1px;border: 1px solid #e8e8e8;
+        background-color: $white;
+        @include border-radius(10px);
+        padding: 30px;
+        border: none;
+        border-top: 10px solid;
         h3{
-            font-size: 20px;font-family: "SofiaPro-Bold";
+            font-size: 22px;font-family: "SofiaPro-Bold";
+        }
+        hr{
+            margin-bottom: 25px;
         }
         .price-box{
+            span{
+                font-size: 16px;
+            }
             h4{
-                font-size: 26px;
+                font-size: 40px;
+                margin-bottom: 15px;
+                strong{
+                    font-weight: 500;
+                }
+            }
+        }
+        .btn-border{
+            min-width: 180px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            min-height: 44px;
+        }
+        p{
+            font-size: 15px;
+            color: #333333;
+            margin-bottom: 0;
+        }
+        .list-item{
+            margin-top: 15px;
+            li{
+                font-size: 15px;
+                margin-bottom: 15px;
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(space-between);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                svg{
+                    cursor: pointer;
+                    width: 16px;
+                    height: 16px;
+                }
+                .icon{
+                    @include flexbox;
+                }
             }
         }
     }
+    @media(max-width:1199px){
+        .pricing-card{
+            padding: 20px;
+        }
+    }
+}
+// roadmap-section
+.roadmap-section{
+    .card-image{
+        img{width: 100%;}
+    }
+}
+
+// .tooltip-inner
+.tooltip{
+    &.show{
+        @include opacity(1);
+    }
+}
+.tooltip-inner{
+    background-color: #2D085B;
+    font-size: 12px;
+}
+.bs-tooltip-top{
+    .tooltip-arrow{
+        &::before{
+            border-top-color:#2D085B;
+        }
+    }
+}
+
+
+.selector #slider-range {
+    margin: 0 7px;
+    margin-bottom: 5px;
+    border: none;
+    background: #EEE9F5;
+    height: 6px;
+}
+
+
+.selector .ui-slider-handle {
+    border-radius: 100px;
+    background-color: $purple;
+    border: none;
+    top: -7px;
+    width: 20px;
+    height: 20px;
+    outline: none
+}
+
+
+.selector .ui-slider-range {
+    background-color: #CDC9D3;
+}
+.price-slider{
+    text-align: right;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    @media(max-width:991px){
+        margin-bottom: 25px;
+    }
+}
+.selector .slider-price {
+    position: relative;
+    display: inline-block;
+    line-height: 28px;
+    text-align: center
 }
