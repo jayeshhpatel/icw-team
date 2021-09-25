@@ -138,7 +138,41 @@
                         </div>
                     </div>
                 </div>
-            </section>            
+            </section> 
+            <section class="section-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 order-2 order-md-1">
+                            <div class="main-title mb-0 mt-4 mt-md-0 wow fadeInUp" data-wow-delay="0.3s">
+                                <h2>Have <span class="text-lightpurple">Admin Rights</span>.<br/> Everything at <span class="text-lightpurple">One Place</span>. </h2>
+                                <p class="mw-500">Take control of everything that is happening inside your space. Choose types of offices, Invite people, Control billing cycles.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-1 order-md-2">
+                            <div class="plan-slider">
+                                <div class="slider-items">
+                                    <div class="slider-content">
+                                        <img src="assets/images/slider-img1.png" alt=""/>
+                                        <div class="slider-dec">
+                                            <h5>Floor plans</h5> 
+                                            <p>Choose from many plans</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-items">
+                                    <div class="slider-content">
+                                        <img src="assets/images/slider-img1.png" alt=""/>
+                                        <div class="slider-dec">
+                                            <h5>Floor plans</h5> 
+                                            <p>Choose from many plans</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>           
         </main>
         <!-- // MAIN SECTION -->
 
@@ -210,9 +244,16 @@
         <!-- JS -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script>
+              $('.plan-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false,
+                dots: true,
+            });                           
             new WOW().init();
         </script>
     </body>

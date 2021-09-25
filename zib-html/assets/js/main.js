@@ -44,35 +44,6 @@ $(document).ready(function () {
       return false;
     });
   }
-  $('.testimonials-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      responsive: [
-          {
-              breakpoint: 767,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  dots: true
-              }
-          }
-      ]
-
-  });
-  $('.slick.marquee').slick({
-    speed: 5000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    centerMode: true,
-    cssEase: 'linear',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-    infinite: true,
-    initialSlide: 1,
-    arrows: true,
-    buttons: false
-  });
+  
 });
 
