@@ -725,9 +725,20 @@ section {
         width: 210px;
         height: 66px;
         margin: auto;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
         img{
             width: auto;
             margin-right: 10px;
+        }
+    }
+    @media(max-width:991px){
+        .living-box{
+            padding: 10px 20px;
+            font-size: 14px;
+            width: 165px;
+            height: 50px;
         }
     }
 }
@@ -786,6 +797,37 @@ section {
             @include transition(0.4s, ease-in-out);
         }
     }
+    @media(max-width:991px){
+        .g-5 {
+            --bs-gutter-y: 24px;
+            --bs-gutter-x: 24px;
+        }
+        .card{
+            padding: 15px;
+            @include border-radius(15px);
+            @include transform(translateY(0));
+            .services-box{
+                height: auto;
+            }
+            .card-img-top{
+                @include transform(translateY(0));
+            }
+            h5{
+                font-size: 16px;
+                @include transform(translateY(0));
+            }
+            p{
+                @include opacity(1);
+                visibility: visible;
+            }
+        }
+    }
+    @media(max-width:767px){
+        .card {
+            min-height: auto;
+            padding: 20px;
+        }
+    }
 }
 // plan-slider
 .plan-slider{
@@ -810,6 +852,32 @@ section {
                 margin-bottom: 10px;
             }
             p{font-size: 18px;color: #2D2D38;font-weight: 600;margin-bottom: 0;}
+        }
+    }
+    @media(max-width:991px){
+        .slider-items {
+            .slider-content{
+                padding: 25px 20px;
+                h5{
+                    font-size: 20px;margin-bottom: 5px;
+                }
+                p{font-size: 16px;}
+            }
+        }
+    }
+    @media(max-width:575px){
+        .slider-items {
+            .slider-content{
+                padding: 25px 20px;
+                display: block;
+                text-align: center;
+                img{
+                    width: 100%;
+                }
+                .slider-dec{
+                    padding: 10px 0 0 0;
+                }
+            }
         }
     }
 }
