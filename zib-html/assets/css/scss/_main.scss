@@ -224,6 +224,9 @@ section {
             font-size: 26px;
             margin-bottom: 15px;
         }
+        p{
+            font-size: 14px;
+        }
     }
 }
 .icons{
@@ -366,7 +369,7 @@ section {
         }
         .navbar-brand{
             img{
-                max-width: 120px;
+                max-width: 100px;
             }
         }
         .sidebar-icon {
@@ -398,7 +401,7 @@ section {
             ul{
                 display: block;
             }
-                min-height: calc(100vh - 70px);
+                min-height: calc(100vh - 66px);
                 overflow-y: auto;
                 width: 300px;
                 display: block;
@@ -412,7 +415,7 @@ section {
                 bottom: 0;
                 z-index: 99;
                 border-top: 1px solid #eeeeee;
-                margin-top: 70px;
+                margin-top: 66px;
             li {
                 margin: 0;
                 padding: 10px 0;
@@ -1181,6 +1184,9 @@ section {
                     display: block;
                     padding-top: 3px;
                 } 
+                @media(max-width:991px){
+                    .error-msg{font-size: 11px;}
+                }
             }
             .error-msg{
                 display: none;
@@ -1245,6 +1251,11 @@ section {
     @media(max-width:767px){
         form{
             padding: 20px;
+            .form-check{
+                .form-check-label{
+                    font-size: 12px;
+                }
+            }
             .custom-input{
                 margin-bottom: 15px;
                 label{
