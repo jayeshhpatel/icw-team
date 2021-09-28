@@ -197,6 +197,7 @@ section {
 }
 .main-title {
     margin-bottom: 40px;
+    .page-title,
     h2 {
         font-weight: 700;
         font-size:40px;
@@ -211,12 +212,14 @@ section {
         }
     }
     @media (max-width: 1399px) {
+        .page-title,
         h2 {
             font-size: 32px;
         }
     }
     @media (max-width: 767px) {
         margin-bottom: 20px;
+        .page-title,
         h2 {
             font-size: 26px;
             margin-bottom: 15px;
@@ -812,7 +815,7 @@ section {
                     }
                 }
             }
-            h5{
+            h3{
                 @include transform(translateY(0));
             }
             p{
@@ -874,7 +877,7 @@ section {
             padding: 10px 0 0;
             flex: 0 0 0;
         }
-        h5{
+        h3{
             color: $darkBlack;
             font-size: 20px;
             font-weight: 700;
@@ -912,7 +915,7 @@ section {
             .card-img-top{
                 @include transform(translateY(0));
             }
-            h5{
+            h3{
                 font-size: 16px;
                 @include transform(translateY(0));
             }
@@ -986,7 +989,7 @@ section {
             .slider-dec{
                 padding-left: 20px;
             }
-            h5{
+            h3{
                 font-size: 24px;
                 font-weight: 600;
                 color: $purple;
@@ -999,7 +1002,7 @@ section {
         .slider-items {
             .slider-content{
                 padding: 25px 20px;
-                h5{
+                h3{
                     font-size: 20px;margin-bottom: 5px;
                 }
                 p{font-size: 16px;}
@@ -1061,7 +1064,7 @@ section {
             }
         }
         .title{
-            h3{
+            h2{
                 font-size: 24px;
                 font-weight: 600;
                 color: #313140;
@@ -1139,7 +1142,7 @@ section {
         .card{
             padding: 20px;
             .title{
-                h3{font-size: 20px;}
+                h2{font-size: 20px;}
                 p{font-size: 16px;}
             }
         }
