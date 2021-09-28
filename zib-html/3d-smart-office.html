@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#000000">
+        <meta name="theme-color" content="#000000" data-react-helmet="true">
         <meta name="Googlebot" content="noindex,nofollow">
-        <meta name="author" content="ZIB Messenger | www.zibmessenger.com">
-        <meta name="description" content="ZIB Messenger | www.zibmessenger.com">
+        <meta name="author" content="ZIB Messenger | www.zibmessenger.com" data-react-helmet="true">
+        <meta name="description" content="ZIB Messenger | www.zibmessenger.com"><meta name="description" content="Learn more about Smart 3D Office" data-react-helmet="true">
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="assets/images/favicon.png" sizes="180x180">
         <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicon.png">
@@ -117,7 +117,7 @@
                             <div class="card h-100 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="services-box">
                                     <div class="card-img-top arrow-image">
-                                        <img src="assets/images/arrow.png" alt=""/>
+                                        <img src="assets/images/arrow-pointer.svg" alt=""/>
                                     </div>
                                     <div class="card-body">
                                         <h5>Quick Setup</h5>
@@ -130,7 +130,7 @@
                             <div class="card h-100 wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="services-box">
                                     <div class="card-img-top headphone-image">
-                                        <img src="assets/images/headphone.png" alt=""/>
+                                        <img src="assets/images/headphones.svg" alt=""/>
                                     </div>
                                     <div class="card-body">
                                         <h5>Effortless Conversation</h5>
@@ -143,7 +143,7 @@
                             <div class="card h-100 wow fadeInUp" data-wow-delay="0.7s">
                                 <div class="services-box">
                                     <div class="card-img-top secure-image">
-                                        <img src="assets/images/secure.png" alt=""/>
+                                        <img src="assets/images/shield.svg" alt=""/>
                                     </div>
                                     <div class="card-body">
                                         <h5>Secure Meetings</h5>
@@ -168,7 +168,9 @@
                             <div class="plan-slider">
                                 <div class="slider-items">
                                     <div class="slider-content">
-                                        <img src="assets/images/slider-img1.png" alt=""/>
+                                        <div class="slider-img">
+                                            <img src="assets/images/slider-img1.png" alt=""/>
+                                        </div>
                                         <div class="slider-dec">
                                             <h5>Floor plans</h5> 
                                             <p>Choose from many plans</p>
@@ -177,19 +179,23 @@
                                 </div>
                                 <div class="slider-items">
                                     <div class="slider-content">
-                                        <img src="assets/images/slider-img1.png" alt=""/>
+                                        <div class="slider-img">
+                                            <img src="assets/images/control.svg" alt=""/>
+                                        </div>
                                         <div class="slider-dec">
-                                            <h5>Floor plans</h5> 
-                                            <p>Choose from many plans</p>
+                                            <h5>Permissions</h5> 
+                                            <p>Have a total control</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slider-items">
                                     <div class="slider-content">
-                                        <img src="assets/images/slider-img1.png" alt=""/>
+                                        <div class="slider-img">
+                                            <img src="assets/images/office-map.png" alt=""/>
+                                        </div>
                                         <div class="slider-dec">
-                                            <h5>Floor plans</h5> 
-                                            <p>Choose from many plans</p>
+                                            <h5>Office Editor</h5> 
+                                            <p>Arrange your warkplace</p>
                                         </div>
                                     </div>
                                 </div>
@@ -210,27 +216,13 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="menu-item-block">
                                     <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a>
+                                        <li><a href="index.html">Home</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="3d-smart-office.html">3D Smart Office</a>
+                                        <li><a href="3d-smart-office.html">3D Smart Office</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="signup.html">Try Now</a>
+                                        <li><a href="signup.html">Try Now</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link text-purple" href="signup.html">Sign Up</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="menu-item-block">
-                                    <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="pricing.html">Pricing</a>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="contact.html">Contact</a>
-                                        </li>
-                                        <li class="menu-item"><a href="#" target="_blank" class="menu-link">Blog</a>
-                                        </li>
-                                        <li class="menu-item"><a href="mailto:support@zibmessenger.com" class="text-purple">support@zibmessenger.com</a>
+                                        <li><a class="menu-link text-purple" href="signup.html">Sign Up</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -238,11 +230,25 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="menu-item-block">
                                     <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="#">Terms</a>
+                                        <li><a href="pricing.html">Pricing</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">Privacy Policy</a>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">Cookies</a>
+                                        <li><a href="#" target="_blank">Blog</a>
+                                        </li>
+                                        <li><a href="mailto:support@zibmessenger.com" class="text-purple">support@zibmessenger.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="menu-item-block">
+                                    <ul class="menu">
+                                        <li><a href="#">Terms</a>
+                                        </li>
+                                        <li><a href="#">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="#">Cookies</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -251,11 +257,11 @@
                                 <div class="social-item-block">
                                     <div class="heading">Follow us</div>
                                     <ul class="social-menu">
-                                        <li class="menu-item"><a href="#" class="menu-link facebook-icon" title="Facebook" target="_blank"><i class="icons icon-facebook"></i></a>
+                                        <li><a href="#" class="facebook-icon" title="Facebook" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-facebook"></i></a>
                                         </li>
-                                        <li class="menu-item"><a href="#" class="menu-link twitter-icon" title="Twitter" target="_blank"><i class="icons icon-twitter"></i></a>
+                                        <li><a href="#" class="twitter-icon" title="Twitter" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-twitter"></i></a>
                                         </li>
-                                        <li class="menu-item"><a href="#" class="menu-link linkedin-icon" title="Linkedin" target="_blank"><i class="icons icon-linkedin"></i></a>
+                                        <li><a href="#" class="linkedin-icon" title="Linkedin" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-linkedin"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -278,6 +284,9 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 5000
             });                           
             new WOW().init();
             var lightboxVideo = GLightbox({

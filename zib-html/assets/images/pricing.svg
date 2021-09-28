@@ -1,9 +1,9 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.72669 7.72001L7.72669 1.72001C7.96669 1.48001 8.30002 1.33334 8.66669 1.33334H13.3334C14.0667 1.33334 14.6667 1.93334 14.6667 2.66668V7.33334C14.6667 7.70001 14.52 8.03334 14.2734 8.28001L8.27335 14.28C8.03335 14.52 7.70002 14.6667 7.33335 14.6667C6.96669 14.6667 6.63335 14.52 6.39335 14.2733L1.72669 9.60668C1.48002 9.36668 1.33335 9.03334 1.33335 8.66668C1.33335 8.30001 1.48669 7.96001 1.72669 7.72001ZM12.3334 4.66668C12.8867 4.66668 13.3334 4.22001 13.3334 3.66668C13.3334 3.11334 12.8867 2.66668 12.3334 2.66668C11.78 2.66668 11.3334 3.11334 11.3334 3.66668C11.3334 4.22001 11.78 4.66668 12.3334 4.66668Z" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="8.00002" y1="1.33334" x2="8.00002" y2="14.6667" gradientUnits="userSpaceOnUse">
-<stop stop-color="#8C91F9"/>
-<stop offset="1" stop-color="#5056CA"/>
-</linearGradient>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.995" viewBox="0 0 16 15.995">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8c91f9"/>
+      <stop offset="1" stop-color="#5056ca"/>
+    </linearGradient>
+  </defs>
+  <path id="pricing" d="M19.166,4.5h-6.6L5.02,12.316a1.769,1.769,0,0,0,0,2.508l5.154,5.15a1.913,1.913,0,0,0,1.2.521,2.09,2.09,0,0,0,1.308-.521L20.5,12.5V5.833ZM17.887,8.779a1.335,1.335,0,1,1,.892-.892A1.3,1.3,0,0,1,17.887,8.779Z" transform="translate(-4.499 -4.5)" fill="url(#linear-gradient)"/>
 </svg>

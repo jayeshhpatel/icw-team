@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#000000">
+        <meta name="theme-color" content="#000000" data-react-helmet="true">
         <meta name="Googlebot" content="noindex,nofollow">
-        <meta name="author" content="ZIB Messenger | www.zibmessenger.com">
-        <meta name="description" content="ZIB Messenger | www.zibmessenger.com">
+        <meta name="author" content="ZIB Messenger | www.zibmessenger.com" data-react-helmet="true">
+        <meta name="description" content="We love to help our customers." data-react-helmet="true">
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="assets/images/favicon.png" sizes="180x180">
         <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicon.png">
@@ -70,13 +70,13 @@
                             <div class="col-md-6">
                                 <div class="custom-input">
                                     <label>Name<span class="text-red">*</span></label>
-                                    <input name="firstName" type="text" class="form-control" placeholder="Full Name"/>
+                                    <input name="firstName" type="text" class="form-control" placeholder="Full Name" required/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="custom-input">
                                     <label>Email Address<span class="text-red">*</span></label>
-                                    <input name="email" type="email" class="form-control" placeholder="Email Address"/>
+                                    <input name="email" type="email" class="form-control" placeholder="Email Address" required/>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -96,7 +96,7 @@
                                 <textarea name="message" class="form-control" rows="5" type="text" placeholder="Message"></textarea>
                             </div>
                             <div class="action text-center">
-                                <button class="btn btn-gradient">Submit</button>
+                                <button type="submit" class="btn btn-gradient">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -114,27 +114,13 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="menu-item-block">
                                     <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a>
+                                        <li><a href="index.html">Home</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="3d-smart-office.html">3D Smart Office</a>
+                                        <li><a href="3d-smart-office.html">3D Smart Office</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="signup.html">Try Now</a>
+                                        <li><a href="signup.html">Try Now</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link text-purple" href="signup.html">Sign Up</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="menu-item-block">
-                                    <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="pricing.html">Pricing</a>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="contact.html">Contact</a>
-                                        </li>
-                                        <li class="menu-item"><a href="#" target="_blank" class="menu-link">Blog</a>
-                                        </li>
-                                        <li class="menu-item"><a href="mailto:support@zibmessenger.com" class="text-purple">support@zibmessenger.com</a>
+                                        <li><a class="menu-link text-purple" href="signup.html">Sign Up</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -142,11 +128,25 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="menu-item-block">
                                     <ul class="menu">
-                                        <li class="menu-item"><a class="menu-link" href="#">Terms</a>
+                                        <li><a href="pricing.html">Pricing</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">Privacy Policy</a>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">Cookies</a>
+                                        <li><a href="#" target="_blank">Blog</a>
+                                        </li>
+                                        <li><a href="mailto:support@zibmessenger.com" class="text-purple">support@zibmessenger.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="menu-item-block">
+                                    <ul class="menu">
+                                        <li><a href="#">Terms</a>
+                                        </li>
+                                        <li><a href="#">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="#">Cookies</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -155,11 +155,11 @@
                                 <div class="social-item-block">
                                     <div class="heading">Follow us</div>
                                     <ul class="social-menu">
-                                        <li class="menu-item"><a href="#" class="menu-link facebook-icon" title="Facebook" target="_blank"><i class="icons icon-facebook"></i></a>
+                                        <li><a href="#" class="facebook-icon" title="Facebook" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-facebook"></i></a>
                                         </li>
-                                        <li class="menu-item"><a href="#" class="menu-link twitter-icon" title="Twitter" target="_blank"><i class="icons icon-twitter"></i></a>
+                                        <li><a href="#" class="twitter-icon" title="Twitter" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-twitter"></i></a>
                                         </li>
-                                        <li class="menu-item"><a href="#" class="menu-link linkedin-icon" title="Linkedin" target="_blank"><i class="icons icon-linkedin"></i></a>
+                                        <li><a href="#" class="linkedin-icon" title="Linkedin" target="_blank" data-bs-toggle="tooltip"><i class="icons icon-linkedin"></i></a>
                                         </li>
                                     </ul>
                                 </div>
