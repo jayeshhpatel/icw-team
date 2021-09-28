@@ -330,7 +330,7 @@ section {
                     content: "";
                     position: absolute;
                     @include border-radius(20px);
-                    background-color: $lightwhite;
+                    background: transparent linear-gradient(90deg, #8C91F9 0%, $purple 100%) 0% 0% no-repeat padding-box;;
                     height: 3px;
                     width: 16px;
                     bottom: -8px;
