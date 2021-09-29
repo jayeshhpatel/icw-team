@@ -1015,11 +1015,12 @@ section {
                 padding: 25px 20px;
                 display: block;
                 text-align: center;
-                img{
+                .slider-img{
                     width: 100%;
+                    text-align: center;
                 }
                 .slider-dec{
-                    padding: 10px 0 0 0;
+                    padding: 15px 0 0 0;
                 }
             }
         }
