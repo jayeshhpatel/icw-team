@@ -1,12 +1,26 @@
 /* main-header */
-.main-header { position: absolute; top: 0; left: 0; right: 0; z-index: 1999; @include transition(0.3s, ease-in-out);
+.main-header { position: relative; top: 0; left: 0; right: 0; z-index: 1999; @include transition(0.3s, ease-in-out);
     /*box-shadow: 0px 0px 4px rgba(#000, 0.08);*/ background: #fff; 
     border-bottom: 1px solid rgba(#9DB0AC, 0.2);
-    @media (max-width: 991px) {  
+    // overflow-x: hidden;
+    @media (max-width: 992px) {  
         .container, .container-fluid {padding: 0px !important;}
     }
 
-    &.is-sticky-header { position: fixed !important;
+    &.is-sticky-header { 
+        &.is-sticky {
+            position: fixed !important;
+            position: sticky !important;
+            top: 0px;
+            .navbar {padding: 10px 0;
+                .nav::before { background: transparent; }
+
+                li.congresses-li .menu-congresses {
+                    top: 75px !important;
+                }
+            }    
+        }
+        // position: fixed !important;
         // &.scroll-up { top: 0px;  background: rgba($darkBlue, 0.8); }
         // &.scroll-down { top: -105px;  background: rgba($darkBlue, 0.8); }
         &.scroll-up { top: 0px; 
@@ -85,7 +99,7 @@
         .mainmenu { margin-left: auto;
             .nav { @include flexbox(); @include align-items(center); @include justify-content(flex-end); margin: 0; padding: 0; list-style-type: none;  margin-left: auto;
                 & > li { padding-right:30px;
-                    &:last-child {padding-right: 0px;border-bottom: none;}
+                    &:last-child {padding-right: 0px;}
                     
                     & > a:not(.btn-nav) { color: $black; text-decoration: none; 
                         padding: 12px 0px; display: inline-block; text-align: center;
@@ -119,15 +133,46 @@
 
                 // IF SUB MENU
                 @media (min-width: 992px) {  
-                    .has-sub-menu {
+                    .has-sub-menu, li.congresses-li {
+
+                        &:hover, &:focus  {
+                            &::after {
+                                display: block;
+                            } 
+                        }
+
+                        &::after {
+                            content: "";
+                            // width: 100%;
+                            left: 0px;
+                            right: 0px;
+                            top: 0px;
+                            bottom: 0px;
+                            position: absolute;
+                            margin-left: calc(50% - 50vw);
+                            margin-right: calc(50% - 50vw);
+                            background: #3c1053;
+                            position: absolute;
+                            // width: 100%;
+                            height: 100%;
+                            right: 0;
+                            left: 0;
+                            z-index: -1;
+                            display: none;
+                        }  
+                        
+                        .m-toggle-arrow { 
+                            display: none !important;
+                        }
+
                     & > a {
-                        position: relative; padding-right: 15px !important;
+                        position: relative; padding-right: 20px !important;
                         &::after {
                             content: "";
                             width: 100%;
                             left: 0;
                             top: 0;
-                            bottom: -22px;
+                            bottom: -25px;
                             position: absolute;
                         }
                         &::before {
@@ -136,11 +181,12 @@
                             right: 0px;
                             top: 50%;
                             margin-top: -5px;
-                            height: 10px;
-                            width: 10px;
+                            height: 14px;
+                            width: 14px;
                             background: url(../images/icons/arrow-menu.svg) 50% 50% no-repeat;
                             background-size: contain;
                             background-position: center;
+                            filter: brightness(0) invert(1);
 
                             @include transition(0.3s, ease-in-out);
                         } 
@@ -158,6 +204,10 @@
                                 visibility: visible;
                                 @include transform(translateY(0));
                                 @include transition(0.3s, ease-in-out);
+                            }
+
+                            .menu-congresses {
+                                display: block !important;
                             }
                         }
                         .dropdown-menu-list {
@@ -185,7 +235,139 @@
                                 }
                             }
                         }
+
+                        // MEGA MENU
+                        
+                        .menu-congresses {
+                            position: absolute;
+                            z-index: 999;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            top: 95px;
+                            background: #3c1053;
+                            color: #fff;
+                            display: none;
+                            
+                            @include transition(0.2s, ease-in-out);
+                            // @include box-shadow(0 -2px 5px rgba(0, 0, 0, 0.08));
+
+                            &::before {
+                                content: "";
+                                margin-left: calc(50% - 50vw);
+                                margin-right: calc(50% - 50vw);
+                                background: #3c1053;
+                                position: absolute;
+                                // width: 100%;
+                                height: 100%;
+                                right: 0;
+                                left: 0;
+                                z-index: -1;
+                            }
+
+                            // &.hidden {
+                            //     display: inherit;
+                            // } 
+                        }
                     }
+                }
+
+                .megamenu-inner {
+                    @include flexbox();
+                    flex-wrap: wrap;
+
+                    padding: 40px 0px 80px;
+
+                    .congress-list {
+                        flex: 1 0 33%;
+                        .menu-title {
+                            font-size: 24px;
+                            font-family: $hfont;
+                            margin-bottom: 15px;
+                            color: #C4D600;
+                        }
+                        
+                        .empty {
+                            font-size: 14px; color: #fff;
+                        }
+                      
+                        .congress-item {
+                            padding-bottom: 15px;
+                            .congress-title {
+                                color: #fff;
+                                font-weight: bold;
+                                display: block;
+                                font-size: 16px;
+                                font-family: $hfont-hbold;
+
+                                &:hover, &:focus {
+                                    text-decoration: none;
+                                    color: #C4D600;
+
+                                    .megamenu-date {
+                                        color: #fff;
+                                    }
+
+                                }
+                            }
+                            .megamenu-date {
+                                display: block;
+                                font-size: 14px;
+                                font-weight: normal;
+                                font-family: $hfont-45;
+                            }
+                        }
+                      
+                    }
+                      
+                      .break {
+                        flex-basis: 100%;
+                        height: 0;
+                      }
+                      
+                      .view-all-wrapper {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+
+                            .congress-item-col {
+                                min-width: 33%;
+                                display: inline-block;
+                                text-align: left;
+                            }
+
+                            .view-all {
+                                color: #fff;
+                                font-size: 14px;
+                                font-family: $hfont-65;
+                                position: relative;
+                                @include transition(0.3s, ease-in-out);
+                                span {
+                                    @include transition(0.3s, ease-in-out);
+                                    display: inline-block; margin-left: 10px;
+                                }
+                                &::before {
+                                    content: "";
+                                    background: $accent;
+                                    position: absolute;
+                                    display: inline-block;
+                                    width: 100px;
+                                    height: 2px;
+                                    right: 0;
+                                    left: 0;
+                                    top: -20px;
+                                }
+
+                                &:hover, &:focus  {
+                                    span {
+                                        margin-left: 15px;
+                                    } 
+                                }
+                              }
+                      }
+
                 }
             
                 @media (min-width:1400px) and (max-width:1600px){
@@ -223,18 +405,18 @@
 
 
     // SHOW MOBILE
-    @media (max-width: 991px) {  
+    @media (max-width: 992px) {  
         background-color: #fff;
-        padding: 15px 0;
-        .nav-logo {
-            margin-left: 15px;
-        }
+        padding: 15px 0 !important;
+        .nav-logo {margin-left: 15px;}
+
         .mainmenu {
             margin-bottom: -15px;
             .nav {
                 flex-direction: column;
-                margin-top: 15px;
+                margin-top: 15px; 
                 border-top: 1px solid #D8CFDD; 
+                // display: block; margin: 100px 15px 20px; padding:0px;
                 &::before { content: none; }
                 & > li { padding: 0px 15px; display: block;
                     border-bottom: 1px solid #D8CFDD; width: 100%;
@@ -301,6 +483,58 @@
                          }
                      }
                  }
+
+                //  Megamenu - congresses-li
+                 li.congresses-li {
+                    position: relative;
+                    .m-toggle-arrow {
+                        position: absolute;
+                        right: 14px;
+                        top: 0px;
+                        width: 40px;
+                        height: 50px;
+                        background: url(../images/icons/arrow-menu.svg) 50% 50% no-repeat;
+                        background-size: 16px;
+                        cursor: pointer;
+                        @include transition(0.3s, ease-in-out);
+                        filter: brightness(0) invert(1);
+
+                        @include transform(rotate(90deg));
+
+                        &.is-active {
+                            @include transform(rotate(0deg));
+                        }
+                    }
+                    .menu-congresses {
+                        display: none;
+                    }
+                 }
+
+                 @media (max-width: 767px) { 
+                    .megamenu-inner {
+                        padding: 0px 0px 15px;
+                        @include flex-direction(column);
+                        .congress-list {
+                            flex: 1 0 100%; margin-bottom: 15px;
+                            .menu-title {
+                                font-size: 18px;
+                            }
+                        
+                        }
+                        
+                        .view-all-wrapper {
+                            position: static !important;
+                            bottom: auto;
+                            text-align: left;
+                            padding-top: 15px;
+
+                                .congress-item-col {
+                                    min-width: 100%;
+                                }
+                        }
+
+                    }
+                }
                 
 
                 @media (max-width: 375px) { 
@@ -313,27 +547,21 @@
     }
 
     @media (max-width: 767px) {  
-        padding: 10px 0;
+        padding: 3px 0px !important;
         .mainmenu {margin-bottom: -3px;
+            .nav {margin-top: 5px; }
         }
     }
 
     } 
-    @media(max-width:991px){
-        &.is-sticky-header{
-            &.scroll-up,
-            &.scroll-down{
-                .navbar{padding: 10px 0;}
-            }
-        }
-    }
-    
     
 }
 
 @media (min-width: 992px){
     .navbar-m-expand-xxl {flex-wrap:nowrap; justify-content:flex-start}
     .navbar-m-expand-xxl .nav {flex-direction:row;}
+    // .navbar-m-expand-xxl .nav .dropdown-menu {position:absolute}
+    // .navbar-m-expand-xxl .nav .nav-link {padding-right:.5rem; padding-left:.5rem}
     .navbar-m-expand-xxl .nav-scroll {overflow:visible}
     .navbar-m-expand-xxl .navbar-collapse {display:flex !important;flex-basis:auto}
     .navbar-m-expand-xxl .navbar-toggler {display:none}
@@ -342,7 +570,7 @@
 
 /* ANIMATED X */
 .navbar-toggler.x {
-    border: none !important;  outline: none !important;  box-shadow:none !important;padding: 0;margin-left:auto;margin-right:15px;
+    border: none !important;  outline: none !important;  width: 44px; height: 44px; box-shadow:none !important; margin-right: 10px; margin-left: auto;
     &:focus {
         outline: none;
     }
@@ -408,5 +636,4 @@
             transform: rotate(0);
         }
     }
-   
 }

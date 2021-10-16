@@ -1,17 +1,14 @@
 .page-title-hero {
     margin: 50px 0; 
-    .sub-title{ font-size: 16px;color: $primary;margin-bottom: 10px;display: block;}
+
     .title {
-        font-size: calc(30px + (42 - 30) * ((100vw - 320px) / (1600 - 320)));
+        font-size: calc(38px + (42 - 38) * ((100vw - 320px) / (1600 - 320)));
     }
     .sm-title {
-        font-size: calc(28px + (32 - 28) * ((100vw - 320px) / (1600 - 320)));
+        font-size: 16px; font-family: $hfont-65 !important; margin-bottom: 15px;
     }
     .main-title {  
-        font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); font-family: $hfont-hbold !important; line-height: 1.2;
-    }
-    @media(max-width:991px){
-        margin: 25px 0;
+        font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); font-family: $hfont !important; line-height: 1.2;
     }
 }
 
@@ -27,6 +24,10 @@
     @media (max-width: 767px) { 
         margin-bottom: 30px;
     }
+
+    // @media (min-width: 1600px) { 
+    //     margin-bottom: 50px; 
+    // }
 
     @media (min-width: 768px) { 
         .hero-bg {

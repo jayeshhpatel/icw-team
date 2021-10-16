@@ -21,8 +21,6 @@ $darkTheme	        :#860052;
 $darkBlue	        :#003762;
 $white			    :#ffffff;
 $black	      		:#000;
-$gray	      		:#333333;
-
 
 $f-smoothing : '-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale';
 
@@ -68,11 +66,6 @@ $f-smoothing : '-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr
     -moz-filter: $value; 
     -o-filter: $value;
     filter: $value; 
-}
-@mixin appearance($value) { 
-    -webkit-appearance: $value;
-    -moz-appearance:$value;
-    appearance:$value 
 }
 
 /* display: flex */

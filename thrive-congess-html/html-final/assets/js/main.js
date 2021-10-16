@@ -3,6 +3,18 @@
 /*-----------------------------------------------------------------------------------*/
 
 // is-sticky-header
+// When the user scrolls the page, execute stickyHeaderFunction
+window.onscroll = function() {stickyHeaderFunction()};
+var header = document.querySelector(".is-sticky-header");
+var sticky = header.offsetTop;
+function stickyHeaderFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("is-sticky");
+  } else {
+    header.classList.remove("is-sticky");
+  }
+}
+/*
 let lastScroll = 0;
 window.addEventListener("scroll", () => {
     let header = document.querySelector(".is-sticky-header");
@@ -11,7 +23,7 @@ window.addEventListener("scroll", () => {
         if (currentScroll <= 0) {
             header.classList.remove("scroll-up");
             return;
-        }    
+        }
         if (currentScroll > lastScroll && !header.classList.contains("scroll-down")) {
             // down
             header.classList.remove("scroll-up");
@@ -24,6 +36,7 @@ window.addEventListener("scroll", () => {
         lastScroll = currentScroll;
     }
 });
+*/
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -127,26 +140,71 @@ if(document.querySelector(".embed-video")){
     }
 }
 
-$(".custom-html-dropdown .dropdown-menu li .dropdown-item").click(function(){
-    $('.custom-html-dropdown .dropdown-menu li .dropdown-item ').removeClass('active');
+
+var $ = jQuery;
+
+$(function() {
+  if (!localStorage.getItem('post-login-disclaimer-closed')) {
+    $('.post-login-disclaimer').removeClass('hidden');
+  }
+
+  $('.post-login-disclaimer .close-container').click(function() {
+    localStorage.setItem('post-login-disclaimer-closed', '1');
+    $('.post-login-disclaimer').addClass('hidden');
+  });
+
+  $('.view-az-internal-publications .custom-filters .publication-status[data-value="All"]').addClass('active');
+
+  $(document).on('click', '.view-az-internal-publications .custom-filters .publication-status', function() {
+    $('.view-az-internal-publications .view-filters [name="field_publication_status_value"]').val($(this).data('value'));
+    $('.view-az-internal-publications .view-filters [type="submit"]').trigger('click');
+    $('.view-az-internal-publications .custom-filters .publication-status').removeClass('active');
     $(this).addClass('active');
-    $(this).parents(".custom-html-dropdown").find('.dropdown-input').html($(this).text() );
-    $(this).parents(".custom-html-dropdown").find('.dropdown-input').val($(this).data('value'));
-});
-// Model Popup
-if(document.querySelector(".custom-modal")){
-    const openEls = document.querySelectorAll("[data-popup]"); 
-    const closeEls = document.querySelectorAll(".popup-close"); 
-    // const modalEls = document.querySelectorAll(".custom-modal"); 
-    for (const el of openEls) {
-        el.addEventListener("click", function() {
-            const modalId = this.dataset.popup;
-            document.getElementById(modalId).classList.add('is-show');
-        });
-    }  
-    for (const el of closeEls) {
-        el.addEventListener("click", function() {
-            document.querySelector(".custom-modal.is-show").classList.remove('is-show');
-        });
+  });
+
+  /*
+  $(document).on('click', 'a.congresses-li', function() {
+    if ($(this).parent().find('.menu-congresses').hasClass('hidden')) {
+      $(this).parent().find('.menu-congresses').removeClass('hidden');
+    } else {
+      $(this).parent().find('.menu-congresses').addClass('hidden');
     }
-}
+
+    return false;
+  });
+
+  $(document).on('mouseleave', '.menu-congresses', function() {
+    $('.menu-congresses').addClass('hidden');
+  });
+
+  document.addEventListener('scroll', function() {
+    $('.menu-congresses').addClass('hidden');
+  });
+
+  */
+  if($('li.congresses-li').length){
+    $("li.congresses-li").prepend('<em class="m-toggle-arrow" aria-expanded="true"></em>');
+
+    $(document).on('click', 'li.congresses-li .m-toggle-arrow', function() {
+      if ($(this).parent().find('.menu-congresses').hasClass('is-show')) {
+        $(this).removeClass('is-active');
+        $(this).parent().find('.menu-congresses').removeClass('is-show');
+      } else {
+        $(this).addClass('is-active');
+        $(this).parent().find('.menu-congresses').addClass('is-show');
+      }
+  
+      return false;
+    });
+  }
+
+
+  $(document).ready(function() {
+    $(".add-to-calendar").popover({
+        html: true,
+        content: function() {
+            return $('#calendar-buttons').html();
+        }
+    });
+  });
+})

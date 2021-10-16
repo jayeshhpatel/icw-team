@@ -74,7 +74,7 @@
 }
 
 
-.btn-border {min-height: 50px; padding: 15px 20px; font-size: 16px; white-space: nowrap; font-family: $hfont-normal; color: $black; border: 1px solid rgba($color: #000000, $alpha: 0.20); text-decoration: none !important; display: inline-block; @include transition(0.2s, ease-in-out); line-height: 1; cursor: pointer;
+.btn-border { padding: 15px 20px; font-size: 16px; white-space: nowrap; font-family: $hfont-normal; color: $black; border: 1px solid rgba($color: #000000, $alpha: 0.20); text-decoration: none !important; display: inline-block; @include transition(0.2s, ease-in-out); line-height: 1; cursor: pointer;
     &.focus, &:focus { outline: none !important; }
     &:hover, &:focus, &:active {
         background-color: $pink !important; border-color: $pink !important; color: $white;
@@ -92,7 +92,6 @@
     color: #fff;
     background-color:$interaction;
     border-color:$interaction;
-    min-height: 50px;
     &:hover, &:focus, &:active,
     &:not(:disabled):not(.disabled).active, 
     &:not(:disabled):not(.disabled):active,
@@ -122,7 +121,7 @@
 .btn-secondary {
     color: #003865;
     background-color:#C4D600;
-    border-color:#C4D600;min-height: 50px;
+    border-color:#C4D600;
     &:hover, &:focus, &:active,
     &:not(:disabled):not(.disabled).active, 
     &:not(:disabled):not(.disabled):active,
@@ -198,7 +197,7 @@
 }
 
 .btn-download {
-    @include inline-flex;  @include align-items(flex-start); @include justify-content(space-between); @include flex-direction(column); text-align: left;
+    @include flexbox();  @include align-items(flex-start); @include justify-content(space-between); @include flex-direction(column); text-align: left;
     color: $interaction; font-size: 16px;  font-family: $hfont-normal; line-height: 1; cursor: pointer;  text-decoration: none;
     padding: 10px;
     padding-left: 50px; position: relative; min-height: 34px;
@@ -213,15 +212,15 @@
         top: 8px;
         height: 34px;
         width: 34px;
-        background: url(../images/icons/icon-download.svg) center center no-repeat;
+        background: url(../images/icons/icon-dwonload.svg) center center no-repeat;
         background-size: 34px 34px; 
         @include transition(0.3s, ease-in-out);
     }
     span {
-        color: $interaction; display: block; padding-bottom: 3px;@include transition(0.3s, ease-in-out);
+        color: $interaction; display: block; padding-bottom: 3px;
     }
     small {
-        font-size: 12px; font-family: $hfont-45;  color: #000000;@include transition(0.3s, ease-in-out);
+        font-size: 12px; font-family: $hfont-45;  color: #000000;
         strong {
             font-family: $hfont-65;
         }

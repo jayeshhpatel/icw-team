@@ -1,4 +1,9 @@
-
+.is-light {
+    .card-external-action strong.icon-zoom,
+    .card-external-action strong.icon-location {
+        filter: brightness(0) invert(1);
+    }
+}
 
 .card {
     height: 100%; border: 0px !important; @include border-radius(0);
@@ -107,6 +112,22 @@
         }
     }
 
+    .watch-live-container {
+        margin-top: 30px; margin-left: 40px;
+        @media (max-width: 767px) {
+            margin-top: 30px; margin-left: 30px;
+        }
+        & + .card-body-top-action {
+            padding-top: 25px;   
+        }
+
+        .watch-live-button {
+            padding: 10px 15px;
+            @include border-radius(4px);
+            font-size: 16px;
+        }
+    }
+
     .card-body {
         padding: 50px 40px 60px; transition: 0.5s;
         @media (max-width: 767px) {
@@ -131,9 +152,32 @@
         }
         .card-external-action {
             font-size: 12px; font-weight: normal; font-family: $hfont-45; text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 15px; word-break: break-word;
             strong {
                 font-family: $hfont-65;
+
+                &.icon-zoom {
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    font-size: 0;
+                    margin-right: 5px;
+                    width: 20px;
+                    height: 18px;
+                    background: url('/themes/custom/AZInternal/images/icons/icon-zoom.svg') top center no-repeat;
+                    background-size: contain;
+                }
+               &.icon-location {
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    font-size: 0;
+                    margin-right: 5px;
+                    width: 20px;
+                    height: 20px;
+                    background: url('/themes/custom/AZInternal/images/icons/icon-location.svg') top center no-repeat;
+                    background-size: contain;
+                }
             }
             a {
                 opacity: 0.8;
@@ -148,8 +192,10 @@
         }
 
         .card-sm-title {  
-            margin-bottom: 10px; text-transform: uppercase; font-family: $hfont;
-            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1600 - 320)));
+            font-size: 12px; font-weight: normal; font-family: $hfont-65; text-transform: uppercase;
+            margin-bottom: 15px;
+            // margin-bottom: 10px; text-transform: uppercase; font-family: $hfont;
+            // font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1600 - 320)));
         }
         .card-title {
             margin-bottom: 20px;
@@ -439,6 +485,11 @@
 
     .card-body {
         padding: 0px 0px 20px;
+
+        video.embed-video {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .card-foot { display: block; margin-bottom: 25px;
@@ -462,3 +513,58 @@
         }
     }
 } 
+
+
+.section-summary-block {
+    height: 100%;
+    background: #F3F7CC;
+    border: 0px;
+    padding: 50px 40px 60px;
+    @media (max-width: 767px) {
+        padding: 30px 30px 50px;
+    }
+
+    .card-title, h2 {
+        margin-bottom: 20px; 
+        font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (1600 - 320)));
+    }
+}
+
+.guideline  {
+    height: 100%;
+    background: rgba(#fff, 0.75);
+    border: 0px;
+    padding: 50px 40px 60px;
+    @media (max-width: 767px) {
+        padding: 50px 30px 50px;
+    }
+
+    .guideline {
+        padding: 0px !important; 
+        background-color: transparent !important;
+        
+        .embed-video {
+            height: auto; width: 100%;
+        }
+    }
+
+    .page-title-hero {
+        margin: 0px 0 30px;
+        .sm-title,
+        .main-title {
+            color: $bodyfontcolor!important;
+        }
+        
+        * {
+            color: $bodyfontcolor!important;
+        }
+    }
+
+    .section-title-block{
+        * {
+            color: $bodyfontcolor!important;
+        }
+    }
+
+    .bookmark { right: 40px !important; top: 15px !important;}
+}
