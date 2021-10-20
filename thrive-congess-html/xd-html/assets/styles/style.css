@@ -1,0 +1,626 @@
+/* drupal templates specific css cn be added here */
+body {
+  padding: 0 !important;
+}
+#toolbar-administration {
+  display: none;
+}
+.region-header-left {
+  display: inline-block;
+}
+.main-footer #block-footercontactus .field--name-body  a {
+    font-family: "lexialight",serif !important;
+    color: #d0006f;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.breadcrumb {
+  padding-bottom: 0 !important;
+}
+h1.page-title {
+  margin: 30px 0;
+}
+.region-footer-top {
+  width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+}
+#block-footerlogo p {
+  margin-bottom: 0;
+}
+[class*="view-id-az_internal_dashboard"] .card-block {
+    position: relative;
+}
+[class*="view-id-az_internal_dashboard"] .card-block a.congress-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 290;
+}
+
+.az-internal-publication-status-Submitted,
+.az-internal-publication-status-Approved,
+.az-internal-publication-status-Declined,
+.az-internal-publication-status-Published {
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.disclaimer-text {
+  background: #F9E79F;
+  padding: 15px;
+  border: 1px solid #FFC300;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-summary-block {
+  max-width: inherit;
+}
+/* @media (min-width: 992px) {
+  body.page-node-type-internal-briefing-materials .section-summary-block {
+    max-width: 50%;
+  }
+} */
+
+
+
+/* .section-summary-block h2 {
+  margin-top: 20px;
+} */
+
+#user-login-form .description,
+#user-pass p {
+  display: none;
+}
+
+#user-login-form .form-item label {
+  display: block;
+}
+
+#user-login-form #edit-actions,
+#user-pass #edit-actions {
+  margin-top: 20px;
+}
+
+#user-login-form .form-type-email {
+  margin-bottom: 10px;
+}
+
+#user-login-form .form-item input,
+#user-pass .form-item input {
+  width: 30%;
+}
+
+.tabs a[href="/user/register"] {
+  display: none;
+}
+
+.section-summary-block {
+  max-width: inherit;
+}
+
+.post-login-disclaimer {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100%;
+  z-index: 111111; margin: 0px !important; padding: 15px 0px !important;
+  border: 0px;
+}
+.post-login-disclaimer .container-fluid {text-align: left; position: relative; padding-right: 60px;}
+.post-login-disclaimer .close-container {
+  position: absolute;
+  right: 15px !important;
+  top: 0px !important;
+  cursor: pointer;
+  font-size: 14px;
+}
+.post-login-disclaimer .icon {
+  font-style: normal;
+  margin-left: 3px;
+  display: inline-block;
+  color: #656565;
+  font-size: 12px;
+}
+@media (min-width: 1250px) {
+  .post-login-disclaimer .close-container {
+    right: 55px !important;
+  }
+}
+
+.button.az-ping-button {
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+/* scrollbar */
+.view-az-internal-publications .custom-filters  {
+  scrollbar-width: thin; scroll-margin-right: 5px;
+}
+.view-az-internal-publications .custom-filters::-webkit-scrollbar {
+    background-color:transparent; width:5px; height: 5px; border-radius:16px;
+}
+.view-az-internal-publications .custom-filters::-webkit-scrollbar-track {
+    background-color:rgba(255, 255, 255, 0.05)
+}
+.view-az-internal-publications .custom-filters::-webkit-scrollbar-track:hover {
+    background-color:rgba(255, 255, 255, 0.15)
+}
+/* scrollbar itself */
+.view-az-internal-publications .custom-filters::-webkit-scrollbar-thumb {
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius:16px;
+}
+.view-az-internal-publications .custom-filters::-webkit-scrollbar-thumb:hover {
+    background-color:rgba(255, 255, 255, 0.5)
+}
+.view-az-internal-publications .custom-filters::-webkit-scrollbar-button {display:none}
+
+
+.view-az-internal-publications .custom-filters {
+  margin-bottom: 25px; margin-left: -15px; margin-right: -15px;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+.view-az-internal-publications .custom-filters .publication-status {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Helvetica 65", sans-serif;
+}
+.view-az-internal-publications .custom-filters .publication-status:first-child {
+  margin-left: 15px;
+}
+.view-az-internal-publications .custom-filters .publication-status:last-child {
+  margin-right: 15px;
+}
+
+.view-az-internal-publications .custom-filters .publication-status.active {
+  border-color: #d0006f; background: #d0006f;
+}
+
+.view-empty {color: #fff; font-size: 14px; padding: 50px 0; text-align: center;}
+
+.view-az-internal-competitor-intelligences .views-field-field-asset {
+  display: none;
+}
+
+.view-az-internal-competitor-intelligences .card .pull-right {
+  text-align: right;
+}
+.view-az-internal-competitor-intelligences .card .pull-right img {
+  height: auto;
+}
+
+.view-az-internal-competitor-intelligences .card .pull-right > a {
+  color: transparent;
+  background: url(../images/icons/download.png);
+  background-size: contain;
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 80px;
+  bottom: 65px;
+}
+
+.view-az-internal-competitor-intelligences .added-by {
+  padding-right: 15px;
+}
+.calendar-link-ics-download {
+  display: inline-block;
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  margin-left: 10px;
+  background: url('../images/icons/calendar.svg') no-repeat;
+  cursor: pointer;
+  background-size: contain;
+  top: 25px;
+  z-index: 300;
+  right: 25px;
+}
+
+.add-to-calendar {
+  display: inline-block;
+  width: 20px;
+  position: relative;
+  height: 20px;
+  margin-left: 10px;
+  background: url('../images/icons/calendar.svg') no-repeat;
+  cursor: pointer;
+  background-size: contain;
+  top: 2px;
+}
+ul.calendar-links {
+  padding-left: 0;
+}
+ul.calendar-links li {
+  display: inline-block;
+}
+
+.calendar-link-google,
+.calendar-link-ics,
+.calendar-link-yahoo,
+.calendar-link-webOutlook {
+  display: inline-block;
+  width: 30px;
+  position: relative;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  top: 2px;
+}
+.calendar-link-google {
+  background-size: contain;
+  background-image: url('/themes/admin/img/google-calendar.png');
+  background-repeat: no-repeat;
+}
+.calendar-link-ics {
+  background-size: contain;
+  background-image: url('/themes/admin/img/ical-calendar.png');
+  background-repeat: no-repeat;
+}
+.calendar-link-yahoo {
+  background-size: contain;
+  background-image: url('/themes/admin/img/yahoo-calendar.png');
+  background-repeat: no-repeat;
+}
+.calendar-link-webOutlook {
+  background-size: contain;
+  background-image: url('/themes/admin/img/outlook-calendar.png');
+  background-repeat: no-repeat;
+}
+
+.bookmark {
+  cursor: pointer;
+  position: absolute;
+  z-index: 301;
+  right: 60px;
+  top: 24px;
+}
+
+@media (max-width: 767px) {
+  .bookmark {
+    right: 24px;
+  }
+
+  .breadcrumb-block .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .path-node .bookmark {
+    top: 5px;
+    right: 10px;
+  }
+
+  .card-block .card-body .bookmark {
+    top: 24px;
+    right: 60px;
+  }
+
+  .card-block .card-body .bookmark + .card-title,
+  .card-block .card-body .calendar-link-ics-download + .card-title {margin-top: 25px;}
+
+  .post-login-disclaimer {
+    padding-right: 55px;
+  }
+
+  .post-login-disclaimer .close-container {
+    right: 15px;
+    top: 16px;
+    font-size: 12px;
+  }
+
+  .post-login-disclaimer .icon {
+    margin-left: 1px;
+    font-size: 11px;
+  }
+
+  .view-az-internal-dashboard .bookmark {
+    right: 60px;
+  }
+}
+
+.bookmark img {
+  width: 20px;
+  height: 20px;
+}
+
+.view-az-internal-publications .bookmark {
+  right: 24px;
+  bottom: 24px;
+  top: auto;
+}
+
+.my-thrive .view-az-debriefing-material .bookmark,
+.view-az-debriefing-material .bookmark,
+.view-az-internal-briefing-material .bookmark,
+.view-az-internal-competitor-intelligences .bookmark,
+.view-az-internal-guidelines .bookmark {
+  right: 24px;
+}
+
+.internal-briefing-materials.full .bookmark {
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.internal-briefing-materials,
+.debriefing-materials,
+.guideline,
+.competitor-intelligence,
+.publication {
+  position: relative;
+}
+
+.my-thrive .top-tabs {
+  padding-left: 0;
+}
+
+.my-thrive .top-tabs {
+  margin-bottom: 0px;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(157,176,172,0.2);
+}
+
+.my-thrive .tabs {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(157,176,172,0.2);
+  background: rgba(0,0,0,0.2);
+}
+
+.my-thrive .tabs li,
+.my-thrive .top-tabs li {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+  color: #fff;
+}
+
+.my-thrive .tabs li.active,
+.my-thrive .tabs li:hover,
+.my-thrive .top-tabs li.active,
+.my-thrive .top-tabs li:hover {
+  /*text-decoration: underline;*/
+  /* font-weight: bold; */
+  color: #c4d600;
+}
+
+
+.my-thrive .tabs li.active:after,
+.my-thrive .top-tabs li.active:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #c4d600;
+}
+
+.my-thrive .tab-content {
+  display: none;
+}
+
+.my-thrive .tab-content.active {
+  display: block;
+}
+
+.my-thrive .tab-content .view-empty {
+  padding: 50px 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+}
+
+#views-exposed-form-az-internal-publications-page-2 {
+  display: none;
+}
+
+.view-az-internal-publications .card-body .bookmark {
+  display: inline-block;
+  padding-right: 7px;
+  position: static;
+}
+
+.watch-live-button {
+  color: #000;
+  background-color: #c3d852;
+  border-color: #c3d852;
+}
+.watch-live-button:hover, .watch-live-button:focus, .watch-live-button:active {
+  background-color: #D0006F;
+  border-color: #D0006F; color: #fff; text-decoration: none;
+}
+.watch-live-button .dot {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  background-color: #54ba43;
+  border-radius: 50%;
+  display: inline-block;
+}
+.watch-live-container {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+
+body.page-node-type-congress .col-md-12.pb-3.views-row,
+.view-az-internal-briefing-material .col-md-12.pb-3.views-row {padding-bottom: 45px !important;}
+@media (max-width: 767px) {
+  body.page-node-type-congress .col-md-12.pb-3.views-row,
+  .view-az-internal-briefing-material .col-md-12.pb-3.views-row {padding-bottom: 25px !important;}
+}
+
+.no-calendar .bookmark {
+  right: 24px;
+}
+
+.view-recording {
+  background: #9b9b9b;
+}
+
+.view-az-internal-publications .watch-live-container {
+  margin-left: 0;
+}
+
+.view-az-internal-publications .calendar-link-ics-download {
+  position: relative;
+  margin-right: 7px;
+  margin-left: 0;
+  right: auto; top: 5px;
+}
+
+.embargoed {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #9b9b9b;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.guideline .embed-container {
+  height: 600px;
+}
+
+.view-az-internal-competitor-intelligences .bookmark {
+  right: 10px;
+  top: 10px;
+}
+
+/*
+.menu-congresses {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  top: 95px;
+  background: #fff;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.menu-congresses .congress-list .title {
+  font-size: 140%;
+  margin-bottom: 15px;
+}
+
+.menu-congresses .congress-list .congress-title {
+  color: #000;
+}
+
+.menu-congresses .congress-list {
+  flex: 1 0 33%;
+}
+
+.menu-congresses .congress-list .empty {
+  font-size: 80%;
+}
+
+.menu-congresses .congress-list .congress-item {
+  padding-bottom: 15px;
+}
+
+.menu-congresses .congress-list .congress-item .congress-title {
+  font-weight: bold;
+}
+
+.menu-congresses .break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.view-all-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.view-all-wrapper a {
+  color: #000;
+  font-size: 90%;
+}
+
+.congresses-li > a:after {
+  display: inline-block;
+  content: '⌄';
+  padding-left: 7px;
+  position: relative;
+  top: -6px;
+  font-size: 110%;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+*/
+
+.cant_view_internal_events_zoom_links .view-az-user-internal-events .card-external-action > a {
+  display: none;
+}
+
+.cant_view_daily_briefing .view-az-internal-briefing-material.view-display-id-block_1 {
+  display: none;
+}
+
+.cant_view_congress_analytics .congress-analytics-tile {
+  display: none;
+}
+
+.internal-user-role-form {
+  width: 215px;
+}
+
+.internal-user-role-form .btn-primary {
+  margin-left: 0;
+  margin-top: 15px;
+}

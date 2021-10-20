@@ -1,0 +1,86 @@
+.section-filter-block {
+    margin-bottom: 15px;
+    padding-top: 30px;
+
+    .title {
+        font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); font-family: $hfont; line-height: 1.2;
+        color: #fff; font-weight: normal;
+    }
+}
+.filter-section {
+    @include flexbox();  @include align-items(center); @include justify-content(flex-start);
+    padding: 0px;
+
+    @media (max-width: 767px) { 
+        margin: -20px -15px 0px; @include border-radius(0px);
+    }
+
+    
+    .filter-items {overflow: auto; 
+
+        ul {
+            overflow: auto; list-style: none; margin: 0px; padding: 11px 0px 11px 5px; white-space: nowrap;
+            @include inline-flex();
+            @media (max-width: 767px) { 
+                margin: 0px 10px;
+            }
+        }
+      
+        .filter-item {
+            font-family: $hfont-65; font-size: 0.71rem; font-weight: normal; text-align: center; text-transform: uppercase;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 1px solid #fff;
+            padding: 8px 10px 8px 10px; margin-right: 10px;
+            line-height: 1;
+            @include border-radius(5px);
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            -webkit-appearance: button;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            text-decoration: none;
+            vertical-align: middle;
+            position: relative;
+            color: #000;
+            color: var(--filter-color, #fff);
+            border-color: var(--filter-color, #fff);
+
+            &.filter-item-icon {
+                padding: 5px;
+                height: 29px;
+                min-width: 30px;
+                img, svg {
+                    height: 16px; 
+                    width: 100%;                
+                }
+            }
+
+            &:hover, &:focus {
+                color: var(--filter-color, #fff);
+                opacity: 0.8;
+            }
+
+            &:focus-visible {
+                -moz-box-shadow:0 0 0 3px #ffffff, 0 0 0 5px $outline;
+                -webkit-box-shadow:0 0 0 3px #ffffff, 0 0 0 5px $outline;
+                box-shadow:0 0 0 3px #ffffff, 0 0 0 5px $outline;
+                // outline: 2px solid $outline !important;
+            }
+
+            &.selected {
+                background: var(--filter-color, #fff) !important;
+                border-color: var(--filter-color, #fff) !important;
+                color: #D0006F;
+
+                &.filter-item-icon {
+                    svg, * {
+                        fill: #D0006F;               
+                    }
+                }
+            }
+        }
+    }
+
+}

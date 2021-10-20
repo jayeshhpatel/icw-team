@@ -1,0 +1,73 @@
+// .modal-backdrop
+.modal-backdrop {
+    z-index: 2040;
+    &.show {
+        @include opacity(0.6);
+    }
+}
+.az-modal {
+    z-index: 2060 !important;
+    &::before { content: ''; position: fixed; top: 0; left: 0; z-index: -1; width: 100vw; height: 100vh; background-color: #3C1053; @include opacity(0); transition: opacity .15s linear; -webkit-transition: opacity .15s linear; -moz-transition: opacity .15s linear; -o-transition: opacity .15s linear; }
+    &.show {  
+        &::before { @include opacity(0.8); }  
+    }
+    &.az-modal-dark {
+        &.show {  
+            &::before { @include opacity(1); }  
+        }
+    }
+    .modal-content {         
+        border: 0;
+       @include border-radius(3px);
+    }
+
+    .az-modal-xs {
+        max-width: 350px; margin: 0 auto;
+    }
+
+    .az-modal-md {
+        max-width: 600px; margin: 0 auto;
+    }
+
+    .az-modal-lg {
+        max-width: 750px;
+    }
+
+    .modal-header {
+        padding: 40px 50px 20px;
+        border-bottom: 0px;
+
+        .modal-title {
+            line-height: 1.2;
+            font-family: $hfont; font-weight: normal; font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1600 - 320))); 
+        }
+
+   
+    }
+    .modal-body {
+        padding: 0px 50px;
+
+        .internal-user-role-form {
+            text-align: center;
+            width: 100%;
+        }
+
+        .modal-form-control {
+            margin-bottom: 15px;
+        }
+    }
+    .modal-footer {
+        border-top: 0px; padding: 10px 50px 35px;
+
+        * {
+            margin: 0px 10px 15px;
+        }
+    }
+
+    @media (max-width: 767px){
+        .modal-header {padding: 30px 30px 20px;}
+        .modal-body {padding: 0px 30px; }
+        .modal-footer {padding: 10px 30px 30px;}
+        .btn-border {white-space: normal;}
+    }
+}
