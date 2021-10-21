@@ -83,7 +83,7 @@
 }
 
 .btn {
-    padding: 15px 20px; font-size: 18px; font-family: $hfont-normal; line-height: 1; cursor: pointer; 
+    padding: 15px 20px; font-size: 16px; font-family: $hfont-normal; line-height: 1; cursor: pointer; 
     @include border-radius(0);
 
     &.btn-md {
@@ -100,7 +100,8 @@
     }
 
     &.btn-max-w {
-        min-width: 260px;
+        max-width: 260px;
+        width: 100%;
         @include justify-content(left);
     }
 
@@ -266,7 +267,7 @@
         top: 8px;
         height: 34px;
         width: 34px;
-        background: url(../images/icons/icon-dwonload.svg) center center no-repeat;
+        background: url(../images/icons/icon-download.svg) center center no-repeat;
         background-size: 34px 34px; 
         @include transition(0.3s, ease-in-out);
     }
@@ -320,13 +321,13 @@
 .arrow-download-white {
     height: 16px;
     width: 16px;
-    background: url(../images/icons/icon-dwonload-white.svg) center center no-repeat;
+    background: url(../images/icons/icon-download-white.svg) center center no-repeat;
     background-size: 16px 16px; 
 }
 .arrow-download-pink {
     height: 16px;
     width: 16px;
-    background: url(../images/icons/icon-dwonload.svg) center center no-repeat;
+    background: url(../images/icons/icon-download.svg) center center no-repeat;
     background-size: 16px 16px; 
 }
 .arrow-download-lime-green {
@@ -353,6 +354,31 @@
     background: url(../images/icons/icon-info-url-lime-green.svg) center center no-repeat;
     background-size: 13px 13px; 
 }
+.arrow-left-pink {
+    &:before{
+        content: "";
+        position: relative;
+        height: 13px;
+        width: 13px;
+        background: url(../images/icons/arrow-red.svg) center center no-repeat;
+        background-size: 13px 13px; 
+        display: inline-block;
+        @include transform(rotate(-180deg));
+        margin-right: 15px;
+    }
+}
+.arrow-right-pink {
+    &:after{
+        content: "";
+        position: relative;
+        height: 13px;
+        width: 13px;
+        background: url(../images/icons/arrow-red.svg) center center no-repeat;
+        background-size: 13px 13px; 
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
 
 
 .btn-svg-arrow {
@@ -361,7 +387,7 @@
     .svg-arrow {
         margin-left: 15px; 
         @include flexbox();
-
+        flex: none;
         &.first-svg-arrow {
             margin-left:0px !important; 
             margin-right:12px;   

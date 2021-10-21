@@ -14,46 +14,19 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="assets/styles/fonts.css">
-        <link rel="stylesheet" href="assets/styles/bootstrap.css">
-        <link rel="stylesheet" href="assets/styles/base.css">
+        <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/styles/main.css">
         <title>Congresses | Astrazeneca THRIVE</title> 
     </head>
     <body class="theme">
         <!-- HEADER SECTION -->
-        <header class="main-header d-none"> <!-- .is-sticky-header -->
-            <div class="container-fluid">
-                <nav class="navbar navbar-m-expand-xxl">
-                    <a class="nav-logo" href="index.html"><img src="assets/images/logo-thrive.svg" alt="Astrazeneca THRIVE" /></a>
-                    <a href="#!" class="btn-live">Watch Live</a>  
-                    <button class="navbar-toggler x" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <div class="mainmenu collapse navbar-collapse" id="mainMenu">
-                        <ul class="nav">
-                            <li class="has-sub-menu">
-                                <a href="congresses.html">Congresses</a>
-                                <em data-bs-toggle="collapse" data-bs-target="#hasmenu1" aria-expanded="false" aria-controls="hasmenu1"></em>
-                                <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu1">
-                                    <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                    <li><a href="#!">Menu Name 2</a></li>
-                                    <li><a href="#!">Another action</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Analytics</a></li>
-                            <li><a href="#">Competitor Intelligence</a></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-        <header id="main-header" role="banner" class="main-header is-sticky-header">
+        <header id="main-header" role="banner" class="main-header is-sticky-header border-0">
             <div class="container-fluid">
               <nav class="navbar navbar-m-expand-xxl">
                     <div id="header-left">
                         <div class="region region-header-left">
                             <div id="block-sitebranding" class="nav-logo">
-                                <a href="/" rel="home" class="site-logo"><img src="assets/images/logo-thrive.svg" alt="Home" /></a>
+                                <a href="index.html" rel="home" class="site-logo"><img src="assets/images/logo-thrive.svg" alt="Home" /></a>
                             </div>
                         </div>
                     </div>
@@ -71,23 +44,45 @@
                                         <li><a href="#!">Another action</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Analytics</a></li>
-                                <li><a href="#">Competitor Intelligence</a></li>
+                                <li><a href="#">Competitor intelligence</a></li>
+                                <li class="has-sub-menu">
+                                    <a href="#!">My THRIVE</a>
+                                    <em data-bs-toggle="collapse" data-bs-target="#hasmenu2" aria-expanded="false" aria-controls="hasmenu2"></em>
+                                    <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu2">
+                                        <li><a href="virtual-conference.html">Virtual conference</a></li>
+                                        <li><a href="#!">Menu Name 2</a></li>
+                                        <li><a href="#!">Another action</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Logout</a></li>
                             </ul>
                         </div>
                     </div>
-        
-        
                 </nav>
            </div>
-        
-        
-          </header>
+        </header>
         <!-- // HEADER SECTION -->
 
         <!-- MAIN SECTION -->
         <main class="main-content-wrapper">
+            <div class="header-search-block border-0">
+                <div class="container">
+                    <div class="input-search-block">
+                        <div class="input-search">
+                            <input type="text" class="form-control" placeholder="Search by keyword, topic or expert" aria-describedby="basic-addon1">
+                            <div class="custom-html-dropdown">
+                                <button class="dropdown-input form-select dropdown-toggle" type="button" id="company-name" data-bs-toggle="dropdown" aria-expanded="false">All content</button>
+                                <ul class="dropdown-menu" aria-labelledby="company-name" style="">
+                                    <li><button class="dropdown-item active" data-value="Congresses">Congresses</button></li>
+                                    <li><button class="dropdown-item" data-value="Analytics">Analytics</button></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </div>
+                        <a href="#!" class="advanced-search">Advanced search</a>
+                    </div>
+                </div>
+            </div>
             <section class="breadcrumb-block">
                 <div class="container">
                 <nav aria-label="breadcrumb">
@@ -98,147 +93,243 @@
                   </nav>
                 </div>
             </section>
-
             <section class="page-title-hero">
                 <div class="container">
                     <h1 class="title">Congresses</h1>
                 </div>
             </section>
-           
-
             <section class="section-block">
                 <div class="container">
-                
                     <div class="row row-card">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-light-blue">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-blue is-light">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-lime-green">CVRM</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
                                     <h2 class="card-title">Virtual conference, J.P. Morgan, European Healthcare Conference</h2>
-                                    <!-- <div class="card-text">Explore AstraZeneca’s Scientific Programme at Heart Failure 2021</div>
-                                    <div class="card-action"><a href="#" class="btn-border btn-arrow">View now</a></div> -->
+                                    <div class="card-date">28<sup>th</sup> - 30<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-light-magenta">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual conference, Guggenheim, Biopharma’s Next Decade</h2>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-purle is-light">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-lime-green">CVRM</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Virtual conference, Bank of America, Global Healthcare Conference</h2>
+                                    <div class="card-date">30<sup>th</sup> - 31<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-light-magenta">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-blue is-light">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-lime-green">ONCOLOGY</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Virtual bus tour, SEP</h2>
+                                    <div class="card-date">4<sup>th</sup> August 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-light-gray">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
                     <hr>
-                    
                     <div class="row row-card">
-                        <div class="col-12 col-sm-12 col-md-6">
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-light-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">RESPIRATORY & IMMUNOLOGY</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                    <div class="card-date">30<sup>th</sup> June 2021</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">CORPORATE</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Half-year and Q2 2021 results</h2>
+                                    <div class="card-date">21<sup>th</sup> June 2021</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="card card-block is-card-hover bg-light-blue">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">RESPIRATORY & IMMUNOLOGY</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
                                     <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                    <div class="card-date">30<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
+                        <div class="col-md-6">
                             <div class="card card-block is-card-hover bg-light-magenta">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">CORPORATE</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Half-year and Q2 2021 results</h2>
+                                    <div class="card-date">21<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
+                        <div class="col-md-6">
                             <div class="card card-block is-card-hover bg-light2-magenta">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">RESPIRATORY & IMMUNOLOGY</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
                                     <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                    <div class="card-date">30<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
+                        <div class="col-md-6">
                             <div class="card card-block is-card-hover bg-light-gray">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">CORPORATE</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Half-year and Q2 2021 results</h2>
+                                    <div class="card-date">21<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-light-magenta">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-dark-gray">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">RESPIRATORY & IMMUNOLOGY</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
                                     <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                    <div class="card-date">30<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-white">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-light-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">CORPORATE</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Half-year and Q2 2021 results</h2>
+                                    <div class="card-date">21<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-white">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">RESPIRATORY & IMMUNOLOGY</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
                                     <h2 class="card-title">Virtual bus tour, UBS</h2>
+                                    <div class="card-date">30<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="card card-block is-card-hover bg-white">
-                                <div class="card-body card-body-top-action">
-                                    <div class="card-action-top"><a href="#" aria-label="Download" data-bs-toggle="tooltip" title="Download"><img src="assets/images/icons/icon-dwonload.svg" alt="Astrazeneca THRIVE" /></a></div>
-                                    <div class="card-date">22 - 25 June 2021</div>
-                                    <h2 class="card-title">Virtual bus tour, UBS</h2>
+                        <div class="col-md-6">
+                            <div class="card card-block is-card-hover bg-light-blue">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name text-dark-gray">CORPORATE</div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title">Half-year and Q2 2021 results</h2>
+                                    <div class="card-date">21<sup>th</sup> June 2021</div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
-
-
         </main>
         <!-- // MAIN SECTION -->
-
-    
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
             <div class="container-fluid">
@@ -275,12 +366,10 @@
         <!-- JS -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
-
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-
         <script type="text/javascript" src="assets/js/main.js"></script>
-
         <script type="text/javascript" src="assets/js/ie.js"></script>
     </body>
 </html>

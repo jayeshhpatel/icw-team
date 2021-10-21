@@ -2,13 +2,16 @@
     margin: 50px 0; 
 
     .title {
-        font-size: calc(38px + (42 - 38) * ((100vw - 320px) / (1600 - 320)));
+        font-size: calc(38px + (42 - 38) * ((100vw - 320px) / (1920 - 320)));
     }
     .sm-title {
         font-size: 16px; font-family: $hfont-65 !important; margin-bottom: 15px;
     }
     .main-title {  
-        font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); font-family: $hfont; line-height: 1.2;
+        font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1920 - 320))); font-family: $hfont; line-height: 1.2;
+    }
+    @media(max-width:991px){
+        margin: 25px 0;
     }
 }
 
@@ -83,7 +86,7 @@
         }
 
         .title {
-            font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1600 - 320)));
+            font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1920 - 320)));
 
             em {
                 img, svg {vertical-align: super;} 
@@ -94,7 +97,7 @@
              }
         }
         .sub-info {
-            font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1600 - 320)));
+            font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
         }
         .link-action {
             margin-top: 20px;

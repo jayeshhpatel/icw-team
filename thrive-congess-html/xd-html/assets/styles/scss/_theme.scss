@@ -217,7 +217,7 @@ body {
                         filter: brightness(0) invert(1);
                     }
                     &.active {
-                        color: #fff;
+                        color: rgba($white, 0.7);
                     }
                 }
             }

@@ -20,17 +20,20 @@ a {
 }
 
 // BG COLORS
+.bg-light-white     {background-color: rgba(#ffffff, 0.90) !important;}
+.bg-white           {background-color: rgba(#f8f8f8, 0.90) !important;}
 .bg-blue            {background-color: rgba(#003865, 0.80) !important;}
 .bg-light-blue      {background-color: rgba(#E1F6F9, 0.80) !important;}
 
 .bg-light-lime      {background-color: rgba(#F3F7CC, 0.80) !important;}
 .bg-lime            {background-color: rgba(#FBEDCB, 0.80) !important;}
-.bg-lime-green       {background-color: rgba(#C4D600, 0.80) !important;}
+.bg-lime-green      {background-color: rgba(#C4D600, 0.80) !important;}
 
 .bg-light-magenta   {background-color: rgba(#E6CCDC, 0.80) !important;}
 .bg-light2-magenta  {background-color: rgba(#D8CFDD, 0.80) !important;}
 .bg-light-gray      {background-color: rgba(#CCD7E0, 0.80) !important;}
 .bg-dark-gray       {background-color: rgba(#CCCCCC, 0.80) !important;}
+.bg-dark-gray1       {background-color: rgba(#D8DADA, 0.80) !important;}
 
 .bg-purle           {background-color: rgba(#3C1053, 0.80) !important;}
 .bg-green           {background-color: rgba(#00927C, 0.80) !important;}
@@ -44,7 +47,7 @@ a {
 
 .text-light-lime      {color: #F3F7CC !important;}
 .text-lime            {color: #FBEDCB !important;}
-.text-lime-green       {color: #C4D600 !important;}
+.text-lime-green      {color: #C4D600 !important;}
 
 .text-light-magenta   {color: #E6CCDC !important;}
 .text-light2-magenta  {color: #D8CFDD !important;}
@@ -57,6 +60,9 @@ a {
 .text-pink            {color: #d0006e !important;}
 .text-dark-pink       {color: #830051 !important;}
 
+.text-dark-gray       {color: #3C4242 !important;}
+
+
 body .text-white-75 {color: rgba(255,255,255,0.75) !important;}
 
 /* Remove outline for non-keyboard :focus */
@@ -64,12 +70,17 @@ body .text-white-75 {color: rgba(255,255,255,0.75) !important;}
 /* Optional: Customize .focus-visible */
 // .focus-visible {outline-color: #000; box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.5);}
 
-p {margin-top: 0; margin-bottom: 1rem;}
+p {
+    margin-top: 0; margin-bottom: 1rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
 img {max-width: 100%;}
 sup {font-size: 70%;}
 
 strong {font-family: $hfont-65; font-weight: 400;}
-hr {background-color:transparent; margin: 0px 0px 40px;  opacity: 1; border-top: 1px dashed rgba(255,255,255,0.6);
+hr {background-color:transparent;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                margin: 0px 0px 40px;  opacity: 1; border-top: 1px dashed rgba(255,255,255,0.6);
     @media (max-width: 767px) {
         margin: 0px 0px 30px;
     }
@@ -101,6 +112,9 @@ h5, .h5 {
 }
 h6, .h6 {
     font-family: $hfont; font-weight: 400; font-size: 16px;
+}
+.helvetica-medium{
+    font-family: $hfont-65 !important;
 }
 
 // strong {font-family: $hfont-bold;}

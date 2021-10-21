@@ -9,7 +9,7 @@ $hfont-normal       :"lexiaregular", serif!important;
 $hfont-bold         :"lexiabold", serif!important;
 
 $hfont-45		    :'Helvetica Neue', sans-serif; //"Helvetica 45", sans-serif;
-$hfont-65           :"Helvetica 65", sans-serif;
+$hfont-65           :"HelveticaNeue Medium", sans-serif;
 $hfont-hbold        :"HelveticaNeue Bold", sans-serif;
 
 $primary        :#830051;
@@ -86,7 +86,7 @@ $f-smoothing : '-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr
 }
 @mixin justify-content($justify) {
     -webkit-justify-content: $justify;
-    -moz-justify-content: $justify;
+    -moz-justify-content: $justify;                                                                                                                                
     -ms-justify-content: $justify;
     justify-content: $justify;
     -ms-flex-pack: $justify;
@@ -108,7 +108,7 @@ $f-smoothing : '-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr
     -webkit-flex-wrap: $wrap;
     -moz-flex-wrap: $wrap;
     -ms-flex-wrap: $wrap;
-    flex-wrap: $wrap;
+    flex-wrap: $wrap;                                                                                                                                                                                                  
 }
 @mixin flex-flow($flow) {
     -webkit-flex-flow: $flow;

@@ -208,3 +208,10 @@ $(document).on('click', 'li.congresses-li .m-toggle-arrow', function() {
     });
   });
 })
+
+$(".custom-html-dropdown .dropdown-menu li .dropdown-item").click(function(){
+  $('.custom-html-dropdown .dropdown-menu li .dropdown-item ').removeClass('active');
+  $(this).addClass('active');
+  $(this).parents(".custom-html-dropdown").find('.dropdown-input').html($(this).text() );
+  $(this).parents(".custom-html-dropdown").find('.dropdown-input').val($(this).data('value'));
+});
