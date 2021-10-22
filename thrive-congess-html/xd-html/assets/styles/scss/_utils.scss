@@ -72,9 +72,10 @@
         @include flexbox(); @include align-items(center); @include justify-content(center);
         svg {
             @include transition(0.3s, ease-in-out);
-            width: 88px; height: 88px; margin-top: -24px;
+            width: 40px; height: 40px; margin-top: -24px;
+            @include opacity(0.6);
             @media (max-width:767px) {
-                width: 44px; height: 44px; margin-top: -22px;
+                 margin-top: -22px;
             }
         }
         &.is-hidden {

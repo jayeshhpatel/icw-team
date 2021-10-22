@@ -20,27 +20,97 @@
     </head>
     <body class="theme">
         <!-- HEADER SECTION -->
-        <header class="main-header is-sticky-header"> <!-- .is-sticky-header -->
+        <header id="main-header" role="banner" class="main-header is-sticky-header border-0">
             <div class="container-fluid">
                 <nav class="navbar navbar-m-expand-xxl">
-                    <a class="nav-logo" href="index.html"><img src="assets/images/logo-thrive.svg" alt="Astrazeneca THRIVE" /></a>
-                    <a href="#!" class="btn-live">Watch Live</a>  
-                    <button class="navbar-toggler x" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <div class="mainmenu collapse navbar-collapse" id="mainMenu">
-                        <ul class="nav">
-                            <li class="has-sub-menu">
-                                <a href="congresses.html">Congresses</a>
-                                <em data-bs-toggle="collapse" data-bs-target="#hasmenu1" aria-expanded="false" aria-controls="hasmenu1"></em>
-                                <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu1">
-                                    <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                    <li><a href="#!">Menu Name 2</a></li>
-                                    <li><a href="#!">Another action</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Analytics</a></li>
-                            <li><a href="#">Competitor Intelligence</a></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
+                    <div id="header-left">
+                        <div class="region region-header-left">
+                            <div id="block-sitebranding" class="block block-system block-system-branding-block">
+                                <a href="index.html" rel="home" class="site-logo">
+                                    <img src="assets/images/logo-thrive.svg" alt="Home" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="header-right">
+                        <!-- make dynamic later //-->
+                        <button class="navbar-toggler x" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <div class="mainmenu collapse navbar-collapse" id="mainMenu">
+                            <div class="region region-header-right">
+                                <div id="block-aznavblock"
+                                    class="block block-thrive-congress-azinternal block-thrive-congress-azinternal-aznav">
+                                    <div class="mainmenu collapse navbar-collapse item-list">
+                                        <ul class="nav">
+                                            <li class="congresses-li">
+                                                <a href="congresses.html">Congresses</a>
+                                                <div class="menu-congresses">
+                                                    <div class="megamenu-inner">
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Live</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="congresses-instance.html">J.P. Morgan, European Healthcare Conference<span class="megamenu-date">4<sup>th</sup> - 8<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Nordic Healthcare Seminar<span class="megamenu-date">5<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Upcoming</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, Guggenheim, Biopharma’s Next Decade<span class="megamenu-date">16<sup>st</sup> - 19<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">21<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">23<sup>rd</sup> - 24<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Recently Archived</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, J.P. Morgan, European Healthcare Conference<span class="megamenu-date">1<sup>st</sup> - 3<sup>rd</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">1<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">14<sup>th</sup> - 15<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="break"></div>
+                                                        <div class="view-all-wrapper">
+                                                            <div class="congress-item-col">
+                                                                <a class="view-all" href="/internal/dashboard">View all
+                                                                    congresses 
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="23.882" height="12" viewBox="0 0 23.882 12">
+                                                                            <path id="Arrow" d="M23.724,132.987h0L18.3,127.559a.543.543,0,1,0-.765.765l4.5,4.5H.543a.543.543,0,0,0,0,1.086H22.031l-4.5,4.5a.543.543,0,1,0,.765.765l5.428-5.428A.543.543,0,0,0,23.724,132.987Z" transform="translate(0 -127.369)" fill="#c4d600"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="has-sub-menu">
+                                                <a href="my-thrive.html">My THRIVE</a>
+                                                <em data-bs-toggle="collapse" data-bs-target="#hasmenu2" aria-expanded="false" aria-controls="hasmenu2"></em>
+                                                <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu2">
+                                                    <li><a href="#!">Bookmarks</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -49,13 +119,51 @@
 
         <!-- MAIN SECTION -->
         <main class="main-content-wrapper">
+            <div class="header-search-block">
+                <div class="container">
+                    <div class="input-search-block">
+                        <div class="input-search">
+                            <input type="text" class="form-control" placeholder="Search by keyword, topic or expert" aria-describedby="basic-addon1">
+                            <div class="custom-html-dropdown">
+                                <button class="dropdown-input form-select dropdown-toggle" type="button" id="company-name" data-bs-toggle="dropdown" aria-expanded="false">All content</button>
+                                <ul class="dropdown-menu" aria-labelledby="company-name" style="">
+                                    <li><button class="dropdown-item active" data-value="Congresses">Congresses</button></li>
+                                    <li><button class="dropdown-item" data-value="Analytics">Analytics</button></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </div>
+                        <a href="#!" class="advanced-search">Advanced search</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-wrapper">
+                <div class="container">
+                    <div class="title-block">
+                        <p>J.P. MORGAN, EUROPEAN HEALTHCARE CONFERENCE</p>
+                        <span>18 - 21 JUNE 2021</span>
+                        <span class="progress-btn">In progress</span>
+                    </div>
+                    <ul class="tabs">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="guide-line.html">Guidelines</a></li>
+                        <li><a href="planning-schedule.html">Planning schedule</a></li>
+                        <li><a href="launch-checklist.html">Launch checklist</a></li>
+                        <li><a href="internal-events.html">Internal events</a></li>
+                        <li class="active"><a href="briefing-materials.html">Briefing materials</a></li>
+                        <li><a href="competitor-intelligence.html">Competitor intelligence</a></li>
+                    </ul>
+                </div>
+            </div>
             <section class="breadcrumb-block">
                 <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
                       <li class="breadcrumb-item"><a href="congresses.html">Congresses</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Virtual conference, J.P. Morrgan, European Healthcare Conference</li>
+                      <li class="breadcrumb-item"><a href="#">J.P. Morgan, European Healthcare Conference</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Briefing materials</li>
                     </ol>
                   </nav>
                 </div>
@@ -63,30 +171,72 @@
 
             <section class="page-title-hero">
                 <div class="container">
-                    <div class="sm-title">Virtual conference, J.P. Morrgan, European Healthcare Conference</div>
                     <h1 class="main-title">Briefing Materials</h1>
                 </div>
             </section>
 
-            <!-- <section class="section-title-block">
-                <div class="container">
-                    <div class="row row-grid justify-content-between">
-                        <div class="col-12 col-sm-auto">
-                            <div class="date"><strong>18 - 21 June 2021</strong></div>
-                        </div>
-                        <div class="col-12 col-sm-auto">
-                            <a href="briefing-materials-detail.html" class="btn btn-primary">In progress</a>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
             <section class="section-block">
                 <div class="container">
-                
                     <div class="row row-card">
+                        <div class="col-12 col-md-4">
+                            <div class="card card-block is-card-hover bg-light-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">DAILY BRIEFING</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-md">19<sup>th</sup> June 2021</h2>
+                                    <p>Egestas congue quisque egestas diam. Auctor neque vitae tempus quam pellentesque nec nam aliquam.</p>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">See daily briefing <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card card-block is-card-hover bg-lime">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">DAILY BRIEFING</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-md">18<sup>th</sup> June 2021</h2>
+                                    <p>Egestas congue quisque egestas diam. Auctor neque vitae tempus quam pellentesque nec nam aliquam.</p>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">See daily briefing <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card card-block is-card-hover bg-light-blue">
+                                <div class="card-body">
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">DAILY BRIEFING</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-md">17<sup>th</sup> June 2021</h2>
+                                    <p>Egestas congue quisque egestas diam. Auctor neque vitae tempus quam pellentesque nec nam aliquam.</p>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">See daily briefing <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12 col-sm-12 col-md-12">
-                            <div class="card card-block-grid is-card-hover bg-blue is-light card-video">
+                            <div class="card card-block-grid card-block is-card-hover bg-light-magenta card-video">
                                 <div class="card-head">
                                     <div class="video-wrapper">
                                         <div class="embed-container ratio ratio-16x9 embed-play-action">
@@ -97,25 +247,43 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">Video</div>
-                                    <h2 class="card-title">Congress Strategy</h2>
+                                    <div class="card-body-action-top mb-4">
+                                        <h2 class="card-title card-title-xl mb-0">Congress strategy</h2>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="card-text">Duis metus turpis, facilisis vitae fermentum sit amet, aliquam sed metus. Donec at tristisque massa. Aliquam eleifend neque.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">See daily briefing <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
 
                         <div class="col-12 col-sm-12 col-md-6">
                             <div class="card card-block is-card-hover bg-light-blue">
                                 <div class="card-head">
                                     <a href="#" class="card-head-img is-video">
-                                        <span class="video-icon-svg"><img src="assets/images/icon-play-yellow.png" alt="Play"></span>
                                         <img src="assets/images/img2-m.jpg" alt="AstraZeneca">
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">DATA</div>
-                                    <h2 class="card-title">Pulmicort data update - June 201</h2>
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">DATA</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-lg">Pulmicort data update - June 201</h2>
                                     <div class="card-text">Our bold ambition is to achiveve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">See the data <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -128,9 +296,19 @@
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">Infographic</div>
-                                    <h2 class="card-title">Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna.</h2>
-                                    <div class="card-text">Our bold ambition is to achiveve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">INFOGRAPHIC</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-lg">Pharetra pharetra massa massa ultricies mi quis.</h2>
+                                    <div class="card-text">Our bold ambition is to achieve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">View the presentation <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +317,7 @@
 
                     <div class="row row-card">
                         <div class="col-12 col-sm-12 col-md-12">
-                            <div class="card card-block-grid is-card-hover bg-blue is-light">
+                            <div class="card card-block-grid card-block is-card-hover bg-dark-gray1">
                                 <div class="card-head">
                                     <div class="slider-block">
                                         <div id="is-card-slider" class="is-card-slider splide">
@@ -166,9 +344,19 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">Image Gallery</div>
-                                    <h2 class="card-title">Our exhibition booth</h2>
-                                    <div class="card-text">Quisque lobortis purus non nunc imperdiet consequat. Sed hendrerit ex risus, vitae placerat ex rhoncus non.</div>
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">IMAGE GALLERY</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-lg">Our exhibition booth</h2>
+                                    <div class="card-text">Duis metus turpis, facilisis vitae fermentum sit amet, aliquam sed metus. Donec at tristique massa. Aliquam eleifend neque.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">View the gallery <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -181,9 +369,19 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">Product</div>
-                                    <h2 class="card-title">Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.</h2>
-                                    <div class="card-text">Our bold ambition is to achiveve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">PRODUCT</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-lg">Consequat interdum varius sit amet mattis vulputate</h2>
+                                    <div class="card-text">Our bold ambition is to achieve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">Understand the benefits <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -195,9 +393,19 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-sm-title">Infographic</div>
-                                    <h2 class="card-title">Venenatis urna cursus eget nunc scelerisque viverra mauris in.</h2>
-                                    <div class="card-text">Our bold ambition is to achiveve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-body-action-top">
+                                        <div class="card-cat-name"><strong class="text-dark-gray1">INFOGRAPHIC</strong></div>
+                                        <div class="card-right-info">
+                                            <div class="bookmark" data-id="88694">
+                                                <img class="filled" src="assets/images/icons/heart-empty.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="card-title card-title-lg">Venenatis urna cursus eget nunc scelerisque viverra</h2>
+                                    <div class="card-text">Our bold ambition is to achieve disease modification and clinical remission in respiratory and immunology.</div>
+                                    <div class="card-action">
+                                        <a href="#" class="btn btn-md btn-border btn-svg-arrow btn-radius">View the presentation <span class="svg-arrow arrow-long-right-pink"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -246,16 +454,12 @@
         <div class="bg-page-theme" style="background-color: #07383f; background-image: url(assets/images/theme/bg4.jpg);"> </div>
         
         <!-- JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
-
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/splide.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
-
         <script type="text/javascript" src="assets/js/ie.js"></script>
-
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 new Splide("#is-card-slider", {                    

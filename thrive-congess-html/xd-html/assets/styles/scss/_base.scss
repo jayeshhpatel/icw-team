@@ -22,12 +22,14 @@ a {
 // BG COLORS
 .bg-light-white     {background-color: rgba(#ffffff, 0.90) !important;}
 .bg-white           {background-color: rgba(#f8f8f8, 0.90) !important;}
-.bg-blue            {background-color: rgba(#003865, 0.80) !important;}
-.bg-light-blue      {background-color: rgba(#E1F6F9, 0.80) !important;}
+.bg-blue            {background-color: rgba(#003865, 0.90) !important;}
+.bg-light-blue      {background-color: rgba(#E1F6F9, 0.90) !important;}
 
-.bg-light-lime      {background-color: rgba(#F3F7CC, 0.80) !important;}
-.bg-lime            {background-color: rgba(#FBEDCB, 0.80) !important;}
-.bg-lime-green      {background-color: rgba(#C4D600, 0.80) !important;}
+.bg-light-lime      {background-color: rgba(#F3F7CC, 0.90) !important;}
+.bg-lime            {background-color: rgba(#FBEDCB, 0.90) !important;}
+.bg-lime-green      {background-color: rgba(#C4D600, 0.90) !important;}
+.bg-dark-green      {background-color: rgba(#07690B, 1) !important;}
+
 
 .bg-light-magenta   {background-color: rgba(#E6CCDC, 0.80) !important;}
 .bg-light2-magenta  {background-color: rgba(#D8CFDD, 0.80) !important;}
@@ -60,7 +62,7 @@ a {
 .text-pink            {color: #d0006e !important;}
 .text-dark-pink       {color: #830051 !important;}
 
-.text-dark-gray       {color: #3C4242 !important;}
+.text-dark-gray1       {color: #3C4242 !important;}
 
 
 body .text-white-75 {color: rgba(255,255,255,0.75) !important;}

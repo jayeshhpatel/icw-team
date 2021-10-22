@@ -16,23 +16,52 @@
             &::before { @include opacity(1); }  
         }
     }
+    &.publications-modal{
+        .modal-body{
+            padding: 75px 20px;
+            .internal-user-role-form{
+                p{
+                    font-size: 20px;
+                }
+                .action-btn{
+                    .btn{
+                        min-width: 200px;
+                        margin: 15px 5px 0 5px;
+                    }
+                    .back-btn{
+                        @include justify-content(start);
+                    }
+                    .continue-btn{
+                        @include justify-content(space-between);
+                    }
+                }
+            }
+            @media(max-width:991px){
+                padding: 25px 15px;
+                .internal-user-role-form{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
     .modal-content {         
         border: 0;
        @include border-radius(3px);
     }
-
     .az-modal-xs {
         max-width: 350px; margin: 0 auto;
     }
-
     .az-modal-md {
         max-width: 600px; margin: 0 auto;
     }
-
     .az-modal-lg {
         max-width: 750px;
     }
-
+    .az-modal-xl {
+        max-width: 1200px;
+    }
     .modal-header {
         padding: 40px 50px 20px;
         border-bottom: 0px;

@@ -22,44 +22,98 @@
         <!-- HEADER SECTION -->
         <header id="main-header" role="banner" class="main-header is-sticky-header border-0">
             <div class="container-fluid">
-              <nav class="navbar navbar-m-expand-xxl">
+                <nav class="navbar navbar-m-expand-xxl">
                     <div id="header-left">
                         <div class="region region-header-left">
-                            <div id="block-sitebranding" class="nav-logo">
-                                <a href="index.html" rel="home" class="site-logo"><img src="assets/images/logo-thrive.svg" alt="Home" /></a>
+                            <div id="block-sitebranding" class="block block-system block-system-branding-block">
+                                <a href="index.html" rel="home" class="site-logo">
+                                    <img src="assets/images/logo-thrive.svg" alt="Home" />
+                                </a>
                             </div>
                         </div>
                     </div>
+        
                     <div id="header-right">
-                      <!-- make dynamic later //-->
+                        <!-- make dynamic later //-->
                         <button class="navbar-toggler x" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                         <div class="mainmenu collapse navbar-collapse" id="mainMenu">
-                            <ul class="nav">
-                                <li class="has-sub-menu">
-                                    <a href="congresses.html">Congresses</a>
-                                    <em data-bs-toggle="collapse" data-bs-target="#hasmenu1" aria-expanded="false" aria-controls="hasmenu1"></em>
-                                    <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu1">
-                                        <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                        <li><a href="#!">Menu Name 2</a></li>
-                                        <li><a href="#!">Another action</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Competitor intelligence</a></li>
-                                <li class="has-sub-menu">
-                                    <a href="#!">My THRIVE</a>
-                                    <em data-bs-toggle="collapse" data-bs-target="#hasmenu2" aria-expanded="false" aria-controls="hasmenu2"></em>
-                                    <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu2">
-                                        <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                        <li><a href="#!">Menu Name 2</a></li>
-                                        <li><a href="#!">Another action</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
+                            <div class="region region-header-right">
+                                <div id="block-aznavblock"
+                                    class="block block-thrive-congress-azinternal block-thrive-congress-azinternal-aznav">
+                                    <div class="mainmenu collapse navbar-collapse item-list">
+                                        <ul class="nav">
+                                            <li class="congresses-li">
+                                                <a href="congresses.html">Congresses</a>
+                                                <div class="menu-congresses">
+                                                    <div class="megamenu-inner">
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Live</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="congresses-instance.html">J.P. Morgan, European Healthcare Conference<span class="megamenu-date">4<sup>th</sup> - 8<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Nordic Healthcare Seminar<span class="megamenu-date">5<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Upcoming</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, Guggenheim, Biopharma’s Next Decade<span class="megamenu-date">16<sup>st</sup> - 19<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">21<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">23<sup>rd</sup> - 24<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Recently Archived</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, J.P. Morgan, European Healthcare Conference<span class="megamenu-date">1<sup>st</sup> - 3<sup>rd</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">1<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">14<sup>th</sup> - 15<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="break"></div>
+                                                        <div class="view-all-wrapper">
+                                                            <div class="congress-item-col">
+                                                                <a class="view-all" href="/internal/dashboard">View all
+                                                                    congresses 
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="23.882" height="12" viewBox="0 0 23.882 12">
+                                                                            <path id="Arrow" d="M23.724,132.987h0L18.3,127.559a.543.543,0,1,0-.765.765l4.5,4.5H.543a.543.543,0,0,0,0,1.086H22.031l-4.5,4.5a.543.543,0,1,0,.765.765l5.428-5.428A.543.543,0,0,0,23.724,132.987Z" transform="translate(0 -127.369)" fill="#c4d600"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="has-sub-menu">
+                                                <a href="my-thrive.html">My THRIVE</a>
+                                                <em data-bs-toggle="collapse" data-bs-target="#hasmenu2" aria-expanded="false" aria-controls="hasmenu2"></em>
+                                                <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu2">
+                                                    <li><a href="#!">Bookmarks</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
-           </div>
+            </div>
         </header>
         <!-- // HEADER SECTION -->
 
@@ -91,14 +145,14 @@
                         <span class="progress-btn">In progress</span>
                     </div>
                     <ul class="tabs">
-                        <li>Home</li>
-                        <li>Publications</li>
-                        <li>Guidelines</li>
-                        <li>Planning schedule</li>
-                        <li>Launch checklist</li>
-                        <li class="active">Internal events</li>
-                        <li>Briefing materials</li>
-                        <li>Competitor intelligence</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="guide-line.html">Guidelines</a></li>
+                        <li><a href="planning-schedule.html">Planning schedule</a></li>
+                        <li><a href="launch-checklist.html">Launch checklist</a></li>
+                        <li class="active"><a href="internal-events.html">Internal events</a></li>
+                        <li><a href="briefing-materials.html">Briefing materials</a></li>
+                        <li><a href="competitor-intelligence.html">Competitor intelligence</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +183,7 @@
                                         <h3 class="card-title mb-0">Marketing team meeting</h3>
                                         <div class="card-right-info">
                                             <div class="bookmark" data-id="88694">
-                                                <img class="filled" src="assets/images/icons/heart-filled-pink.svg">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
                                             </div>
                                             <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
@@ -149,7 +203,7 @@
                                         <h3 class="card-title mb-0">Strategy meeting</h3>
                                         <div class="card-right-info">
                                             <div class="bookmark" data-id="88694">
-                                                <img class="filled" src="assets/images/icons/heart-filled-pink.svg">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
                                             </div>
                                             <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
@@ -169,7 +223,7 @@
                                         <h3 class="card-title mb-0">Internal AZ policy meeting</h3>
                                         <div class="card-right-info">
                                             <div class="bookmark" data-id="88694">
-                                                <img class="filled" src="assets/images/icons/heart-filled-pink.svg">
+                                                <img class="filled" src="assets/images/icons/heart-filled.svg">
                                             </div>
                                             <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
@@ -194,7 +248,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>
@@ -214,7 +268,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>
@@ -234,7 +288,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>
@@ -254,7 +308,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>
@@ -274,7 +328,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>
@@ -294,7 +348,7 @@
                                             <div class="bookmark" data-id="88694">
                                                 <img class="filled" src="assets/images/icons/heart-empty.svg">
                                             </div>
-                                            <a href="#" class="calendar-link-ics-download" title="Download ICS" download="EASD 2021.ics"></a>
+                                            <a href="#" class="calendar-pink-icon" title="Download ICS" download="EASD 2021.ics"></a>
                                         </div>
                                     </div>
                                     <div class="card-date">14<sup>th</sup> June 2021, 10:00 - 11:00 (GMT)</div>

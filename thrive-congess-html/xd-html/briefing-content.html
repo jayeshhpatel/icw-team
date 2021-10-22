@@ -20,69 +20,123 @@
     </head>
     <body class="theme">
         <!-- HEADER SECTION -->
-        <header id="main-header" role="banner" class="main-header is-sticky-header">
+        <header id="main-header" role="banner" class="main-header is-sticky-header border-0">
             <div class="container-fluid">
-              <nav class="navbar navbar-m-expand-xxl">
+                <nav class="navbar navbar-m-expand-xxl">
                     <div id="header-left">
                         <div class="region region-header-left">
-                            <div id="block-sitebranding" class="nav-logo">
-                                <a href="index.html" rel="home" class="site-logo"><img src="assets/images/logo-thrive.svg" alt="Home" /></a>
+                            <div id="block-sitebranding" class="block block-system block-system-branding-block">
+                                <a href="index.html" rel="home" class="site-logo">
+                                    <img src="assets/images/logo-thrive.svg" alt="Home" />
+                                </a>
                             </div>
                         </div>
                     </div>
+        
                     <div id="header-right">
-                      <!-- make dynamic later //-->
+                        <!-- make dynamic later //-->
                         <button class="navbar-toggler x" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                         <div class="mainmenu collapse navbar-collapse" id="mainMenu">
-                            <ul class="nav">
-                                <li class="has-sub-menu">
-                                    <a href="congresses.html">Congresses</a>
-                                    <em data-bs-toggle="collapse" data-bs-target="#hasmenu1" aria-expanded="false" aria-controls="hasmenu1"></em>
-                                    <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu1">
-                                        <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                        <li><a href="#!">Menu Name 2</a></li>
-                                        <li><a href="#!">Another action</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Competitor intelligence</a></li>
-                                <li class="has-sub-menu">
-                                    <a href="#!">My THRIVE</a>
-                                    <em data-bs-toggle="collapse" data-bs-target="#hasmenu1" aria-expanded="false" aria-controls="hasmenu1"></em>
-                                    <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu1">
-                                        <li><a href="virtual-conference.html">Virtual conference</a></li>
-                                        <li><a href="#!">Menu Name 2</a></li>
-                                        <li><a href="#!">Another action</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
+                            <div class="region region-header-right">
+                                <div id="block-aznavblock"
+                                    class="block block-thrive-congress-azinternal block-thrive-congress-azinternal-aznav">
+                                    <div class="mainmenu collapse navbar-collapse item-list">
+                                        <ul class="nav">
+                                            <li class="congresses-li">
+                                                <a href="congresses.html">Congresses</a>
+                                                <div class="menu-congresses">
+                                                    <div class="megamenu-inner">
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Live</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="congresses-instance.html">J.P. Morgan, European Healthcare Conference<span class="megamenu-date">4<sup>th</sup> - 8<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Nordic Healthcare Seminar<span class="megamenu-date">5<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Upcoming</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, Guggenheim, Biopharma’s Next Decade<span class="megamenu-date">16<sup>st</sup> - 19<sup>th</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">21<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">23<sup>rd</sup> - 24<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="congress-list">
+                                                            <div class="menu-title">Recently Archived</div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual conference, J.P. Morgan, European Healthcare Conference<span class="megamenu-date">1<sup>st</sup> - 3<sup>rd</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Carnegie, Finnish Healthcare Seminar<span class="megamenu-date">1<sup>st</sup> June 2021</span></a>
+                                                            </div>
+                                                            <div class="congress-item">
+                                                                <a class="congress-title" href="#!">Virtual bus tour, UBS<span class="megamenu-date">14<sup>th</sup> - 15<sup>th</sup> May 2021</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="break"></div>
+                                                        <div class="view-all-wrapper">
+                                                            <div class="congress-item-col">
+                                                                <a class="view-all" href="/internal/dashboard">View all
+                                                                    congresses 
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="23.882" height="12" viewBox="0 0 23.882 12">
+                                                                            <path id="Arrow" d="M23.724,132.987h0L18.3,127.559a.543.543,0,1,0-.765.765l4.5,4.5H.543a.543.543,0,0,0,0,1.086H22.031l-4.5,4.5a.543.543,0,1,0,.765.765l5.428-5.428A.543.543,0,0,0,23.724,132.987Z" transform="translate(0 -127.369)" fill="#c4d600"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="has-sub-menu">
+                                                <a href="my-thrive.html">My THRIVE</a>
+                                                <em data-bs-toggle="collapse" data-bs-target="#hasmenu2" aria-expanded="false" aria-controls="hasmenu2"></em>
+                                                <ul class="dropdown-menu-list collapse" role="menu" id="hasmenu2">
+                                                    <li><a href="#!">Bookmarks</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
-           </div>
+            </div>
         </header>
         <!-- // HEADER SECTION -->
 
         <!-- MAIN SECTION -->
         <main class="main-content-wrapper">
             <div class="header-search-block">
-                    <div class="container">
-                        <div class="input-search-block">
-                            <div class="input-search">
-                                <input type="text" class="form-control" placeholder="Search by keyword, topic or expert" aria-describedby="basic-addon1">
-                                <div class="custom-html-dropdown">
-                                    <button class="dropdown-input form-select dropdown-toggle" type="button" id="company-name" data-bs-toggle="dropdown" aria-expanded="false">All content</button>
-                                    <ul class="dropdown-menu" aria-labelledby="company-name" style="">
-                                        <li><button class="dropdown-item active" data-value="Congresses">Congresses</button></li>
-                                        <li><button class="dropdown-item" data-value="Analytics">Analytics</button></li>
-                                    </ul>
-                                </div>
-                                <button class="btn btn-primary" type="button">Search</button>
+                <div class="container">
+                    <div class="input-search-block">
+                        <div class="input-search">
+                            <input type="text" class="form-control" placeholder="Search by keyword, topic or expert" aria-describedby="basic-addon1">
+                            <div class="custom-html-dropdown">
+                                <button class="dropdown-input form-select dropdown-toggle" type="button" id="company-name" data-bs-toggle="dropdown" aria-expanded="false">All content</button>
+                                <ul class="dropdown-menu" aria-labelledby="company-name" style="">
+                                    <li><button class="dropdown-item active" data-value="Congresses">Congresses</button></li>
+                                    <li><button class="dropdown-item" data-value="Analytics">Analytics</button></li>
+                                </ul>
                             </div>
-                            <a href="#!" class="advanced-search">Advanced search</a>
+                            <button class="btn btn-primary" type="button">Search</button>
                         </div>
+                        <a href="#!" class="advanced-search">Advanced search</a>
                     </div>
                 </div>
+            </div>
             <div class="tabs-wrapper">
                 <div class="container">
                     <div class="title-block">
@@ -91,14 +145,14 @@
                         <span class="progress-btn">In progress</span>
                     </div>
                     <ul class="tabs">
-                        <li>Home</li>
-                        <li>Publications</li>
-                        <li>Guidelines</li>
-                        <li>Planning schedule</li>
-                        <li>Launch checklist</li>
-                        <li>Internal events</li>
-                        <li class="active">Briefing materials</li>
-                        <li>Competitor intelligence</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="guide-line.html">Guidelines</a></li>
+                        <li><a href="planning-schedule.html">Planning schedule</a></li>
+                        <li><a href="launch-checklist.html">Launch checklist</a></li>
+                        <li><a href="internal-events.html">Internal events</a></li>
+                        <li class="active"><a href="briefing-materials.html">Briefing materials</a></li>
+                        <li><a href="competitor-intelligence.html">Competitor intelligence</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,8 +162,8 @@
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
                       <li class="breadcrumb-item"><a href="congresses.html">Congresses</a></li>
-                      <li class="breadcrumb-item"><a href="#!">J.P. Morgan, European Healthcare Conference</a></li>
-                      <li class="breadcrumb-item"><a href="#!">Briefing materials</a></li>
+                      <li class="breadcrumb-item"><a href="#">J.P. Morgan, European Healthcare Conference</a></li>
+                      <li class="breadcrumb-item"><a href="#">Briefing materials</a></li>
                       <li class="breadcrumb-item active" aria-current="page">Ornare quam viverra orci sagittis eu volutpat odio facilisis mauris</li>
                     </ol>
                   </nav>
@@ -118,7 +172,8 @@
 
             <section class="page-title-hero">
                 <div class="container">
-                    <h1 class="main-title">Ornare quam viverra orci sagittis eu<br class="d-none d-lg-block"/> volutpat odio facilisis mauris</h1>
+                    <div class="sm-title">DAILY BRIEFING</div>
+                    <h1 class="main-title">19th June 2021</h1>
                 </div>
             </section>
             <section class="section-block">
@@ -128,47 +183,43 @@
                             <div class="section-summary-list bg-light-lime">
                                 <h2>Summary</h2>
                                 <ul>
-                                    <li>Sed nisi lacus sed viverra tellus in hac habitasse.</li>
-                                    <li>Ut consequat semper viverra nam.</li>
-                                    <li>Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada.</li>
-                                    <li>Pulvinar mattis nunc sed blandit libero valutpat sed.</li>
-                                    <li>Morbi quis commodo odio aenean sed adipiscing diam.</li>
+                                    <li>Pellentesque auctor venenatis nunc ut lobortis </li>
+                                    <li>Etiam quam eros, semper vitae tempor vel, semper vitae ante </li>
+                                    <li>Aenean mollis justo a ultricies convallis </li>
+                                    <li>Sed a dolor eget lectus consequat fermentum in eget quam</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="section-summary-list bg-white">
-                        <h2>Ornare quam viverra update</h2>
+                        <h2>Praesent vitae dictum mi</h2>
                         <div class="card-pdf-block">
                             <div class="card-body">
                                 <div class="image-block">
-                                    <img src="assets/images/img5-m.png" alt="" class="w-100"/>
+                                    <div class="video-wrapper">
+                                        <div class="embed-container ratio ratio-16x9 embed-play-action">
+                                            <video class="embed-video" poster="assets/images/img4-m.jpg" controls controlsList="nodownload">
+                                                <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4" type="video/mp4" />
+                                            </video>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-foot">
                                 <div class="action">
                                     <a href="#" class="btn-download d-inline-flex">
-                                        <span>Download presentation</span>
+                                        <span>Download video</span>
                                         <small><strong>PDF</strong> (6.2mb)</small> 
                                     </a>
                                 </div>
                             </div>
                         </div>
-                            <h2>Excepteur sint occaecat</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Integer elementum, diam in faucibus interdum, est massa tincidunt nunc, non cursus eros velit at risus. Donec iaculis fringilla sapien et ullamcorper. Praesent ac suscipit nunc. In erat massa, mattis sit amet nibh non, aliquam feugiat lorem. Proin vitae magna et nisl elementum dignissim sed nec erat. Mauris consequat ipsum quis eros imperdiet sagittis. Mauris molestie nunc vel imperdiet scelerisque. Donec et nibh diam. In ut luctus velit, et interdum lectus. Donec lacinia justo nec ipsum suscipit, quis accumsan arcu accumsan. Cras et sollicitudin ipsum.</p>
                     </div>
-
                 </div>
             </section>
-
-
         </main>
         <!-- // MAIN SECTION -->
-
-    
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
             <div class="container-fluid">

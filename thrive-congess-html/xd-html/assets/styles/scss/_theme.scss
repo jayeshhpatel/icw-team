@@ -124,9 +124,9 @@ body {
                             .has-sub-menu {
                                 & > a {
                                
-                                    &::before {
-                                        filter: brightness(0) invert(1);
-                                    } 
+                                    // &::before {
+                                    //     filter: brightness(0) invert(1);
+                                    // } 
                                     
                                 }
                             }

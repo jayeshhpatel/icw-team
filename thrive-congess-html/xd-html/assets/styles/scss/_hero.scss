@@ -1,11 +1,11 @@
 .page-title-hero {
-    margin: 50px 0; 
+    margin: 35px 0; 
 
     .title {
         font-size: calc(38px + (42 - 38) * ((100vw - 320px) / (1920 - 320)));
     }
     .sm-title {
-        font-size: 16px; font-family: $hfont-65 !important; margin-bottom: 15px;
+        font-size: 12px; font-family: $hfont-65 !important; margin-bottom: 10px;
     }
     .main-title {  
         font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1920 - 320))); font-family: $hfont; line-height: 1.2;

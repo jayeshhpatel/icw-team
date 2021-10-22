@@ -181,13 +181,11 @@
                             right: 0px;
                             top: 50%;
                             margin-top: -5px;
-                            height: 14px;
-                            width: 14px;
-                            background: url(../images/icons/arrow-menu.svg) 50% 50% no-repeat;
+                            height: 12px;
+                            width: 12px;
+                            background: url(../images/icons/arrow-menu-lime-green.svg) 50% 50% no-repeat;
                             background-size: contain;
                             background-position: center;
-                            filter: brightness(0) invert(1);
-
                             @include transition(0.3s, ease-in-out);
                         } 
                         span {display: none;}
@@ -242,16 +240,12 @@
                             position: absolute;
                             z-index: 999;
                             left: 0;
-                            top: 0;
                             width: 100%;
-                            top: 90px;
+                            top: 78px;
                             background: #3c1053;
                             color: #fff;
                             display: none;
-                            
                             @include transition(0.2s, ease-in-out);
-                            // @include box-shadow(0 -2px 5px rgba(0, 0, 0, 0.08));
-
                             &::before {
                                 content: "";
                                 margin-left: calc(50% - 50vw);
@@ -263,6 +257,7 @@
                                 right: 0;
                                 left: 0;
                                 z-index: -1;
+                                top: -2px;
                             }
 
                             // &.hidden {
@@ -380,10 +375,10 @@
                                 }
                                 &::before {
                                     content: "";
-                                    background: $accent;
+                                    background: $primary;
                                     position: absolute;
                                     display: inline-block;
-                                    width: 100px;
+                                    width: 40px;
                                     height: 2px;
                                     right: 0;
                                     left: 0;
@@ -474,13 +469,11 @@
                             top: 0px;
                             width: 40px;
                             height: 50px;
-                            background: url(../images/icons/arrow-menu.svg) 50% 50% no-repeat;
+                            background: url(../images/icons/arrow-menu-lime-green.svg) 50% 50% no-repeat;
                             background-size: 16px;
                             cursor: pointer;
                             @include transition(0.3s, ease-in-out);
-
                             @include transform(rotate(90deg));
-
                             &[aria-expanded="true"] {
                                 @include transform(rotate(0deg));
                             }
@@ -523,7 +516,7 @@
                         top: 0px;
                         width: 40px;
                         height: 50px;
-                        background: url(../images/icons/arrow-menu.svg) 50% 50% no-repeat;
+                        background: url(../images/icons/arrow-menu-lime-green.svg) 50% 50% no-repeat;
                         background-size: 16px;
                         cursor: pointer;
                         @include transition(0.3s, ease-in-out);
