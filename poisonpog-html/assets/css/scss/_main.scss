@@ -803,6 +803,15 @@ h3{
             display: block;
         }
     }
+    @media(max-width:767px){
+        li{
+            padding: 0 5px;
+            svg{
+                width: 24px;
+                height: 36px;
+            }
+        }
+    }
 }
 .main-banner{
     // background: url(../images/main-banner.jpg) no-repeat center;
@@ -1121,8 +1130,12 @@ h3{
         }
     }
     @media(max-width:767px){
+        padding: 35px 0;
         .footer-link-box{
             margin-bottom: 25px;
+            .social-icon{
+                margin-left: -5px;
+            }
         }
         .footer-logo{
             @include align-items(center);
@@ -1195,7 +1208,7 @@ h3{
                     max-width: 95px;
                 }
                 h3{
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
             .line-img{
@@ -1640,16 +1653,47 @@ h3{
                 bottom: 0;
             }
         }
+        @media(max-width:991px){
+            .navbar{
+                .navbar-brand{
+                    img{
+                       max-width: 80px;
+                    }
+                }
+                
+            }
+        }
     }
     .main-banner-block{
         min-height: 100vh;
         @include flexbox();
         @include justify-content(flex-end);
         @include flex-direction(column);
+        position: relative;
         padding-bottom: 0;
+        overflow: hidden;
+        .bg-page-image{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #417157;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            animation: Zoom 10s linear 2s infinite alternate;
+            -webkit-animation: Zoom 10s linear 2s infinite alternate;
+            -moz-animation: Zoom 10s linear 2s infinite alternate;
+            -o-animation: Zoom 10s linear 2s infinite alternate;
+        }
         .bg-overly-block{
             background: linear-gradient(90deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.11) 42.49%, rgba(0, 0, 0, 0) 77.4%);
             padding: 45px 0;
+            position: relative;
+            z-index: 2;
         }
         .main-title{
             h1{
@@ -1683,6 +1727,20 @@ h3{
                 box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
                 position: relative;
                 z-index: 2;
+            }
+        }
+        @media(max-width:991px){
+            min-height: 50vh;
+            .bg-overly-block{
+                padding: 30px 0;
+            }
+            .main-title{
+                .blur-shadow{
+                    margin-top: 20px;
+                }
+                .btn-primary{
+                    min-width: 150px;
+                }
             }
         }
     }
