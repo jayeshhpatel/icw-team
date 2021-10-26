@@ -490,6 +490,9 @@ h3{
             ul {
                 li {
                     padding: 0 12px;
+                    a{
+                        font-size: 18px;
+                    }
                     &.has-sub-menu{
                         .dropdown-menu-list{
                             min-width: 200px;
@@ -507,6 +510,13 @@ h3{
     }
     @media (min-width: 1200px) {
         .navbar {
+            .social-width-column{
+                ul {
+                    li {
+                        padding: 0 20px;
+                    }
+                }
+            }
             ul {
                 li {
                     &.has-sub-menu{
@@ -532,7 +542,7 @@ h3{
                 }
                 ul {
                     li {
-                        padding: 0 20px;
+                        padding: 0 10px;
                     }
                 }
             }
@@ -774,20 +784,41 @@ h3{
     }
 }
 .main-banner{
-    background: url(../images/main-banner.jpg) no-repeat center;
+    // background: url(../images/main-banner.jpg) no-repeat center;
     background-size: cover;
-    min-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    .banner-img{
+        animation: Zoom 10s linear 2s infinite alternate;
+        -webkit-animation: Zoom 10s linear 2s infinite alternate;
+        -moz-animation: Zoom 10s linear 2s infinite alternate;
+        -o-animation: Zoom 10s linear 2s infinite alternate;
+    }
     @media(max-width:991px){
-        min-height: 50vh;
+        min-height: auto;
     }
 }
+
+@-webkit-keyframes Zoom{0%{-webkit-transform:translate(0,0) scale(1)}100%{-webkit-transform:translate(0,15px) scale(1.05)}}
+@-moz-keyframes Zoom{0%{-moz-transform:translate(0,0) scale(1)}100%{-moz-transform:translate(0,15px) scale(1.05)}}
+@-o-keyframes Zoom{0%{-o-transform:translate(0,0) scale(1)}100%{-o-transform:translate(0,15px) scale(1.05)}}
+@keyframes Zoom{0%{transform:translate(0,0) scale(1)}100%{transform:translate(0,15px) scale(1.05)}}
+
 .image-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    @media(max-width:991px){
+        img{
+            max-width: 95%;
+        }
+    }
     @media(max-width:575px){
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        img{
+            margin-bottom: 10px;
+        }
     }
 }
 .content-btn-block{
@@ -997,20 +1028,17 @@ h3{
     h2{
         font-family: 'Creepster', cursive;
         font-size: 24px;
-        color: $white;margin-bottom: 20px;
+        color: $white;margin-bottom: 15px;
     }
     p{font-size: 18px;font-family: 'Lato', sans-serif;font-weight: 400;}
 
     .footer-logo{
-        @include align-items(center);
+        @include align-items(flex-end);
         @include flexbox();
-        h2{
-            margin-bottom: 0;
-            margin-left: 30px;
-        }
+        
     }
     .footer-dec{
-        margin-left: 116px;
+        margin-left: 20px;
     }
     .footer-link-box{
         .social-icon{
@@ -1020,8 +1048,8 @@ h3{
     .footer-links{
         font-family: 'Lato', sans-serif;
         li{
+            line-height: normal;
             a{font-size: 18px;color: #E5E5E5;text-decoration: none;
-                padding-bottom: 10px;
                 display: inline-block;font-weight: 400;
                 &:hover{
                     color: #00D0AB;
@@ -1044,6 +1072,11 @@ h3{
     }
    
     @media(max-width:991px){
+        .footer-logo{
+            img{
+                max-width: 100px;
+            }
+        }
         padding: 40px 0;
         p{
             font-size: 14px;
@@ -1053,15 +1086,22 @@ h3{
             font-size: 20px;
         }
         .footer-link-box{
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .footer-links{
             li{
                 a{
-                    padding-bottom: 5px;
                     font-size: 14px;
                 }
+            }
+        }
+    }
+    @media(max-width:767px){
+        .footer-logo{
+            @include align-items(center);
+            h2{
+               margin: 0;
             }
         }
     }
@@ -1194,6 +1234,7 @@ h3{
                 }
                 .card-title{
                     font-size: 20px;
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -1294,6 +1335,7 @@ h3{
                 font-size: 16px;
                 font-weight: 700;
                 padding: 8px 20px;
+                white-space: normal;
                 &:hover,
                 &:focus,
                 &.active{
@@ -1422,7 +1464,9 @@ h3{
                     display: none;
                 }
                 .dropdown-menu{
-                    left: auto !important;
+                    left: 0 !important;
+                    min-width: 150px;
+                    width: auto;
                 }
                 .dropdown-input{
                     @include flexbox();
