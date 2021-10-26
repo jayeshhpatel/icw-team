@@ -416,8 +416,6 @@ h3{
             @include align-items(center);
             @include flexbox();
             @include justify-content(space-between);
-        }
-        ul {
             li {
                 padding: 0 30px;
                 position: relative;
@@ -484,17 +482,23 @@ h3{
                     }
                 }
             }
-            .myaccount-icon {
-                cursor: pointer;
-                min-height: 40px;
-                @include flexbox();
-                @include align-items(center);
+        }
+        
+    }
+    @media (max-width: 1299px) {
+        .navbar {
+            .menu-list {
+                li{
+                    a{
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
     @media (max-width: 1199px) {
         .navbar {
-            ul {
+            .menu-list {
                 li {
                     padding: 0 12px;
                     a{
@@ -684,7 +688,7 @@ h3{
                 &.is-visible {
                     @include transform(translateX(0));
                 }
-                ul {
+                .menu-list {
                     padding: 15px 15px 20px;
                     width: 100%;
                     li {
@@ -696,6 +700,12 @@ h3{
                                 display: none;
                             }
                         }
+                    }
+                }
+                .social-icon{
+                    padding: 0 15px;
+                    li{
+                        padding: 0 15px 0 0;
                     }
                 }
             }
@@ -713,7 +723,7 @@ h3{
                         width: 25px;
                         height: 25px;
                         background: url(../images/menu-arrow.svg) 50% 50% no-repeat;
-                        background-size: 16px;
+                        background-size: 12px;
                         cursor: pointer;
                         @include transition(0.3s, ease-in-out);
                         &[aria-expanded="true"] {
@@ -1065,7 +1075,7 @@ h3{
             a{font-size: 18px;color: #E5E5E5;text-decoration: none;
                 display: inline-block;font-weight: 400;
                 &:hover{
-                    color: #00D0AB;
+                    color: #10F526;
                 }
             }
         }
