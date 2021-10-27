@@ -1769,11 +1769,12 @@ h3{
                 text-align: center;
                 .card-head{
                     padding: 18px;
-                    display: inline-block;
+                    overflow: visible;
                 }
                 .card-title{
                     font-weight: 400;
                     display: inline-block;
+                    vertical-align: middle;
                     margin: 0;
                 }
             }
@@ -1784,7 +1785,7 @@ h3{
                     &:after{
                         content: "";
                         position: absolute;
-                        right: 0;
+                        right: -22%;
                         top: 0;
                         bottom: 0;
                         margin: auto;
@@ -1792,6 +1793,51 @@ h3{
                         height: 46px;
                         background: url(../images/arrow-left.svg) no-repeat center;
                         transform: rotate(180deg);
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        left: -22%;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 42px;
+                        height: 46px;
+                        background: url(../images/arrow-left.svg) no-repeat center;
+                    }
+                }
+            }
+        }
+        @media(min-width:1400px){
+            &.arrow-block{
+                .card-head{
+                    &:after{
+                        right: -33%;
+                    }
+                    &:before{
+                        left: -33%;
+                    }
+                }
+            }
+        }
+        @media(min-width:1441px){
+            &.arrow-block{
+                .card-head{
+                    &:after{
+                        right: -40%;
+                    }
+                    &:before{
+                        left: -40%;
+                    }
+                }
+            }
+        }
+        @media(min-width:768px){
+            &.card-block{
+                .card-body{
+                    .card-head{
+                        display: inline-block;
+                        vertical-align: middle;
                     }
                 }
             }
@@ -1846,6 +1892,16 @@ h3{
 }
 // provenance-block
 .provenance-block{
+    .card-item{
+        border-bottom: 1px solid #565656;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        &:last-child{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    }
     p{
         font-weight: 400;
     }
@@ -1857,7 +1913,7 @@ h3{
             font-size: 18px;
             margin-bottom: 0;
         }
-        .card-item{
+        .card-list{
             @include flexbox();
             margin-bottom: 10px;
             .mw-40{
@@ -1898,10 +1954,11 @@ h3{
     }
     .card-data-table{
         font-family: 'Lato', sans-serif !important;
+       
         table{
             color: #FFFFFF;
             font-size: 15px;
-            font-weight: 400;
+            font-weight: 400; margin-bottom: 0;
             tr{
                 td{
                     padding: 12px 20px;
@@ -1933,5 +1990,8 @@ h3{
                 }
             }
         }
+    }
+    @media(min-width:992px){
+        padding-top: 70px;
     }
 }
