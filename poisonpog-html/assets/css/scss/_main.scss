@@ -1912,6 +1912,7 @@ h3{
         p{
             font-size: 18px;
             margin-bottom: 0;
+            word-break: break-all
         }
         .card-list{
             @include flexbox();
@@ -1983,6 +1984,9 @@ h3{
                         min-width: 35px;
                         padding-left: 0;
                     }
+                    &:last-child{
+                        padding-right: 0;
+                    }
                     &:nth-child(2){
                         min-width: 60px;
                         text-align: center;
@@ -1993,5 +1997,68 @@ h3{
     }
     @media(min-width:992px){
         padding-top: 70px;
+    }
+    @media(max-width:991px){
+        .text-sm {
+            font-size: 14px;
+        }
+        .card-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+        .card-content{
+            p{
+                font-size: 14px;
+            }
+            .card-list{
+                .mw-40{
+                    padding-right: 20px;
+                }
+                .mw-60{
+                    padding-left: 20px;
+                }
+            }
+        }
+        .card-content-scroll{
+            padding-right: 10px;
+        }
+    }
+    @media(max-width:575px){
+        .card-content {
+            // overflow-y: auto;
+            // white-space: nowrap;
+            // width: 100%;
+            .card-list{
+                .mw-40{
+                    width: 100%;
+                }
+                .mw-60{
+                    width: 100%;
+                }
+            }
+        }
+        .card-data-table{
+            table{
+                font-size: 14px;
+            }
+        }
+        
+    }
+}
+// terms-block
+.terms-block{
+    p{
+        font-weight: 400;
+    }
+    .card-item{
+        margin-bottom: 90px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    @media(max-width:991px){
+        .card-item{
+            margin-bottom: 540px;
+        }
     }
 }
