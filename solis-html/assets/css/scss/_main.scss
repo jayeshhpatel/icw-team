@@ -684,6 +684,14 @@ section {
                 }
             }
         }
+        .logo-block{
+            img{
+                margin-bottom: 64px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
         .tab-item-content{
             background-color: #040404;
             border-radius: 10px;
@@ -764,6 +772,7 @@ section {
                     margin-right: 20px;
                 }
             }
+            
             .tab-item-content{
                 padding: 30px;
             }
