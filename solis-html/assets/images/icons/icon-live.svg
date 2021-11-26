@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="1.7347412" y1="1.6685814" x2="-0.4250407" y2="-0.45013186" id="gradient_1">
+      <stop offset="0" stop-color="#C90099" />
+      <stop offset="0.643467" stop-color="#F67622" />
+      <stop offset="1" stop-color="#D8D8D8" />
+    </linearGradient>
+  </defs>
+  <g id="ICON---Live" transform="translate(0.5 0.5)">
+    <path d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z" id="BG" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+    <g id="pictogramstouch-screenmobile" transform="translate(20 14)">
+      <path d="M0 0.38778C0 0.172944 0.171999 0 0.384595 0L19.6143 0C19.828 0 20 0.172944 20 0.38778L20 32.6133C20 32.8271 19.828 33 19.6143 33L0.384595 33C0.171999 33 0 32.8271 0 32.6133L0 0.38778ZM19.2297 24.6751L0.770258 24.6751L0.770258 0.774486L19.2297 0.774486L19.2297 24.6751ZM19.2297 32.2266L0.770258 32.2266L0.770258 25.4496L19.2297 25.4496L19.2297 32.2266ZM8.93254 28.8532C8.93254 28.2592 9.41007 27.779 10.0009 27.779C10.5906 27.779 11.0692 28.2592 11.0692 28.8532C11.0692 29.4462 10.5906 29.9274 10.0009 29.9274C9.41007 29.9274 8.93254 29.4462 8.93254 28.8532Z" id="Fill-4" fill="#040404" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>
