@@ -315,6 +315,7 @@ section {
                 @include flexbox();
                 @include align-items(center);
                 @include transition(0.3s, ease-in-out);
+                text-shadow: 1px 1px 1px rgba(0,0,0,.5);
             }
         }
     }
@@ -1065,7 +1066,12 @@ section {
         h3{
             font-size: 18px;
             color: $white;
-            margin-bottom: 45px;
+            margin-bottom: 10px;
+        }
+        .title-block{
+            p{
+                font-size: 16px;
+            }
         }
         .category-items{
             text-align: center;
@@ -1124,15 +1130,22 @@ section {
             padding: 30px;
             h3{
                 font-size: 16px;
-                margin-bottom: 30px;
+            }
+            .title-block{
+                p{
+                    font-size: 14px;
+                }
             }
             .category-items{
-                margin-bottom: 30px;
-                overflow-y: auto;
-                white-space: nowrap;
+                margin-bottom: 20px;
+                @include flex-wrap(wrap);
+                @include justify-content(center);
+                // overflow-y: auto;
+                // white-space: nowrap;
                 .category-item{
                     width: 25%;
                     flex: none;
+                    margin-bottom: 30px;
                     span{
                         font-size: 14px;
                     }
