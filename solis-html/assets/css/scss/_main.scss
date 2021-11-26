@@ -40,10 +40,10 @@ body {
     color: $bodyfontcolor;
     font-size: $bodyfontsize;
     background-color: $bodybg;
-    background-image: url(../images/bg-shape.svg);
+    background-image: url(../images/bg-striped.png);
     background-repeat: no-repeat;
-    background-position: right top;
-    background-size: contain;
+    background-position: center center;
+    background-size: 100% 100%;
     position: relative;
     min-height: 100vh;
     line-height: 1.5;
@@ -223,11 +223,17 @@ section {
         font-weight: 900;
         font-size: 24px;
         margin-bottom: 0;
-        background: linear-gradient(to right, #FC6300, #C90099);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         text-transform: uppercase;
         font-family: $font-Saira;
+        span{
+            background: rgb(246,118,34);
+            background: -moz-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+            background: linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67622",endColorstr="#c90099",GradientType=1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
     p {
         margin: 20px auto 0;color:$white;max-width: 500px;
@@ -465,9 +471,16 @@ section {
 .main-content-wrapper{
     flex: 1 1 auto;
     padding-top: 74px;
+    background-image: url(../images/bg-shape.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
     @media(max-width:991px){
         padding-top: 66px;
     }
+}
+.mw-775{
+    max-width: 775px !important;
 }
 // content-section
 .content-section{
@@ -482,7 +495,6 @@ section {
         p{
             margin: 0;
             font-size: 36px;
-            max-width: 100%;
             font-weight: 300;
             letter-spacing: 1.35px;
             font-family: "Archivo-Expanded-Light";
@@ -494,6 +506,9 @@ section {
         display: flex;
         align-items: center;
         color: #f4f4f4;
+        &:hover{
+            color: #f57a29;
+        }
     }
     @media(max-width:991px){
         padding-top: 50px;
@@ -521,17 +536,22 @@ section {
 
 .main-footer{
     background-color: #000000;
+    font-family: "Archivo-SemiExpanded";
     .container{
         max-width: 1550px;
     }
     .footer-link-section{
         padding: 70px 0 35px;
-        h2{font-size: 20px;color: $white;margin-bottom: 15px;text-transform: uppercase;}
+        h2{font-size: 18px;color: $white;margin-bottom: 15px;text-transform: uppercase;}
         .footer-links{
             li{
                 padding: 5px 0;
                 a{
-                    background: linear-gradient(to right, #ea9c68 -10%, #e95444 100%);
+                    background: rgb(246,118,34);
+                    background: -moz-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                    background: -webkit-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                    background: linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67622",endColorstr="#c90099",GradientType=1);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     position: relative;z-index: 1;
@@ -550,7 +570,7 @@ section {
                         bottom: -2px;
                         background: #f57a29;
                         width: 0;
-                        height: 2px;
+                        height: 1px;
                         @include transition(0.3s, ease-in-out);
                     }
                 }
@@ -558,22 +578,28 @@ section {
         }
     }
     .social-icon{
-        @include inline-flex;
-        margin: 0 -5px;
-        li{
-            @include inline-flex;
-            padding: 0 5px;
-            a{
-                width: 30px;
-                height: 30px;
-                @include border-radius(30px);
-                background-color: #D8D8D8;
-                @include inline-flex;
-                @include align-items(center);
-                @include transition(0.4s, ease-in-out);
-                &:hover{
-                    background-color: $purple;
-                }
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        .social-item{
+            display: inline-flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            width: 50%;
+            &:hover{
+                color: $white;
+            }
+            span{
+                background: rgb(246,118,34);
+                background: -moz-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                background: -webkit-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                background: linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67622",endColorstr="#c90099",GradientType=1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+            }
+            .inner-text{
+                margin-left: 15px;
             }
         }
     }
@@ -585,11 +611,14 @@ section {
         }
     }
     @media(max-width:767px){
+        .footer-logo{
+            margin-bottom: 30px;
+        }
         .footer-link-section{
             padding-bottom: 10px;
             padding-top: 50px;
             h2{
-                font-size: 18px;margin-bottom: 10px;
+                font-size: 16px;margin-bottom: 10px;
             }
             .footer-links{
                 margin-bottom: 20px;
@@ -597,6 +626,14 @@ section {
         }
         .footer-copyright-section{
             padding-top: 0;
+        }
+        .social-icon{
+            .social-item{
+                width: 100%;
+                .inner-text{
+                    font-size: 14px;
+                }
+            }
         }
     }
 }
@@ -663,7 +700,7 @@ section {
                 padding: 0;
                 margin-right: 40px;
                 font-weight: 500;
-                padding-right: 15px;
+                padding-right: 10px;
                 font-family: "Archivo-Expanded-Medium";
                 &:last-child{
                     margin-right: 0;
@@ -679,7 +716,7 @@ section {
                         bottom: 0;
                         background: linear-gradient(229.42deg, #D92462 29.27%, #FA6302 111.54%);
                         width: 100%;
-                        height: 1px;
+                        height: 2px;
                     }
                 }
             }
@@ -734,6 +771,10 @@ section {
                     margin-top: 15px;
                     font-size: 16px;
                     display: inline-block;
+                    @include transition(0.3s, ease-in-out);
+                    @media (max-width:767px) {
+                        font-size: 14px;
+                    }
                     &:hover{
                         color: #FC6300;
                     }
@@ -745,6 +786,22 @@ section {
                         display: inline-block;
                         background: url(../images/arrow-right.svg) no-repeat right center;
                     }
+                }
+                @media (max-width:767px) {
+                    ul li,
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @media (max-width:991px) {
+            .logo-block{
+                img{
+                    margin-bottom: 20px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }
@@ -786,6 +843,10 @@ section {
         .tab-block{
             .nav-tabs{
                 margin-bottom: 20px;
+                @include flexbox;
+                white-space: nowrap;
+                overflow-y: auto;
+                flex-wrap: nowrap;
                 a{
                     font-size: 15px;
                     margin-right: 15px;
@@ -801,5 +862,29 @@ section {
 @media (max-width:991px) {
     .br-none br{
         display: none;
+    }
+}
+.hover-line{
+    position: relative;
+    z-index: 1;
+    display: inline-flex !important;
+    align-items: center;
+    &:hover{
+        &:before{
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        background: #f57a29;
+        width: 0;
+        height: 2px;
+        @include transition(0.3s, ease-in-out);
     }
 }
