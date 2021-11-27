@@ -260,6 +260,15 @@ section {
         }
     }
 }
+.fw-xxl{
+    @media (min-width:992px) {
+        font-size: 64px !important;
+        line-height: 1.2;
+    }
+    @media (min-width:1200px) {
+        font-size: 84px !important;
+    }
+}
 
 .main-header {
     position: fixed;
@@ -584,13 +593,19 @@ section {
 }
 .main-content-wrapper{
     flex: 1 1 auto;
-    padding-top: 74px;
+    padding-top: 94px;
     @media(max-width:991px){
         padding-top: 66px;
     }
 }
 .shape-image{
     background-image: url(../images/bg-shape.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+.shape-image1{
+    background-image: url(../images/bg-shape1.svg);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: contain;
@@ -1192,6 +1207,160 @@ section {
                     width: 50%;
                 }
             }
+        }
+    }
+}
+// image-content-section
+.image-content-section{
+    padding-top: 130px;
+    .main-title{
+        margin-bottom: 130px;
+    }
+    .scroll-to-explore{
+        margin-bottom: 120px;
+    }
+    .img-block{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    @media (max-width:1199px) {
+        .img-block{
+            img{
+                max-width: 550px;
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width:991px) {
+        .img-block{
+            img{
+                max-width: 385px;
+            }
+        }
+        .main-title{
+            margin-bottom: 50px;
+            p{
+                font-size: 30px;
+            }
+        }
+        .scroll-to-explore{
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width:767px) {
+        padding-top: 40px;
+        padding-bottom: 0;
+        .img-block{
+            position: relative;
+            top: auto;
+            right: auto;
+            margin-top: 25px;
+            text-align: center;
+            img{
+                max-width: 100%;
+            }
+        }
+        .main-title{
+            margin-bottom: 40px;
+            p{
+                font-size: 16px;
+                br{
+                    display: none;
+                }
+            }
+        }
+        .scroll-to-explore{
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+    }
+}
+// image-content-section1
+.image-content-section1{
+    background: url(../images/overlay-img01.png) left center no-repeat;
+    min-height: 695px;
+    margin-bottom: 160px;
+    margin-top: 45px;
+    background-size: cover;
+    .card-content{
+        font-size: 32px;
+    }
+    @media (max-width:991px) {
+        min-height: 40vh;
+        margin-bottom: 50px;
+        .card-content{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    @media (max-width:767px) {
+        min-height: 30vh;
+        margin-bottom: 30px;
+        .card-content{
+            font-size: 16px;
+        }
+    }
+}
+.border-gradient {
+    border-image-source: linear-gradient(266deg, rgba(201,0,153,1) 0%, rgba(246,118,34,1) 40%, rgba(216,216,216,1) 100%) !important;
+  }
+// camera-man-section
+.camera-man-section{
+    padding: 45px 0;
+    min-height: 985px;
+    background: url(../images/cameraman.png) center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    .card-content{
+        max-width: 545px;
+        margin: 0 auto;
+        background-color: #040404;
+        border: 0.75px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+        padding: 32px;
+        font-size: 18px;
+    }
+    @media (max-width:991px) {
+        min-height: 40vh;
+        .card-content{
+            font-size: 16px;
+        }
+    }
+    @media (max-width:767px) {
+        min-height: 30vh;
+        @include flexbox();
+        @include align-items(center);
+        .card-content{
+            padding: 20px;
+        }
+    }
+}
+// content-box-section
+.content-box-section{
+    padding: 200px 0;
+    text-align: center;
+    .card-content{
+        max-width: 1120px;
+        margin: 0 auto;
+        background-color: #040404;
+        border: 0.75px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+        padding: 32px;
+        font-size: 18px;
+    }
+    @media (max-width:991px) {
+        padding: 40px 0;
+        .card-content{
+            font-size: 16px;
+        }
+    }
+    @media (max-width:767px) {
+        .card-content{
+            padding: 20px;
         }
     }
 }
