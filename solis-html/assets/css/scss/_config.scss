@@ -13,7 +13,7 @@ $lightpink:#830051;
 $font-Saira:'Saira', sans-serif;
 
 @font-face {
-	font-family: "Archivo-SemiExpanded";
+	font-family: "Archivo-SemiExpanded-light";
 	font-weight: 300;
 	src:url("../fonts/Archivo_SemiExpanded-Light.woff") format("woff");
 }
@@ -32,6 +32,13 @@ $font-Saira:'Saira', sans-serif;
 	font-weight: 500;
 	src:url("../fonts/Archivo_Expanded-Medium.woff") format("woff");
 }
+@font-face {
+	font-family: "Saira-Expanded-Black";
+	font-weight: 900;
+	src:url("../fonts/Saira_Expanded-Black.woff") format("woff"), url('../fonts/Saira_Expanded-Black.ttf') format('truetype'),;
+}
+
+
 /* Mixins */
 @mixin border-radius($radius) {
   border-radius: $radius;

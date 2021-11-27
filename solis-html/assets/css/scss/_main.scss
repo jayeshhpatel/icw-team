@@ -229,13 +229,13 @@ section {
         font-size: 24px;
         margin-bottom: 0;
         text-transform: uppercase;
-        font-family: $font-Saira;
+        font-family: "Saira-Expanded-Black";
         span{
-            background: rgb(246,118,34);
-            background: -moz-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
-            background: linear-gradient(90deg, rgba(246,118,34,1) 0%, rgba(201,0,153,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67622",endColorstr="#c90099",GradientType=1);
+            background: rgb(234,156,104);
+            background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+            background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -273,7 +273,7 @@ section {
         background-color: rgba(0, 0, 0, 0.6);
     }
     .container{
-        max-width: 1550px;
+        max-width: 1520px;
     }
     .navbar {
         padding: 25px 0;
@@ -596,17 +596,21 @@ section {
     background-size: contain;
 }
 .circle-image{
-    background: url("../images/bg-circle.svg") no-repeat right top;
+    background: url("../images/bg-circle.svg") no-repeat right 90px;
     background-size: 45%;
 }
 @media (max-width:991px) {
     .circle-image{
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/bg-circle.svg") no-repeat right top;
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/bg-circle.svg") no-repeat right 95px;
         background-size: 65%;
     }
 }
 .mw-775{
     max-width: 775px !important;
+}
+.mw-1110{
+    max-width: 1110px;
+    margin: auto;
 }
 // content-section
 .content-section{
@@ -662,9 +666,9 @@ section {
 
 .main-footer{
     background-color: #000000;
-    font-family: "Archivo-SemiExpanded";
+    font-family: "Archivo-SemiExpanded-light";
     .container{
-        max-width: 1550px;
+        max-width: 1520px;
     }
     .footer-link-section{
         padding: 70px 0 35px;
@@ -673,11 +677,11 @@ section {
             li{
                 padding: 5px 0;
                 a{
-                    background: rgb(249,130,50);
-                    background: -moz-linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                    background: -webkit-linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                    background: linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f98232",endColorstr="#c90099",GradientType=1);
+                    background: rgb(234,156,104);
+                    background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     position: relative;z-index: 1;
@@ -716,11 +720,11 @@ section {
                 color: $white;
             }
             span{
-                background: rgb(249,130,50);
-                background: -moz-linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                background: -webkit-linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                background: linear-gradient(90deg, rgba(249,130,50,1) 0%, rgba(201,0,153,1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f98232",endColorstr="#c90099",GradientType=1);
+                background: rgb(234,156,104);
+                background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent; 
                 position: relative;
@@ -752,7 +756,7 @@ section {
     .footer-copyright-section{
         padding: 30px 0;
         p{
-            font-size: 16px;  
+            font-size: 10px;  
             margin-bottom: 0;
         }
     }
@@ -804,13 +808,17 @@ section {
             height: 100%;
             right: -8px;
             bottom: -8px;
-            background:linear-gradient(138deg, #F4F4F4, #FC6300 70%);
+            background: rgb(216,216,216);
+            background: -moz-linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            background: -webkit-linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            background: linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d8d8d8",endColorstr="#f67622",GradientType=1);
             border-radius: 10px;
             z-index: -1;
             @include transition(0.4s, ease-in-out);
         }
         .card-body{
-            padding: 40px;
+            padding: 40px 26px;
         }
         .card-img-top{
             margin-bottom: 30px;
@@ -819,7 +827,10 @@ section {
             font-size: 18px;
             margin-bottom: 30px;
             line-height: 27px;
-            font-family: "Archivo-SemiExpanded";
+            font-family: "Archivo-SemiExpanded-light";
+        }
+        .card-text{
+            font-size: 16px;
         }
     }
 }
@@ -835,17 +846,15 @@ section {
     .tab-block{
         .nav-tabs{
             border: none;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             a{
                 font-size: 21px;
-                text-transform: uppercase;
                 border: none;
                 color: $white;
                 position: relative;
-                padding: 0;
-                margin-right: 40px;
+                margin-right: 60px;
                 font-weight: 500;
-                padding-right: 10px;
+                padding:0 10px 5px 0;
                 font-family: "Archivo-Expanded-Medium";
                 &:last-child{
                     margin-right: 0;
@@ -861,7 +870,7 @@ section {
                         bottom: 0;
                         background: linear-gradient(229.42deg, #D92462 29.27%, #FA6302 111.54%);
                         width: 100%;
-                        height: 2px;
+                        height: 1px;
                     }
                 }
             }
@@ -878,7 +887,7 @@ section {
             background-color: #040404;
             border-radius: 10px;
             position: relative;
-            padding: 70px;
+            padding: 55px 95px;
             @include transition(0.4s, ease-in-out);
             &:before{
                 content: "";
@@ -1008,6 +1017,7 @@ section {
         text-transform: uppercase;
         margin-bottom: 15px;
         line-height: 1.5;
+        font-family: "Archivo-SemiExpanded-light";
     }
     @media (max-width:991px) {
         margin-top: 50px;
@@ -1097,7 +1107,7 @@ section {
                     padding-top: 17px;
                     font-size: 16px;
                     display: block;
-                    font-family: "Archivo-SemiExpanded";
+                    font-family: "Archivo-SemiExpanded-light";
                     @include transition(0.3s, ease-in-out);
                 }
             }
