@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;900&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,300;100,400;100,500;100,700;100,800;100,900;125,400&family=Saira:wdth,wght@100,300;100,400;100,500;100,700;100,800;100,900;125,900&display=swap');
 /* Variables */
-$bodyfont: 'Archivo-Expanded-Light', sans-serif;
+$bodyfont: 'Archivo', sans-serif;
 $bodyfontsize: 16px;
 $bodyfontcolor: #f4f4f4;
 $bodybg: #040404;
@@ -11,32 +11,6 @@ $purple:#7733de;
 $lightpink:#830051;
 
 $font-Saira:'Saira', sans-serif;
-
-@font-face {
-	font-family: "Archivo-SemiExpanded-light";
-	font-weight: 300;
-	src:url("../fonts/Archivo_SemiExpanded-Light.woff") format("woff"),url('../fonts/Archivo_SemiExpanded-Light.ttf') format('truetype');
-}
-@font-face {
-	font-family: "Archivo-Expanded";
-	font-weight: 400;
-	src:url("../fonts/Archivo_Expanded-Regular.woff") format("woff"),url('../fonts/Archivo_Expanded-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family: "Archivo-Expanded-Light";
-	font-weight: 300;
-	src:url("../fonts/Archivo_Expanded-Light.woff") format("woff"),url('../fonts/Archivo_Expanded-Light.ttf') format('truetype');
-}
-@font-face {
-	font-family: "Archivo-Expanded-Medium";
-	font-weight: 500;
-	src:url("../fonts/Archivo_Expanded-Medium.woff") format("woff"),url('../fonts/Archivo_Expanded-Medium.ttf') format('truetype');
-}
-@font-face {
-	font-family: "Saira-Expanded-Black";
-	font-weight: 900;
-	src:url("../fonts/Saira_Expanded-Black.woff") format("woff"), url('../fonts/Saira_Expanded-Black.ttf') format('truetype');
-}
 
 
 /* Mixins */
