@@ -1599,7 +1599,7 @@ section {
             position: absolute;
             right: 0;
             top: 0;
-            background: url(../images/arrow-bg.svg) no-repeat top center;
+            background: url(../images/arrow.png) no-repeat top center;
             width: 100%;
             height: 100%;
             background-size: 100% 98%;
@@ -1637,8 +1637,16 @@ section {
         margin-top: 20px;
     }
     @media (max-width:1199px) {
-        &:after{
-            background-size: 100% 100%;
+        .card-content{
+            h3{
+                margin-bottom: 15px;
+            }
+            &:after{
+                background-size: 100% 100%;
+            }
+            .wallet-exchange-block{
+                padding: 0;
+            }
         }
     }
     @media (max-width:991px) {
@@ -1657,6 +1665,21 @@ section {
                 span{
                     font-size: 14px;
                 }
+            }
+        }
+    }
+    @media (max-width:768px) {
+        .card-content{
+            .image-block{
+                img{
+                    margin-top: 0;
+                }
+            }
+            .wallet-exchange-block{
+                margin-top: 15px;
+            }
+            &:after{
+                display: none;
             }
         }
     }
@@ -1694,8 +1717,8 @@ section {
                     @include border-radius(10px);
                     margin-bottom: 30px;
                     position: relative;
-                    a{
-                        display: block;
+                    img{
+                        width: 100%;
                     }
                     
                     &:after{
