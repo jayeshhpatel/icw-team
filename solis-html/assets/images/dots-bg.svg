@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1371px" height="763px" viewBox="0 0 1371 763" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="1.7019179" y1="1.8670118" x2="-0.13656956" y2="-0.21853307" id="gradient_1">
+      <stop offset="0" stop-color="#C90099" />
+      <stop offset="0.6046439" stop-color="#F67622" />
+      <stop offset="1" stop-color="#D8D8D8" />
+    </linearGradient>
+  </defs>
+  <g id="DOTS" transform="translate(0.5 0.5)">
+    <g id="RIGHT-2" transform="translate(1352 748)">
+      <path d="M4 8C6.20914 8 8 6.20914 8 4C8 1.79086 6.20914 0 4 0C1.79086 0 0 1.79086 0 4C0 6.20914 1.79086 8 4 8Z" id="circle-hollow-8px" fill="none" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+      <path d="M16 14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10C14.8954 10 14 10.8954 14 12C14 13.1046 14.8954 14 16 14Z" id="circle-filled-4px" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+    </g>
+    <g id="LEFT-2" />
+    <g id="SINGLE">
+      <path d="M4 185C6.20914 185 8 183.209 8 181C8 178.791 6.20914 177 4 177C1.79086 177 0 178.791 0 181C0 183.209 1.79086 185 4 185Z" id="circle-hollow-8px" fill="none" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+      <path d="M16 173C17.1046 173 18 172.105 18 171C18 169.895 17.1046 169 16 169C14.8954 169 14 169.895 14 171C14 172.105 14.8954 173 16 173Z" id="circle-filled-4px" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+      <path d="M4 395C6.20914 395 8 393.209 8 391C8 388.791 6.20914 387 4 387C1.79086 387 0 388.791 0 391C0 393.209 1.79086 395 4 395Z" id="circle-hollow-8px" fill="none" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+      <path d="M254 75C256.209 75 258 73.2091 258 71C258 68.7909 256.209 67 254 67C251.791 67 250 68.7909 250 71C250 73.2091 251.791 75 254 75Z" id="circle-hollow-8px" fill="none" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+      <path d="M1264 8C1266.21 8 1268 6.20914 1268 4C1268 1.79086 1266.21 0 1264 0C1261.79 0 1260 1.79086 1260 4C1260 6.20914 1261.79 8 1264 8Z" id="circle-hollow-8px" fill="none" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="1" />
+    </g>
+  </g>
+</svg>
