@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1313px" height="278px" viewBox="0 0 1313 278" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="1.5605812" y1="1.3711677" x2="-0.13207191" y2="-0.2903808" id="gradient_1">
+      <stop offset="0" stop-color="#C90099" />
+      <stop offset="0.80727583" stop-color="#F67622" />
+      <stop offset="1" stop-color="#D8D8D8" />
+    </linearGradient>
+    <linearGradient x1="1.4860289" y1="209.99066" x2="-0.13207191" y2="-0.2903808" id="gradient_2">
+      <stop offset="0" stop-color="#C90099" />
+      <stop offset="0.80727583" stop-color="#F67622" />
+      <stop offset="1" stop-color="#D8D8D8" />
+    </linearGradient>
+  </defs>
+  <g id="DIVIDER-LINES" transform="translate(0.25 0.25)">
+    <path d="M0.5 1.5L1311.42 1" id="Line-2-Copy-4" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_2)" stroke-width="0.5" stroke-linecap="square" />
+    <path d="M0.250319 1L0.749681 277" id="Line-2-Copy-5" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="0.5" stroke-linecap="square" />
+    <path d="M338.25 1L338.75 277" id="Line-2-Copy-6" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="0.5" stroke-linecap="square" />
+    <path d="M676.25 1L676.75 277" id="Line-2-Copy-7" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="0.5" stroke-linecap="square" />
+    <path d="M1011.25 1L1011.75 277" id="Line-2-Copy-8" fill="url(#gradient_1)" fill-rule="evenodd" stroke="url(#gradient_1)" stroke-width="0.5" stroke-linecap="square" />
+  </g>
+</svg>
