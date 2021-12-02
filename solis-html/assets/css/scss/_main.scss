@@ -41,7 +41,7 @@ strong{
     z-index: 1;
 }
                     
-.house-section{
+.lab-section{
     *{
         color: #d8d8d8;
     }
@@ -53,7 +53,8 @@ strong{
     }
     @media (min-width:992px) {
         section{
-            padding: 60px 0;
+            padding: 100px 0 60px;
+            margin-top: -40px;
         }
     }
 }
@@ -362,7 +363,6 @@ section {
                     }
                     &:hover{
                         >a{
-                            font-weight: 800;
                             &:before{
                                 @include transform(rotate(-180deg));
                             }
@@ -1888,6 +1888,15 @@ section {
                         z-index: -1;
                     }
                 }
+                .linkedin-icon {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    z-index: 1;
+                    img{
+                        width: auto;
+                    }
+                }
                 .card-title{
                     font-size: 20px;
                     color: $white;
@@ -1949,16 +1958,23 @@ section {
         }
     }
 }
+.border-line{
+    margin: 40px 0;
+    border-top: 1px solid rgba(255, 255, 240, 0.75);
+    @media (max-width:991px) {
+        margin: 0;
+    }
+}
 // group-section
 .group-section{
     .inner-block{
-        padding: 120px 0;
-        border-top: 1px solid rgba(255, 255, 240, 0.75);
         border-bottom: 1px solid rgba(255, 255, 240, 0.75);
+        padding-bottom: 120px;
     }
     @media (max-width:991px) {
+        padding-bottom: 0;
         .inner-block{
-            padding: 40px 0;
+            padding-bottom: 40px;
         }
     }
 }
@@ -2221,6 +2237,100 @@ section {
             .img-block{
                 margin: 0;
                 text-align: center;
+            }
+        }
+    }
+}
+.team-user-modal{
+    .modal-content{
+        background-color: #040404;
+        border: 0.75px solid;
+        border-image-slice: 1;
+        border-width: 6px;
+        border-image-source: linear-gradient(140.64deg, #D8D8D8 -40.47%, #F67622 65.96%, #C90099 161.84%);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .modal-header{
+        border-bottom: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        .btn-close{
+            filter: invert(1);
+        }
+    }
+    .card-img{
+        position: relative;
+        z-index: 1;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            right: -5px;
+            bottom: -5px;
+            background: rgb(216,216,216);
+            background: -moz-linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            background: -webkit-linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            background: linear-gradient(132deg, rgba(216,216,216,1) 0%, rgba(246,118,34,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d8d8d8",endColorstr="#f67622",GradientType=1);
+            border-radius: 10px;
+            z-index: -1;
+            @include transition(0.4s, ease-in-out);
+        }
+        img{
+            @include border-radius(10px);
+        }
+    }
+    .modal-body{
+        padding: 40px;
+    }
+    .card-content{
+        border-left: 1px solid #ffffff;
+        padding-left: 20px;
+        h2{
+            font-size: 24px;
+            color: #f57a29;
+            margin-bottom: 5px;
+        }
+        span{
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    @media (min-width:576px) {
+        .modal-dialog {
+            max-width: 755px;
+        }
+    }
+    @media (max-width:767px) {
+        .card-img{
+            display: inline-block;
+            width: auto;
+            img{
+                max-width: 150px;
+                width: 100%;
+            }
+        }
+        .modal-body {
+            padding: 40px 20px 20px;
+        }
+        .card-content{
+            padding: 20px 0 0 0;
+            margin-top: 30px;
+            border-top: 1px solid #ffffff;
+            border-left: none;
+            h2{
+                font-size: 20px;
+            }
+            span{
+                font-size: 12px;
             }
         }
     }
