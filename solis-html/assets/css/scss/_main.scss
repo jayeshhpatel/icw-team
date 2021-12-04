@@ -588,6 +588,9 @@ section {
     height: 100vh;
     top: 0;
     z-index: -1;
+    .ratio{
+        height: 100vh;
+    }
 }
 .arrow-right {
     &:after {
@@ -1355,25 +1358,34 @@ section {
 }
 // image-content-section1
 .image-content-section1{
-    background: url(../images/top-shape.svg) right bottom no-repeat;
-    padding-bottom: 160px;
+    background: url(../images/overlay-img01.png) left center no-repeat;
+    padding-bottom: 0;
     padding-top: 45px;
     .image-content-inner{
-        background: url(../images/overlay-img01.png) left center no-repeat;
+        background: url(../images/top-shape.svg) right bottom no-repeat;
         min-height: 695px;
         padding-top: 90px;
+        @media (max-width:1399px) {
+            background-size: 30%;
+        }
+        @media (max-width:575px) {
+            background-size: 36%;
+        }
     }
     .card-content{
         font-size: 32px;
     }
-    @media (max-width:1199px) {
-        background-size: 30%;
+    @media (max-width:1399px) {
+        .card-content{
+            font-size: 26px;
+        }
     }
     @media (max-width:991px) {
-        padding-bottom: 100px;
+        padding: 0;
         .image-content-inner{
             min-height: 40vh;
             padding: 40px 0;
+            margin-bottom: -5px;
         }
         .card-content{
             font-size: 20px;
@@ -1381,18 +1393,15 @@ section {
         }
     }
     @media (max-width:767px) {
-        padding-bottom: 80px;
+        background-size: cover;
         .image-content-inner{
-            min-height: 30vh;
-            background-size: cover;
+            min-height: 35vh;
         }
         .card-content{
             font-size: 16px;
         }
     }
-    @media (max-width:575px) {
-        background-size: 36%;
-    }
+    
 }
 .border-gradient {
     border-image-source: linear-gradient(266deg, rgba(201,0,153,1) 0%, rgba(246,118,34,1) 40%, rgba(216,216,216,1) 100%) !important;
