@@ -72,10 +72,14 @@ a {
         color: $purple;
         text-decoration: none;
     }
+    &:focus-visible {
+        outline: 3px solid #f0ab2e !important;
+        @include border-radius(4px);
+    }
 }
-:focus {
-    outline: none !important;
-}
+// :focus {
+//     outline: none !important;
+// }
 p {
     margin-top: 0;
     margin-bottom: 15px;
@@ -268,31 +272,31 @@ section {
         }
     }
 }
-.header-note{
-    background: url(../images/top-line.svg) repeat center;
-    text-align: center;
-    padding: 8px 0;
-    .note-text{
-        font-weight: 600;
-        font-size: 12px;color: #303245;
-    }
-    @media (max-width:767px) {
+
+.main-header {
+    .header-note{
+        background: url(../images/top-line.svg) repeat center;
+        text-align: center;
+        padding: 8px 0;
+        & + .header-nav-wrap {
+            top: 34px; 
+        }
         .note-text{
-            overflow-y: auto;
-            white-space: nowrap;
+            font-weight: 600;
+            font-size: 12px;color: #303245;
+        }
+        @media (max-width:767px) {
+            .note-text{
+                overflow-y: auto;
+                white-space: nowrap;
+            }
         }
     }
-}
-.main-header {
     .header-nav-wrap{
         position: fixed;
-        top: 34px;
+        top: 0px;
         left: 0;
         right: 0;
-        // background: linear-gradient(to bottom,#fff 50%,transparent 50%);
-        // background-size: 100% 200%;
-        // background-position: bottom left;
-        background-color: $white;
         z-index: 10;
         @include transition(0.5s, ease-in-out);
         &.fixed-header {
@@ -300,10 +304,15 @@ section {
             top: 0;
             background-position: top left;
             z-index: 10;
+            background-color: $white;
+            .navbar{
+                padding: 5px 0;
+                min-height: 65px;
+            }
         }
     }
     .navbar {
-        padding: 25px 0;
+        padding: 15px 0;
         min-height: 74px;
         >.container{
             display: block;
@@ -321,7 +330,6 @@ section {
             margin: 0 25px;
             padding: 10px 0;
             position: relative;
-            
             &:last-child{
                 margin-right: 0;
             }
@@ -334,12 +342,13 @@ section {
                 @include inline-flex;
                 @include align-items(center);
                 @include transition(0.3s, ease-in-out);
+                
             }
         }
     }
     .sub-menu{
         li{
-            margin: 0;
+            margin: 0 !important;
             padding: 5px 0;
             a{
                 font-size: 15px;
@@ -350,12 +359,16 @@ section {
         @include flexbox();
         @include align-items(center);
         @include justify-content(space-between);
+        position: relative;
     }
     
     @media (min-width: 992px) {
         .menu-list {
             li {
-                &:hover{
+                &:last-child{
+                    padding: 0;
+                }
+                &:hover, &:focus {
                     .sub-menu{
                         @include opacity(1);
                         visibility: visible;
@@ -363,7 +376,7 @@ section {
                     }
                 }
                 a {
-                    &:hover {
+                    &:hover, &:focus {
                         color: $purple;
                         &:after {
                             width: 100%;
@@ -371,6 +384,7 @@ section {
                             left: 0;
                         }
                     }
+                    
                     &:after {
                         content: "";
                         position: absolute;
@@ -412,6 +426,14 @@ section {
         }
     }
     @media (max-width: 991px) {
+        .header-note{
+            & + .header-nav-wrap {
+                .menu-list{
+                    min-height: calc(100vh - 90px);
+                    margin-top: 90px;
+                }
+            }
+        }
         &.is-visible {
             background-color: $white;
             .header-nav-wrap{
@@ -424,35 +446,44 @@ section {
         .header-nav-wrap{
             &.fixed-header{
                 .menu-list{
-                    min-height: calc(100vh - 66px);
-                    margin-top: 66px;
+                    min-height: calc(100vh - 56px);
+                    margin-top: 56px;
                 }
             }
         }
         .navbar {
-            min-height: 66px;
+            min-height: 56px !important;
             padding: 10px 0;
+        }
+        .header-first-block {
+            @include justify-content(center);
         }
         .sidebar-icon {
             display: inline-block;
             cursor: pointer;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            position: absolute;
+            left: 0;
+            z-index: 10;
             &.is-visible {
                 .line1 {
-                    @include transform(rotate(-45deg) translate(-4px, 7px));
+                    @include transform(rotate(-45deg) translate(-3px, 4px));
                 }
                 .line2 {
                     @include opacity(0);
                     visibility: hidden;
                 }
                 .line3 {
-                    @include transform(rotate(45deg) translate(-4px, -7px));
+                    @include transform(rotate(45deg) translate(-3px, -4px));
                 }
             }
             span {
-                width: 24px;
+                width: 15px;
                 height: 2px;
-                margin: 6px 0;
-                background-color: #000000;
+                margin: 3px 0;
+                background-color: #303245;
                 @include border-radius(4px);
                 display: block;
                 @include transition(0.4s, ease-in-out);
@@ -463,10 +494,14 @@ section {
                 @include align-items(flex-start);
                 @include flex-wrap(wrap);
                 @include flex-direction(inherit);
+                @include justify-content(start);
                 >li {
                     margin: 0;
                     padding: 10px 0;
                     width: 50%;
+                    &:last-child{
+                        width: 100%;
+                    }
                     >a{
                         font-size: 18px;
                         color: $purple;
@@ -474,7 +509,7 @@ section {
                     }
                 }
             }
-            min-height: calc(100vh - 100px);
+            min-height: calc(100vh - 56px);
             overflow-y: auto;
             width: 100%;
             display: block;
@@ -487,17 +522,8 @@ section {
             left: 0;
             bottom: 0;
             z-index: 99;
-            margin-top: 100px;
+            margin-top: 56px;
         }
-    }
-    @media (max-width: 767px) {
-        // .header-nav-wrap{
-        //     top: 52px;
-        // }
-        // .menu-list{
-        //     min-height: calc(100vh - 118px);
-        //     margin-top: 118px;
-        // }
     }
     @media (max-width: 350px) {
         .menu-list {
