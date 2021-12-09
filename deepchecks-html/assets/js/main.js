@@ -19,6 +19,31 @@ $(document).ready(function () {
     });
   }
 });
+$('.post-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: false,
+  responsive: [
+      {
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: false,
+              dots: true
+          }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+        }
+    }
+  ]
+});
 
  /* WOW Animation - Init */
  try {
