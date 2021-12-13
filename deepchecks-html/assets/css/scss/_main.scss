@@ -77,6 +77,38 @@ a {
         @include border-radius(4px);
     }
 }
+.code-items{
+    margin-bottom: 35px;
+    .code { 
+        background: #ffffff; padding: 20px; @include border-radius(10px);display: inline-block;
+        margin-bottom: 15px;
+        filter: drop-shadow(0px 4px 50px rgba(75, 83, 98, 0.1));
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .text-red { color: #AC4142 !important; }
+        .text-black { color: #4D4E5F !important; }
+        .text-yellow{color: #D28445 !important;}
+        .text-lightyellow{color: #F4BF75 !important;}
+        code {
+            color: #6A9FB5;
+            font-size: 14px;
+            width: 100%;
+            display: block;word-break: break-all;
+        }
+    }
+    @media (max-width:767px) {
+        .code {
+            margin-bottom: 20px;
+            background-color: transparent;
+            padding: 0;
+            @include border-radius(0);
+            code{
+                word-break: break-all;
+            }
+        }
+    }
+}
 .mw-225{
     max-width: 225px;
     width: 100%;
@@ -92,6 +124,11 @@ a {
 .mw-415{
     max-width: 415px;
     width: 100%;
+}
+.container{
+    @media (max-width:991px) {
+        max-width: 100%;
+    }
 }
 p {
     margin-top: 0;
@@ -123,12 +160,7 @@ section {
         padding: 30px 0;
     }
 }
-.container{
-    max-width: 1230px;
-    @media (max-width:767px) {
-        padding: 0 20px;
-    }
-}
+
 .slick-dots{
     position: relative;
     bottom: auto;
@@ -373,7 +405,6 @@ section {
         @include justify-content(space-between);
         position: relative;
     }
-    
     @media (min-width: 992px) {
         .menu-list {
             li {
@@ -438,6 +469,7 @@ section {
         }
     }
     @media (max-width: 991px) {
+        
         .header-note{
             & + .header-nav-wrap {
                 .menu-list{
@@ -566,10 +598,6 @@ section {
 // main-banner
 .main-banner{
     padding-top: 0;
-   
-    .container{
-        max-width: 1300px;
-    }
     .banner-btn{
         margin-top: 50px;
         @include flexbox();
@@ -632,13 +660,10 @@ section {
         }
     }
     @media (max-width:767px) {
-        .hiro-image{
+        .hero-image{
             margin-bottom: 30px;
         }
         .banner-text{
-            h1{
-                // margin-bottom: 20px;
-            }
             .sub-title{
                 font-size: 13px;
             }
@@ -877,6 +902,12 @@ section {
             li{
                 padding: 5px 0;
                 @include flexbox();
+                @include flex-wrap(wrap);
+                .sub-list{
+                    margin-top: 5px;
+                    margin-left: 15px;
+                    width: 100%;
+                }
                 a{
                     color: #A394BD;
                     font-weight: normal;
@@ -1006,6 +1037,7 @@ section {
             .footer-links{
                 @include justify-content(space-between);
                 margin-bottom: 10px;
+                
             }
         }
         .social-icon{
@@ -1021,7 +1053,9 @@ section {
                 li{
                     @include justify-content(center);
                     padding: 4px 0;
-                    
+                    .sub-list{
+                        margin-left: 0;
+                    }
                 }
             }
             .newsletter-input-block{
@@ -1055,6 +1089,80 @@ section {
     }
 }
 // features-section
+.features-section{
+    .data-table{
+        max-width: 490px;
+        margin: auto;
+        filter: drop-shadow(62.0075px 78.4543px 80px rgba(75, 83, 98, 0.04)) drop-shadow(40.19px 50.85px 46.8519px rgba(75, 83, 98, 0.0303704)) drop-shadow(23.8844px 30.2194px 25.4815px rgba(75, 83, 98, 0.0242963)) drop-shadow(12.4015px 15.6909px 13px rgba(75, 83, 98, 0.02)) drop-shadow(5.05246px 6.39257px 6.51852px rgba(75, 83, 98, 0.0157037)) drop-shadow(1.14829px 1.45286px 3.14815px rgba(75, 83, 98, 0.00962963));
+        tr{
+            font-size: 14px;
+            th,
+            td{
+                padding: 15px 10px;
+                color: #545770;
+            }
+            
+        }
+        thead{
+            tr{
+                th{
+                    background-color: #ffffff;
+                    color: #303245;
+                    &:first-child{
+                        padding-left: 20px;
+                        border-radius: 15px 0 0 0;
+                    }
+                    &:last-child{
+                        padding-right: 20px;
+                        border-radius: 0 15px 0 0;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    background-color: #ffffff;
+                    border: none;
+                    color: #545770;
+                    text-align: center;
+                    &.rowspan-column{
+                        vertical-align: middle;
+                        text-align: center;
+                        background-color: #EEF1F4 !important;
+                        border-radius: 0 0 0 15px;
+                    }
+                }
+                &:first-child{
+                    td{
+                        border-top: 2px solid #303245;
+                    }
+                }
+                &:last-child{
+                    td{
+                        &:last-child{
+                            border-radius: 0 0 15px 0;
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    td{
+                        background-color: #F2F3F5;
+                    }   
+                }
+            }
+        }
+    }
+    @media (max-width:767px) {
+        .data-table{
+            max-width: 375px;
+            margin-bottom: 50px;
+            tr{
+                font-size: 12px;
+            }
+        }
+    }
+}
 .img-content-block{
     .main-title{
         margin-bottom: 50px;
@@ -1109,6 +1217,13 @@ section {
 .performance-section{
     background-color: $white;
     box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
+}
+// explainability-section
+.explainability-section{
+    .btn-secondary{
+        background-color: $white !important;
+        color: #303245 !important
+    }
 }
 // community-section
 .community-section{

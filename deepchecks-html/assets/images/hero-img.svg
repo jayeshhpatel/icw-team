@@ -32,34 +32,34 @@
     animation-delay: 2s;
 }
 #_cloud-box {
-	animation: swing 10s infinite;
-	-webkit-animation: swing 10s infinite;
-	-moz-animation: swing 10s infinite;
-	-o-animation: swing 10s infinite;
+	animation: swing 5s infinite;
+	-webkit-animation: swing 5s infinite;
+	-moz-animation: swing 5s infinite;
+	-o-animation: swing 5s infinite;
 }
 #_cloud-box1 {
-	animation: swing 8s infinite;
-	-webkit-animation: swing 8s infinite;
-	-moz-animation: swing 8s infinite;
-	-o-animation: swing 8s infinite;
+	animation: swing 6s infinite;
+	-webkit-animation: swing 6s infinite;
+	-moz-animation: swing 6s infinite;
+	-o-animation: swing 6s infinite;
 }
 #_cloud-box2 {
-	animation: swing 15s infinite;
-	-webkit-animation: swing 15s infinite;
-	-moz-animation: swing 15s infinite;
-	-o-animation: swing 15s infinite;
+	animation: swing 7s infinite;
+	-webkit-animation: swing 7s infinite;
+	-moz-animation: swing 7s infinite;
+	-o-animation: swing 7s infinite;
 }
 #_swing {
-	animation: swing1 10s infinite;
-	-webkit-animation: swing1 10s infinite;
-	-moz-animation: swing1 10s infinite;
-	-o-animation: swing1 10s infinite;
+	animation: swing1 5s infinite;
+	-webkit-animation: swing1 5s infinite;
+	-moz-animation: swing1 5s infinite;
+	-o-animation: swing1 5s infinite;
 }
 #_swing1 {
-	animation: swing1 7s infinite;
-	-webkit-animation: swing1 7s infinite;
-	-moz-animation: swing1 7s infinite;
-	-o-animation: swing1 7s infinite;
+	animation: swing1 5s infinite;
+	-webkit-animation: swing1 5s infinite;
+	-moz-animation: swing1 5s infinite;
+	-o-animation: swing1 5s infinite;
 }
 
 </style>
