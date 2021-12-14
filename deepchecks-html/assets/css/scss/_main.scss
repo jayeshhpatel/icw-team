@@ -128,6 +128,7 @@ a {
 .container{
     @media (max-width:991px) {
         max-width: 100%;
+        padding: 0 20px;
     }
 }
 p {
@@ -289,6 +290,15 @@ section {
 .main-title {
     margin-bottom: 24px;
     text-align: center;
+    .sub-title{
+        font-weight: 600;
+        font-size: 16px;letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $purple;
+        font-family: $font-poppins;
+        margin-bottom: 6px;
+        display: block;
+    }
     h1,
     h2 {
         font-weight: 600;
@@ -308,6 +318,9 @@ section {
     @media (max-width: 767px) {
         margin-bottom: 30px;
         text-align: left;
+        .sub-title{
+            font-size: 13px;
+        }
         h1,
         h2 {
             font-size: 24px;
@@ -382,6 +395,7 @@ section {
     .navbar {
         padding: 15px 0;
         min-height: 74px;
+        @include transition(0.4s, ease-in-out);
         >.container{
             display: block;
         }
@@ -581,7 +595,7 @@ section {
             overflow-y: auto;
             width: 100%;
             display: block;
-            padding: 15px;
+            padding: 15px 20px;
             background-color: $white;
             @include transition(0.4s, ease-in-out);
             @include transform(translateX(-100%));
@@ -637,13 +651,8 @@ section {
     }
     .banner-text{
         .sub-title{
-            font-weight: 600;
-            font-size: 16px;letter-spacing: 0.05em;
-            text-transform: uppercase;
             color: #007AFF;
             margin-bottom: 15px;
-            font-family: $font-poppins;
-            display: block;
         }
         h1{
             margin-bottom: 50px;
@@ -1548,6 +1557,97 @@ section {
             .card-content{
                 padding: 40px 30px 40px 40px;
             }
+        }
+    }
+}
+// community-support-section
+.community-support-section{
+    z-index: 1;
+    padding-bottom: 185px;
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 43%;
+        z-index: -1;
+        background: linear-gradient(135deg, #17003E 0%, #260067 100%);
+    }
+    .main-title{
+        margin-bottom: 50px;
+    }
+    .card{
+        background: #FFFFFF;
+        box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
+        @include border-radius(30px);
+        border: none;
+        .card-body{
+            padding: 50px 30px;
+            .card-img-top{
+                margin-bottom: 32px;
+            }
+            .card-title{
+                font-weight: 600;
+                font-size: 20px;color: #303245;
+                margin-bottom: 24px;
+                font-family: $font-poppins;
+            }
+            .card-text{
+                font-size: 16px;
+                color: #545770;
+                margin-bottom: 35px;
+            }
+            .join-slack-btn{
+                letter-spacing: 0.05em;
+                text-transform: uppercase;font-weight: 600;
+                font-family: $font-poppins;
+                font-size: 16px;
+                color: $purple;
+                position: relative;
+                z-index: 1;
+                @include inline-flex;@include align-items(center);
+                &:hover {
+                    &:before {
+                        width: 100%;
+                        right: auto;
+                        left: 0;
+                    }
+                    &:after{
+                        margin-left: 12px;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    right: 0;
+                    bottom: -2px;
+                    background: $purple;
+                    width: 0;
+                    height: 1px;
+                    @include transition(0.3s, ease-in-out);
+                }
+                &:after{
+                    content: "";
+                    position: relative;
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 8px;
+                    background: url(../images/arrow-right.svg) no-repeat center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    @include transition(0.3s, ease-in-out);
+                }
+            }
+        }
+    }
+    @media (max-width:991px) {
+        padding-bottom: 100px;
+    }
+    @media (max-width:767px) {
+        &:after{
+            height: 76%;
         }
     }
 }
