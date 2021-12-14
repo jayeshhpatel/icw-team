@@ -1584,6 +1584,10 @@ section {
         border: none;
         .card-body{
             padding: 50px 30px;
+            @include flexbox();
+            @include flex-direction(column);
+            .card-top-content{
+            }
             .card-img-top{
                 margin-bottom: 32px;
             }
@@ -1596,48 +1600,53 @@ section {
             .card-text{
                 font-size: 16px;
                 color: #545770;
+                flex: 1 1 auto;
                 margin-bottom: 35px;
             }
-            .join-slack-btn{
-                letter-spacing: 0.05em;
-                text-transform: uppercase;font-weight: 600;
-                font-family: $font-poppins;
-                font-size: 16px;
-                color: $purple;
-                position: relative;
-                z-index: 1;
-                @include inline-flex;@include align-items(center);
+            .readmore-btn{
                 &:hover {
+                    a{
+                        &:before {
+                            width: 100%;
+                            right: auto;
+                            left: 0;
+                        }
+                        &:after{
+                            margin-left: 12px;
+                        }
+                    }
+                }
+                a{
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;font-weight: 600;
+                    font-family: $font-poppins;
+                    font-size: 16px;
+                    color: $purple;
+                    position: relative;
+                    z-index: 1;
+                    @include inline-flex;@include align-items(center);
                     &:before {
-                        width: 100%;
-                        right: auto;
-                        left: 0;
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        right: 0;
+                        bottom: -2px;
+                        background: $purple;
+                        width: 0;
+                        height: 1px;
+                        @include transition(0.3s, ease-in-out);
                     }
                     &:after{
-                        margin-left: 12px;
+                        content: "";
+                        position: relative;
+                        width: 16px;
+                        height: 16px;
+                        margin-left: 8px;
+                        background: url(../images/arrow-right.svg) no-repeat center;
+                        display: inline-block;
+                        vertical-align: middle;
+                        @include transition(0.3s, ease-in-out);
                     }
-                }
-                &:before {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    right: 0;
-                    bottom: -2px;
-                    background: $purple;
-                    width: 0;
-                    height: 1px;
-                    @include transition(0.3s, ease-in-out);
-                }
-                &:after{
-                    content: "";
-                    position: relative;
-                    width: 16px;
-                    height: 16px;
-                    margin-left: 8px;
-                    background: url(../images/arrow-right.svg) no-repeat center;
-                    display: inline-block;
-                    vertical-align: middle;
-                    @include transition(0.3s, ease-in-out);
                 }
             }
         }
