@@ -80,9 +80,35 @@ a {
 .code-items{
     margin-bottom: 35px;
     .code { 
-        background: #ffffff; padding: 20px; @include border-radius(10px);display: inline-block;
+        background: #ffffff; padding: 20px 50px 20px 20px; @include border-radius(10px);
+        display: inline-block;
+        vertical-align: middle;
         margin-bottom: 15px;
         filter: drop-shadow(0px 4px 50px rgba(75, 83, 98, 0.1));
+        position: relative;
+        &:hover{
+            .clipboard-btn{
+                @include opacity(1);
+            } 
+        }
+        .clipboard-btn{
+            right: 0;
+            top: 0;
+            color: #24292f;
+            background-color: $white;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #dddddd;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include border-radius(5px);
+            @include transition(0.4s, ease-in-out);
+            z-index: 1;
+            cursor: pointer;
+            margin: 8px;
+            @include opacity(0);
+        }
         &:last-child{
             margin-bottom: 0;
         }
@@ -93,8 +119,13 @@ a {
         code {
             color: #6A9FB5;
             font-size: 14px;
-            width: 100%;
-            display: block;word-break: break-all;
+            // width: 100%;
+            // display: block;
+        }
+    }
+    @media (max-width:991px) {
+        .code {
+            display: block;
         }
     }
     @media (max-width:767px) {
@@ -161,7 +192,6 @@ section {
         padding: 30px 0;
     }
 }
-
 .slick-dots{
     position: relative;
     bottom: auto;
@@ -1586,10 +1616,8 @@ section {
             padding: 50px 30px;
             @include flexbox();
             @include flex-direction(column);
-            .card-top-content{
-            }
             .card-img-top{
-                margin-bottom: 32px;
+                margin-bottom: 30px;
             }
             .card-title{
                 font-weight: 600;
@@ -1600,7 +1628,9 @@ section {
             .card-text{
                 font-size: 16px;
                 color: #545770;
-                flex: 1 1 auto;
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;            
+                flex: 1 1 auto; 
                 margin-bottom: 35px;
             }
             .readmore-btn{
