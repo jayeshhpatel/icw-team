@@ -112,12 +112,14 @@ a {
         &:last-child{
             margin-bottom: 0;
         }
+        .text-green { color: green !important; }
+        .text-purple { color: #6610f2 !important; }
         .text-red { color: #AC4142 !important; }
         .text-black { color: #4D4E5F !important; }
         .text-yellow{color: #D28445 !important;}
         .text-lightyellow{color: #F4BF75 !important;}
         code {
-            color: #6A9FB5;
+            color: #000000;
             font-size: 14px;
             // width: 100%;
             // display: block;
@@ -134,9 +136,9 @@ a {
             background-color: transparent;
             padding: 0;
             @include border-radius(0);
-            code{
-                word-break: break-all;
-            }
+            // code{
+            //     word-break: break-all;
+            // }
         }
     }
 }
