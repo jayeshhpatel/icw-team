@@ -80,7 +80,7 @@ a {
 .code-items{
     margin-bottom: 35px;
     .code { 
-        background: #ffffff; padding: 20px 50px 20px 20px; @include border-radius(10px);
+        background: $white; padding: 20px 50px 20px 20px; @include border-radius(10px);
         display: inline-block;
         vertical-align: middle;
         margin-bottom: 15px;
@@ -1169,7 +1169,7 @@ section {
         thead{
             tr{
                 th{
-                    background-color: #ffffff;
+                    background-color: $white;
                     color: #303245;
                     &:first-child{
                         padding-left: 20px;
@@ -1185,7 +1185,7 @@ section {
         tbody{
             tr{
                 td{
-                    background-color: #ffffff;
+                    background-color: $white;
                     border: none;
                     color: #545770;
                     text-align: center;
@@ -1608,7 +1608,7 @@ section {
         margin-bottom: 50px;
     }
     .card{
-        background: #FFFFFF;
+        background: $white;
         box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
         @include border-radius(30px);
         border: none;

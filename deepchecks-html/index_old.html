@@ -144,10 +144,7 @@
                                 <div class="code-items">
                                     <div class="code overflow-auto">
                                         <code id="code1">
-                                            <!-- IntegrityCheckSuite.<span class="text-red">run</span><span class="text-black">(</span>train_dataset<span class="text-black">=</span>df_train<span class="text-black">,</span> test_dataset<span class="text-black">=</span>df_test<span class="text-black">,</span> check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-black">)</span> -->
-                                            IntegritySuite= integrity_suite()<br/>
-                                            IntegritySuite.<span class="text-red">run</span><span class="text-black">(</span>train_dataset<span class="text-black">=</span>ds_train<span class="text-black">,</span> test_dataset=ds_test<span class="text-black">,</span><br/>
-                                            model=rf_clf<span class="text-black">,</span> check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-black">)</span>
+                                            IntegrityCheckSuite.<span class="text-red">run</span><span class="text-black">(</span>train_dataset<span class="text-black">=</span>df_train<span class="text-black">,</span> test_dataset<span class="text-black">=</span>df_test<span class="text-black">,</span> check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-black">)</span>
                                         </code>
                                         <div class="clipboard-btn position-absolute" data-clipboard-target="#code1" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
                                            <img src="assets/images/copy-icon.svg" alt="Copy to clipboard"/>
@@ -155,7 +152,6 @@
                                     </div>
                                     <div class="code">
                                         <code class="text-black" id="code2">
-                                            <span class="text-yellow">df</span> = pd.DataFrame(data=data)<br/>
                                             <span class="text-yellow">check</span> = StringMismatch()<br/>
                                             <span class="text-yellow">result</span> = check.run(df)
                                         </code>
@@ -262,10 +258,7 @@
                             <div class="code-items">
                                 <div class="code">
                                     <code class="text-black" id="code5">
-                                        <!-- <span class="text-red">OverfiteSuite</span> = <span class="text-red">overfit_check_suite()</span><br/> OverfiteSuite.<span class="text-red">run(train_dataset</span>=alternative_train_df, test_dataset=alternative_test_df, model=alt_rf_clf, check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-red">)</span><br/> -->
-                                        <span class="text-red">OverfiteSuite</span> = <span class="text-red">overfit_suite()</span><br/>
-                                        OverfiteSuite.<span class="text-red">run(train_dataset</span>=ds_train, test_dataset=ds_test,<br/>
-                                        model=rf_clf, check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-red">)</span>
+                                        <span class="text-red">OverfiteSuite</span> = <span class="text-red">overfit_check_suite()</span><br/> OverfiteSuite.<span class="text-red">run(train_dataset</span>=alternative_train_df, test_dataset=alternative_test_df, model=alt_rf_clf, check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-red">)</span>
                                     </code>
                                     <div class="clipboard-btn position-absolute" data-clipboard-target="#code5" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
                                         <img src="assets/images/copy-icon.svg" alt="Copy to clipboard"/>
@@ -273,9 +266,7 @@
                                 </div>
                                 <div class="code">
                                     <code class="text-black" id="code6">
-                                        <!-- <span class="text-yellow">check</span> BoostingOverfit()<br/>
-                                        <span class="text-yellow">result</span> = check.run(train_ds, validation_ds, clf) -->
-                                        <span class="text-yellow">check</span> = BoostingOverfit()<br/>
+                                        <span class="text-yellow">check</span> BoostingOverfit()<br/>
                                         <span class="text-yellow">result</span> = check.run(train_ds, validation_ds, clf)
                                     </code>
                                     <div class="clipboard-btn position-absolute" data-clipboard-target="#code6" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
@@ -333,11 +324,8 @@
                             <div class="code-items">
                                 <div class="code">
                                     <code class="text-black" id="code8">
-                                        <!-- <span class="text-yellow">PerformanceSuite</span> = [erformance_check_suite() <br/>
-                                        <span class="text-yellow">PerformanceSuite.run(train_dataset=alternative_train_df</span>, test_dataset=alternative_test_df, <br/><span class="text-yellow">model=alt_rf_clf</span>, check+datasets_policy=’both’) -->
-                                        <span class="text-yellow">PerformanceSuite</span> = performance_suite()<br/>
-                                        <span class="text-yellow">PerformanceSuite.run(train_dataset=train_df</span>, test_dataset=test_df,<br/>
-                                        <span class="text-yellow">model=rf_clf</span>, check_datasets_policy='both')
+                                        <span class="text-yellow">PerformanceSuite</span> = [erformance_check_suite() <br/>
+                                        <span class="text-yellow">PerformanceSuite.run(train_dataset=alternative_train_df</span>, test_dataset=alternative_test_df, <br/><span class="text-yellow">model=alt_rf_clf</span>, check+datasets_policy=’both’)
                                     </code>
                                      <div class="clipboard-btn position-absolute" data-clipboard-target="#code8" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
                                         <img src="assets/images/copy-icon.svg" alt="Copy to clipboard"/>
