@@ -112,10 +112,10 @@ a {
         &:last-child{
             margin-bottom: 0;
         }
-        .text-green { color: green !important; }
-        .text-purple { color: #6610f2 !important; }
-        .text-red { color: #AC4142 !important; }
-        .text-black { color: #4D4E5F !important; }
+        .text-green { color: green !important;}
+        .text-purple { color: #6610f2 !important;}
+        .text-red { color: #AC4142 !important;}
+        .text-black { color: #4D4E5F !important;}
         .text-yellow{color: #D28445 !important;}
         .text-lightyellow{color: #F4BF75 !important;}
         code {
@@ -1680,6 +1680,83 @@ section {
                         @include transition(0.3s, ease-in-out);
                     }
                 }
+            }
+        }
+    }
+    @media (max-width:991px) {
+        padding-bottom: 100px;
+    }
+    @media (max-width:767px) {
+        &:after{
+            height: 76%;
+        }
+    }
+}
+
+// grid-navigation-section
+.grid-navigation-section{
+    z-index: 1;
+    padding-bottom: 185px;
+    .main-title {
+        margin-bottom: 50px;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 43%;
+        z-index: -1;
+        background: #F4F5F6;
+    }
+    .same-frame-grid{
+        position: relative;
+        display: block;
+        &:hover{
+            .grid-img{
+                img{
+                    @include transform(scale(1.03));
+                }
+            }
+        }
+        .grid-img{
+            @include border-radius(30px); 
+            overflow: hidden;
+            box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
+            img{
+                width: 100%;
+                @include transition(0.2s, ease-in-out);
+            }
+        }
+        h2{
+            font-weight: 600;
+            font-size: 36px;color: #F9FBFD;
+            margin: auto;
+            font-family: $font-poppins;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+        }
+    }
+    @media (min-width:1200px) {
+        .same-frame-grid{
+            h2.font-md{
+                font-size: 32px;
+            }
+        }
+    }
+    @media (max-width:1199px) {
+        .same-frame-grid{
+            h2{
+                font-size: 24px;
             }
         }
     }
