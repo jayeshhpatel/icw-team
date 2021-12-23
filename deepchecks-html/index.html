@@ -224,7 +224,9 @@
                                 <div class="code-items">
                                      <div class="code overflow-auto">
                                         <code id="code1">
-                                            IntegrityCheckSuite.<span class="text-red">run</span><span class="text-black">(</span>train_dataset<span class="text-black">=</span>df_train<span class="text-black">,</span> test_dataset<span class="text-black">=</span>df_test<span class="text-black">,</span> check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-black">)</span>
+                                            IntegritySuite= integrity_suite()<br/>
+                                            IntegritySuite.<span class="text-red">run</span><span class="text-black">(</span>train_dataset<span class="text-black">=</span>ds_train<span class="text-black">,</span> test_dataset=ds_test<span class="text-black">,</span><br/>
+                                            model=rf_clf<span class="text-black">,</span> check_datasets_policy=<span class="text-lightyellow">’both’</span><span class="text-black">)</span>
                                         </code>
                                         <div class="clipboard-btn position-absolute" data-clipboard-target="#code1" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
                                            <img src="assets/images/copy-icon.svg" alt="Copy to clipboard"/>
@@ -232,6 +234,7 @@
                                     </div>
                                     <div class="code">
                                         <code class="text-black" id="code2">
+                                            <span class="text-yellow">df</span> = pd.DataFrame(data=data)<br/>
                                             <span class="text-yellow">check</span> = StringMismatch()<br/>
                                             <span class="text-yellow">result</span> = check.run(df)
                                         </code>
