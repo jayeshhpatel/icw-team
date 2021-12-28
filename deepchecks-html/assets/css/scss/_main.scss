@@ -2099,3 +2099,72 @@ section {
         }
     }
 }
+// request-feature-modal
+.request-feature-modal{
+    .modal-content{
+        border: none;
+        box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
+        @include border-radius(30px);
+    }
+    .hbspt-form{
+        .hs-button{
+            color: $white !important;
+            background-color:$purple;
+            border:1px solid $purple;
+            min-height: 46px;
+            padding: 0 20px;
+            font-weight: 600;
+            font-size: 16px;
+            min-width: 126px;
+            @include transition(0.3s, ease-in-out);
+            @include border-radius(5px);
+            @include inline-flex;
+            @include align-items(center);
+            @include justify-content(center);
+            img{
+                margin-right: 8px;
+            }
+            &:after{
+                display: none;
+            }
+            &:hover, &:focus, &:active,
+            &:not(:disabled):not(.disabled).active, 
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled).active:focus, 
+            &:not(:disabled):not(.disabled):active:focus {
+                background-color: #b585ff !important;
+                color: $white !important;
+                border-color:#b585ff !important;
+                box-shadow: none !important;
+            }
+            &.disabled,
+            &:disabled {
+                background-color: #ADBDBA;
+                border-color: #ADBDBA;
+                &:hover, &:focus, &:active {
+                    background: #ADBDBA !important;
+                    border-color: #ADBDBA !important;
+                }
+            }
+            @media (max-width:575px) {
+                min-width: 100%;
+                padding: 0 12px;
+            }
+        }
+    }
+    .modal-header{
+        display: block;
+        padding: 50px 30px 30px;
+        margin: 0;
+        border: none;
+        h2{
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+    @media (min-width:576px) {
+        .modal-dialog{
+            max-width: 430px;
+        }
+    }
+}

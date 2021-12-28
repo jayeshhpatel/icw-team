@@ -274,6 +274,27 @@ section {
 .container{
     max-width: 1455px;
 }
+.before-shape{
+    position: relative;
+    &:hover{
+        &:after{
+            right: 8px;
+            bottom: 8px;
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -10px;
+        bottom: -10px;
+        @include transition(0.3s, ease-in-out);
+        background: linear-gradient(314.45deg, #C90099 -70.21%, #F67622 58.16%, #D8D8D8 143.73%);
+        @include border-radius(10px);
+        z-index: -1;
+    }
+}
 .main-header {
     position: fixed;
     background-color: transparent;
@@ -632,7 +653,7 @@ section {
         .banner-item{
             position: relative;
             z-index: 1;
-            margin: 8px;
+            margin: 10px;
             &:hover{
                 &:after{
                     right: 8px;
@@ -644,10 +665,10 @@ section {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                right: -7px;
-                bottom: -7px;
+                right: -10px;
+                bottom: -10px;
                 @include transition(0.3s, ease-in-out);
-                background: linear-gradient(130.5deg, #D8D8D8 -31.81%, #DEC2B0 -5.61%, #F67622 63.41%, #C90099 100.73%);
+                background: linear-gradient(314.45deg, #C90099 -70.21%, #F67622 58.16%, #D8D8D8 143.73%);
                 @include border-radius(10px);
                 z-index: -1;
             }
@@ -659,6 +680,7 @@ section {
                 @include border-radius(10px);
                 position: relative;
                 border: 1px solid #F67622;
+                overflow: hidden;
             }
         }
         .slick-prev{
@@ -737,6 +759,46 @@ section {
             .banner-item {
                 .thumb-img{
                     background-size: cover !important;
+                }
+            }
+        }
+    }
+}
+.single-banner{
+    .banner-slider{
+        .slick-arrow{
+            filter: invert(1)
+        }
+        .slick-dots{
+            li{
+                button{
+                    background: #131623;
+                }
+            }
+        }
+    }
+    .banner-content-block{
+        @include border-radius(10px);
+        border: 1px solid transparent;
+        background:linear-gradient(#131623, #131623) padding-box,linear-gradient(277.72deg, #C9009A -32.97%, #FC6401 55.57%, #F4F4F4 144.11%) border-box;
+        padding: 30px;
+        h2{
+            font-weight: 900;
+            font-size: 24px;text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: $font-Saira;
+            margin-bottom: 20px;
+        }
+        .setting-user{
+            .user-names{
+                span{
+                    font-weight: normal;
+                    font-size: 16px;color: #FFFFFF;
+                    @include flexbox();
+                    @include align-items(center);
+                    img{
+                        margin-right: 10px;
+                    }
                 }
             }
         }

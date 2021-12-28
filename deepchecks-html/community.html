@@ -112,7 +112,7 @@
                                     </div>
                                     <h2 class="card-title">Request Feature / Report Bug</h2>
                                     <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
-                                    <div class="readmore-btn">
+                                    <div class="readmore-btn" data-bs-toggle="modal" data-bs-target="#request-feature-Modal">
                                         <a href="#!">Request or Report</a>
                                     </div>
                                 </div>
@@ -122,6 +122,34 @@
                 </div>
             </section>
         </main>
+        
+        <!-- Modal -->
+        <div class="modal fade request-feature-modal" id="request-feature-Modal" tabindex="-1" aria-labelledby="request-feature" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header main-title">
+                        <span class="sub-title">Share your experience with us</span>
+                        <h2 class="modal-title" id="request-feature">Request Feature / Report Bug</h2>
+                    </div>
+                    <div class="modal-body">
+                        <!--[if lte IE 8]>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                        <![endif]-->
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                        <script>
+                        hbspt.forms.create({
+                        region: "na1",
+                        portalId: "8338627",
+                        formId: "c0e09bff-d4ef-4c8d-bd09-b74159b43584"
+                        });
+                        </script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- // MAIN SECTION -->
         <!-- JS -->
         <script src="assets/js/jquery.min.js"></script>
