@@ -108,6 +108,52 @@ $(document).ready(function () {
   $('.fourgrid-right').click(function(){
     $('.fourgrid-slider').slick('slickNext');
   })
+  $('.gridthree-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    accessibility: false,
+    arrows: true,
+    responsive: [
+      {
+          breakpoint: 991,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+          }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  $('.gridfour-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    accessibility: false,
+    arrows: true,
+    responsive: [
+      {
+          breakpoint: 991,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+          }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+      }
+    ]
+  });
 });
 
  /* WOW Animation - Init */

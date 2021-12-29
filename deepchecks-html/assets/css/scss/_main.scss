@@ -1299,6 +1299,9 @@ section {
     .btn-secondary{
         margin-top: 35px;
     }
+    p{
+        color: #ffffff;
+    }
     .inner-content{
         @include border-radius(50px);
         background-color: #4A154B;
@@ -1799,7 +1802,6 @@ section {
         }
     }
 }
-
 .mw-570{
     max-width: 570px;
     width: 100%;
