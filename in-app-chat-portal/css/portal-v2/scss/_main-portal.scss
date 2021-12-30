@@ -552,17 +552,26 @@ html .portal {
                 }
                 @media (max-width: 767px) { 
                     .nav-tabs { 
+                        overflow: auto;
+                        white-space: nowrap;
+                        @include flex-wrap(nowrap);
                         .nav-link { padding: 10px 20px; }
                     }
                 }
                 @media (max-width: 575px) { 
                     .nav-tabs { 
-                        .nav-link { font-size: 14px; padding: 10px; }
+                        .nav-link { font-size: 14px;
+                            //  padding: 10px; 
+                            }
                     }
                 }
                 @media (max-width: 420px) { 
                     .nav-tabs { 
-                        .nav-link { font-size: 12px; padding: 8px; max-width: 25%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+                        .nav-link { 
+                            // font-size: 12px; padding: 8px;
+                            //  max-width: 25%;
+                              white-space: nowrap;
+                            }
                     }
                 }
             }
@@ -924,6 +933,15 @@ html .portal {
                         &:hover > .button { background: $blue; color: $white; }
                         &.-chosen > .label {color: $black; }
                     }
+                    @media (max-width:991px) {
+                        .upload-img{
+                            display: block;
+                        }
+                        .file-input{
+                            width: 100%;
+                            margin: 0 0 10px 0;
+                        }
+                    }
                 }        
                 .security-block {  
                     .heading { color: #4E5C73; font-size: 16px; font-weight: bold; font-style: italic; display: grid; grid-template-columns: 70% auto; @include align-items(grid); padding-bottom: 18px; }
@@ -1239,7 +1257,9 @@ html .portal {
                 &.with-bg { background: #F7F8F9; }
                 .card-body { padding: 0; @include flexbox(); @include flex-direction(column);
                     .report-by { letter-spacing: 0.39px; color: #0E132A; font-size: 13px; padding-bottom: 5px; @include inline-flex; @include align-items(center);
-                        em { color: #8690A0; font-style: italic; padding-right: 5px; display: inline-block; }
+                        em { color: #8690A0; font-style: italic; padding-right: 5px; display: inline-block;~em{
+                            padding-left: 5px;
+                        } }
                         .badge { margin-left: 15px; }
                     }                    
                     .report-content-block { padding: 5px 0; flex: 1 1 auto;
@@ -1276,7 +1296,8 @@ html .portal {
                         }
                     }
                     .time-user-name { color: #0E132A; letter-spacing: 0.39px; font-size: 13px; @include inline-flex; @include align-items(center); padding-top: 10px;
-                        em { color: #8690A0; font-style: italic; }
+                        em { color: #8690A0; font-style: italic;padding-right: 5px; ~em{padding-left: 5px;} }
+                        strong{color: #0E132A;}
                         .divider { font-style: normal; padding: 0 6px; color: #E2E5E9; }
                     }
                     hr { border-color: #E2E5E9; margin: 15px 0 25px; }
@@ -1285,6 +1306,12 @@ html .portal {
                         .btn { min-width: 88px; height: 31px; padding: 0 15px; line-height: 28px; margin-left: 10px; }
                         span { letter-spacing: 0.39px; color: #8690A0; font-size: 13px; 
                             span { padding-left: 5px }
+                        }
+                        strong{color: #0E132A !important;}
+                        em{
+                            ~em{
+                                padding-left: 10px;
+                            }
                         }
                     }
                     .report-data-block { @include flexbox; @include align-items(center); @include justify-content(space-between); 

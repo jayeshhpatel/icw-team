@@ -288,7 +288,7 @@ section {
 }
 .font-lg{
     @media (min-width:992px) {
-        font-size: 64px !important;
+        font-size: 54px !important;
     }
 }
 .container{
@@ -691,22 +691,20 @@ section {
     }
     .banner-slider{
         @include border-radius(10px);
+        border: 1px solid #FC6401;
         margin: 0;
+        overflow: hidden;
         .banner-item{
             position: relative;
             z-index: 1;
-            // margin: 10px;
+            overflow: hidden;
             .banner-content{
                 padding: 100px;
                 position: relative;
             }
             .thumb-img{
-                @include border-radius(10px);
                 position: relative;
-                background:linear-gradient(#131623, #131623) padding-box,linear-gradient(277.72deg, #C9009A -32.97%, #FC6401 55.57%, #F4F4F4 144.11%) border-box;
-                border: 1px solid transparent;
                 overflow: hidden;
-                margin: 0 1px;
                 img{
                     width: 100%;
                 }
@@ -990,9 +988,9 @@ section {
 .bottom-content{
     padding-top: 25px;
     h2{
-        font-size: 64px;
+        font-size: 54px;
         margin-bottom: 15px;
-        line-height: 64px;letter-spacing: 6px;
+        line-height: 100%;letter-spacing: 6px;
         span{
             background: rgb(234,156,104);
             background: -moz-linear-gradient(90deg, #C9009A 0.01%, #FC6401 100.01%);
@@ -1005,7 +1003,7 @@ section {
         }
     }
     p{
-        font-size: 24px;
+        font-size: 20px;
     }
     .btn-primary{
         max-width: 275px;
@@ -1219,9 +1217,9 @@ section {
     .slick-dots{
         @include justify-content(center);
     }
-    div.slick-list {
-        padding-right: 5px;
-    }
+    // div.slick-list {
+    //     padding-right: 5px;
+    // }
     .slick-arrow{
         width: 24px;
         height: 42px;
@@ -1274,7 +1272,7 @@ section {
                 font-family: $font-Abril-Fatface;
             }
             p{
-                font-size: 22px;
+                font-size: 20px;
                 text-transform: uppercase;
                 font-family: $font-Archivo;
             }
@@ -1364,13 +1362,11 @@ section {
 }
 .show-more-btn{
     font-weight: normal;
-    font-size: 24px;color: #F4F4F4;
+    font-size: 18px;color: #F4F4F4;
     text-align: center;
     margin-top: 50px;
     a{
         @include transition(0.3s, ease-in-out);
-    }
-    span{
         display: inline-block;
         vertical-align: middle;
         cursor: pointer;
@@ -1383,6 +1379,7 @@ section {
     svg{
         display: block;
         margin: auto;@include transition(0.3s, ease-in-out);
+        width: 30px;
     }
     @media (max-width:991px) {
         font-size: 16px;
@@ -1404,7 +1401,7 @@ section {
         p{
             margin: 0 0 20px;
             font-family: $font-Archivo;
-            font-size: 24px;
+            font-size: 20px;
         }
         .btn-primary{
             min-width: auto;
