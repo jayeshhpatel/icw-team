@@ -1325,6 +1325,11 @@ html .portal {
                             }
                         }
                     }
+                    .report-details-block{
+                        .link{
+                            font-size: 16px;
+                        }
+                    }
                     .time-user-name { color: #0E132A; letter-spacing: 0.39px; font-size: 13px; padding-top: 10px;
                         @include inline-flex; 
                         @include align-items(center); 
