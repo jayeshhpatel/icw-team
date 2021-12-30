@@ -555,25 +555,26 @@ html .portal {
                         overflow: auto;
                         white-space: nowrap;
                         @include flex-wrap(nowrap);
-                        .nav-link { padding: 10px 20px; }
+                        .nav-link { padding: 10px 20px; white-space: nowrap; }
                     }
                 }
-                @media (max-width: 575px) { 
-                    .nav-tabs { 
-                        .nav-link { font-size: 14px;
-                            //  padding: 10px; 
-                            }
-                    }
-                }
-                @media (max-width: 420px) { 
-                    .nav-tabs { 
-                        .nav-link { 
-                            // font-size: 12px; padding: 8px;
-                            //  max-width: 25%;
-                              white-space: nowrap;
-                            }
-                    }
-                }
+                // @media (max-width: 575px) { 
+                //     .nav-tabs { 
+                //         .nav-link { 
+                //             // font-size: 14px;
+                //             //  padding: 10px; 
+                //             }
+                //     }
+                // }
+                // @media (max-width: 420px) { 
+                //     .nav-tabs { 
+                //         .nav-link { 
+                //             // font-size: 12px; padding: 8px;
+                //             //  max-width: 25%;
+                //               white-space: nowrap;
+                //             }
+                //     }
+                // }
             }
             .project-info-block {  
                 .row {
@@ -1256,7 +1257,13 @@ html .portal {
             .card { border: 1px solid #E2E5E9; padding: 30px; @include border-radius(10px); height: 100%;
                 &.with-bg { background: #F7F8F9; }
                 .card-body { padding: 0; @include flexbox(); @include flex-direction(column);
-                    .report-by { letter-spacing: 0.39px; color: #0E132A; font-size: 13px; padding-bottom: 5px; @include inline-flex; @include align-items(center);
+                    .report-by { letter-spacing: 0.39px; color: #0E132A; font-size: 13px; padding-bottom: 5px; 
+                        @include inline-flex; 
+                        @include align-items(center);
+                        @include flex-wrap(wrap);
+                        span {
+                            white-space: nowrap;
+                        }
                         em { color: #8690A0; font-style: italic; padding-right: 5px; display: inline-block;~em{
                             padding-left: 5px;
                         } }
@@ -1295,9 +1302,17 @@ html .portal {
                             }
                         }
                     }
-                    .time-user-name { color: #0E132A; letter-spacing: 0.39px; font-size: 13px; @include inline-flex; @include align-items(center); padding-top: 10px;
-                        em { color: #8690A0; font-style: italic;padding-right: 5px; ~em{padding-left: 5px;} }
-                        strong{color: #0E132A;}
+                    .time-user-name { color: #0E132A; letter-spacing: 0.39px; font-size: 13px; padding-top: 10px;
+                        @include inline-flex; 
+                        @include align-items(center); 
+                        @include flex-wrap(wrap);
+                        span {
+                            white-space: nowrap;
+                        }
+                        em { color: #8690A0; font-style: italic;padding-right: 5px; 
+                            ~em {padding-left: 5px;} 
+                        }
+                        strong {color: #0E132A;}
                         .divider { font-style: normal; padding: 0 6px; color: #E2E5E9; }
                     }
                     hr { border-color: #E2E5E9; margin: 15px 0 25px; }
