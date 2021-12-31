@@ -168,6 +168,7 @@ p {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 18px;
+    color: #545770;
     &:last-child{
         margin-bottom: 0;
     }
@@ -665,6 +666,14 @@ section {
         max-width: 100%;
     }
 }
+.mw-770{
+    max-width: 770px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @media (max-width:767px) {
+        max-width: 100%;
+    }
+}
 // main-banner
 .main-banner{
     padding-top: 0;
@@ -683,7 +692,7 @@ section {
     }
     .banner-text{
         .sub-title{
-            color: #007AFF;
+            // color: #007AFF;
             margin-bottom: 15px;
         }
         h1{
@@ -1235,7 +1244,7 @@ section {
     h3{
         font-weight: 600;
         font-size: 24px;color: #303245;
-        margin-bottom: 35px;
+        margin-bottom: 24px;
         font-family: $font-poppins;
     }
     .image-block{
@@ -1774,7 +1783,7 @@ section {
     }
 }
 .white-section {
-    background: #FFFFFF;
+    background: $white;
     box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
 }
 .dots-list{
@@ -1821,7 +1830,6 @@ section {
         border: 1px solid #D7D8E2;
         @include border-radius(50px);
         overflow: hidden;
-        margin-bottom: 50px;
         .boder-left{
             border-left: 1px solid #D7D8E2;
         }
@@ -1866,7 +1874,7 @@ section {
         }
     }
     @media (max-width:991px) {
-        .build-inner-block{ margin-bottom: 30px;
+        .build-inner-block{
             .card-item{
                 padding: 30px 40px;
                 .img-block{
@@ -1884,7 +1892,6 @@ section {
     @media (max-width:767px) {
         .build-inner-block{
             @include border-radius(20px);
-           
             .boder-left {
                 border-top: 1px solid #D7D8E2;
                 border-left: transparent;
@@ -1911,17 +1918,53 @@ section {
     .price-card-item{
         padding: 32px;
         border: none;
-        background: #FFFFFF;
+        background: $white;
         box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
         @include border-radius(30px);
         height: 100%;
+        @include transition(0.3s, ease-in-out);
+        &:hover{
+            background-color: $purple;
+            .card-head{
+                background-color: $purple;
+                img{
+                    filter: brightness(100);
+                }
+            }
+            h2,p{
+                color: $white;
+            }
+            .check-list{
+                li{
+                    color: $white;
+                    &::before{
+                        filter: brightness(100);
+                    }
+                }
+            }
+            .card-footer{
+                .btn-primary{
+                    background-color: $white !important;
+                    color: $purple !important;
+                    border: 1px solid $white;
+                }
+            }
+        }
         .card-head{
+            margin-top: -95px;
             margin-bottom: 30px;
+            background: $white;
+            border: 3px solid $white;
+            box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
+            width: 125px;
+            height: 125px;
+            @include inline-flex;
+            @include align-items(center);
+            @include justify-content(center);
+            @include border-radius(50%);
+            @include transition(0.3s, ease-in-out);
             img{
-                margin-top: -95px;
-                width: 100%;
-                max-width: 125px;
-                @include border-radius(100%);
+                @include transition(0.3s, ease-in-out);
             }
         }
         .card-body{
@@ -1940,11 +1983,13 @@ section {
             font-size: 20px;color: #303245;
             margin-bottom: 0;
             font-family: $font-poppins;
+            @include transition(0.3s, ease-in-out);
         }
         p{
             font-weight: normal;
             font-size: 16px;color: #545770;
             margin: 30px 0 0 0;
+            @include transition(0.3s, ease-in-out);
         }
         .check-list{
             margin:30px 0 50px 0;
@@ -1955,6 +2000,7 @@ section {
                 position: relative;
                 @include flexbox();
                 @include align-items(center);
+                @include transition(0.3s, ease-in-out);
                 &::before{
                     content: "";
                     position: relative;
@@ -1965,6 +2011,7 @@ section {
                     flex: none;
                     background: url(../images/check.svg) no-repeat center;
                     background-size: contain;
+                    @include transition(0.3s, ease-in-out);
                 }
                 &:last-child{
                     margin-bottom: 0;
@@ -1979,7 +2026,6 @@ section {
                 margin-bottom: 20px;
                 img{
                     max-width: 100px;
-                    margin-top: -75px;
                 }
             }
             h2{
