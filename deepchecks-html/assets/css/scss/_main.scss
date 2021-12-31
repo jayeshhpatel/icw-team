@@ -2216,3 +2216,177 @@ section {
         }
     }
 }
+
+// with-video
+.with-video-block{
+    .main-header{
+        .header-nav-wrap{
+            &.fixed-header{
+                .header-logo{
+                    .logo-light{
+                        display: none;
+                    }
+                    .logo-dark{
+                        display: block;
+                    }
+                }
+                .menu-list{
+                    li{
+                        a{
+                            color: #303245;
+                        }
+                    }
+                }
+                @media (max-width:991px) {
+                    .sidebar-icon{
+                        span{
+                            background-color: #303245;
+                        }
+                    }
+                }
+            }
+        }
+        .header-logo{
+            .logo-dark{
+                display: none;
+            }
+        }
+        .menu-list{
+            li{
+                a{
+                    color: $white;
+                }
+            }
+        }
+        @media (max-width:991px) {
+            &.is-visible{
+                .header-logo{
+                    .logo-light{
+                        display: none;
+                    }
+                    .logo-dark{
+                        display: block;
+                    }
+                }
+            }
+            .sidebar-icon{
+                &.is-visible{
+                    span{
+                        background-color: #303245;
+                    }                    
+                }
+                span{
+                    background-color: $white;
+                }
+            }
+            .menu-list{
+                li{
+                    a{
+                        color: #303245;
+                    }
+                }
+            }
+        }
+    }
+    .with-video{
+        margin-top: -94px;
+        padding-top: 94px;
+        background-color: #1a0951;
+        color: $white;
+        min-height: 100vh;
+        @include flexbox();
+        @include align-items(center);
+        .banner-text{
+            .line-text{
+                color: $white;
+            }
+        }
+        .video-content-block{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            .video-full{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+                pointer-events: none;
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                    background-color: transparent;
+                    object-position: right top;
+                }
+            }
+        }
+        @media (max-width:1399px) {
+            min-height: 85vh;
+            .video-content-block{
+                .video-full{
+                    video{
+                        height: 85%;
+                    }
+                }
+            }
+        }
+        @media (max-width:1199px) {
+            min-height: 70vh;
+            .video-content-block{
+                .video-full{
+                    video{
+                        height: 70%;
+                    }
+                }
+            }
+        }
+        @media (max-width:991px) {
+            min-height: auto;
+            padding-top: 75px;
+            margin-top: -66px;
+            .video-content-block{
+                top: -10px;
+                .video-full{
+                    video{
+                        height: 50%;
+                    }
+                }
+            }
+        }
+        @media (max-width:767px) {
+            display: block;
+            .video-content-block{
+                top: auto;
+                position: relative;
+                .video-full{
+                    position: relative;
+                    height: auto;
+                }
+            }
+        }
+        @media (max-width:475px) {
+            .video-content-block{
+                .video-full{
+                    height: 330px;
+                    video{
+                        height: 100%;
+                        width: 150%;
+                        left: -50%;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    .with-image{
+        
+    }
+}
