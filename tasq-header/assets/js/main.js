@@ -1,12 +1,6 @@
 /*-----------------------------------------------------------------------------------*/
 /* MAIN
 /*-----------------------------------------------------------------------------------*/
-
-jQuery(function (o) {
-	o(".purple-circle-btn").hover(function () {
-		o(this).addClass("hovered")
-	})
-})
 $(document).ready(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
   
@@ -24,5 +18,15 @@ $(document).ready(function () {
         $('.main-header').removeClass('fixed-header');
     }
   });
-
+  $(".menu-item-has-children .arrow-down").click(function () {
+    if ($(this).closest(".menu-item-has-children").hasClass("open")) {
+        $(this).closest(".menu-item-has-children").removeClass("open");
+        $(this).closest(".menu-item-has-children").find(".sub-menu").slideUp();
+    } else {
+        $(".menu-item-has-children").removeClass("open");
+        $(".menu-item-has-children").find(".sub-menu").slideUp();
+        $(this).closest(".menu-item-has-children").addClass("open");
+        $(this).closest(".menu-item-has-children").find(".sub-menu").slideDown();
+    }
+  })
 });
