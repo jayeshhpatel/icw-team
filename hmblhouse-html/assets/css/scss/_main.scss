@@ -605,11 +605,11 @@ section {
                 min-width: 100%;
             }
         }
-        @media (max-width:991px) {
-            padding-bottom: 30px;
-        }
-    }
        
+    }
+    @media (max-width:991px) {
+        padding-bottom: 30px;
+    }
 }
 .gallery-section{
     .gallery-inner-block{
