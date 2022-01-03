@@ -650,6 +650,21 @@ section {
                         background-color: rgba(0, 0, 0, 0.35);
                     }
                 }
+                .title-card-back{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    padding: 10px;
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include align-items(center);
+                    @include justify-content(center);
+                    p{
+                        margin: 10px 0 0 ;
+                    }
+                }
                 h3 {  
                     color: #FFFFFF;
                     font-family: "Archivo", Sans-serif;
@@ -657,14 +672,7 @@ section {
                     font-weight: 700;
                     margin-bottom: 0;
                     word-break: break-word;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    @include flexbox();
-                    @include align-items(center);
-                    @include justify-content(center);
+                    width: 100%;
                 }
             }
             .flip-card-back {
@@ -684,13 +692,33 @@ section {
             }
         }
     }
+    @media (min-width:992px) {
+        .gallery-inner-block{
+            .flip-card{
+                .title-card-back{
+                    p{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
     @media (max-width:991px) {
         .gallery-inner-block{
             grid-template-columns: repeat(2, 1fr);
             .flip-card{
+                &:hover{
+                    .flip-card-inner{
+                        @include transform(rotateY(0));
+                    }
+                }
                 &.grid-full{
                     grid-column-start: 1;
                     grid-column-end: 3;
+                }
+                
+                .flip-card-back{
+                    display: none !important;
                 }
             }
         }
@@ -724,7 +752,6 @@ section {
     }
 }
 .logo-section{
-    
     .logo-inner-block{
         display: -ms-grid;
         display: grid;
