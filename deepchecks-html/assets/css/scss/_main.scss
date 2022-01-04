@@ -2419,6 +2419,14 @@ section {
             .btn-primary{
                 background-color: #BEFB60;
                 color: #303245 !important;
+                &:hover,&:focus{
+                   background-color: #ceee9e !important;
+                }
+            }
+            .btn-secondary{
+                &:hover,&:focus{
+                    border: 1px solid $white !important;
+                }
             }
         }
     }
