@@ -47,9 +47,10 @@
                                 <a href="#">Ecosystem</a>
                                 <em class="arrow-down"></em>
                                 <ul class="sub-menu">
+                                    <li><a href="#">SOLIS</a></li>
                                     <li><a href="#">SOLIS LABS</a></li>
+                                    <li><a href="#">SOLIS STUDIOS</a></li>
                                     <li><a href="#">SOLIS MARKET</a></li>
-                                    <li><a href="#">HMBL HOUSE</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -62,17 +63,25 @@
         </header>
         <div class="bg-overly"></div>
 
+        <!-- // background-video-->
+        <div class="bg-video">
+            <div class="embed-container ratio ratio-16x9">
+                <video class="embed-video" autoplay loop muted preload controlsList="nodownload">
+                    <source src="assets/video/bg-video.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
         <main class="main-content-wrapper">
             <section class="video-section">
                 <div class="vimeo-wrapper">
-                    <iframe src="https://player.vimeo.com/video/552482371?controls=0&autoplay=1&muted=1&title=0&byline=0&portrait=0&sidedock=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+                    <video class="embed-video" autoplay loop muted preload controlsList="nodownload">
+                        <source src="assets/video/HMBL.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </section>
             <section class="gallery-section" id="services">
                 <div class="container">
-                    <div class="main-title">
-                        <h2>Services</h2>
-                    </div>
                     <div class="gallery-inner-block">
                         <div class="flip-card grid-full">
                             <div class="flip-card-inner">
@@ -159,9 +168,6 @@
             </section>
             <section class="logo-section" id="work">
                 <div class="container">
-                    <div class="main-title">
-                        <h2>Work</h2>
-                    </div>
                     <div class="logo-inner-block">
                         <div class="logo-item">
                            <img src="assets/images/logo/taco-ball.png" alt=""/>
@@ -239,11 +245,6 @@
                 </div>
             </section>
             <section class="product-section" id="merch">
-                <div class="container">
-                    <div class="main-title">
-                        <h2>Merch</h2>
-                    </div>
-                </div>
                 <div class="product-slider">
                     <div class="product-item">
                         <img src="assets/images/vintage-hoodie-large.png" alt="" class="product-img"/>
@@ -320,35 +321,22 @@
             <div class="container">
                 <div class="footer-link-section">
                     <div class="row">
-                        <div class="col-sm-6 col-md-3 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="col-sm-6">
                             <div class="footer-logo">
                                 <img src="assets/images/logo.png" alt="HMBLHouse"/>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
-                            <h2>SUPPORT</h2>
-                            <ul class="footer-links">
-                                <li><a href="#!">Terms and conditions</a></li>
-                                <li><a href="#!">Privacy Policy</a></li>
-                                <li><a href="#!">Cookie Policy</a></li>
-                                <li><a href="#!">Contact us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-5 wow fadeInUp" data-wow-delay="0.8s">
-                            <h2>CONNECT</h2>
-                            <div class="social-icon">
-                                <a href="#!" class="social-item">
-                                    <img src="assets/images/twitter.svg" alt="twitter"/> 
-                                    <div class="inner-text">
-                                        Follow us on Twitter<br/> <span>@solis_io</span>
-                                    </div>
-                                </a>
-                                <a href="#!" class="social-item">
-                                    <img src="assets/images/twitter.svg" alt="twitter"/> 
-                                    <div class="inner-text">
-                                        Join the conversation<br/> <span>@SolisLabs</span>
-                                    </div>
-                                </a>
+                        <div class="col-sm-6 text-sm-end">
+                            <div class="footer-links-block">
+                                <h2>CONNECT</h2>
+                                <div class="social-icon">
+                                    <a href="#!" class="social-item">
+                                        <img src="assets/images/instagram.svg" alt="instagram"/> 
+                                        <div class="inner-text">
+                                            Follow us on Instagram<br/> <span>Instagram</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
