@@ -2386,7 +2386,61 @@ section {
             }
         }
     }
-    .with-image{
-        
+}
+.validation-card{
+    background: #9D60FB;
+    @include border-radius(10px);
+    padding: 35px;
+    background-image: url(../images/logo-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    .main-title{
+        margin-bottom: 0;
+        color: $white;
+        .sub-title{
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: $white;
+        }
+        h2{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .validation-btn{
+            @include flexbox();
+            @include align-items(center);
+            a{
+                margin-right: 12px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            .btn-primary{
+                background-color: #BEFB60;
+                color: #303245 !important;
+            }
+        }
+    }
+    @media (max-width:767px) {
+        padding: 35px 20px;
+        @include border-radius(0);
+        margin: 0 -20px;
+        .main-title{
+            .sub-title{
+                font-size: 12px;
+            }
+            h2{
+                br{
+                    display: none;
+                }
+            }
+            .validation-btn{
+                a{
+                    min-width: auto;
+                    padding: 0 20px;
+                }
+            }
+        }
     }
 }
