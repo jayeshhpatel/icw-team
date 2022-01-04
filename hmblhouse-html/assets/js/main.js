@@ -35,7 +35,7 @@ $(document).ready(function () {
     }
   })
   $('.product-slider').slick({
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: true,
