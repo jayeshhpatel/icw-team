@@ -291,6 +291,11 @@ section {
         font-size: 54px !important;
     }
 }
+.font-md{
+    @media (min-width:992px) {
+        font-size: 36px !important;
+    }
+}
 .container{
     max-width: 1455px;
 }
@@ -880,6 +885,103 @@ section {
                 }
             }
         }
+        .top-bar-block{
+            background: linear-gradient(90deg, #C9009A 0.01%, #FC6401 100.01%);
+            padding: 30px;
+            margin: -30px -30px 50px;
+        }
+        .price-inner-block{
+            margin-top: 50px;
+            h3{
+                font-weight: 900;
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-family: $font-Saira;
+                span{
+                    background: rgb(234,156,104);
+                    background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    display: inline-block;
+                }                
+            }
+            .dec-text{
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            .history-block{
+                margin-top: 30px;
+                max-width: 335px;border-radius: 10px;border: 1px solid #EB3636;
+                padding: 20px;
+                overflow-y: auto;
+                max-height: 280px;
+                &::-webkit-scrollbar-thumb {
+                    background-color: $white;
+                    @include border-radius(100px);
+                }
+                &::-webkit-scrollbar {
+                    width: 3px;
+                    background-color: transparent;
+                }
+                h4{
+                    font-weight: normal;
+                    font-size: 28px;color: #F4F4F4;
+                    font-family: $font-Aldrich;
+                    margin-bottom: 20px;
+                }
+                .dec-text{
+                    margin-bottom: 50px;
+                    p{
+                        font-size: 18px;
+                        @include flexbox();
+                        @include align-items(center);
+                    }
+                    span{
+                        width: 50%;
+                        display: inline-block;
+                    }
+                }
+                .price-text{
+                    @include flexbox();
+                    @include align-items(center);
+                    p{
+                        background: rgb(234,156,104);
+                        background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                        background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                        background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        display: inline-block;
+                        font-size: 24px;
+                        margin-bottom: 0;
+                    }
+                    span{
+                        color: #F4F4F4;
+                        font-size: 14px;
+                        margin-left: 25px;
+                    }
+                }
+            }
+            @media (max-width:767px) {
+                .history-block{
+                    h4{
+                        font-size: 18px;
+                    }
+                    .price-text,
+                    .dec-text{
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
     }
     @media (max-width:1199px) {
         .banner-content-block{
@@ -1453,5 +1555,76 @@ section {
 }
 // individual-block
 .individual-block{
-    
+    .price-buynow-btn{
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        margin-top: 35px;
+        a{
+            max-width: 162px;
+            width: 100%;
+            min-width: auto;
+        }
+        .current-price{
+            @include flexbox();
+            @include align-items(center);width: 80%;
+            h3{
+                font-weight: 900;
+                font-size: 36px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                font-family:$font-Saira;
+                margin:0 0 0 8px;
+            }
+        }
+        .right-block{
+            width: 20%;
+        }
+    }
+    .timer-block{
+        text-align: right;
+        span{
+            max-width: 162px;
+            padding: 10px 15px;
+            display: inline-block;
+            width: 100%;color: #FFFFFF;font-size: 18px;
+            text-align: center;
+        }
+    }
+    @media (max-width:767px) {
+        .price-buynow-btn{
+            .current-price{
+                h3{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    @media (max-width:575px) {
+        .price-buynow-btn{
+            display: block;
+            a{
+                max-width: 115px;
+            }
+            .current-price{
+            width: 100%;@include justify-content(space-between);
+                h3{
+                    font-size: 22px;
+                }
+            }
+            .right-block{
+                @include justify-content(space-between);
+                @include flexbox();
+                @include align-items(center);
+                margin-top: 15px;   
+                width: 100%;             
+            }
+        }
+        .timer-block{
+            span{
+                font-size: 14px;
+                max-width: initial;
+            }
+        }
+    }
 }
