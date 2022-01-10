@@ -1,0 +1,359 @@
+@media (max-width:1599px) {
+	.navigation ul li { margin: 0; }
+}
+@media (max-width:1365px) {
+    .container { max-width: 1140px; }
+    h1 { font-size: 32px; line-height: 40px; }
+    .navigation ul li a { padding: 5px; }
+    .banner-content { font-size: 18px; line-height: 24px; }
+    .banner-content p { padding-bottom: 15px; }
+    .banner-content .button,.banner-content .button.btn-white { padding: 15px; width: 165px; margin: 0 8px; } 
+    .welcome-section { padding: 40px 0 50px; }
+    .blog-section { padding: 70px 0; } 
+    .education-program-section { padding: 60px 0 40px; }
+    .cta-section { padding: 40px 0; font-size: 18px; line-height: 28px; }
+    .footer-links ul li { max-width: 150px; } 
+	.footer-links ul li:last-child { max-width: 90px; }
+    .footer-slider-section .owl-nav button.owl-prev { left: -35px; }
+    .footer-slider-section .owl-nav button.owl-next { right: -35px; }
+    
+    .advocary-title img { max-height: 50px; }
+    .advocary-title h2 { padding-top: 25px; font-size: 22px; line-height: 30px; }
+    
+    .banner-signle-content date, .meeting-block date { margin-bottom: 20px; }
+    .banner-signle-content .button, .meeting-block .button { margin-top: 0; }
+	
+	.about-banner-section .banner-signle-content { max-width: 1100px; }
+	.about-banner-section .banner-signle-content .row { padding-top: 80px; }
+	.about-banner-section .banner-signle-content .banner-about-info { font-size: 22px; line-height: 28px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number span { top: -20px; font-size: 22px; line-height: 30px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number { font-size: 52px; line-height: 60px; }
+	.benifits-bottom { padding: 50px 70px 30px; }
+	.about-contact-section { padding: 50px 0 40px; }
+	.frieght-brokerage { padding: 0 30px 0 0; }
+
+} 
+@media (max-width:1199px) {
+    .container { max-width: 960px; }
+    h3 { font-size: 20px; line-height: 28px; }
+    .logo { margin-left: 0; }
+    .header-right { padding-right: 0; }
+	.navigation { padding-right: 30px; } 
+	.navigation ul { padding: 15px 0 10px; }
+	ul.sub-menu:before { top: 10px; }
+	.navigation ul li a { font-size: 12px; } 
+	.navigation ul li.open > ul.sub-menu, .navigation ul li:hover > ul.sub-menu { padding-top: 15px; }
+	ul.sub-menu li a { padding: 5px !important; }
+	.search-section .search-bar { margin-top: 2px; }
+    .banner-section .owl-item .item img { min-height: 450px; }
+    .blog-section { padding: 50px 0; }
+    .blog-section .blog-image { margin-bottom: 20px; }
+    .education-program-section { padding: 50px 0 30px; }
+    .partner-section { padding: 40px 0 30px; }
+    .footer-slider-section { padding: 50px 0; }
+    .footer-slider { padding: 0 20px; }
+    .footer-slider-section .owl-nav button.owl-prev { left: -10px; }
+    .footer-slider-section .owl-nav button.owl-next { right: -10px; }
+    .site-footer {  padding: 50px 0 30px; }
+    .footer-links { padding-left: 0px; }
+    .footer-links ul li { max-width: 130px; } 
+    .footer-links ul li:last-child { max-width: 80px; }
+	.footer-links ul li a { font-size: 13px; }
+    
+    .advocary-landing-block img { min-height: 300px; }
+    .advocary-title img { min-height: 100%; }
+    .advocary-title { max-width: 300px; width: 100%; }
+    
+    .content-section { padding: 65px 0; }
+    .content-block { padding-right: 0; }
+    .filter-result { height: 200px; padding: 30px; }
+    .filter-result h5 { padding: 20px 0 0 0; }
+    .advocary-sidebar-image { margin-bottom: 30px; }
+    .content-sidebar .key-issue { margin-bottom: 40px; }
+
+    .banner-signle-content date, .meeting-block date { font-size: 20px; margin-bottom: 10px; }
+    .banner-signle-content,.meeting-block-content { font-size: 16px; line-height: 24px; }
+    .banner-signle-content .button, .meeting-block .button { padding: 15px 30px; }
+
+    .seminars-webinars-section { padding: 50px 0 70px; }
+    .seminars-webinars-title:before { bottom: 10px; }
+    .seminars-webinars-block h5 { padding-bottom: 10px; }
+    
+    .ctb-pricing { padding: 50px 0 30px; }
+    .education-form { padding: 50px 0 25px; }
+
+
+	.about-banner-section .banner-signle-content .row { padding-top: 70px; }
+	.about-banner-section .banner-signle-content { max-width: 1025px; }
+	.about-banner-section .banner-signle-content .banner-about-info { font-size: 18px; line-height: 24px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number span { top: -20px; font-size: 18px; line-height: 22px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number {  font-size: 42px; line-height: 40px; }
+
+	.about-benifits-section { padding: 40px 0 50px; }
+	.about-benifits-section .benifits-top { padding-top: 20px; }
+	.benifits-bottom {  padding: 30px; }
+	.benifits-bottom ul { margin: 10px 0 0;  }
+	.benifits-bottom .benifits-list p { margin: 10px 0;}
+	.frieght-brokerage { padding: 0 20px 0 0; }
+	
+	.intro-section { padding: 50px 0; }
+	.about-the-industry { padding: 35px 0 50px; }
+	.content-block h1 { padding-bottom: 5px; }
+
+	.banner-divider { height: 10px; line-height: 10px; }
+	.why-join-tia { padding: 50px 0 40px; }
+
+
+	.content-block.commitee-block { padding: 50px 0 30px; }
+	.commitee-content { padding: 0 30px 10px 15px; }
+	
+	.welcome-block .welcome-title { font-size: 16px; line-height: 22px; }
+    .footer-social {padding-left: 0%;}
+
+
+
+
+}
+
+@media (max-width:991px) { 
+    .container { max-width: 720px; }
+    body  { font-size: 14px; line-height: 22px; }
+    p { margin: 0 0 20px; }
+    .button { font-size: 13px; line-height: 16px; padding: 13px 20px; }
+	.header-buttons .button { padding: 12px 16px; }
+	.header-buttons .button.btn-blue { padding: 12px 16px; }
+	h1 { font-size: 30px; line-height: 34px; }
+    h2 { font-size: 24px; line-height: 30px; }
+    h5 { font-size: 16px; line-height: 20px; }
+    .logo { max-width: 200px; }
+    .navigation { display: none; }
+    .navigation-mobile { display: block; }
+	.navigation.top-navigation { display: block; padding-right: 20px; }
+	.navigation.top-navigation.hidden-desktop { display: none; }
+    .header-right { padding-top: 10px; }
+	.header-right .header-social { padding-right: 20px; }
+    .header-buttons .button { padding: 12px 16px; margin-left: 5px; }
+    .header-social ul { margin: 0 5px 0 0; }
+	.search-form-top { top: calc(100% + 16px); }
+	.navigation ul { padding: 15px 0 10px; }    
+    .navigation ul li.open > ul.sub-menu, .navigation ul li:hover > ul.sub-menu { padding-top: 20px; }
+    ul.sub-menu:before { top: 10px; }
+    .banner-section .owl-item .item img {  min-height: 400px; }
+    .banner-content h1 { padding-bottom: 0; }
+    .banner-content p {  padding-bottom: 0; }
+    .banner-content .button, .banner-content .button.btn-white { padding: 15px; width: 175px; margin: 0 5px; }
+    .welcome-section { padding: 40px 0; }
+    .welcome-block {  margin-bottom: 40px; }
+    .intro-block { max-width: 250px; } 
+    .blog-section .container { padding: 0 10px; }
+    .blog-section .container .row {  margin: 0 -10px; }
+    .blog-section .container .row .col-md-4 {  padding: 0 10px; }
+    .education-program-section {  padding: 40px 0 20px; }
+    .education-program-title { padding-bottom: 40px; }
+    .education-program-title:before { bottom: 20px; }
+    .cta-block { max-width: 100%; text-align: center; }
+    .cta-text { font-size: 16px; line-height: 26px; padding-bottom: 15px; padding-right: 0; }
+    .site-footer { padding: 30px 0; }
+	.footer-info {  padding: 0; }
+	.footer-logo { margin: 0 auto; }
+    .footer-links { padding: 0 20px; }
+    
+    .banner-single img { min-height: 350px; }
+    .banner-signle-content { max-width: 700px; }
+    .banner-signle-content date, .meeting-block date { font-size: 18px; }
+        
+    .education-banner.banner-section .owl-item .item img { min-height: 350px; }
+    .education-banner .banner-signle-content date { margin-bottom: 10px; } 
+    .education-banner .banner-signle-content h2 { padding-bottom: 10px; }
+    .education-banner .banner-signle-content .button { margin-top: 0; }
+    .seminars-webinars-section { padding: 40px 0 50px; }
+    .seminars-webinars-block h5 { padding-bottom: 0; }
+    .pricing-sidebar {  padding-right: 0; }
+    .pricing-sidebar h3 { padding-right: 0; margin: 0; }
+    .education-pricing ul { padding: 0 0 25px; } 
+    .education-pricing ul li { font-size: 20px; padding: 15px; }
+ 
+
+    .education-section { padding: 50px 0; }
+    .ctb-pricing {  padding: 30px 0 20px; }
+    .ctb-pricing-table .table th { padding: 10px 0; font-size: 16px; }
+    .ctb-pricing-table .table tr td { padding: 15px; font-size: 20px; }
+    .accodiant-block .card-body { padding: 15px 15px 15px 25px; }
+    .education-form h3 { font-size: 18px; padding-bottom: 0; }
+    .education-form input.form-control { padding: 8px 12px; }
+    .education-form input[type="submit"] { padding: 12px 30px; }
+
+
+	.about-banner-section .banner-signle-content h1 { font-size: 28px; }
+	.about-banner-section .banner-signle-content { max-width: 760px; }
+	.about-banner-section .banner-signle-content .row { padding-top: 50px; }
+	.about-banner-section .banner-signle-content .banner-about-info { font-size: 16px; line-height: 22px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number { font-size: 36px; line-height: 38px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number span { top: -17px; font-size: 16px;line-height: 20px; }
+	.benifits-bottom { padding: 10px 0 30px; }
+	.benifits-list h2 { font-size: 22px; }
+	.benifits-bottom ul li { font-size: 14px; line-height: 20px; }
+	
+	.tia-board .table tr th,.tia-board .table tr td { font-size: 14px; line-height: 20px; width: 100% !important;  white-space: nowrap; }
+	.about-faq-height {  height: 30px; line-height: 30px; }
+	.accodiant-block { margin: 10px 0 0 0; }
+	.wp-block-column { -ms-flex-preferred-size: 100%; flex-basis: 100%; margin: 0px !important; }
+	.editor-section-block { padding: 20px 0 50px; }
+    .footer-social {padding-left: 0;text-align: center;}
+	.commitee-banner img { height: 350px; }
+	/*.welcome-section .col-12 { -webkit-box-flex: 0; -ms-flex: 0 0 33.33%; flex: 0 0 33.33%; max-width: 33.33%; }*/
+	.footer-links ul li {max-width: 180px; margin: 0;}
+
+	
+}
+@media (max-width:767px) { 
+    .container { max-width: 100%; }   
+    h1 { font-size: 26px; line-height: 32px; }
+    h2 { font-size: 22px; line-height: 28px; }
+
+
+    .banner-content { font-size: 16px; line-height: 22px; padding: 0 30px; }
+    .banner-content .button, .banner-content .button.btn-white { margin: 5px; }
+    .banner-section .owl-nav button,.footer-slider-section .owl-nav button { display: none; }
+    .blog-section { padding: 50px 0 20px; }
+    .blog-section .container { padding: 0 20px; }
+    .blog-section .container .row {  margin: 0 -20px; }
+    .blog-section .container .row .col-md-4 {  padding: 0 20px; }
+    .blog-block { margin: 0 0 30px; }
+	.header-main { position: relative; padding: 15px 0; }
+    .humberg-icon { width: 20px; height: 25px; position: relative; cursor: pointer; z-index: 4; position: absolute; top: 50%; right: 30px; }
+    .menu-icon { display: block; width: 100%; height: 2px; background: #000; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; position: absolute; top: 50%; margin-top: -2px; }
+    .menu-icon:before { content: ""; position: absolute; top: -8px; width: 100%; height: 2px; background: #000; -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s linear; transition: top 0.2s linear 0.2s, -webkit-transform 0.2s linear; transition: transform 0.2s linear, top 0.2s linear 0.2s; transition: transform 0.2s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s linear; -webkit-transform: rotate(0deg); transform: rotate(0deg); left: 0px; }
+    .menu-icon:after { content: ""; position: absolute; top: 8px; width: 100%; height: 2px; background: #000; -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s linear; transition: top 0.2s linear 0.2s, -webkit-transform 0.2s linear;   transition: transform 0.2s linear, top 0.2s linear 0.2s; transition: transform 0.2s linear, top 0.2s linear 0.2s, -webkit-transform 0.2s linear; -webkit-transform: rotate(0deg); transform: rotate(0deg); left: 0px; }
+    .menu-open .menu-icon:before, .menu-open .menu-icon:after { top: 0; -webkit-transition: all 0.2s linear, -webkit-transform 0.2s linear 0.2s; transition: all 0.2s linear, -webkit-transform 0.2s linear 0.2s; transition: all 0.2s linear, transform 0.2s linear 0.2s; transition: all 0.2s linear, transform 0.2s linear 0.2s, -webkit-transform 0.2s linear 0.2s; }
+    .menu-open .menu-icon { background: transparent; }
+    .menu-open .menu-icon:before { -webkit-transform: rotate(55deg); transform: rotate(55deg); }
+    .menu-open .menu-icon:after { -webkit-transform: rotate(-55deg); transform: rotate(-55deg); }
+    .menu-open .header-right { right: 0; -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7); box-shadow: 0px 0px 10px rgba(0,0,0,0.7); }
+    .site { position: relative; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; left: 0px; }
+    .menu-open .site { left: -270px; }
+    
+    .navigation.navigation-mobile { display: none; }
+    .navigation { display: block; }
+    .header-right {position: fixed; right: -270px; background: #08213f; top: 0; width: 270px; -webkit-transition: all 0.2s linear;   transition: all 0.2s linear; height: 100vh; overflow: auto; z-index: 3; padding: 50px 0; }
+    .menu-open .header-right { right: 0; -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7); box-shadow: 0px 0px 10px rgba(0,0,0,0.7); }
+        
+    .header-main-top.hidden-mobile  { display: none; }
+    .header-main-top.visible-mobile  { display: block; }
+    .navigation ul {  padding: 0; text-align: left; }
+    .navigation ul li { display: block; }
+    .navigation ul li a { padding: 7px 20px; color: #FFF; }
+    .navigation ul li.menu-item-has-children > a:after { content: ""; border: solid #fff;  border-width: 0 2px 2px 0; display: inline-block; padding: 4px; transform: rotate(45deg); -webkit-transform: rotate(45deg); position: relative; vertical-align: top; margin-left: 10px; }
+    .navigation ul li.open > ul.sub-menu, .navigation ul li:hover > ul.sub-menu { position: relative; top: 0; left: 0; width: 100%;    background-color: transparent; padding: 0; }
+    ul.sub-menu:before { content: none; }
+    ul.sub-menu li a { padding: 7px 20px !important; }
+	
+	ul.sub-menu li:hover > ul.sub-menu, ul.sub-menu li.open > ul.sub-menu { right: 0; left: auto;padding-top: 10px; }
+	ul.sub-menu li:last-child:hover > ul.sub-menu, ul.sub-menu li:last-child.open > ul.sub-menu { right: 0; }
+	
+	
+    .header-buttons { text-align: center; padding: 20px; }
+    .header-buttons .button { display: block; margin: 0 0 10px; }
+    .header-social ul { margin: 20px 0 0 0; text-align: center; }
+    .header-social ul li { margin: 0 10px; }
+	
+	.footer-links { text-align: center; }
+	.footer-links ul li,.footer-links ul li:last-child { max-width: 45%; vertical-align: top; margin: 0 0 20px 0; text-align: center; }
+    
+    .banner-single img { min-height: 250px; }
+    .content-section { padding: 45px 0 20px; }
+    .content-sidebar { margin: 30px 0 0 0; }
+    .content-sidebar .key-issue,.advocary-sidebar-image { text-align: center; margin-bottom: 20px; }
+    .sidebar-text-block { padding-bottom: 10px; } 
+
+    
+    .advocary-detail-section .banner-single img { min-height: 350px; }
+    .banner-signle-content date, .meeting-block date { font-size: 16px; }
+    .banner-signle-content h2, .meeting-block h2 { padding-bottom: 0; }
+    .banner-signle-content, .meeting-block-content {  font-size: 14px; line-height: 22px; }
+    .banner-signle-content .button, .meeting-block .button { padding: 13px 20px; }
+
+    .education-section { padding: 35px 0; }
+    .accodiant-block .card-header { padding: 10px 10px 10px 50px; }
+    .accodiant-block .card-header button.btn-link:before { width: 35px; }
+    .accodiant-block .card-header button.btn-link { font-size: 15px; }
+    .education-form { padding: 30px 0 10px; }
+
+    .about-banner-section .banner-signle-content {  max-width: 100%; }
+ 	.about-banner-section .banner-signle-content .row { padding-top: 30px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number { font-size: 22px; line-height: 24px; padding-bottom: 5px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number span { top: -17px; font-size: 14px; line-height: 18px; }
+	.about-banner-section .banner-signle-content .banner-about-info {  font-size: 14px;line-height: 20px; }
+	.about-banner-section .banner-signle-content .banner-about-info p { margin: 0; }
+	.benifits-top .benifits-block h5 { padding: 10px 0; }
+	.benifits-bottom .benifits-list { margin: 0 0 10px; }
+	.benifits-list h2 { font-size: 20px; }
+	
+	.tia-board .table tr th, .tia-board .table tr td { white-space: nowrap; }
+	.footer-links {  text-align: left; }
+	.frieght-brokerage { padding: 0 20px 10px; }
+
+	.about-the-industry {  padding: 25px 0 40px; }
+	.content-block h1 { padding-bottom: 0; }
+	.banner-signle-content h1, .meeting-block h1 { padding-bottom: 0;     font-size: 20px;
+    line-height: 22px;}
+	.banner-divider {  height: 0;  line-height: 0; }
+	
+	.why-join-tia { padding: 30px 0 20px; }
+	
+	.commitee-banner img { height: 250px; }
+	.commitee-content { padding: 0 20px; }
+
+/*27-02-2019*/
+.table-section{padding: 50px 0 30px;}
+
+.table-section .table thead th{font-size: 14px; line-height: 1.4; }
+.table-section .table td{font-size: 16px; line-height: 23px; }
+.table-section .table ul{padding: 15px 0 15px 15px; }
+.table-section .table ul li{font-size: 14px; line-height: 1.4; } 
+.table-section .table ul ul{padding: 0 0 15px 15px;}
+	
+	.ac-block .ac-content,.ac-block .ac-logo-image { float: none; width: 100%; }
+	.ac-block .ac-logo-image { margin: 0 0 20px; }
+	
+	/*.welcome-section .col-12 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; }*/
+	.search-section { position: relative; right: 0; top: 0; -webkit-transform: translateY(0%); transform: translateY(0%); z-index: 11; width: 100%; }
+	.search-section .search-bar { display: none; }
+	.search-form-top { display: block !important;position: relative;top: 0;right: 0;width: 100%;padding-left: 40px;background: transparent;margin-top: 10px; }
+	.footer-slider { padding: 0; text-align: center; }
+	.pac-footer-section { padding: 0px 0 30px; }
+
+	.navigation.top-navigation.hidden-desktop  { display: block; }
+	
+	.about-page .row .col-content {padding-left: 0;}
+	.about-page .row.row-reverse .col-content {text-align: left;padding-right: 0;}
+	.about-page .col-img{margin-bottom: 30px;}
+	.sub-heading {font-size: 18px;line-height: 26px;}
+	.playpause {width: 80px;height: 50px;left: 10px;top: 10px;}
+	.playpause:before {border-width: 7px 0px 7px 12px; margin-left: -6px; border-radius: 6px;}
+	.video-col{margin-bottom: 30px;}
+	
+	
+    
+}
+@media (max-width:568px) {  
+    .footer-links ul li,.footer-links ul li:last-child { max-width: 100%; text-align: center; padding: 0 0 15px; }
+    .footer-links ul.sub-menu li { padding: 0; }
+    .filter-form select.custom-select { width: 250px; }
+	.banner-signle-content .col-sm-3 { max-width: 50%; }
+	.about-banner-section .banner-signle-content h1 { font-size: 20px; line-height: 22px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number span {  top: -15px;  font-size: 12px; line-height: 16px; }
+	.about-banner-section .banner-signle-content .banner-about-info { font-size: 13px; line-height: 18px; margin: 0 0 10px; }
+	.about-benifits-section .benifits-top { padding-top: 10px; }
+	.about-benifits-section .benifits-top .benifits-block { margin: 0 0 10px; }
+	.about-benifits-section { text-align: center; }
+	/*.welcome-section .col-12 { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }*/
+	
+}
+@media (max-width:320px) {  
+	.about-banner-section .banner-signle-content h1 { font-size: 16px; line-height: 20px; }
+	.about-banner-section .banner-signle-content .banner-about-info .number { font-size: 20px; line-height: 22px; }
+	.about-banner-section .banner-signle-content .row {  padding-top: 20px; }
+
+
+}
