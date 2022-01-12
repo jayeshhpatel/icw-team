@@ -14,14 +14,19 @@ $(document).ready(function () {
         dots:false,
         responsive:{
             0:{
-                items:1
+                items:1,
+                dots:true,
+                nav:false
             },
             460:{
-                items:2
+                items:2,
+                dots:true,
+                nav:false
             },
             992:{
                 items:3,
-                nav:true
+                nav:true,
+                dots:false,
             }
         }   
     });

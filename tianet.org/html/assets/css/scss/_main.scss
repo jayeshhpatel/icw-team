@@ -51,6 +51,9 @@ body {
 .site-marketplace{
     color: #787878;font-family: $bodyfont;
     font-weight: 500;
+    position: relative;
+    left: 0;
+    @include transition(0.3s, ease-in-out);
 ul {
     margin: 0;
     padding: 0;
@@ -155,6 +158,25 @@ h6 {
         background-color:#a1d03d;
     }
 }
+.blue-btn{
+    background-color: #175D9E;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 2px 15px;
+    min-height: 30px;
+    min-width: 130px;
+    @include inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include border-radius(5px);
+    @include transition(0.3s, ease-in-out);
+    &:hover,&:focus{
+        background-color:#124270;
+        color: #ffffff !important;
+    }
+}
 .orange-btn{
     background-color: #D75F03;
     border: none;
@@ -169,15 +191,20 @@ h6 {
 .owl-carousel{
     .owl-dots{
         text-align: center;@include flexbox();@include justify-content(center);
-        margin-bottom: 15px;
+        margin-top: 20px !important;
         .owl-dot{
+            span{
             width: 8px;
             height: 8px;
             border-radius: 8px;
             margin: 0 5px;
             background-color: #9c9c9c;
+            display: block;
+            }
             &.active{
-                background-color: #0091B9;
+                span{
+                    background-color: #0091B9;
+                }
             }
         }
     }
@@ -205,6 +232,18 @@ h6 {
                 font-size: 50px;
                 line-height: 100%;
                 background-color: transparent !important;
+            }
+        }
+        @media (max-width:991px) {
+            button{
+                &.owl-prev{
+                    left: 10px;
+                    font-size: 40px;
+                }
+                &.owl-next{
+                    right: 10px;
+                    font-size: 40px;
+                }
             }
         }
     }
@@ -399,6 +438,11 @@ h6 {
             color: #ffffff;
             font-size: 20px;
             font-weight: 600;
+        }
+        .feature-slider{
+            .owl-dots{
+                margin-bottom: 25px;
+            }
         }
         .feature-item{
             img{
@@ -640,19 +684,57 @@ h6 {
     padding: 25px 0;
     margin: 25px 0;
 }
-.tab-block{
-    .title{
-        background-color: #85AC31;
-        padding: 25px 0;
-        text-align: center;
-        margin-bottom: 30px;
+.green-bg-title{
+    background-color: #85AC31;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    h2{
+        color: #ffffff;
+        font-weight: 300;
+    }
+    @media(max-width:767px){
+        padding: 15px 0;
         h2{
-            color: #ffffff;
-            font-weight: 400;
+            font-size: 20px;
         }
     }
+}
+.blue-bg-title{
+    background-color: #0090B9;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    h2{
+        color: #ffffff;
+        font-weight: 300;
+    }
+    @media(max-width:767px){
+        padding: 15px 0;
+        h2{
+            font-size: 20px;
+        }
+    }
+}
+.gray-bg-title{
+    background-color: #BCBDC0;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    h2{
+        color: #ffffff;
+        font-weight: 300;
+    }
+    @media(max-width:767px){
+        padding: 15px 0;
+        h2{
+            font-size: 20px;
+        }
+    }
+}
+.tab-block{
     .tab-wrapper{
-        ul{
+        .nav{
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-gap: 20px;
@@ -683,27 +765,330 @@ h6 {
                 color: #0A2F5B;
                 font-weight: 700;
                 font-size: 28px;
-                margin-bottom: 20px;
+                margin-bottom: 50px;
                 text-align: center;
             }
-            .card{
-                .card-body{
-                    .card-title{
-                        font-size: 24px;
-                        font-weight: 700;color: #0A2F5B;
+            
+            .view-link{
+                margin-top: 50px;
+                text-align: center;
+                a{
+                    color: #175D9E;
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 15px;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
                     }
-                    .sub-name{
-                        font-style: italic;
-                        display: block;
-                        margin-bottom: 25px;
-                        font-size: 15px;
+                }
+            }
+            .perspectives-content{
+                .image-block{
+                    text-align: right;
+                }
+                .card-content{
+                    h4{
+                        color: #0091B9;
+                        font-weight: 700;
+                        font-size: 20px;
+                        margin-bottom: 5px;
                     }
-                    .card-text{
-                        p{font-size: 15px;}
+                    .link-list{
+                        li{
+                            padding: 4px 0;
+                            a{
+                                color: #175D9E;
+                                font-weight: 500;
+                                text-decoration: underline;
+                                font-style: italic;
+                                &:hover{
+                                    color: #85AC31;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .news-list{
+                li{
+                    color: #0091B9;
+                    font-weight: 700;
+                    padding: 8px 0;
+                }
+            }
+            .industry-block{
+                .image-block{
+                    min-height: 110px;
+                    @include flexbox();
+                    @include align-items(center);
+                }
+                .industry-list{
+                    margin-top: 20px;
+                    margin-bottom: 60px;
+                    li{
+                        font-weight: 600;
+                        padding: 8px 0;
+                        border-top: 1px solid #787878;
+                    }
+                }
+            }
+            @media (min-width:992px) {
+                padding: 0 40px;
+            }
+        }
+        @media (max-width:991px) {
+            .nav{
+                margin-bottom: 15px;
+                padding-bottom: 25px;grid-gap: 15px;overflow-y: auto;
+                white-space: nowrap;
+                li{
+                    white-space: nowrap;
+                    min-width: 130px;
+                    .tab-title{
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .tab-content-block{
+                h3{
+                    font-size: 20px;
+                    margin-bottom: 25px;
+                }
+                .view-link {
+                    margin-top: 30px;
+                }
+                
+                .perspectives-content{
+                    .image-block{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    .card-content{
+                        h4{
+                            font-size: 16px;
+                        }
+                        .link-list{
+                            li{
+                                a{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .news-list{
+                    li{
+                        font-size: 14px;
+                        padding: 5px 0;
+                    }
+                }
+                .industry-block{
+                    .image-block{
+                        min-height: auto;
+                        img{
+                            max-height: 55px;
+                        }
+                    }
+                    .industry-list{
+                        margin-bottom: 40px;
+                        li{
+                            font-size: 14px;
+                        }
                     }
                 }
             }
         }
+    }
+}
+.category-blog-wrapper{
+    .card{
+        border: none;
+        .head-image{
+            border: 1px solid #787878;
+            overflow: hidden;
+            img{
+                @include transition(0.3s, ease-in-out);
+                width: 100%;
+            }
+            &:hover{
+                img{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+        .card-body{
+            padding: 15px 0 0;
+            .card-title{
+                font-size: 24px;
+                font-weight: 700;color: #0A2F5B;
+                margin-bottom: 10px;
+            }
+            .sub-name{
+                font-style: italic;
+                display: block;
+                margin-bottom: 25px;
+                font-size: 15px;
+            }
+            .card-text{
+                margin-bottom: 25px;
+                p{font-size: 15px;}
+            }
+        }
+    }
+    @media (max-width:991px) {
+        .card{
+            .card-body{
+                .card-title{
+                    font-size: 16px;
+                }
+                .sub-name{
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                }
+                .card-text{
+                    margin-bottom: 15px;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom-title{
+    text-align: center;
+    margin-top: 100px;
+    h2{
+        color: #C84727;
+        max-width: 860px;
+        margin: auto;
+    }
+    @media (max-width:991px) {
+        margin-top: 40px;
+    }
+}
+.category-blog-block{
+    .category-blog-wrapper{
+        .row{
+            .col{
+                margin-bottom: 25px;
+            }
+        }
+        @media (min-width:992px) {
+            .row{
+                margin: 0 -30px;
+                .col{
+                    padding: 0 30px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+.brokering-block{
+    .title-block{
+        text-align: center;
+        h2{
+            margin-bottom: 20px;
+        }
+        p{
+            text-align: left;
+        }
+    }
+    .img-text-block{
+        margin: 40px 0;
+        .market-img{
+            float: left;
+            max-width: 290px;
+            margin: 0 25px 15px 0;
+        }
+    }
+    .green-bg-title{
+        margin-top: 30px;
+    }
+    .information-table{
+        table{
+            margin-bottom: 40px;
+            tr{
+                font-size: 18px;
+                .title{
+                    color: #85AC31;
+                    font-weight: 700;
+                    padding-right: 10px;max-width: 180px;
+                }
+                td{
+                    padding: 10px 0;
+                    border-top: 1px solid #85AC31;border-bottom-width: 0;
+                    a{
+                        color: #175D9E;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .upcoming-block{
+        .upcoming-items{
+            border-top: 1px solid #787878;
+            margin: 20px 0 30px;
+        }
+        .upcoming-item{
+            padding: 20px 0;
+            border-bottom: 1px solid #787878;
+            span{
+                margin-bottom: 10px;
+                display: block;
+            }
+            h3{
+                color: #0090B9;
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media (max-width:991px) {
+        .information-table{
+            table{
+                margin-bottom: 20px;
+                tr{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media (max-width:575px) {
+        .img-text-block{
+            margin: 25px 0;
+            .market-img{
+                float: none;
+                margin: 0 0 20px;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+.brand-logo{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+    img{
+        margin: auto;
+    }
+    @media (max-width:991px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width:767px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:500px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
     }
 }
 }
