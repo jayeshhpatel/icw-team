@@ -1,25 +1,13 @@
 /*-----------------------------------------------------------------------------------*/
 /* MAIN
 /*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function () {
-    jQuery('.owl-carousel.feature-slider').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
+
+$(document).ready(function () {
+    $('.toggle-sidebar').on('click', function (e) {
+        $('.navbar-collapse,.toggle-sidebar,body').toggleClass('is-visible');
+        e.preventDefault();
     });
-    jQuery('.owl-carousel.category-slider').owlCarousel({
+    $('.owl-carousel.category-slider').owlCarousel({
         loop:true,
         margin:30,
         nav:true,
@@ -28,12 +16,31 @@ jQuery(document).ready(function () {
             0:{
                 items:1
             },
-            500:{
+            460:{
                 items:2
             },
-            1000:{
-                items:3
+            992:{
+                items:3,
+                nav:true
+            }
+        }   
+    });
+    $('.owl-carousel.feature-slider').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            992:{
+                items:1,
+                dots:true,
             }
         }
-    })
-})
+    });
+});
