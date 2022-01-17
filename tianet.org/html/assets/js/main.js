@@ -12,6 +12,7 @@ $(document).ready(function () {
         margin:30,
         nav:true,
         dots:false,
+        items:3,
         responsive:{
             0:{
                 items:1,
