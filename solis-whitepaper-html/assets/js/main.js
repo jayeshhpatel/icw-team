@@ -45,10 +45,3 @@ if (jQuery('.section-block').length) {
         });
     }).scroll();
 }
-
- /* WOW Animation - Init */
-try {
-    new WOW().init();
-} catch (e) {
-  //
-};
