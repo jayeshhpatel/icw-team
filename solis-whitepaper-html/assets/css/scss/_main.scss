@@ -803,6 +803,7 @@ img{
             @include align-items(center);
             img{
                 flex: none;
+                max-width:110px;
             }
             .user-name{
                 margin-left: 20px;
@@ -819,6 +820,11 @@ img{
         }
         @media (max-width:1200px) {
             grid-template-columns: repeat(2, 1fr);
+            .team-item{
+                img{
+                    max-width:90px;
+                }
+            }
         }
     }
     .team-name-wrapper {
