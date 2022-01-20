@@ -43,6 +43,12 @@ strong{
 .text-orange{
     color: #f57a29 !important;
 }
+.font-24 {
+    font-size: 24px !important;
+    @media (max-width: 767px) {
+        font-size: 18px !important;
+    }
+}
 body {
     margin: 0;
     padding: 0;
@@ -91,7 +97,7 @@ a {
 p {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     &:last-child{
         margin-bottom: 0;
@@ -186,29 +192,32 @@ img{
 .main-title {
     margin-bottom: 40px;
     .sub-title{
-        font-size:16px;
+        font-size:20px;
         margin-bottom: 10px;
+        margin-top: 5px;
         display: block;
+        font-weight: 500;
     }
     &.d-flex { 
         @include justify-content(space-between);
     }
     h1,
     h2 {
-        font-weight: 900;
-        font-size: 24px;
+        font-weight: 700;
+        font-size: 36px;
         margin-bottom: 0;
         text-transform: uppercase;
         font-family: $font-Saira;
-        span{
-            background: rgb(234,156,104);
-            background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-            background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        color:#f57a29;
+        // span{
+        //     background: rgb(234,156,104);
+        //     background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+        //     background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+        //     background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
+        //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
+        //     -webkit-background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        // }
     }
     p {
         margin: 20px 0 0;color:#f4f4f4;
@@ -216,7 +225,7 @@ img{
     @media (max-width: 1199px) {
         h1,
         h2 {
-            font-size: 22px;
+            font-size: 26px;
         }
     }
     @media (max-width: 767px) {
@@ -225,7 +234,7 @@ img{
             margin-top: 10px;
         }
         .sub-title{
-            font-size:14px;
+            font-size:16px;
         }
     }
 }
@@ -238,13 +247,11 @@ img{
         font-size: 62px !important;
     }
 }
-
 .container{
     @media (min-width:1400px) and (max-width:1600px) {
         max-width: 1280px;
     }
 }
-
 .main-header {
     position: fixed;
     background-color: transparent;
@@ -421,20 +428,11 @@ img{
         li {
             padding: 10px 30px;            
             &.title {  
-                font-weight: 900;
+                font-weight: 700;
                 font-size: 24px;
                 margin-bottom: 0;
                 text-transform: uppercase;
-                font-family: "Saira",sans-serif;
-                span {  
-                    background: #ea9c68;
-                    background: -moz-linear-gradient(90deg, #ea9c68 0%, #e95443 100%);
-                    background: -webkit-linear-gradient(90deg, #ea9c68 0%, #e95443 100%);
-                    background: linear-gradient(90deg, #ea9c68 0%, #e95443 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
+                font-family: "Saira",sans-serif;color: #f57a29;
             }
             a {
                 display: inline-block;
@@ -662,7 +660,7 @@ img{
             font-size: 18px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            // font-style: italic;
+            font-style: italic;
             span {
                 font-weight: 300;
             }
@@ -781,7 +779,7 @@ img{
 .two-grid-block{
     .card-dec{
         p{
-            font-size: 20px;
+            font-size: 20px; line-height: 1.8;
         }
     }
     @media (max-width:767px) {
