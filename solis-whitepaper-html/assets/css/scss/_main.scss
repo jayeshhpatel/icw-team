@@ -212,15 +212,6 @@ img{
         margin-bottom: 0;
         text-transform: uppercase;
         color:#FC6700;
-        // span{
-        //     background: rgb(234,156,104);
-        //     background: -moz-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-        //     background: -webkit-linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-        //     background: linear-gradient(90deg, rgba(234,156,104,1) 0%, rgba(233,84,67,1) 100%);
-        //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
-        //     -webkit-background-clip: text;
-        //     -webkit-text-fill-color: transparent;
-        // }
     }
     p {
         margin: 20px 0 0;color:#f4f4f4;
@@ -229,7 +220,7 @@ img{
         .sub-title,
         h1,
         h2 {
-            font-size: 26px;
+            font-size: 24px;
         }
     }
     @media (max-width: 767px) {
@@ -1228,7 +1219,9 @@ img{
                 font-weight: 700;
                 color: #FC6700;
             }
-            
+            ul{
+                padding-left:0;
+            }
         }
     }
     @media (min-width:1200px) {
@@ -1303,6 +1296,7 @@ img{
         }
         .list-block{
             margin-top: 15px;
+            padding-left: 0;
             word-break: break-word;
             li{
                 font-weight: 500;
@@ -1426,19 +1420,28 @@ img{
        }
    } 
    .line-left{
-       position: relative;
-       padding-left: 100px;
-       @media(max-width:1299px){
+    position: relative;
+    padding-left: 100px;
+        @media(max-width:1299px){
             padding-left: 30px;
-       }
-       &:before{
-        content: "";
-        left: 0;
-        bottom: 0;
-        width: 4px;
-        height: 94%;
-        position: absolute;
-        background: linear-gradient(270deg, #F0511D -3.51%, #D92464 105.11%);
-       }
+        }
+        &:before{
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            height: 94%;
+            position: absolute;
+            background: linear-gradient(270deg, #F0511D -3.51%, #D92464 105.11%);
+        }
+    }
+   @media(max-width:767px){
+        .line-left{
+            padding-left: 15px;
+            margin-top: 25px;
+            &::before{
+                display: none;
+            }
+        }
    }
 }
