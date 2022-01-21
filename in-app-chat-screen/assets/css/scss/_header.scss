@@ -37,10 +37,44 @@
                 }
             }
         }
+        .menu-icon{
+            span{
+                position: relative;
+                z-index: 101;
+                cursor: pointer;
+                display: block;
+                background-color: tr;
+                &.open {
+                    span {
+                        &.line1 {
+                            @include transform(rotate(-45deg) translate(-4px, 6px));
+                            background-color: #000000;
+                        }
+                        &.line2 {
+                            opacity: 0;
+                        }
+                        &.line3 {
+                            @include transform(rotate(45deg) translate(-4px, -6px));
+                            background-color: #000000;
+                        }
+                    }
+                }
+                width: 25px;
+                height: 3px;
+                margin: 4px 0px;
+                display: block;
+                @include transition(0.3s, ease-in-out);
+                background-color: #000000;
+                @include border-radius(3px);
+            }
+        }
         @media (min-width:992px) {
             .menu-icon{
                 display: none;
             }
+        }
+        @media (max-width:991px) {
+            
         }
     }
 }

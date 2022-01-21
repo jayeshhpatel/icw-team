@@ -52,6 +52,12 @@ strong{
         font-size: 18px !important;
     }
 }
+.font-28 {
+    font-size: 28px !important;
+    @media (max-width: 767px) {
+        font-size: 20px !important;
+    }
+}
 body {
     margin: 0;
     padding: 0;
@@ -205,10 +211,16 @@ img{
     &.d-flex { 
         @include justify-content(space-between);
     }
-    h1,
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color:#FC6700;
+    }
     h2 {
         font-weight: 700;
-        font-size: 38px;
+        font-size: 36px;
         margin-bottom: 0;
         text-transform: uppercase;
         color:#FC6700;
@@ -216,9 +228,23 @@ img{
     p {
         margin: 20px 0 0;color:#f4f4f4;
     }
+    .text-gradient{
+        background: rgb(234,156,104);
+        background: -moz-linear-gradient(90deg, #f96106 0%, #ce186e 100%);
+        background: -webkit-linear-gradient(90deg, #f96106 0%, #ce186e 100%);
+        background: linear-gradient(90deg, #f96106 0%, #ce186e 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea9c68",endColorstr="#e95443",GradientType=1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        letter-spacing: 5px;
+        font-size: 38px;
+    }
     @media (max-width: 1199px) {
         .sub-title,
-        h1,
+        h1{
+            font-size: 28px;
+        }
         h2 {
             font-size: 24px;
         }
@@ -653,6 +679,7 @@ img{
     text-align: center;
     margin-top: 40px;
 }
+
 // list-items
 .list-items{
     .list-item{
@@ -664,8 +691,8 @@ img{
             color: #FC6700;
             font-size: 18px;
             margin-bottom: 15px;
-            text-transform: uppercase;
-            font-style: italic;
+            // text-transform: uppercase;
+            // font-style: italic;
             span {
                 font-weight: 300;
             }
@@ -1444,4 +1471,19 @@ img{
             }
         }
    }
+}
+
+#storytellers{
+    .main-title{
+        .sub-title{
+            text-transform: inherit;
+        }
+    }
+    p{
+        line-height: 2;font-size: 18px;
+        .font-24 { font-size: 30px !important; }
+    }
+}
+.mw-1000{
+    max-width:1000px;
 }
