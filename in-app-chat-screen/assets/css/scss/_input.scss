@@ -1,0 +1,14 @@
+.form-group {
+    .form-control {
+        border: 1px solid #D5D7DB;
+        @include border-radius(4px);
+        height: 38px;
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        padding: 0 10px;
+        &::placeholder{
+            color: #D5D7DB;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.custom-dropdown{
+    .custom-dropdown-menu{
+        border: 1px solid #D5D7DB;
+        background-color: #ffffff;
+        @include border-radius(4px);
+        padding: 10px 0;
+        width: 100%;
+        min-width: 160px;
+        li {
+            padding: 5px 15px;
+            cursor: pointer;
+            @include transition(0.3s, ease-in-out);
+            color: #333333;
+                font-size: 14px;
+                font-weight: 500;
+                .status{
+                    margin-right: 7px;
+                }
+            &:hover{
+                background-color: #eeeeee;
+            }
+            a{
+            color: #333333;
+            @include transition(0.3s, ease-in-out);
+            }
+        }
+    }
+}

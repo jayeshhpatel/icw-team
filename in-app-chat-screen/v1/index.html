@@ -8,12 +8,11 @@
         <meta name="author" content="In-App Chat">
         <meta name="description" content="In-App Chat">
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+        <link rel="apple-touch-icon" href="assets/images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="shortcut icon" type="images/x-icon" href="assets/images/favicons/favicon.ico">
 
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/main.css">
-
         <title>Dashboard | In-App Chat</title>
     </head>
 
@@ -21,7 +20,7 @@
         <!-- HEADER SECTION -->
         <header class="main-header">
             <nav class="navbar">
-                <button type="button" class="menu-icon">
+                <button type="button" class="bar-icon toggle-sidebar">
                     <span class="line1"></span>
                     <span class="line2"></span>
                     <span class="line3"></span>
@@ -33,7 +32,7 @@
                 </div>
                 <div class="title-block">
                     <div class="title">
-                        <img src="assets/images/icons/message.svg" alt="Threads" class="icon"/>
+                        <img src="assets/images/message.svg" alt="Threads" class="icon"/>
                         <h1>Threads</h1>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
         <div class="bg-overly"></div>
 
         <main class="main-content-wrapper">
-            <div class="main-sidebar">
+            <div class="sidebar-block">
                 <div class="search-bar">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search"/>
@@ -52,13 +51,13 @@
                     <div class="message-sidebar-channels">
                         <div class="collapse-card">
                             <div class="collaspe-header">
-                                <div class="name"><img src="assets/images/icons/message.svg" alt="Message" class="icon"/> Threads</div>
+                                <div class="name"><img src="assets/images/message.svg" alt="Message" class="icon"/> Threads</div>
                             </div>
                         </div>
                         <hr/>
                         <div class="collapse-card">
                             <div class="collaspe-header">
-                                <div class="name"><img src="assets/images/icons/star.svg" alt="Favorites" class="icon"/>Favorites</div>
+                                <div class="name"><img src="assets/images/star.svg" alt="Favorites" class="icon"/>Favorites</div>
                             </div>
                         </div>
                         <hr/>
@@ -72,7 +71,7 @@
                                 <div class="collapse-body show">
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/group-icon.svg" alt="group"/>
+                                            <img src="assets/images/group-icon.svg" alt="group"/>
                                         </div>
                                         <div class="user-title">
                                             Design Channel <span>Hello Tushar</span>
@@ -80,7 +79,7 @@
                                     </div>
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/group-icon.svg" alt="group"/>
+                                            <img src="assets/images/group-icon.svg" alt="group"/>
                                         </div>
                                         <div class="user-title">
                                             Developer's Channel <span>nature.jpg</span>
@@ -98,7 +97,7 @@
                                 <div class="collapse-body">
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/user.svg" alt="user"/>
+                                            <img src="assets/images/user.svg" alt="user"/>
                                             <span class="status online"></span>
                                         </div>
                                         <div class="user-title">
@@ -107,7 +106,7 @@
                                     </div>
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/user.svg" alt="user"/>
+                                            <img src="assets/images/user.svg" alt="user"/>
                                             <span class="status billing"></span>
                                         </div>
                                         <div class="user-title">
@@ -116,7 +115,7 @@
                                     </div>
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/user.svg" alt="user"/>
+                                            <img src="assets/images/user.svg" alt="user"/>
                                         </div>
                                         <div class="user-title">
                                             William <span>Hello Tushar</span>
@@ -124,7 +123,7 @@
                                     </div>
                                     <div class="user-name">
                                         <div class="avatar-img">
-                                            <img src="assets/images/icons/user.svg" alt="user"/>
+                                            <img src="assets/images/user.svg" alt="user"/>
                                             <span class="status online"></span>
                                         </div>
                                         <div class="user-title">
@@ -138,7 +137,7 @@
                 </div>
                 <div class="user-setting-block">
                     <div class="user-switch-block custom-dropdown">
-                        <span class="user-name"><img src="assets/images/icons/user.svg" alt="user"/>Tushar</span>
+                        <span class="user-name"><img src="assets/images/user.svg" alt="user"/>Tushar</span>
                         <div class="user-dropdown">
                             <div class="user-available-icon">
                                 <span class="status online"></span>
@@ -162,12 +161,16 @@
                 </div>
             </div>
             <div class="content-block">
-                <div class="message-block">
-                   
-                </div>
-                <div class="message-write-block">
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Send a message..."></textarea>
+                <!-- <div class="no-conversation-block">
+                    <h2>You don’t have any conversations</h2>
+                    <h2 class="text-blue">Start a new conversation</h2>
+                </div> -->
+                <div class="edit-profile-wrapper">
+                    <div class="edit-profile-block">
+                        <h2>Edit Profile</h2>
+                        <div class="edit-profile-content">
+
+                        </div>
                     </div>
                 </div>
             </div>

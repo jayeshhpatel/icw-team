@@ -1,0 +1,8 @@
+.message-write-block {
+    padding: 20px;
+    .write-content-box {
+        border: 1px solid #E5E7EB;
+        @include border-radius(8px);
+
+    }
+}
