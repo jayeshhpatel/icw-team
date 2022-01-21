@@ -44,7 +44,7 @@ strong{
     color: #FC6700 !important;
 }
 .text-gray{
-    color: #999999 !important;
+    color: #515256 !important;
 }
 .font-24 {
     font-size: 24px !important;
@@ -56,6 +56,12 @@ strong{
     font-size: 28px !important;
     @media (max-width: 767px) {
         font-size: 20px !important;
+    }
+}
+.font-50 {
+    font-size: 50px !important;
+    @media (max-width: 767px) {
+        font-size: 32px !important;
     }
 }
 body {
@@ -201,9 +207,9 @@ img{
 .main-title {
     margin-bottom: 40px;
     .sub-title{
-        font-size:38px;
+        font-size:32px;
         line-height: 100%;
-        margin: 0;
+        margin: 5px 0 0;
         display: block;
         font-weight: 400;
         text-transform: uppercase;
@@ -689,7 +695,7 @@ img{
         }
         h3{
             color: #FC6700;
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 15px;
             // text-transform: uppercase;
             // font-style: italic;
@@ -751,14 +757,14 @@ img{
     }
     .card-title{
         h3{
-            font-size: 26px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
         .card-sub-title{
             font-weight: 700;
-            font-size: 20px;
+            font-size: 28px;
             span{
-                color: #FC6700;font-size: 18px;
+                color: #FC6700;font-size: 22px;
             }
         }
     }
@@ -954,6 +960,9 @@ img{
 // category-block
 .category-block{
     .main-title{
+        h2{
+            text-transform: inherit;
+        }
         .sub-title{
             text-transform: inherit;
             font-weight: 300;
