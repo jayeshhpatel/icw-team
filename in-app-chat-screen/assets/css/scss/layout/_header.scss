@@ -10,6 +10,7 @@
     min-height: 80px;
    .navbar {    
         @include flexbox();
+        @include align-items(center);
         width: 100%;    
         height: 80px;
         .logo-block {
@@ -37,28 +38,16 @@
                 }
             }
         }
-        .menu-icon{
-            span{
+        .menu-icon {
+            display: none;
+            margin-right: 20px;
+            &.ml-auto { margin-left: auto; }
+            span {
                 position: relative;
                 z-index: 101;
                 cursor: pointer;
                 display: block;
-                background-color: tr;
-                &.open {
-                    span {
-                        &.line1 {
-                            @include transform(rotate(-45deg) translate(-4px, 6px));
-                            background-color: #000000;
-                        }
-                        &.line2 {
-                            opacity: 0;
-                        }
-                        &.line3 {
-                            @include transform(rotate(45deg) translate(-4px, -6px));
-                            background-color: #000000;
-                        }
-                    }
-                }
+                background-color: transparent;
                 width: 25px;
                 height: 3px;
                 margin: 4px 0px;
@@ -67,14 +56,29 @@
                 background-color: #000000;
                 @include border-radius(3px);
             }
-        }
-        @media (min-width:992px) {
-            .menu-icon{
-                display: none;
+            &.is-active {
+                span {
+                    &.line1 {
+                        @include transform(rotate(-45deg) translate(-4px, 6px));
+                        background-color: #000000;
+                    }
+                    &.line2 {
+                        opacity: 0;
+                    }
+                    &.line3 {
+                        @include transform(rotate(45deg) translate(-4px, -6px));
+                        background-color: #000000;
+                    }
+                }
             }
         }
         @media (max-width:991px) {
-            
+            .menu-icon {
+                display: inline-block;
+            }
+            .logo-block {
+                min-width: auto;
+            }
         }
     }
 }

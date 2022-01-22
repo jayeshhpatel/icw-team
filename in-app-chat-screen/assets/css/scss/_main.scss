@@ -96,8 +96,13 @@ h6 {
         @include flexbox;
         @include flex-direction(column);
     }
+    @media(max-width: 992px) {
+        .content-block {
+            margin-left: 0px;
+        }
+    }
 }
-.bg-overly {
+.bg-overlay {
     position: fixed;
     top: 0px;
     right: 0px;

@@ -1,0 +1,45 @@
+.message-write-block {
+    padding: 20px;    
+    .form-group {
+        flex: 1 1;
+        margin-right: 30px;
+        line-height: 0.7;
+        .form-control {
+            height: 60px;
+            font-size: 16px;   
+            border: none;  
+            padding: 19px 0;    
+            resize: none;  
+            &:focus {
+                outline: none
+            } 
+        }
+    }
+    .message-write-box{
+        @include flexbox();
+        @include align-items(flex-end);
+        border: 1px solid #D5D7DB;
+        background: $white;
+        padding: 0px 20px;
+        @include border-radius(8px);
+    }
+    .msg-option-block{
+        .message-options{
+            @include flexbox();
+            @include align-items(center);      
+            height: 60px;      
+            .msg-option-button{
+                @include flexbox();
+                cursor: pointer;
+                ~ .msg-option-button{
+                    margin-left: 10px;
+                }
+                @media (max-width:575px) {
+                    ~ .msg-option-button{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

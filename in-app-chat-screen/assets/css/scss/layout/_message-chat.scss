@@ -1,0 +1,30 @@
+.message-block {
+    overflow: hidden;
+    overflow-y: auto;
+    flex: 1 1;
+    .no-chat-msg {  
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+        height: 100%;
+        p { 
+            letter-spacing: 0.2px;
+            color: #010101; 
+            font-size: 20px; 
+            font-weight: 500;
+            margin: 0 0 5px;
+        }
+        a {
+            letter-spacing: 0.2px;
+            color: #2B7AD5;
+            font-size: 20px; 
+            font-weight: 500;
+            text-decoration: none;
+            @include transition(0.3s, ease-in-out);
+            &:hover {
+                color: #FF9900;
+            }
+        }
+    }
+}
