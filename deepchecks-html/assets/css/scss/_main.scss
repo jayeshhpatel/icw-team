@@ -2631,14 +2631,14 @@ section {
     z-index: 99;
     .speaker-sticky-info{
         display: grid;
-        grid-template-columns: 1fr 1fr 135px;
+        grid-template-columns: 1fr 1fr 150px;
         grid-column-gap: 20px;
         @include align-items(center);
         @include justify-content(center);
     }
     .close-sticky{
         position: absolute;
-        right: 20px;
+        right: 15px;
         color: #C7A3FF;
         font-size: 35px;
         line-height:100%;   
@@ -2659,6 +2659,7 @@ section {
             small{
                 font-weight: 600;
                 font-size: 16px;color: #FFFFFF;
+                display: block;
             }
         }
     }
