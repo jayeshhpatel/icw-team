@@ -1,0 +1,29 @@
+.modal-wrapper {
+    .modal-block {
+        @include flexbox();
+        @include flex-direction(column);
+        padding: 20px;
+        background-color: #ffffff;
+        @include border-radius(20px);
+        .modal-header{
+            @include flexbox();
+            @include align-items(center);
+            margin-bottom: 15px;
+            .title{
+                color: #333333;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .close-btn{
+                margin-left: auto;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+            }
+        }
+        .modal-body{
+            flex: 1 1;
+        }
+    }
+}
