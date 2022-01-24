@@ -2621,3 +2621,106 @@ section {
         }
     }
 }
+
+.icw-sticky {
+    background: #9D60FB;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+    padding: 24px 0;
+    z-index: 99;
+    .speaker-sticky-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 135px;
+        grid-column-gap: 20px;
+        @include align-items(center);
+        @include justify-content(center);
+    }
+    .close-sticky{
+        position: absolute;
+        right: 20px;
+        color: #C7A3FF;
+        font-size: 35px;
+        line-height:100%;   
+        cursor: pointer;
+        @include transition(0.3s, ease-in-out);
+    }
+    .strip-img{
+        @include flexbox();
+        @include align-items(center);
+        .title{
+            margin-left: 24px;
+            strong{
+                letter-spacing: 0.05em;
+                text-transform: uppercase;color: #FDD247;font-weight: 600;
+                font-size: 16px;font-family: $font-poppins;
+                margin-bottom: 4px;
+            }
+            small{
+                font-weight: 600;
+                font-size: 16px;color: #FFFFFF;
+            }
+        }
+    }
+    #deadline-message{
+        display: none;
+        text-align: center;
+    }
+    .timer-sticky{
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        font-weight: 600;
+                font-size: 28px;
+                line-height: 100%;
+        text-align: center;
+        .countdown-number{
+            .countdown-text{
+                font-size: 16px;@include opacity(0.8);
+                display:block;
+            }
+        }   
+        .dots{
+            opacity: 0.3;
+            padding:0 25px;
+        }
+    }
+    .btn-secondary{
+        color:$purple !important;
+        min-width:140px;
+        &:hover, &:focus, &:active,
+        &:not(:disabled):not(.disabled).active, 
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active:focus, 
+        &:not(:disabled):not(.disabled):active:focus {
+            border-color:$white !important;
+            color:$white !important;
+        }
+    }
+    @media(max-width:991px){
+        padding: 30px 0;
+        .speaker-sticky-info {
+            grid-template-columns: auto;
+            text-align: center;
+            grid-row-gap: 20px;
+        }
+        .close-sticky {
+            right: 15px;
+            top: 10px;
+        }
+        .timer-sticky{
+            .dots{
+                padding:0 16px;
+            }
+        }
+        .strip-img{
+            @include justify-content(center);
+            img{
+                display:none;
+            }
+            .title {
+                margin-left: 0;
+            }
+        }
+    }
+}

@@ -68,7 +68,7 @@
                 </nav>
             </div>
         </header>
-        <!-- // HEADER SECTION -->
+        <!-- // HEADER SECTION --....>
         
         <!-- MAIN SECTION -->
         <main class="main-content-wrapper">
@@ -105,7 +105,7 @@
                                         <span>ML Researcher</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div>iukjkbkj
                         </div>
                     </div>
                 </div>
@@ -151,6 +151,42 @@
         </main>
         <!-- // MAIN SECTION -->
 
+        <div class="icw-sticky">
+            <div class="container">
+                <div class="speaker-sticky-info"> 
+                    <span class="close-sticky">×</span>
+                    <div class="strip-img">
+                        <img src="assets/images/avatars.png" alt=""/>
+                        <div class="title">
+                            <strong>Upcoming Online Event</strong><br><small>Deepchecks for Computer Vision: Draft for<br/> Community Feedback Before Release</small>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="deadline-message" class="hidden">-</div>
+                        <div id="countdown" class="timer-sticky">
+                            <div class="countdown-number">
+                                <div class="days countdown-time">3</div> <span class="countdown-text">days</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="hours countdown-time">06</div> <span class="countdown-text">hrs</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="minutes countdown-time">14</div> <span class="countdown-text">min</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="seconds countdown-time">19</div> <span class="countdown-text">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#!" class="btn btn-secondary" target="_self">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- JS -->
         
         <script src="assets/js/jquery.min.js"></script>
@@ -160,8 +196,56 @@
         <script src="assets/js/clipboard.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script>
-            $( document ).ready(function() {
+            $(document).ready(function () {
                 var clipboard = new ClipboardJS('.clipboard-btn');
+            });
+
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    total: t,
+                    days: days,
+                    hours: hours,
+                    minutes: minutes,
+                    seconds: seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector(".days");
+                var hoursSpan = clock.querySelector(".hours");
+                var minutesSpan = clock.querySelector(".minutes");
+                var secondsSpan = clock.querySelector(".seconds");
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+                    if (t.total <= 0) {
+                        document.getElementById("countdown").className = "hidden";
+                        document.getElementById("deadline-message").className = "visible";
+                        clearInterval(timeinterval);
+                        return true;
+                    }
+                    daysSpan.innerHTML = t.days;
+                    hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+                }
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+            var deadline = "January 27, 2022 18:00:00 GMT"; // var deadline = "January 01 2018 00:00:00 GMT+0300"; 
+            // var deadline = new Date(Date.parse(new Date()) + 5 * 1000); // for endless timer
+            initializeClock("countdown", deadline);
+            jQuery(document).ready(function ($) {
+                $(".close-sticky").click(function (e) {
+                    $(".icw-sticky").slideUp();
+                    e.stopPropagation();
+                });
             });
         </script>
     </body>
