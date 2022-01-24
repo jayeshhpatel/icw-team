@@ -74,13 +74,6 @@ window.addEventListener('load', function () {
     }
 });
 
-// $(".custom-dropdown .dropdown-menu .item").click(function() {
-//     var selected_value = $(this).html();
-//     var first_li = $(this).parents('.custom-dropdown').find('.input-dropdown .select-item').html(); 
-//     $(this).parents('.custom-dropdown').find('.item').removeClass('selected');
-//     $(this).addClass('selected');
-//     $(this).parents('.custom-dropdown').find('.input-dropdown .select-item').html(selected_value);
-// });
 
 document.querySelector('.user-status-dropdown .custom-dropdown-menu li').addEventListener('click', function(){
     var selected_value = this.textContent || this.innerText;;
