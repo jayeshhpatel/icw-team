@@ -85,10 +85,6 @@ body {
     &.is-visible {
         overflow: hidden;
     }
-
-    &::-webkit-scrollbar { width:8px;background-color: rgba(245, 245, 245, 0.1); }
-    &::-webkit-scrollbar-thumb { background-color:#FC6700; }
-    &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);background-color:transparent; }
 }
 ul {
     margin: 0;
@@ -451,13 +447,13 @@ img{
         overflow-y: auto;
         padding: 20px 0;
         &::-webkit-scrollbar { width:6px;background-color: rgba(245, 245, 245, 0.1); }
-        &::-webkit-scrollbar-thumb { background-color:rgba(255, 255, 255, 0.1); }
+        &::-webkit-scrollbar-thumb { background-color:rgba(0,0,0,0.3); }
         &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);background-color:transparent; }
         li {
-            padding: 0px 30px 3px;            
+            padding: 10px 30px;            
             &.title {  
                 font-weight: 700;
-                font-size: 20px;
+                font-size: 24px;
                 margin-bottom: 0;
                 text-transform: uppercase;
                 font-family: "Saira",sans-serif;color: #FC6700;
@@ -467,27 +463,22 @@ img{
                 text-transform: uppercase;
                 color: #FC6700;
                 font-weight: 700;
-                font-size: 13px;
                 &:focus, &:hover, &.active{
                     color: #ffffff;
                 }
             }
             .squre-list {
-                padding-top: 5px;
+                padding-top: 10px;
                 li {
                     font-weight: 300;
-                    padding: 0 0 5px ;
-                    &:before {
-                        margin-right: 10px;
-                    }
+                    padding: 5px 0;
                     a{
                         font-weight: 400;
-                        font-size: 13px;
                     }
                 }
             }
             @media(max-width: 1200px) {
-                padding: 0px 15px 3px;    
+                padding: 10px 15px;
                 &.title {  
                     font-size: 22px; 
                 }
@@ -847,18 +838,6 @@ img{
             font-size: 24px;
         }
     }
-    .row-team {
-        display: grid;
-        grid-template-columns: 1fr 280px;
-        grid-gap: 20px;
-        @media (max-width:1400px) {
-            grid-template-columns: 1fr 250px;  
-        }
-        
-        @media (max-width:1200px) {
-            grid-template-columns: auto;  
-        }
-    }
     .team-wrapper{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -883,11 +862,8 @@ img{
                 }
             }
         }
-        @media (max-width:1650px) {
-            grid-template-columns: repeat(2, 1fr);    
-        }
         @media (max-width:1200px) {
-             grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             .team-item{
                 img{
                     max-width:90px;
@@ -916,7 +892,7 @@ img{
             }
         }
         .team-name-item {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400; display: block;
             &::before{
                 content: "";
@@ -931,14 +907,14 @@ img{
             }
         }
     }
-    @media (max-width:1400px) {
+    @media (max-width:1299px) {
         .team-name-wrapper {
             .team-name-item {
                 font-size: 14px;
             }
         }
     }
-    @media (max-width:1200px) {
+    @media (max-width:992px) {
         .team-wrapper{
             grid-template-columns: repeat(2, 1fr);
             .team-item{
@@ -957,14 +933,14 @@ img{
             }
         }
     }
-    @media (max-width:1200px) {
+    @media (max-width:767px) {
         .team-name-wrapper {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 15px;display: grid;
             margin-top: 30px;
-            // padding: 0;
+            padding: 0;
             .team-name-item {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
     }
@@ -1156,7 +1132,7 @@ img{
         }
     }
     .footer-link-section{
-        padding: 40px 0 0px;
+        padding: 70px 0 35px;
         h2{font-size: 18px;color: $white;margin-bottom: 15px;text-transform: uppercase;}
     }
     .social-icon{
@@ -1225,7 +1201,7 @@ img{
         }
         .footer-link-section{
             padding-bottom: 10px;
-            padding-top: 40px;
+            padding-top: 50px;
             
         }
         .footer-copyright-section{
