@@ -130,7 +130,6 @@ h6 {
     @include inline-flex;
     @include align-items(center);
     @include justify-content(center);
-    background-color: $purple;
     cursor: pointer;
     @include transition(0.3s, ease-in-out);
     &:hover {
