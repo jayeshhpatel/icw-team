@@ -454,7 +454,7 @@ img{
         &::-webkit-scrollbar-thumb { background-color:rgba(255, 255, 255, 0.1); }
         &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);background-color:transparent; }
         li {
-            padding: 3px 30px 3px;            
+            padding: 0px 30px 3px;            
             &.title {  
                 font-weight: 700;
                 font-size: 20px;
@@ -467,35 +467,13 @@ img{
                 text-transform: uppercase;
                 color: #FC6700;
                 font-weight: 700;
-                font-size: 13px;  
-                @include transition(0.3s, ease-in-out);             
+                font-size: 13px;
                 &:focus, &:hover, &.active{
                     color: #ffffff;
                 }
             }
-            &.with-sub-menu {
-                .menu-item { @include flexbox; @include align-items(center); @include justify-content(space-between);
-                    span { display: inline-block; }
-                    .icon-arrow {
-                        background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="rgb(252 103 0)"/></svg>') no-repeat center center; width: 12px; height: 12px; background-size: contain; display: inline-block; @include transition(0.3s, ease-in-out); @include transform(rotate(-90deg)); margin-top: -2px;
-                    }
-                    &.active, &:hover {
-                        .icon-arrow {
-                            background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="white"/></svg>') no-repeat center center; background-size: contain; 
-                        } 
-                    }
-                }
-                &.show {
-                    .menu-item { @include flexbox; @include align-items(center); @include justify-content(space-between);
-                        .icon-arrow {
-                            background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="white"/></svg>') no-repeat center center; background-size: contain; @include transform(rotate(0deg));
-                        }
-                    }
-                }
-            }
             .squre-list {
-                padding-top: 5px; 
-                display: none;
+                padding-top: 5px;
                 li {
                     font-weight: 300;
                     padding: 0 0 5px ;

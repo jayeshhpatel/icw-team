@@ -17,21 +17,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    $('.with-sub-menu .menu-item').on('click', function (e) { 
-        if($(this).parents('.with-sub-menu').hasClass('show')){
-            $(this).parents('.with-sub-menu').find('.menu-item').removeClass('active');
-            $(this).parents('.with-sub-menu').removeClass('show');
-            $(this).parents('.with-sub-menu').find('.squre-list').slideUp();
-        } else {
-            $('.with-sub-menu .menu-item').removeClass('active');
-            $('.with-sub-menu').removeClass('show');
-            $('.with-sub-menu .squre-list').slideUp();
-            $(this).parents('.with-sub-menu').find('.menu-item').addClass('active');
-            $(this).parents('.with-sub-menu').addClass('show');
-            $(this).parents('.with-sub-menu').find('.squre-list').slideDown();
-        }       
-    })
 });
 
 /* menu-wise scroll body */
