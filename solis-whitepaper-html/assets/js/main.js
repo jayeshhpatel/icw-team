@@ -56,6 +56,7 @@ if (jQuery('.section-block').length) {
                     jQuery('.sidebar-menu-list li a').removeClass('active');
                     jQuery('.sidebar-menu-list li a[href^="#'+getid+'"]').parents('.with-sub-menu').find('.menu-item').addClass('active');
                     jQuery('.sidebar-menu-list li a[href^="#'+getid+'"]').addClass('active');
+                    
                 }
             }
         });
