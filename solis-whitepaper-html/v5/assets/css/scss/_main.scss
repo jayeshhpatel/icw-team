@@ -60,9 +60,6 @@ strong{
 }
 .font-50 {
     font-size: 50px !important;
-    @media (max-width: 1400px) {
-        font-size: 40px !important;
-    }
     @media (max-width: 767px) {
         font-size: 32px !important;
     }
@@ -119,13 +116,13 @@ a {
 p {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     &:last-child{
         margin-bottom: 0;
     }
     @media (max-width: 992px) {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 img{
@@ -150,9 +147,8 @@ img{
     padding: 100px 0 40px;
     margin-top: -40px;
     z-index: 1;
-
     @media (max-width: 992px) {
-        padding: 80px 0 40px;
+        padding: 70px 0 40px;
     }
     @media (max-width: 767px) {
         padding: 50px 0 40px;
@@ -213,7 +209,7 @@ img{
     background-color: #F9F8FA;
 }
 .main-title {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     .sub-title{
         font-size:32px;
         line-height: 100%;
@@ -231,7 +227,6 @@ img{
         margin-bottom: 0;
         text-transform: uppercase;
         color:#FC6700;
-        font-size: 38px !important;
     }
     h2 {
         font-weight: 700;
@@ -253,7 +248,7 @@ img{
         -webkit-text-fill-color: transparent;
         font-weight: 700;
         letter-spacing: 5px;
-        font-size: 28px;
+        font-size: 38px;
     }
     @media (max-width: 1199px) {
         .sub-title,
@@ -296,7 +291,7 @@ img{
         @include box-shadow(0px 6px 20px rgba(0, 0, 0, 0.08));
         background-color: rgba(0, 0, 0, 1);
         .navbar{
-            padding: 10px 15px;
+            padding: 15px 30px;
             @media (max-width: 767px) {
                 padding: 10px 15px;
             }
@@ -309,13 +304,13 @@ img{
         }
     }
     .navbar {
-        padding: 10px 15px;
-        min-height: 68px;
+        padding: 15px 30px;
+        min-height: 74px;
         @include transition(0.4s, ease-in-out);
         .navbar-brand {
             line-height: 1;
             img { 
-                max-width: 110px; 
+                max-width: 135px; 
             }
         }
         @media (max-width: 767px) {
@@ -447,22 +442,22 @@ img{
     background: rgba(7, 7, 7, 0.6);
     height: calc(100vh - 79px);
     position: sticky;
-    top: 68px;   
-    width: 250px;  
-    min-width: 250px;  
+    top: 79px;   
+    width: 370px;  
+    min-width: 370px;  
     .sidebar-menu-list { 
         height: 100%;
         overflow: hidden;
         overflow-y: auto;
-        padding: 10px 0;
+        padding: 20px 0;
         &::-webkit-scrollbar { width:6px;background-color: rgba(245, 245, 245, 0.1); }
         &::-webkit-scrollbar-thumb { background-color:rgba(255, 255, 255, 0.1); }
         &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);background-color:transparent; }
         li {
-            padding: 3px 10px 3px 15px;            
+            padding: 0px 30px 3px;            
             &.title {  
                 font-weight: 700;
-                font-size: 18px;
+                font-size: 20px;
                 margin-bottom: 0;
                 text-transform: uppercase;
                 font-family: "Saira",sans-serif;color: #FC6700;
@@ -471,62 +466,30 @@ img{
                 display: inline-block;
                 text-transform: uppercase;
                 color: #FC6700;
-                font-weight: 500;
-                font-size: 11px;  
-                letter-spacing: -0.2px;
-                @include transition(0.3s, ease-in-out);             
+                font-weight: 700;
+                font-size: 13px;
                 &:focus, &:hover, &.active{
                     color: #ffffff;
                 }
             }
-            &.with-sub-menu {
-                .menu-item { @include flexbox; @include align-items(center); @include justify-content(space-between);
-                    span { display: inline-block; }
-                    .icon-arrow {
-                        background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="rgb(252 103 0)"/></svg>') no-repeat center center; width: 12px; height: 12px; background-size: contain; display: inline-block; @include transition(0.3s, ease-in-out); @include transform(rotate(-90deg)); margin-top: -2px;
-                    }
-                    &.active, &:hover {
-                        .icon-arrow {
-                            background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="white"/></svg>') no-repeat center center; background-size: contain; 
-                        } 
-                    }
-                    &.active {
-                        .icon-arrow {
-                            @include transform(rotate(0deg));  
-                        }
-                    }
-                    &.active + .squre-list {
-                        display: block !important;
-                    }
-                }
-                &.show {
-                    .squre-list {display: block !important;}
-                    .menu-item { @include flexbox; @include align-items(center); @include justify-content(space-between);
-                        .icon-arrow {
-                            background: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.19494 0.206747C8.45529 -0.0691596 8.8774 -0.0691595 9.13775 0.206748C9.3981 0.482655 9.3981 0.929989 9.13775 1.2059L5.13775 5.44492C4.88536 5.71239 4.47897 5.72175 4.21586 5.46615L0.215858 1.58038C-0.055555 1.31671 -0.0738912 0.869802 0.174904 0.582171C0.423699 0.294539 0.845411 0.275109 1.11682 0.53877L4.64629 3.96745L8.19494 0.206747Z" fill="white"/></svg>') no-repeat center center; background-size: contain; @include transform(rotate(0deg));
-                        }
-                    }
-                }
-            }
             .squre-list {
-                padding-top: 5px; 
-                display: none;
+                padding-top: 5px;
                 li {
                     font-weight: 300;
                     padding: 0 0 5px ;
                     &:before {
                         margin-right: 10px;
                     }
-                    a {
+                    a{
                         font-weight: 400;
-                        font-size: 11px;
+                        font-size: 13px;
                     }
                 }
             }
             @media(max-width: 1200px) {
-                padding: 0px 10px 3px 15px;    
+                padding: 0px 15px 3px;    
                 &.title {  
-                    font-size: 16px; 
+                    font-size: 22px; 
                 }
             }
             @media(max-width: 767px) {
@@ -569,10 +532,10 @@ img{
 .main-content-wrapper {
     position: relative;
     .content-wrapper {
-        padding: 0 40px;
+        padding: 0 50px;
         overflow: hidden;
         @media(max-width: 1299px) {
-            padding: 0 20px;
+            padding: 0 30px;
         }
         @media(max-width: 992px) {
             width: 100%;
@@ -649,7 +612,7 @@ img{
             @include border-radius(10px);
             display: inline-block;
             background: #FC6700;
-            margin-right: 10px;
+            margin-right: 20px;
             flex: none;
         }
         ul{
@@ -673,7 +636,7 @@ img{
         padding: 0 0 5px 32px;
         width: 100%;
         li{
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 300;
             &::before{
                 border: 1px solid #FC6700;
@@ -775,12 +738,12 @@ img{
 .three-grid-block{
     .card-item{
         h3{
-            font-size: 24px;
+            font-size: 26px;
             color: #FC6700;
             font-weight: 500;
             text-transform: uppercase;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
     }
     .grid-column{
@@ -803,14 +766,14 @@ img{
     }
     .card-title{
         h3{
-            font-size: 24px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
         .card-sub-title{
             font-weight: 700;
-            font-size: 20px;
+            font-size: 28px;
             span{
-                color: #FC6700; font-size: 18px;
+                color: #FC6700;font-size: 22px;
             }
         }
     }
@@ -863,7 +826,7 @@ img{
 .two-grid-block{
     .card-dec{
         p{
-            font-size: 16px;
+            font-size: 20px; line-height: 1.8;
         }
     }
     @media (max-width:767px) {
@@ -1060,10 +1023,6 @@ img{
                     height: 36px;
                     background: url(../images/plus.svg) no-repeat center;
                     background-size: contain;
-                    @media (max-width:1024px) {
-                        width: 22px;
-                        height: 22px;
-                    }
                 }
                 &:after{
                     content: "";
@@ -1086,7 +1045,7 @@ img{
             }
         }
         p{
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             @media (max-width:1199px) {
                 font-size: 16px;
@@ -1109,11 +1068,11 @@ img{
     .main-title{
         h2{
             font-weight: 300;
-            font-size: 20px; text-transform: inherit;
+            font-size: 26px;text-transform: inherit;
             color: #ffffff;
             max-width: 1000px;
             margin: auto;
-            // line-height: 1.4;
+            line-height: 1.4;
         }
     }
     .card-item{
@@ -1126,7 +1085,7 @@ img{
         h3{
             color: #FC6700;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
    
@@ -1158,7 +1117,7 @@ img{
             .column-box{
                 &:nth-child(odd){
                     .card-item{
-                        margin-top: 5px;
+                        margin-top: 25px;
                     }
                 }
             }
@@ -1554,7 +1513,7 @@ img{
         }
     }
     p{
-        line-height: 1.5; font-size: 16px;
+        line-height: 2;font-size: 18px;
         .font-24 { font-size: 30px !important; }
     }
 }
