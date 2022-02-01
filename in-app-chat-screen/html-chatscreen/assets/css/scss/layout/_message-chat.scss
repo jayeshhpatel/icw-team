@@ -70,4 +70,43 @@
         }
         .custom-dropdown { margin-right: 10px; }
     }
+    .message-body-wrapper{
+        .divider{
+            text-align: center;
+            margin-bottom: 15px;
+            .text{
+                color: #333333;font-size: 16px;
+            }
+        }
+        .message-row{
+            .message-content{
+                .sender-info{
+                    font-weight: 700;font-size: 13px;margin: 0;
+                }
+                .text-item{
+                    border: 1px solid #E5E7EB;@include border-radius(8px);background-color: $white;
+                    padding: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;margin-bottom:16px;
+                    .message-text{
+                        font-size: 16px;
+                        margin: 0;
+                        line-height: normal;
+                        .mention{
+                            color: #2B7AD5;
+                        }
+                    }
+                    .timestamp{
+                        color: #A7A7A7;
+                        font-size: 10px;
+                        position: absolute;
+                        right: 0;
+                        bottom: -16px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -26,7 +26,7 @@
                 background-color: #eeeeee;
             }
             a {
-                color: #333333; font-size: 14px; font-weight: 500; @include inline-flex; @include align-items(center); @include transition(0.3s, ease-in-out); white-space: nowrap; overflow: hidden; max-width: 250px; text-overflow: ellipsis; 
+                color: #333333;line-height: normal; font-size: 14px; font-weight: 500; @include inline-flex; @include align-items(center); @include transition(0.3s, ease-in-out); white-space: nowrap; overflow: hidden; max-width: 250px; text-overflow: ellipsis; 
                 em { 
                     margin-right: 10px; min-width: 16px;                    
                 }
