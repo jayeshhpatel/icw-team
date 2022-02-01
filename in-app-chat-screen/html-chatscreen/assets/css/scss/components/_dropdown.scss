@@ -18,7 +18,7 @@
     .custom-dropdown-menu { 
         @include transition(0.3s, ease-in-out); z-index: -1; min-width: 160px; display: none; position: absolute; border: 1px solid #E5E7EB; background: #ffffff; @include border-radius(8px); padding: 8px 0; margin: 0; list-style: none; background-clip: padding-box; 
         li {
-            padding: 5px 15px; cursor: pointer; @include transition(0.3s, ease-in-out); display: block; width: 100%; clear: both; white-space: nowrap; line-height: 0.7;
+            padding: 7px 15px; cursor: pointer; @include transition(0.3s, ease-in-out); display: block; width: 100%; clear: both; white-space: nowrap; line-height: 0.7;
             .status {
                 margin-right: 7px;
             }
