@@ -734,7 +734,7 @@ section {
                 padding: 100px;
                 position: relative;
                 p{
-                    letter-spacing: 3px;
+                    letter-spacing: 1px;
                 }
             }
             .thumb-img{
@@ -1248,12 +1248,11 @@ section {
                     width: 50%;
                     display: block;
                     color: #f57a29;
-                    text-align: right;
                 }
                 p{
                     font-size: 14px;color: #F4F4F4;
                     margin: 0;
-                    width: 50%;
+                    width: 50%;text-align: right;
                 }
             }
         }
