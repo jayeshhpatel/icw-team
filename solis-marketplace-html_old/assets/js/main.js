@@ -136,7 +136,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     accessibility: false,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
           breakpoint: 991,
@@ -154,41 +154,6 @@ $(document).ready(function () {
       }
     ]
   });
-  $('.gridfour-left').click(function(){
-    $('.gridfour-slider').slick('slickPrev');
-  })
-  $('.gridfour-right').click(function(){
-    $('.gridfour-slider').slick('slickNext');
-  })
-  $('.memorabilia-slider').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: false,
-    accessibility: false,
-    arrows: false,
-    responsive: [
-      {
-          breakpoint: 991,
-          settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-          }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
-      }
-    ]
-  });
-  $('.memorabilia-left').click(function(){
-    $('.memorabilia-slider').slick('slickPrev');
-  })
-  $('.memorabilia-right').click(function(){
-    $('.memorabilia-slider').slick('slickNext');
-  })
 });
 
  /* WOW Animation - Init */

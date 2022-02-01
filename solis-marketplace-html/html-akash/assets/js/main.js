@@ -113,7 +113,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     accessibility: false,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
           breakpoint: 991,
