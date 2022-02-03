@@ -72,7 +72,7 @@
             <!-- // HEADER SECTION -->
             <!-- MAIN SECTION -->
             <main class="main-content-wrapper">
-                <section class="individual-block main-banner single-banner">
+                <section class="section-block individual-block main-banner">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
@@ -96,8 +96,8 @@
                                     </div>
                                 </div>
                                 <div class="price-buynow-btn">
-                                    <div class="current-price">
-                                        <a href="#!" class="btn-secondery">$12,075.34 USD</a>
+                                    <div class="current-price flex-fill">
+                                        <span class="btn-secondery">$12,075.34 USD</span>
                                         <h3>CURRENT PRICE</h3>
                                     </div>
                                     <div class="right-block">
@@ -193,8 +193,17 @@
                                                 <span><img src="assets/images/person.svg" alt=""/>KITO FORTUNE</span>
                                                 <span><img src="assets/images/category.svg" alt=""/>Performance</span>
                                             </div>
-                                            <div class="share-btn">
-                                                <img src="assets/images/share.svg" alt=""/>
+                                            
+                                            <div class="custom-html-dropdown">
+                                                <button class="dropdown-input dropdown-toggle" type="button" id="company-name" data-bs-toggle="dropdown">
+                                                    <div class="share-btn">
+                                                        <img src="assets/images/share.svg" alt=""/>
+                                                    </div>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="company-name">
+                                                    <li><a href="#!" class="dropdown-item active">Facebook</a></li>
+                                                    <li><a href="#!" class="dropdown-item">Twitter</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -213,6 +222,12 @@
                                             <div class="history-block">
                                                 <div class="history-scroll-block">
                                                     <h3>HISTORY</h3>
+                                                    <div class="dec-text">
+                                                        <p><span>BID 9</span> <span>4.83 ETH</span> <span>$12,075.34 USD</span></p>
+                                                        <p><span>BID 8</span> <span>3.74 ETH</span> <span>$9,350.24 USD</span></p>
+                                                        <p><span>BID 7</span> <span>3.58 ETH</span> <span>$8,950.12 USD</span></p>
+                                                        <p><span>BID 6</span> <span>3.42 ETH</span> <span>$8,550.89 USD</span></p>
+                                                    </div>
                                                     <div class="dec-text">
                                                         <p><span>BID 9</span> <span>4.83 ETH</span> <span>$12,075.34 USD</span></p>
                                                         <p><span>BID 8</span> <span>3.74 ETH</span> <span>$9,350.24 USD</span></p>
@@ -282,5 +297,11 @@
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            $(".custom-html-dropdown .dropdown-menu li .dropdown-item").click(function(){
+                $('.custom-html-dropdown .dropdown-menu li .dropdown-item ').removeClass('active');
+                $(this).addClass('active');
+            });
+        </script>
     </body>
 </html>
