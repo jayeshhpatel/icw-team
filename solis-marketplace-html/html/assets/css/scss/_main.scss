@@ -844,7 +844,7 @@ img{
         .banner-slider{
             .slick-dots{
                 width: 100%;
-                bottom: 25px;
+                bottom: 10px;
                 right: 0;@include justify-content(center);
             }
             .banner-item {
@@ -1366,7 +1366,7 @@ img{
         @include border-radius(10px);
         border: 1px solid transparent;
         background:linear-gradient(#131623, #131623) padding-box,linear-gradient(277.72deg, #C9009A -32.97%, #FC6401 55.57%, #F4F4F4 144.11%) border-box;
-        height: calc(100% - 15px);@include flexbox();@include flex-direction(column);
+        height: calc(100% - 10px);@include flexbox();@include flex-direction(column);
         h2{
             font-weight: 900;
             font-size: 24px;text-transform: uppercase;
@@ -1378,7 +1378,7 @@ img{
             letter-spacing: 1px;
         }
         .scroll-block{
-            padding: 25px;
+            padding: 22px;
             overflow-y: auto;
             flex: 1 1 auto;
             &::-webkit-scrollbar-thumb {
@@ -1434,7 +1434,7 @@ img{
         }
         .top-bar-block{
             background: linear-gradient(90deg, #C9009A 0.01%, #FC6401 100.01%);
-            padding: 25px;
+            padding: 22px;
         }
         .price-inner-block{
             margin-top: 50px;
