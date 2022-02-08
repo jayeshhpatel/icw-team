@@ -145,6 +145,14 @@ img{
         max-width: 800px;
     }
 }
+.section-hash {
+    min-height: 100vh;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
 .section-block {
     position: relative;
     padding: 100px 0 40px;
