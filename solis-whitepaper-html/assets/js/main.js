@@ -33,14 +33,14 @@ $(document).ready(function () {
         }       
     });
 
-    if (jQuery('.section-block').length) {
-        $('a.menu-item').bind('click',function(event){
+    if (jQuery('.is-wrapper-onemenu .section-block').length) {
+        $('.is-sidebar-onemenu a.menu-item').bind('click',function(event){
             var $anchor = $(this);
             var $hoffset = '50';
             var $tabValue = $(this).attr('href');
             // var $withoutHash = $tabValue.slice(1);
-            $('.menu-item').removeClass("active");
-            $('.section-hash').removeClass("show");
+            $('.is-sidebar-onemenu .menu-item').removeClass("active");
+            $('.is-wrapper-onemenu .section-hash').removeClass("show");
             $($tabValue).addClass("show");
             $anchor.addClass("active");
             $('html, body').stop().animate({
@@ -49,7 +49,7 @@ $(document).ready(function () {
             event.preventDefault();
             // return false;
         });
-        $('.squre-list a').bind('click',function(event){
+        $('.is-sidebar-onemenu .squre-list a').bind('click',function(event){
             var $anchor = $(this);
             var $hoffset = '50';
             var $tabValue = $(this).attr('href');
@@ -66,34 +66,38 @@ $(document).ready(function () {
             // return false;
         });
     }
+
+
+    /* menu-wise scroll body */
+    // $('.is-sidebar-scroll .menu-item').bind('click',function(event){
+    //     var $anchor = $(this);
+    //     var $hoffset = '20';
+    //     $('.is-sidebar-scroll .menu-item').removeClass("active");
+    //     $anchor.addClass("active");
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top-$hoffset
+    //     }, 10,'easeInOutExpo');
+    //     event.preventDefault();
+    // });
+
+    // if (jQuery('.is-wrapper-scroll .section-block').length) {
+    //     jQuery(window).scroll(function() {
+    //         var scrollDistance = jQuery(window).scrollTop();
+    //         jQuery('.is-wrapper-scroll .section-block').each(function(i) {      
+    //             if (jQuery('.is-sidebar-scroll').length) {
+    //                 if (jQuery(this).position().top <= scrollDistance - 500 ) { 
+    //                     var getid = jQuery(this).attr('id');  
+    //                     jQuery('.is-sidebar-scroll li a').removeClass('active');
+    //                     jQuery('.is-sidebar-scroll li a[href^="#'+getid+'"]').parents('.with-sub-menu').find('.menu-item').addClass('active');
+    //                     jQuery('.is-sidebar-scroll li a[href^="#'+getid+'"]').addClass('active');
+                        
+    //                 }
+    //             }
+    //         });
+    //     }).scroll();
+    // }
+
 });
 
-/* menu-wise scroll body */
-// $('.menu-item').bind('click',function(event){
-//     var $anchor = $(this);
-//     var $hoffset = '20';
-//     $('.menu-item').removeClass("active");
-//     $anchor.addClass("active");
-//     $('html, body').stop().animate({
-//         scrollTop: $($anchor.attr('href')).offset().top-$hoffset
-//     }, 10,'easeInOutExpo');
-//     event.preventDefault();
-// });
 
-// if (jQuery('.section-block').length) {
-//     // jQuery(window).scroll(function() {
-//     //     var scrollDistance = jQuery(window).scrollTop();
-//     //     jQuery('.section-block').each(function(i) {      
-//     //         if (jQuery('.sidebar-menu-list').length) {
-//     //             if (jQuery(this).position().top <= scrollDistance - 500 ) { 
-//     //                 var getid = jQuery(this).attr('id');  
-//     //                 jQuery('.sidebar-menu-list li a').removeClass('active');
-//     //                 jQuery('.sidebar-menu-list li a[href^="#'+getid+'"]').parents('.with-sub-menu').find('.menu-item').addClass('active');
-//     //                 jQuery('.sidebar-menu-list li a[href^="#'+getid+'"]').addClass('active');
-                    
-//     //             }
-//     //         }
-//     //     });
-//     // }).scroll();
-// }
     

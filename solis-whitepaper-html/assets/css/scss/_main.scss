@@ -152,7 +152,12 @@ img{
     &.show {
         display: block;
     }
+
+    .is-wrapper-scroll & {
+        display: block !important;
+    }
 }
+
 .section-block {
     position: relative;
     padding: 100px 0 40px;
@@ -507,7 +512,7 @@ img{
                         display: block !important;
                     }
                 }
-                &.show {
+                &.show, &.active {
                     .squre-list {display: block !important;}
                     .menu-item { @include flexbox; @include align-items(center); @include justify-content(space-between);
                         .icon-arrow {
@@ -572,6 +577,19 @@ img{
                 }
             }
         }
+    }
+
+    //is-sidebar-scroll
+    .is-sidebar-scroll {
+        li.active {
+            & > a {
+                color: #fff;
+            }
+
+            .squre-list {
+                display: block !important;
+            }
+        }   
     }
 }
 .main-content-wrapper {
