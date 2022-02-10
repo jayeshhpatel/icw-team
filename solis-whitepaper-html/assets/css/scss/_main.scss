@@ -146,9 +146,14 @@ img{
     }
 }
 .section-hash {
-    min-height: 100vh;
     display: none;
-
+    @media (min-width:1025px) {
+        min-height: 100vh;
+    }
+    @media (max-width:1024px) {
+        margin-bottom:80px;
+    }
+    
     &.show {
         display: block;
     }
