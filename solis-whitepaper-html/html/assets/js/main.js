@@ -7,6 +7,11 @@ $(document).ready(function () {
         $('.bg-overly,.toggle-sidebar,body,.main-header, .menu-sidebar').toggleClass('is-visible');
         e.preventDefault();
     });
+    
+    $('.toggle-panel').on('click', function (e) {
+        $('.menu-sidebar').toggleClass('is-hide');
+        e.preventDefault();
+    });
 
     if ($('.main-header').length) {
         $(window).scroll(function () {
