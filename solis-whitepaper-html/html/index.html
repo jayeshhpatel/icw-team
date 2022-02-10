@@ -321,26 +321,60 @@
             }
         })();
 
+            var sections = $('.section-hash'), nav = $('nav.navbar'), nav_height = nav.outerHeight();
 
-            window.addEventListener('DOMContentLoaded', () => {
+            $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop();
+            
+            sections.each(function() {
+                var top = $(this).offset().top - nav_height,
+                    bottom = top + $(this).outerHeight();
+                
+                if (cur_pos >= top && cur_pos <= bottom) {
+                $('.is-sidebar-scroll').find('a').removeClass('active');
+                $('.with-sub-menu').removeClass('active');
+                sections.removeClass('active');
+                
+                $(this).addClass('active');
+                $('.is-sidebar-scroll').find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+                // console.log($(this));
+                $('a[href="#'+$(this).attr('id')+'"]').parents('.with-sub-menu').addClass('active');
+                }
+            });
+            });
 
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        const id = entry.target.getAttribute('id');
-                        if (entry.intersectionRatio > 0) {
-                            document.querySelector(`.is-sidebar-scroll li a[href="#${id}"]`).parentElement.classList.add('active');
-                        } else {
-                            document.querySelector(`.is-sidebar-scroll li a[href="#${id}"]`).parentElement.classList.remove('active');
-                        }
-                    });
-                });
+            $('.is-sidebar-scroll').find('a').on('click', function () {
+            var $el = $(this)
+                , id = $el.attr('href');
+            
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - nav_height
+            }, 500);
+            
+            return false;
+            });
 
-                // Track all sections that have an `id` applied
-                document.querySelectorAll('.section-hash[id]').forEach((section) => {
-                    observer.observe(section);
-                });
 
-                });
+            // window.addEventListener('DOMContentLoaded', () => {
+
+            //     const observer = new IntersectionObserver(entries => {
+            //         entries.forEach(entry => {
+            //             const id = entry.target.getAttribute('id');
+            //             console.log(entry.intersectionRatio);
+            //             if (entry.intersectionRatio > 0) {
+            //                 document.querySelector(`.is-sidebar-scroll li a[href="#${id}"]`).    .classList.add('active');
+            //             } else {
+            //                 document.querySelector(`.is-sidebar-scroll li a[href="#${id}"]`).parentElement.classList.remove('active');
+            //             }
+            //         });
+            //     });
+
+            //     // Track all sections that have an `id` applied
+            //     document.querySelectorAll('.section-hash[id]').forEach((section) => {
+            //         observer.observe(section);
+            //     });
+
+            //     });
           </script>    
     </body>
 </html>
