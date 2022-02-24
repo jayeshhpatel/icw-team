@@ -14,6 +14,7 @@
         <link rel="shortcut icon" type="assets/images/favicons/x-icon" href="favicon.ico">  
 
         <!-- CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <title>Testing Machine Learning Models | Deepchecks</title>
@@ -82,6 +83,12 @@
             </div>
         </header>
         <div class="bg-overly"></div>
+
+        <span class="stars">4.8618164</span>
+        <span class="stars">2.6545344</span>
+        <span class="stars">0.5355</span>
+        <span class="stars">8</span>
+
         <main class="main-content-wrapper">
             <section class="page-header-section">
                 <div class="container">
@@ -249,9 +256,27 @@
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/clipboard.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            $(function() {
+                $('span.stars').stars();
+            });
+            $.fn.stars = function() {
+                return $(this).each(function() {
+                    // Get the value
+                    var val = parseFloat($(this).html());
+                    // Make sure that the value is in 0 - 5 range, multiply to get width
+                    var size = Math.max(0, (Math.min(5, val))) * 16;
+                    // Create stars holder
+                    var $span = $('<span />').width(size);
+                    // Replace the numerical value with stars
+                    $(this).html($span);
+                });
+            }
+        </script>
     </body>
 </html>
