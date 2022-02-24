@@ -299,7 +299,7 @@
                             left: 50%;
                             @include transition(0.3s, ease-in-out);
                             @include transform(translate(-50%, -50%));
-                            transform-origin: center;
+                            -webkit-transform-origin: center;-ms-transform-origin: center;transform-origin: center;
                         }
                     }
                     .chat-reaction{
@@ -330,7 +330,7 @@
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            transform-origin: center;
+                            -webkit-transform-origin: center;-ms-transform-origin: center;transform-origin: center;
                             @include transition(0.3s, ease-in-out);
                             @include transform(translate(-50%, -50%));
                         }
