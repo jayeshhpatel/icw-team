@@ -1,5 +1,8 @@
 .message-block {
     overflow: hidden; overflow-y: auto; flex: 1 1; padding: 20px;
+    .pointer{
+        cursor: pointer;
+    }
     @media(max-width: 767px) {
         padding: 20px 15px;
     }
@@ -74,8 +77,16 @@
         .divider{
             text-align: center;
             margin-bottom: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
             .text{
                 color: #333333;font-size: 16px;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0px 15px;
+                @include border-radius(4px);
+                background-color: #F8F9FA;
             }
         }
         .message-row{
@@ -187,9 +198,15 @@
                     }
                     .image-item{
                         @include flexbox();
+                        &:hover,&:focus{
+                            img{
+                                @include opacity(0.8);
+                            }
+                        }
                         img{
                             max-width: 225px;
                             width: 100%;
+                            @include transition(0.3s, ease-in-out);
                         }
                     }
                 }
@@ -260,8 +277,16 @@
                     .video{
                         margin: -10px;
                         display: flex;
+                        &:hover,&:focus{
+                            .video-play{
+                                @include transform(scale(1.08) translate(-50%, -50%));
+                            }
+                            img{
+                                @include opacity(0.8);
+                            }
+                        }
                         img{
-                            border-radius: 8px;
+                            @include border-radius(8px);@include transition(0.3s, ease-in-out);
                         }
                         .video-play {
                             height: 36px;
@@ -272,7 +297,9 @@
                             position: absolute;
                             top: 50%;
                             left: 50%;
+                            @include transition(0.3s, ease-in-out);
                             @include transform(translate(-50%, -50%));
+                            transform-origin: center;
                         }
                     }
                     .chat-reaction{
@@ -283,10 +310,18 @@
                     .gif{
                         margin: -10px;
                         display: flex;
-                        img{
-                            border-radius: 8px;
+                        &:hover,&:focus{
+                            .icon-gif{
+                                @include transform(scale(1.08) translate(-50%, -50%));
+                            }
+                            img{
+                                @include opacity(0.8);
+                            }
                         }
-                        .gif-play {
+                        img{
+                            @include border-radius(8px);@include transition(0.3s, ease-in-out);
+                        }
+                        .icon-gif {
                             height: 36px;
                             width: 70px;
                             background: url(../images/icons/gif.svg) no-repeat center center;
@@ -295,6 +330,8 @@
                             position: absolute;
                             top: 50%;
                             left: 50%;
+                            transform-origin: center;
+                            @include transition(0.3s, ease-in-out);
                             @include transform(translate(-50%, -50%));
                         }
                     }
@@ -316,7 +353,6 @@
                 .attach-item {
                     @include flexbox();
                     @include align-items(center);
-                    cursor: pointer;
                     .icon{
                         flex: none;
                     }
@@ -329,7 +365,7 @@
                         width: 100%;
                         .size{
                             color: #616264;
-                            padding-top: 6px;
+                            padding-top: 4px;
                             font-size: 10px;
                             @include flexbox();
                             @include align-items(center);
