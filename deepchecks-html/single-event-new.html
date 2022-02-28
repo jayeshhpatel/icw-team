@@ -89,47 +89,47 @@
                         <p>Challenges in generic CV validation stems from framework use, task types, conventions, and formats (formatters for label, prediction, and image). We are working hard to see that Deepchecks can accommodate all these with the help of our community.</p>
                         <h3>Plans for the future</h3>
                         <p>There are features we planned to implement in the initial version which helps check for:</p>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Leakage: When the train and test set to share the same or similar data due to poor splitting of the data in some cases or a suspiciously high accuracy score.
                                 <img src="assets/images/leakage.png" alt=""/>
                             </li>
                         </ul>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Redundancy: Wasting resources on training similar datasets.
                                 <img src="assets/images/redundancy.png" alt=""/>
                             </li>
                         </ul>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Ambiguity (label): More than one label creates different interpretations of the image and can be problematic for the model. It happens primarily during tagging in a typical classification use case.
                                 <img src="assets/images/ambiguity.png" alt=""/>
                             </li>
                         </ul>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Outliers: Inconsistent images in a dataset. It is not necessarily a bad thing but knowing that there are outliers helps the data scientist or ML engineers make informed decisions in the model building process.
                             <img src="assets/images/outlier.png" alt=""/>
                             </li>
                         </ul>
                         <p>Additional checks:</p>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Model inference time: Gives a report on time spent by the model to make a prediction. For example, in the case of deep learning, how long does it take to run a forward propagation?</li>
                             <li>Samples of low confidence: It checks and displays images with low confidence.</li>
                         </ul>
                         <p>In the next version, we want to implement checks for:</p>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Data drift:<br/> This is caused by image data changing over time and can affect the model. We will address this issue by looking for drifts in simple properties, for example, looking at the distributions of color histograms of the trained dataset and comparing with test dataset to see if there is a significant drift. Also, we can look for drift in the bounding box centers in the train and test dataset.
                                 <img src="assets/images/data-drift.png" alt=""/>
                                 <img src="assets/images/chart-box.png" alt=""/>
                             </li>
                         </ul>
                         <p>In the future, we would like to use the embedding layer of the user’s or third-party neural network and use those features as the base of a domain classifier to learn the difference in the train and test dataset. </p>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Simple feature contribution:<br/> We want to go beyond just knowing that the model succeeded but how it succeeded? We want to know the specific defining feature (not just a simple feature like color in the example below) that influenced the model’s decision. </li>
                         </ul>
                         <div class="two-grid-image">
                             <img src="assets/images/two-img.png" alt=""/>
                             <img src="assets/images/simple-feature.png" alt=""/>
                         </div>
-                        <ul class="image-list">
+                        <ul class="ul-line">
                             <li>Quantized model performance:<br/> For a quantized model, we would like to simply compare its performance before and after quantization.
                                 <img src="assets/images/float-img.png" alt="" />
                             </li>
