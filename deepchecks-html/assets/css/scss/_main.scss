@@ -4560,23 +4560,39 @@ body input.hs-input[type="file"] {
         padding: 30px 0;
     }
     .card-content {
-        h3{
+        @media (max-width:991px) {
+            font-size: 16px;
+        }
+        h3 {
             font-weight: 700;
             font-size: 24px;
             margin-bottom: 20px;
+            @media (max-width:991px) {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
         }
-        h4{
+        h4 {
             font-weight: 700;
             font-size: 20px;
             margin-bottom: 20px;
+            @media (max-width:991px) {
+                font-size: 16px;margin-bottom: 15px;
+            }
         }
-        .image-list{
+        .image-list {
             margin-left: 30px;
-            li{
+            @media (max-width:991px) {
+                margin-left: 15px;
+            }
+            li {
                 position: relative;
                 padding-left: 25px;
                 margin-bottom: 25px;
-                &:after{
+                @media (max-width:991px) {
+                    padding-left: 15px;
+                }
+                &:after {
                     content: "";
                     position: absolute;
                     left: 0;
@@ -4588,17 +4604,23 @@ body input.hs-input[type="file"] {
                 }
             }
         }
-        .two-grid-image{
+        .two-grid-image {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
             align-items: center;
             margin-bottom: 30px;
+            @media (max-width:575px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
         .future-img-block{
             margin-left: 55px;
             margin-bottom: 30px;
             border: 1px solid #808080;
+            @media (max-width:991px) {
+                margin-left: 0;
+            }
         }
         .image-block{
             margin-bottom: 30px;border: 1px solid #808080;
@@ -4608,7 +4630,7 @@ body input.hs-input[type="file"] {
         max-width: 690px;
         margin: auto;
         @media (min-width:992px) {
-            p{
+            p {
                 margin-bottom: 35px;
             }
         }
