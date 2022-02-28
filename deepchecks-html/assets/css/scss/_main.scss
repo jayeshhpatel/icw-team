@@ -4428,7 +4428,7 @@ body input.hs-input[type="file"] {
         text-decoration: none;
     }
 }
-.community-banner-block {
+.p-100-50 {
     padding: 100px 0 50px;
     margin: 0;
     .banner-text {
@@ -4479,6 +4479,7 @@ body input.hs-input[type="file"] {
         @include border-radius(30px);
         background-color: $white;
         overflow: hidden;
+        box-shadow: 41.886px 40.1194px 80px rgba(63, 69, 82, 0.02), 27.1483px 26.0033px 46.8519px rgba(63, 69, 82, 0.0151852), 16.1339px 15.4534px 25.4815px rgba(63, 69, 82, 0.0121481), 8.3772px 8.02387px 13px rgba(63, 69, 82, 0.01), 3.41293px 3.26899px 6.51852px rgba(63, 69, 82, 0.00785185), 0.775666px 0.742951px 3.14815px rgba(63, 69, 82, 0.00481481);
         .title-image-block {
             background: $purple;
             padding: 40px 60px;
