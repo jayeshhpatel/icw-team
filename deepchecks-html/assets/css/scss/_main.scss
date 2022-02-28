@@ -4581,14 +4581,16 @@ body input.hs-input[type="file"] {
             }
         }
         .image-list {
-            margin-left: 30px;
-            @media (max-width:991px) {
-                margin-left: 15px;
-            }
             li {
                 position: relative;
                 padding-left: 25px;
                 margin-bottom: 25px;
+                img{
+                    margin: 30px 0 0;
+                    @media (max-width:767px) {
+                        margin: 20px 0 0;
+                    }
+                }
                 @media (max-width:991px) {
                     padding-left: 15px;
                 }
@@ -4609,21 +4611,15 @@ body input.hs-input[type="file"] {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
             align-items: center;
-            margin-bottom: 30px;
             @media (max-width:575px) {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
-        .future-img-block{
-            margin-left: 55px;
+        img{
             margin-bottom: 30px;
-            border: 1px solid #808080;
-            @media (max-width:991px) {
-                margin-left: 0;
+            @media (max-width:767px) {
+                margin-bottom: 20px;
             }
-        }
-        .image-block{
-            margin-bottom: 30px;border: 1px solid #808080;
         }
     }   
     .card-content {

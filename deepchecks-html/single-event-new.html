@@ -30,7 +30,7 @@
         <main class="main-content-wrapper">
             <section class="main-banner p-100-50">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-text main-title mb-0 text-left">
                                 <div class="wow fadeInUp">
@@ -65,46 +65,50 @@
                         <p>At its base, checks when used correctly provide outputs with information about the data or model. It can be about data leakage, model performance, or just information about the structure of the data depending on what a practitioner is looking to validate. Suites on the other hand are a collection of checks with a holistic diagnosis of the model or data of interest and the exciting thing is that conditions can be added to these checks for more flexibility. Check out our <a href="#!" class="link-text">Quickstart in 5 minutes tutorial</a> and lets know what you think.</p>
                         <h3>Computer Vision Checks</h3>
                         <p>For now, Deepchecks supports Pytorch object detection and classification use cases and with time based on feedback, will add more use cases.</p>
-                        <img src="assets/images/computer-model.png" alt="" class="image-block"/>
+                        <img src="assets/images/computer-model.png" alt="" />
                         <p>In every step in the computer vision pipeline, there are checks to enable practitioners <a href="#!" class="link-text">to avoid pitfalls</a> and validate their data and model. Similar to the tabular package, the vision package has an object called the ‘VisionData’ that contains the data loader and metadata regarding the task type among other functions. To give you some insight into what this module offers, we have listed five important checks for you to see and use.</p>
                         <h4>#1 Dataset Dimensions: Integrity check and check if the data is correct</h4>
                         <p>To derive metadata from the dataset of choice, it has to be transformed into a format recognized by deepchecks. While in this preprocessing stage, our ImageDimensionsCheck package can check, for example, the distributions of the image dimensions and the number of bounding boxes per image. This invariably can help detect outliers in labeling or in other cases to understand strange behaviors in the model of choice.</p>
-                        <img src="assets/images/code-img.png" alt="" class="image-block"/>
+                        <img src="assets/images/code-img.png" alt="" />
                         <h4>#2 Label Drift:  Checking if the data was split correctly</h4>
-                        <img src="assets/images/code-img1.png" alt="" class="image-block"/>
-                        <img src="assets/images/chat.png" alt="" class="image-block"/>
+                        <img src="assets/images/code-img1.png" alt="" />
+                        <img src="assets/images/chat.png" alt="" />
                         <p>Sometimes, there is a high likelihood of having varying distributions of the target label after splitting data into train and test. This mistake can reduce the model performance on the test set, and we don’t want that to happen to data science teams. Deepchecks built the TrainTestLabelDrift package to enable data scientists and ML engineers to detect label drift between the distributions of the train and test datasets. It uses metrics like Drift Score – Earth Mover’s Distance, Bounding box area distribution, Drift Score – PSI, Sample per class, and bounding box per image.</p>
                         <h4>#3 Performance: Performance of the model</h4>
                         <p>After validating the dataset and training the model, the next natural step will be to evaluate and validate the model. It can be a difficult task because there are different evaluation metrics for each task type but for an object detection task, Deepchecks supports two metrics namely, MeanAveragePrecisionReport and MeanAverageRecallReport which provides an understanding of how well the object detection model performed. </p>
-                        <img src="assets/images/code-img2.png" alt="" class="image-block"/>
+                        <img src="assets/images/code-img2.png" alt="" />
                         <h4>#4 Robustness: Performance of model on unique examples</h4>
                         <p>The RobustnessReport package enables teams to check the strength of their model on varying conditions (or corruptions) each data example is subjected to. It utilizes RandomBrightnessContrast, ShiftScaleRotate, HueSaturationValue, and RGBShift corruptions on images to test the model’s performance. </p>
-                        <img src="assets/images/code-img3.png" alt="" class="image-block"/>
+                        <img src="assets/images/code-img3.png" alt="" />
                         <p>In other words, RobustnessReport creates augmented examples of the dataset to check the performance degradation of the model. This can give immense insight on the type of techniques to use to ensure that the data is sufficiently robust and in turn increase model performance.</p>
-                        <img src="assets/images/image-group.png" alt="" class="image-block"/>
+                        <img src="assets/images/image-group.png" alt="" />
                         <h4>#5 Suspicious Robustness:</h4>
-                        <img src="assets/images/code-img4.png" alt="" class="image-block"/>
+                        <img src="assets/images/code-img4.png" alt="" />
                         <p>We also know that a model can be too robust which might translate to overfitting on specific augmentations or features that might not be relevant to the problem. Deepchecks can check this using the SuspiciousRobustness package which is designed specifically to detect if the dataset is suspiciously robust. It shows the mean average precision depending on the level of corruption. It is also flexible as anyone can edit parameters of the object to reflect a realistic level of augmentation the model might encounter.</p>
-                        <img src="assets/images/image-chat.png" alt="" class="image-block"/>
+                        <img src="assets/images/image-chat.png" alt="" />
                         <p>Challenges in generic CV validation stems from framework use, task types, conventions, and formats (formatters for label, prediction, and image). We are working hard to see that Deepchecks can accommodate all these with the help of our community.</p>
                         <h3>Plans for the future</h3>
                         <p>There are features we planned to implement in the initial version which helps check for:</p>
                         <ul class="image-list">
-                            <li>Leakage: When the train and test set to share the same or similar data due to poor splitting of the data in some cases or a suspiciously high accuracy score.</li>
+                            <li>Leakage: When the train and test set to share the same or similar data due to poor splitting of the data in some cases or a suspiciously high accuracy score.
+                                <img src="assets/images/leakage.png" alt=""/>
+                            </li>
                         </ul>
-                        <img src="assets/images/leakage.png" alt="" class="future-img-block"/>
                         <ul class="image-list">
-                            <li>Redundancy: Wasting resources on training similar datasets.</li>
+                            <li>Redundancy: Wasting resources on training similar datasets.
+                                <img src="assets/images/redundancy.png" alt=""/>
+                            </li>
                         </ul>
-                        <img src="assets/images/redundancy.png" alt="" class="future-img-block"/>
                         <ul class="image-list">
-                            <li>Ambiguity (label): More than one label creates different interpretations of the image and can be problematic for the model. It happens primarily during tagging in a typical classification use case.</li>
+                            <li>Ambiguity (label): More than one label creates different interpretations of the image and can be problematic for the model. It happens primarily during tagging in a typical classification use case.
+                                <img src="assets/images/ambiguity.png" alt=""/>
+                            </li>
                         </ul>
-                        <img src="assets/images/ambiguity.png" alt="" class="future-img-block"/>
                         <ul class="image-list">
-                            <li>Outliers: Inconsistent images in a dataset. It is not necessarily a bad thing but knowing that there are outliers helps the data scientist or ML engineers make informed decisions in the model building process.</li>
+                            <li>Outliers: Inconsistent images in a dataset. It is not necessarily a bad thing but knowing that there are outliers helps the data scientist or ML engineers make informed decisions in the model building process.
+                            <img src="assets/images/outlier.png" alt=""/>
+                            </li>
                         </ul>
-                        <img src="assets/images/outlier.png" alt="" class="future-img-block"/>
                         <p>Additional checks:</p>
                         <ul class="image-list">
                             <li>Model inference time: Gives a report on time spent by the model to make a prediction. For example, in the case of deep learning, how long does it take to run a forward propagation?</li>
@@ -112,10 +116,11 @@
                         </ul>
                         <p>In the next version, we want to implement checks for:</p>
                         <ul class="image-list">
-                            <li>Data drift:<br/> This is caused by image data changing over time and can affect the model. We will address this issue by looking for drifts in simple properties, for example, looking at the distributions of color histograms of the trained dataset and comparing with test dataset to see if there is a significant drift. Also, we can look for drift in the bounding box centers in the train and test dataset.</li>
+                            <li>Data drift:<br/> This is caused by image data changing over time and can affect the model. We will address this issue by looking for drifts in simple properties, for example, looking at the distributions of color histograms of the trained dataset and comparing with test dataset to see if there is a significant drift. Also, we can look for drift in the bounding box centers in the train and test dataset.
+                                <img src="assets/images/data-drift.png" alt=""/>
+                                <img src="assets/images/chart-box.png" alt=""/>
+                            </li>
                         </ul>
-                        <img src="assets/images/data-drift.png" alt="" class="future-img-block"/>
-                        <img src="assets/images/chart-box.png" alt="" class="future-img-block"/>
                         <p>In the future, we would like to use the embedding layer of the user’s or third-party neural network and use those features as the base of a domain classifier to learn the difference in the train and test dataset. </p>
                         <ul class="image-list">
                             <li>Simple feature contribution:<br/> We want to go beyond just knowing that the model succeeded but how it succeeded? We want to know the specific defining feature (not just a simple feature like color in the example below) that influenced the model’s decision. </li>
@@ -125,9 +130,10 @@
                             <img src="assets/images/simple-feature.png" alt=""/>
                         </div>
                         <ul class="image-list">
-                            <li>Quantized model performance:<br/> For a quantized model, we would like to simply compare its performance before and after quantization.</li>
+                            <li>Quantized model performance:<br/> For a quantized model, we would like to simply compare its performance before and after quantization.
+                                <img src="assets/images/float-img.png" alt="" />
+                            </li>
                         </ul>
-                        <img src="assets/images/float-img.png" alt="" class="image-block"/>
                         <p>We will be supporting TensorFlow framework soon and adding tasks such as, Segmentation, Regression, and Pose Estimation.</p>
                         <p>In conclusion, Deepchecks is community focused, and we will need all the support we can get to ensure the realization of our planned improvements. You can join <a href="#!" class="link-text">our community</a> and also become a contributor for this project on <a href="#!" class="link-text">GitHub</a>. Can’t wait to get feedback and make the evaluation, and validation process for practitioners easier.</p>
                     </div>
