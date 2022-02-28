@@ -4560,6 +4560,13 @@ body input.hs-input[type="file"] {
         padding: 30px 0;
     }
     .card-content {
+        max-width: 570px;
+        margin: auto;
+        @media (min-width:992px) {
+            p {
+                margin-bottom: 35px;
+            }
+        }
         @media (max-width:991px) {
             font-size: 16px;
         }
@@ -4623,13 +4630,4 @@ body input.hs-input[type="file"] {
             }
         }
     }   
-    .card-content {
-        max-width: 690px;
-        margin: auto;
-        @media (min-width:992px) {
-            p {
-                margin-bottom: 35px;
-            }
-        }
-    }
 }
